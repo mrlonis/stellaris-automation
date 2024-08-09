@@ -1,18 +1,14 @@
 namespace = lazy_arm_rec_events
-
 country_event = {
 	id = lazy_arm_rec_events.1
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		has_country_flag = auto_army_recruit_enable_flag
 	}
-
-	immediate = { 
+	immediate = {
 		switch = {
 			trigger = has_country_flag
-	
 			recruit_slave_army_flag = {
 				country_event = {
 					id = lazy_arm_rec_events.3
@@ -91,12 +87,10 @@ country_event = {
 	id = lazy_arm_rec_events.2
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		has_country_flag = auto_army_recruit_enable_flag
 	}
-
-	immediate = { 
+	immediate = {
 		every_owned_planet = {
 			prev = {
 				if = {
@@ -123,12 +117,10 @@ country_event = {
 	id = lazy_arm_rec_events.3
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		has_country_flag = auto_army_recruit_enable_flag
 	}
-
-	immediate = { 
+	immediate = {
 		every_owned_planet = {
 			limit = {
 				has_building = building_slave_processing
@@ -150,12 +142,10 @@ country_event = {
 	id = lazy_arm_rec_events.4
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		has_country_flag = auto_army_recruit_enable_flag
 	}
-
-	immediate = { 
+	immediate = {
 		every_owned_planet = {
 			prev = {
 				recruit_chosen_army = {
@@ -171,12 +161,10 @@ country_event = {
 	id = lazy_arm_rec_events.5
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		has_country_flag = auto_army_recruit_enable_flag
 	}
-
-	immediate = { 
+	immediate = {
 		every_owned_planet = {
 			prev = {
 				recruit_chosen_army = {
@@ -192,12 +180,10 @@ country_event = {
 	id = lazy_arm_rec_events.6
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		has_country_flag = auto_army_recruit_enable_flag
 	}
-
-	immediate = { 
+	immediate = {
 		every_owned_planet = {
 			prev = {
 				recruit_chosen_army = {
@@ -213,12 +199,10 @@ country_event = {
 	id = lazy_arm_rec_events.7
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		has_country_flag = auto_army_recruit_enable_flag
 	}
-
-	immediate = { 
+	immediate = {
 		every_owned_planet = {
 			prev = {
 				recruit_chosen_army = {
@@ -234,12 +218,10 @@ country_event = {
 	id = lazy_arm_rec_events.8
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		has_country_flag = auto_army_recruit_enable_flag
 	}
-
-	immediate = { 
+	immediate = {
 		every_owned_planet = {
 			prev = {
 				recruit_chosen_army = {
@@ -255,12 +237,10 @@ country_event = {
 	id = lazy_arm_rec_events.9
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		has_country_flag = auto_army_recruit_enable_flag
 	}
-
-	immediate = { 
+	immediate = {
 		every_owned_planet = {
 			prev = {
 				recruit_chosen_army = {
@@ -276,12 +256,10 @@ country_event = {
 	id = lazy_arm_rec_events.10
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		has_country_flag = auto_army_recruit_enable_flag
 	}
-
-	immediate = { 
+	immediate = {
 		every_owned_planet = {
 			prev = {
 				recruit_chosen_army = {
@@ -297,12 +275,10 @@ country_event = {
 	id = lazy_arm_rec_events.11
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		has_country_flag = auto_army_recruit_enable_flag
 	}
-
-	immediate = { 
+	immediate = {
 		every_owned_planet = {
 			limit = {
 				has_active_building = building_dread_encampment
