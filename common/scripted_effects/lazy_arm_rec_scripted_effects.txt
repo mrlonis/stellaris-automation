@@ -2,18 +2,18 @@ recruit_chosen_army = {
 	if = {
 		limit = {
 			[[MINERALS]
-				resource_stockpile_compare = {
-					resource = minerals
-					value >= $MINERALS$
-					mult = value:positive_modifier_mult|MODIFIER|armies_cost_mult|
-				}
+			resource_stockpile_compare = {
+				resource = minerals
+				value >= $MINERALS$
+				mult = value:positive_modifier_mult|MODIFIER|armies_cost_mult|
+			}
 			]
 			[[ENERGY]
-				resource_stockpile_compare = {
-					resource = energy
-					value >= $ENERGY$
-					mult = value:positive_modifier_mult|MODIFIER|armies_cost_mult|
-				}
+			resource_stockpile_compare = {
+				resource = energy
+				value >= $ENERGY$
+				mult = value:positive_modifier_mult|MODIFIER|armies_cost_mult|
+			}
 			]
 		}
 		if = {
@@ -39,27 +39,25 @@ recruit_chosen_army = {
 			create_fleet = {
 				effect = {
 					set_owner = root
-	
 					create_army_transport = {
 						army_type = $army$
 					}
-	
 					set_fleet_stance = passive
 					set_location = prevprev
 				}
-			}	
+			}
 		}
 		[[MINERALS]
-			add_resource = {
-				minerals = $MINERALS$
-				mult = value:negative_modifier_mult|MODIFIER|armies_cost_mult|
-			}
+		add_resource = {
+			minerals = $MINERALS$
+			mult = value:negative_modifier_mult|MODIFIER|armies_cost_mult|
+		}
 		]
 		[[ENERGY]
-			add_resource = {
-				energy = $ENERGY$
-				mult = value:negative_modifier_mult|MODIFIER|armies_cost_mult|
-			}
+		add_resource = {
+			energy = $ENERGY$
+			mult = value:negative_modifier_mult|MODIFIER|armies_cost_mult|
+		}
 		]
 	}
 }
