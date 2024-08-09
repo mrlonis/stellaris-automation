@@ -1,6 +1,5 @@
 lazy_automation_shortcut = {
 	potential = {
-
 	}
 	allow = {
 		hidden_trigger = {
@@ -8,7 +7,6 @@ lazy_automation_shortcut = {
 			is_ai = no
 		}
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
@@ -16,7 +14,7 @@ lazy_automation_shortcut = {
 					id = lazy_config_events.1
 				}
 			}
-		}	
+		}
 	}
 }
 
@@ -51,11 +49,8 @@ lazy_automation_dynamic_background = {
 		}
 	}
 	allow = {
-
 	}
-	
 	effect = {
-
 	}
 }
 
@@ -72,11 +67,8 @@ lazy_automation_dynamic_background_2 = {
 		}
 	}
 	allow = {
-
 	}
-	
 	effect = {
-
 	}
 }
 
@@ -103,7 +95,6 @@ lazy_automation_auto_construct_outpost = {
 			}
 		}
 	}
-	
 	effect = {
 		hidden_effect = {
 			set_fleet_flag = auto_outpost_ship_flag
@@ -135,7 +126,6 @@ lazy_automation_auto_construct_outpost_active = {
 			}
 		}
 	}
-	
 	effect = {
 		hidden_effect = {
 			remove_fleet_flag = auto_outpost_ship_flag
@@ -171,7 +161,6 @@ lazy_automation_auto_construct_megastructures = {
 			}
 		}
 	}
-	
 	effect = {
 		hidden_effect = {
 			fleet_event = {
@@ -203,7 +192,6 @@ lazy_automation_auto_construct_megastructures_active = {
 			}
 		}
 	}
-	
 	effect = {
 		hidden_effect = {
 			remove_fleet_flag = auto_mega_ship_flag
@@ -244,7 +232,6 @@ lazy_automation_auto_construct_megastructures_alt = {
 			is_ai = no
 		}
 	}
-	
 	effect = {
 		hidden_effect = {
 			fleet_event = {
@@ -273,7 +260,6 @@ lazy_automation_auto_construct_megastructures_active_alt = {
 			is_ai = no
 		}
 	}
-	
 	effect = {
 		hidden_effect = {
 			remove_fleet_flag = auto_mega_ship_flag
@@ -311,7 +297,6 @@ lazy_automation_auto_fleet_attack = {
 			is_ai = no
 		}
 	}
-	
 	effect = {
 		hidden_effect = {
 			set_fleet_flag = auto_fleet_attack_flag
@@ -338,7 +323,6 @@ lazy_automation_auto_fleet_attack_active = {
 			is_ai = no
 		}
 	}
-	
 	effect = {
 		hidden_effect = {
 			remove_fleet_flag = auto_fleet_attack_flag
@@ -355,9 +339,7 @@ lazy_automation_speed = {
 		is_scope_type = country
 	}
 	allow = {
-
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
@@ -365,13 +347,12 @@ lazy_automation_speed = {
 					id = lazy_config_events.2
 				}
 			}
-		}	
+		}
 	}
 }
 
 lazy_automation_auto_button_centre_left_effect = {
 	potential = {
-		
 	}
 	allow = {
 		hidden_trigger = {
@@ -399,7 +380,6 @@ lazy_automation_auto_button_centre_left_effect = {
 			}
 		}
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
@@ -445,13 +425,12 @@ lazy_automation_auto_button_centre_left_effect = {
 					}
 				}
 			}
-		}	
+		}
 	}
 }
 
 lazy_automation_auto_button_centre_right_effect = {
 	potential = {
-		
 	}
 	allow = {
 		hidden_trigger = {
@@ -475,7 +454,6 @@ lazy_automation_auto_button_centre_right_effect = {
 			}
 		}
 	}
-	
 	effect = {
 		hidden_effect = {
 			from = {
@@ -493,7 +471,6 @@ lazy_automation_auto_button_centre_right_effect = {
 				remove_country_flag = auto_terraforming_flag
 				remove_country_flag = auto_upgrade_starbases_flag
 				remove_country_flag = auto_recruit_leaders_enable_flag
-
 				remove_country_flag = auto_alpine_terraform_flag
 				remove_country_flag = auto_arctic_terraform_flag
 				remove_country_flag = auto_tundra_terraform_flag
@@ -572,7 +549,6 @@ lazy_automation_auto_button_centre_right_effect = {
 
 lazy_automation_auto_button_upper_middle_left_effect = {
 	potential = {
-		
 	}
 	allow = {
 		hidden_trigger = {
@@ -583,19 +559,17 @@ lazy_automation_auto_button_upper_middle_left_effect = {
 			}
 		}
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
 				set_country_flag = auto_construct_outposts_flag
 			}
-		}	
+		}
 	}
 }
 
 lazy_automation_auto_button_upper_middle_right_effect = {
 	potential = {
-		
 	}
 	allow = {
 		hidden_trigger = {
@@ -606,19 +580,17 @@ lazy_automation_auto_button_upper_middle_right_effect = {
 			}
 		}
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
 				set_country_flag = auto_recruit_leaders_enable_flag
 			}
-		}	
+		}
 	}
 }
 
 lazy_automation_auto_button_upper_top_left_effect = {
 	potential = {
-		
 	}
 	allow = {
 		hidden_trigger = {
@@ -629,7 +601,6 @@ lazy_automation_auto_button_upper_top_left_effect = {
 			}
 		}
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
@@ -647,13 +618,12 @@ lazy_automation_auto_button_upper_top_left_effect = {
 					}
 				}
 			}
-		}	
+		}
 	}
 }
 
 lazy_automation_auto_button_upper_top_right_effect = {
 	potential = {
-		
 	}
 	allow = {
 		hidden_trigger = {
@@ -664,19 +634,17 @@ lazy_automation_auto_button_upper_top_right_effect = {
 			}
 		}
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
 				set_country_flag = auto_fleet_attack_enable_flag
 			}
-		}	
+		}
 	}
 }
 
 lazy_automation_auto_button_upper_bottom_left_effect = {
 	potential = {
-		
 	}
 	allow = {
 		hidden_trigger = {
@@ -687,19 +655,17 @@ lazy_automation_auto_button_upper_bottom_left_effect = {
 			}
 		}
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
 				set_country_flag = auto_army_recruit_enable_flag
 			}
-		}	
+		}
 	}
 }
 
 lazy_automation_auto_button_upper_bottom_right_effect = {
 	potential = {
-		
 	}
 	allow = {
 		hidden_trigger = {
@@ -710,7 +676,6 @@ lazy_automation_auto_button_upper_bottom_right_effect = {
 			}
 		}
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
@@ -722,7 +687,6 @@ lazy_automation_auto_button_upper_bottom_right_effect = {
 
 lazy_automation_auto_button_lower_top_middle_effect = {
 	potential = {
-		
 	}
 	allow = {
 		hidden_trigger = {
@@ -733,19 +697,17 @@ lazy_automation_auto_button_lower_top_middle_effect = {
 			}
 		}
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
 				set_country_flag = auto_colony_manager_flag
 			}
-		}	
+		}
 	}
 }
 
 lazy_automation_auto_button_lower_middle_left_effect = {
 	potential = {
-		
 	}
 	allow = {
 		hidden_trigger = {
@@ -756,19 +718,17 @@ lazy_automation_auto_button_lower_middle_left_effect = {
 			}
 		}
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
 				set_country_flag = lazy_resettle_flag
 			}
-		}	
+		}
 	}
 }
 
 lazy_automation_auto_button_lower_bottom_middle_effect = {
 	potential = {
-		
 	}
 	allow = {
 		hidden_trigger = {
@@ -779,7 +739,6 @@ lazy_automation_auto_button_lower_bottom_middle_effect = {
 			}
 		}
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
@@ -794,13 +753,12 @@ lazy_automation_auto_button_lower_bottom_middle_effect = {
 					}
 				}
 			}
-		}	
+		}
 	}
 }
 
 lazy_automation_auto_button_lower_middle_right_effect = {
 	potential = {
-		
 	}
 	allow = {
 		hidden_trigger = {
@@ -811,7 +769,6 @@ lazy_automation_auto_button_lower_middle_right_effect = {
 			}
 		}
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
@@ -824,13 +781,12 @@ lazy_automation_auto_button_lower_middle_right_effect = {
 					set_fleet_stance = aggressive
 				}
 			}
-		}	
+		}
 	}
 }
 
 lazy_automation_auto_button_lower_top_left_effect = {
 	potential = {
-		
 	}
 	allow = {
 		hidden_trigger = {
@@ -841,7 +797,6 @@ lazy_automation_auto_button_lower_top_left_effect = {
 			}
 		}
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
@@ -879,13 +834,12 @@ lazy_automation_auto_button_lower_top_left_effect = {
 					}
 				}
 			}
-		}	
+		}
 	}
 }
 
 lazy_automation_auto_button_lower_bottom_left_effect = {
 	potential = {
-		
 	}
 	allow = {
 		hidden_trigger = {
@@ -899,19 +853,17 @@ lazy_automation_auto_button_lower_bottom_left_effect = {
 			has_technology = tech_mega_engineering
 		}
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
 				set_country_flag = auto_upgrade_megastructure_flag
 			}
-		}	
+		}
 	}
 }
 
 lazy_automation_auto_button_lower_top_right_effect = {
 	potential = {
-		
 	}
 	allow = {
 		hidden_trigger = {
@@ -922,19 +874,17 @@ lazy_automation_auto_button_lower_top_right_effect = {
 			}
 		}
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
 				set_country_flag = auto_terraforming_flag
 			}
-		}	
+		}
 	}
 }
 
 lazy_automation_auto_button_lower_bottom_right_effect = {
 	potential = {
-		
 	}
 	allow = {
 		hidden_trigger = {
@@ -945,24 +895,20 @@ lazy_automation_auto_button_lower_bottom_right_effect = {
 			}
 		}
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
 				set_country_flag = auto_upgrade_starbases_flag
 			}
-		}	
+		}
 	}
 }
 
 lazy_automation_auto_menu_upper_middle_left_effect = {
 	potential = {
-		
 	}
 	allow = {
-
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
@@ -976,12 +922,9 @@ lazy_automation_auto_menu_upper_middle_left_effect = {
 
 lazy_automation_auto_menu_upper_middle_right_effect = {
 	potential = {
-		
 	}
 	allow = {
-
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
@@ -995,12 +938,9 @@ lazy_automation_auto_menu_upper_middle_right_effect = {
 
 lazy_automation_auto_menu_upper_top_left_effect = {
 	potential = {
-		
 	}
 	allow = {
-
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
@@ -1008,18 +948,15 @@ lazy_automation_auto_menu_upper_top_left_effect = {
 					id = lazy_config_events.8
 				}
 			}
-		}	
+		}
 	}
 }
 
 lazy_automation_auto_menu_upper_top_right_effect = {
 	potential = {
-		
 	}
 	allow = {
-		
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
@@ -1033,12 +970,9 @@ lazy_automation_auto_menu_upper_top_right_effect = {
 
 lazy_automation_auto_menu_upper_bottom_left_effect = {
 	potential = {
-		
 	}
 	allow = {
-
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
@@ -1052,12 +986,9 @@ lazy_automation_auto_menu_upper_bottom_left_effect = {
 
 lazy_automation_auto_menu_upper_bottom_right_effect = {
 	potential = {
-		
 	}
 	allow = {
-
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
@@ -1071,12 +1002,9 @@ lazy_automation_auto_menu_upper_bottom_right_effect = {
 
 lazy_automation_auto_menu_lower_top_middle_effect = {
 	potential = {
-		
 	}
 	allow = {
-		
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
@@ -1084,18 +1012,15 @@ lazy_automation_auto_menu_lower_top_middle_effect = {
 					id = lazy_config_events.15
 				}
 			}
-		}	
+		}
 	}
 }
 
 lazy_automation_auto_menu_lower_bottom_middle_effect = {
 	potential = {
-		
 	}
 	allow = {
-
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
@@ -1109,12 +1034,9 @@ lazy_automation_auto_menu_lower_bottom_middle_effect = {
 
 lazy_automation_auto_menu_lower_top_left_effect = {
 	potential = {
-		
 	}
 	allow = {
-
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
@@ -1122,18 +1044,15 @@ lazy_automation_auto_menu_lower_top_left_effect = {
 					id = lazy_config_events.7
 				}
 			}
-		}	
+		}
 	}
 }
 
 lazy_automation_auto_menu_lower_top_right_effect = {
 	potential = {
-		
 	}
 	allow = {
-
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
@@ -1141,18 +1060,15 @@ lazy_automation_auto_menu_lower_top_right_effect = {
 					id = lazy_config_events.11
 				}
 			}
-		}	
+		}
 	}
 }
 
 lazy_automation_auto_menu_lower_middle_left_effect = {
 	potential = {
-		
 	}
 	allow = {
-
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
@@ -1160,18 +1076,15 @@ lazy_automation_auto_menu_lower_middle_left_effect = {
 					id = lazy_config_events.3
 				}
 			}
-		}	
+		}
 	}
 }
 
 lazy_automation_auto_menu_lower_middle_right_effect = {
 	potential = {
-		
 	}
 	allow = {
-
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
@@ -1185,12 +1098,9 @@ lazy_automation_auto_menu_lower_middle_right_effect = {
 
 lazy_automation_auto_menu_lower_bottom_left_effect = {
 	potential = {
-		
 	}
 	allow = {
-
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
@@ -1204,12 +1114,9 @@ lazy_automation_auto_menu_lower_bottom_left_effect = {
 
 lazy_automation_auto_menu_lower_bottom_right_effect = {
 	potential = {
-
 	}
 	allow = {
-
 	}
-	
 	effect = {
 		hidden_effect = {
 			from = {
@@ -1223,7 +1130,6 @@ lazy_automation_auto_menu_lower_bottom_right_effect = {
 
 lazy_automation_auto_disable_upper_middle_left_effect = {
 	potential = {
-		
 	}
 	allow = {
 		hidden_trigger = {
@@ -1232,7 +1138,6 @@ lazy_automation_auto_disable_upper_middle_left_effect = {
 			}
 		}
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
@@ -1248,13 +1153,12 @@ lazy_automation_auto_disable_upper_middle_left_effect = {
 					set_name = random
 				}
 			}
-		}	
+		}
 	}
 }
 
 lazy_automation_auto_disable_upper_middle_right_effect = {
 	potential = {
-		
 	}
 	allow = {
 		hidden_trigger = {
@@ -1263,19 +1167,17 @@ lazy_automation_auto_disable_upper_middle_right_effect = {
 			}
 		}
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
 				remove_country_flag = auto_recruit_leaders_enable_flag
 			}
-		}	
+		}
 	}
 }
 
 lazy_automation_auto_disable_upper_top_left_effect = {
 	potential = {
-		
 	}
 	allow = {
 		hidden_trigger = {
@@ -1284,7 +1186,6 @@ lazy_automation_auto_disable_upper_top_left_effect = {
 			}
 		}
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
@@ -1306,13 +1207,12 @@ lazy_automation_auto_disable_upper_top_left_effect = {
 					set_name = random
 				}
 			}
-		}	
+		}
 	}
 }
 
 lazy_automation_auto_disable_upper_top_right_effect = {
 	potential = {
-		
 	}
 	allow = {
 		hidden_trigger = {
@@ -1321,7 +1221,6 @@ lazy_automation_auto_disable_upper_top_right_effect = {
 			}
 		}
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
@@ -1337,13 +1236,12 @@ lazy_automation_auto_disable_upper_top_right_effect = {
 					set_name = random
 				}
 			}
-		}	
+		}
 	}
 }
 
 lazy_automation_auto_disable_upper_bottom_left_effect = {
 	potential = {
-		
 	}
 	allow = {
 		hidden_trigger = {
@@ -1352,7 +1250,6 @@ lazy_automation_auto_disable_upper_bottom_left_effect = {
 			}
 		}
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
@@ -1373,7 +1270,6 @@ lazy_automation_auto_disable_upper_bottom_left_effect = {
 
 lazy_automation_auto_disable_upper_bottom_right_effect = {
 	potential = {
-		
 	}
 	allow = {
 		hidden_trigger = {
@@ -1382,7 +1278,6 @@ lazy_automation_auto_disable_upper_bottom_right_effect = {
 			}
 		}
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
@@ -1404,7 +1299,6 @@ lazy_automation_auto_disable_upper_bottom_right_effect = {
 
 lazy_automation_auto_disable_lower_top_middle_effect = {
 	potential = {
-		
 	}
 	allow = {
 		hidden_trigger = {
@@ -1413,7 +1307,6 @@ lazy_automation_auto_disable_lower_top_middle_effect = {
 			}
 		}
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
@@ -1448,13 +1341,12 @@ lazy_automation_auto_disable_lower_top_middle_effect = {
 				# 	remove_modifier = building_notification_amenities
 				# }
 			}
-		}	
+		}
 	}
 }
 
 lazy_automation_auto_disable_lower_bottom_middle_effect = {
 	potential = {
-		
 	}
 	allow = {
 		hidden_trigger = {
@@ -1463,7 +1355,6 @@ lazy_automation_auto_disable_lower_bottom_middle_effect = {
 			}
 		}
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
@@ -1479,13 +1370,12 @@ lazy_automation_auto_disable_lower_bottom_middle_effect = {
 					set_name = random
 				}
 			}
-		}	
+		}
 	}
 }
 
 lazy_automation_auto_disable_lower_top_left_effect = {
 	potential = {
-		
 	}
 	allow = {
 		hidden_trigger = {
@@ -1494,7 +1384,6 @@ lazy_automation_auto_disable_lower_top_left_effect = {
 			}
 		}
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
@@ -1512,13 +1401,12 @@ lazy_automation_auto_disable_lower_top_left_effect = {
 					set_name = random
 				}
 			}
-		}	
+		}
 	}
 }
 
 lazy_automation_auto_disable_lower_top_right_effect = {
 	potential = {
-		
 	}
 	allow = {
 		hidden_trigger = {
@@ -1527,7 +1415,6 @@ lazy_automation_auto_disable_lower_top_right_effect = {
 			}
 		}
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
@@ -1561,13 +1448,12 @@ lazy_automation_auto_disable_lower_top_right_effect = {
 					remove_planet_flag = auto_planet_nuked_terraform_flag
 				}
 			}
-		}	
+		}
 	}
 }
 
 lazy_automation_auto_disable_lower_middle_left_effect = {
 	potential = {
-		
 	}
 	allow = {
 		hidden_trigger = {
@@ -1576,20 +1462,18 @@ lazy_automation_auto_disable_lower_middle_left_effect = {
 			}
 		}
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
 				remove_country_flag = lazy_resettle_flag
 				remove_country_flag = lazy_resettle_no_cost_flag
 			}
-		}	
+		}
 	}
 }
 
 lazy_automation_auto_disable_lower_middle_right_effect = {
 	potential = {
-		
 	}
 	allow = {
 		hidden_trigger = {
@@ -1598,7 +1482,6 @@ lazy_automation_auto_disable_lower_middle_right_effect = {
 			}
 		}
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
@@ -1613,13 +1496,12 @@ lazy_automation_auto_disable_lower_middle_right_effect = {
 					remove_fleet_flag = auto_army_invade_flag
 				}
 			}
-		}	
+		}
 	}
 }
 
 lazy_automation_auto_disable_lower_bottom_left_effect = {
 	potential = {
-		
 	}
 	allow = {
 		hidden_trigger = {
@@ -1628,19 +1510,17 @@ lazy_automation_auto_disable_lower_bottom_left_effect = {
 			}
 		}
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
 				remove_country_flag = auto_upgrade_megastructure_flag
 			}
-		}	
+		}
 	}
 }
 
 lazy_automation_auto_disable_lower_bottom_right_effect = {
 	potential = {
-		
 	}
 	allow = {
 		hidden_trigger = {
@@ -1649,7 +1529,6 @@ lazy_automation_auto_disable_lower_bottom_right_effect = {
 			}
 		}
 	}
-	
 	effect = {
 		from = {
 			hidden_effect = {
@@ -1661,7 +1540,6 @@ lazy_automation_auto_disable_lower_bottom_right_effect = {
 
 lazy_automation_auto_upgrade_megastructures_speed_up = {
 	potential = {
-		
 	}
 	allow = {
 		hidden_trigger = {
@@ -1673,7 +1551,6 @@ lazy_automation_auto_upgrade_megastructures_speed_up = {
 			}
 		}
 	}
-	
 	effect = {
 		hidden_effect = {
 			from = {
@@ -1688,7 +1565,6 @@ lazy_automation_auto_upgrade_megastructures_speed_up = {
 
 lazy_automation_auto_upgrade_megastructures_speed_down = {
 	potential = {
-		
 	}
 	allow = {
 		hidden_trigger = {
@@ -1700,7 +1576,6 @@ lazy_automation_auto_upgrade_megastructures_speed_down = {
 			}
 		}
 	}
-	
 	effect = {
 		hidden_effect = {
 			from = {
@@ -1715,7 +1590,6 @@ lazy_automation_auto_upgrade_megastructures_speed_down = {
 
 lazy_automation_auto_pop_migration_speed_up = {
 	potential = {
-		
 	}
 	allow = {
 		hidden_trigger = {
@@ -1727,7 +1601,6 @@ lazy_automation_auto_pop_migration_speed_up = {
 			}
 		}
 	}
-	
 	effect = {
 		hidden_effect = {
 			from = {
@@ -1742,7 +1615,6 @@ lazy_automation_auto_pop_migration_speed_up = {
 
 lazy_automation_auto_pop_migration_speed_down = {
 	potential = {
-		
 	}
 	allow = {
 		hidden_trigger = {
@@ -1754,7 +1626,6 @@ lazy_automation_auto_pop_migration_speed_down = {
 			}
 		}
 	}
-	
 	effect = {
 		hidden_effect = {
 			from = {
@@ -1769,7 +1640,6 @@ lazy_automation_auto_pop_migration_speed_down = {
 
 lazy_automation_auto_terraform_speed_up = {
 	potential = {
-		
 	}
 	allow = {
 		hidden_trigger = {
@@ -1781,7 +1651,6 @@ lazy_automation_auto_terraform_speed_up = {
 			}
 		}
 	}
-	
 	effect = {
 		hidden_effect = {
 			from = {
@@ -1796,7 +1665,6 @@ lazy_automation_auto_terraform_speed_up = {
 
 lazy_automation_auto_terraform_speed_down = {
 	potential = {
-		
 	}
 	allow = {
 		hidden_trigger = {
@@ -1808,7 +1676,6 @@ lazy_automation_auto_terraform_speed_down = {
 			}
 		}
 	}
-	
 	effect = {
 		hidden_effect = {
 			from = {
@@ -1823,7 +1690,6 @@ lazy_automation_auto_terraform_speed_down = {
 
 lazy_automation_auto_upgrade_starbases_speed_up = {
 	potential = {
-		
 	}
 	allow = {
 		hidden_trigger = {
@@ -1835,7 +1701,6 @@ lazy_automation_auto_upgrade_starbases_speed_up = {
 			}
 		}
 	}
-	
 	effect = {
 		hidden_effect = {
 			from = {
@@ -1850,7 +1715,6 @@ lazy_automation_auto_upgrade_starbases_speed_up = {
 
 lazy_automation_auto_upgrade_starbases_speed_down = {
 	potential = {
-		
 	}
 	allow = {
 		hidden_trigger = {
@@ -1862,7 +1726,6 @@ lazy_automation_auto_upgrade_starbases_speed_down = {
 			}
 		}
 	}
-	
 	effect = {
 		hidden_effect = {
 			from = {
