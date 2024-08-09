@@ -27,7 +27,6 @@ auto_assign_planet_army_leader = {
 				limit = {
 					switch = {
 						trigger = has_skill
-	
 						1 = {
 							root = {
 								resource_stockpile_compare = {
@@ -154,7 +153,6 @@ auto_assign_planet_army_leader = {
 				}
 				switch = {
 					trigger = has_skill
-	
 					1 = {
 						root = {
 							add_resource = {
@@ -270,7 +268,6 @@ auto_assign_army_leader = {
 				limit = {
 					switch = {
 						trigger = has_skill
-
 						1 = {
 							root = {
 								resource_stockpile_compare = {
@@ -393,7 +390,6 @@ auto_assign_army_leader = {
 				}
 				switch = {
 					trigger = has_skill
-
 					1 = {
 						root = {
 							add_resource = {
@@ -511,7 +507,6 @@ auto_assign_fleet_leader = {
 				limit = {
 					switch = {
 						trigger = has_skill
-
 						1 = {
 							root = {
 								resource_stockpile_compare = {
@@ -636,7 +631,6 @@ auto_assign_fleet_leader = {
 				}
 				switch = {
 					trigger = has_skill
-
 					1 = {
 						root = {
 							add_resource = {
