@@ -63,7 +63,7 @@
 # 			}
 # 		}
 # 		AND = {
-# 			has_resource = { 
+# 			has_resource = {
 # 				type = exotic_gases amount > 0
 # 			}
 # 			root.owner = {
@@ -73,7 +73,7 @@
 # 			}
 # 		}
 # 		AND = {
-# 			has_resource = { 
+# 			has_resource = {
 # 				type = sr_zro amount > 0
 # 			}
 # 			root.owner = {
@@ -85,7 +85,6 @@
 # 		has_planet_flag = auto_construct_planet_flag
 # 	}
 # }
-
 species_coloniseable_planet = {
 	is_colony = no
 	has_anomaly = no
