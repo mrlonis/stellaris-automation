@@ -72,14 +72,14 @@ auto_upgrade_starbase = {
 		limit = {
 			prev = {
 				[[TECH_1]
-					has_technology = $TECH_1$
+				has_technology = $TECH_1$
 				]
 				[[ALLOYS]
-					resource_stockpile_compare = {
-						resource = alloys
-						value >= $ALLOYS$
-						mult = value:positive_modifier_mult|MODIFIER|starbase_upgrade_cost_mult|
-					}
+				resource_stockpile_compare = {
+					resource = alloys
+					value >= $ALLOYS$
+					mult = value:positive_modifier_mult|MODIFIER|starbase_upgrade_cost_mult|
+				}
 				]
 			}
 		}
@@ -106,10 +106,10 @@ auto_upgrade_starbase = {
 				}
 			}
 			[[ALLOYS]
-				add_resource = {
-					alloys = $ALLOYS$
-					mult = value:negative_modifier_mult|MODIFIER|starbase_upgrade_cost_mult|
-				}
+			add_resource = {
+				alloys = $ALLOYS$
+				mult = value:negative_modifier_mult|MODIFIER|starbase_upgrade_cost_mult|
+			}
 			]
 		}
 	}
