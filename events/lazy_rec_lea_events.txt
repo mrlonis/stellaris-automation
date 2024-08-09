@@ -1,18 +1,14 @@
 namespace = lazy_rec_lea_events
-
 country_event = {
 	id = lazy_rec_lea_events.1
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		has_country_flag = auto_recruit_leaders_enable_flag
 	}
-
 	immediate = {
 		while = {
 			count = auto_rec_lea_speed
-
 			if = {
 				limit = {
 					has_country_flag = auto_assign_planet_army_leader_flag
