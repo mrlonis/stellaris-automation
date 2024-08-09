@@ -1,19 +1,15 @@
 namespace = lazy_mig_une_pop_events
-
 country_event = {
 	id = lazy_mig_une_pop_events.1
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		has_country_flag = lazy_resettle_flag
 		has_country_flag = lazy_resettle_unemployed_to_free_jobs
 	}
-
 	immediate = {
 		while = {
 			count = auto_mig_une_pop_speed
-			
 			random_owned_planet = {
 				limit = {
 					colony_age >= 60
@@ -80,16 +76,13 @@ country_event = {
 	id = lazy_mig_une_pop_events.2
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		has_country_flag = lazy_resettle_flag
 		has_country_flag = lazy_resettle_to_synaptic_lathe_flag
 	}
-
 	immediate = {
 		while = {
 			count = auto_mig_une_pop_speed
-			
 			random_owned_planet = {
 				limit = {
 					NOT = {
