@@ -1,14 +1,11 @@
 namespace = lazy_fle_att_events
-
 fleet_event = {
 	id = lazy_fle_att_events.1
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		has_fleet_flag = auto_fleet_attack_flag
 	}
-
 	immediate = {
 		set_fleet_flag = auto_fleet_attack_flag
 		clear_fleet_actions = this
@@ -75,7 +72,6 @@ fleet_event = {
 							# 	flag = target_fleet_system_@root
 							# 	days = 3
 							# }
-
 							random_fleet_in_system = {
 								limit = {
 									exists = owner
@@ -429,13 +425,11 @@ planet_event = {
 	id = lazy_fle_att_events.2
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		from = {
 			has_fleet_flag = auto_fleet_attack_flag
 		}
 	}
-
 	immediate = {
 		from = {
 			set_timed_fleet_flag = {
