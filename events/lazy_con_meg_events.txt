@@ -1,15 +1,12 @@
 namespace = lazy_con_meg_events
-
 fleet_event = {
 	id = lazy_con_meg_events.1
 	title = "lazy_con_meg_events.1.name"
 	desc = "lazy_con_meg_events.1.desc"
 	picture = GFX_evt_machine_sapience
 	hide_window = no
-
 	is_triggered_only = yes
-	
-	option = { 
+	option = {
 		name = "lazy_con_meg_events.1.b"
 		allow = {
 			root.owner = {
@@ -32,7 +29,6 @@ fleet_event = {
 			remove_fleet_flag = auto_construct_frameworld_harvest_flag
 			remove_fleet_flag = auto_construct_frameworld_salvage_habitat_flag
 			remove_fleet_flag = auto_construct_orbital_ring_flag
-
 			fleet_event = {
 				id = lazy_con_meg_events.2
 			}
@@ -41,8 +37,7 @@ fleet_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "lazy_con_meg_events.1.c"
 		allow = {
 			root.owner = {
@@ -65,7 +60,6 @@ fleet_event = {
 			remove_fleet_flag = auto_construct_frameworld_harvest_flag
 			remove_fleet_flag = auto_construct_frameworld_salvage_habitat_flag
 			remove_fleet_flag = auto_construct_orbital_ring_flag
-
 			fleet_event = {
 				id = lazy_con_meg_events.3
 			}
@@ -74,8 +68,7 @@ fleet_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "lazy_con_meg_events.1.d"
 		allow = {
 			hidden_trigger = {
@@ -103,7 +96,6 @@ fleet_event = {
 			remove_fleet_flag = auto_construct_frameworld_harvest_flag
 			remove_fleet_flag = auto_construct_frameworld_salvage_habitat_flag
 			remove_fleet_flag = auto_construct_orbital_ring_flag
-
 			fleet_event = {
 				id = lazy_con_meg_events.4
 			}
@@ -112,8 +104,7 @@ fleet_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "lazy_con_meg_events.1.e"
 		allow = {
 			hidden_trigger = {
@@ -141,7 +132,6 @@ fleet_event = {
 			remove_fleet_flag = auto_construct_frameworld_harvest_flag
 			remove_fleet_flag = auto_construct_frameworld_salvage_habitat_flag
 			remove_fleet_flag = auto_construct_orbital_ring_flag
-
 			fleet_event = {
 				id = lazy_con_meg_events.5
 			}
@@ -150,8 +140,7 @@ fleet_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "lazy_con_meg_events.1.f"
 		allow = {
 			hidden_trigger = {
@@ -179,7 +168,6 @@ fleet_event = {
 			remove_fleet_flag = auto_construct_frameworld_harvest_flag
 			remove_fleet_flag = auto_construct_frameworld_salvage_habitat_flag
 			remove_fleet_flag = auto_construct_orbital_ring_flag
-
 			fleet_event = {
 				id = lazy_con_meg_events.6
 			}
@@ -188,8 +176,7 @@ fleet_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "lazy_con_meg_events.1.g"
 		trigger = {
 			hidden_trigger = {
@@ -216,7 +203,6 @@ fleet_event = {
 			remove_fleet_flag = auto_construct_frameworld_harvest_flag
 			remove_fleet_flag = auto_construct_frameworld_salvage_habitat_flag
 			remove_fleet_flag = auto_construct_orbital_ring_flag
-
 			fleet_event = {
 				id = lazy_con_meg_events.7
 			}
@@ -225,8 +211,7 @@ fleet_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "lazy_con_meg_events.1.h"
 		trigger = {
 			hidden_trigger = {
@@ -253,7 +238,6 @@ fleet_event = {
 			remove_fleet_flag = auto_construct_frameworld_outpost_flag
 			remove_fleet_flag = auto_construct_frameworld_salvage_habitat_flag
 			remove_fleet_flag = auto_construct_orbital_ring_flag
-
 			fleet_event = {
 				id = lazy_con_meg_events.8
 			}
@@ -262,8 +246,7 @@ fleet_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "lazy_con_meg_events.1.i"
 		trigger = {
 			hidden_trigger = {
@@ -291,7 +274,6 @@ fleet_event = {
 			remove_fleet_flag = auto_construct_frameworld_outpost_flag
 			remove_fleet_flag = auto_construct_frameworld_harvest_flag
 			remove_fleet_flag = auto_construct_orbital_ring_flag
-
 			fleet_event = {
 				id = lazy_con_meg_events.9
 			}
@@ -300,8 +282,7 @@ fleet_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "lazy_con_meg_events.1.j"
 		allow = {
 			hidden_trigger = {
@@ -323,7 +304,6 @@ fleet_event = {
 			remove_fleet_flag = auto_construct_frameworld_outpost_flag
 			remove_fleet_flag = auto_construct_frameworld_harvest_flag
 			remove_fleet_flag = auto_construct_frameworld_salvage_habitat_flag
-
 			fleet_event = {
 				id = lazy_con_meg_events.10
 			}
@@ -332,8 +312,7 @@ fleet_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "EXIT"
 	}
 }
@@ -342,12 +321,10 @@ fleet_event = {
 	id = lazy_con_meg_events.2
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		has_fleet_flag = auto_mega_ship_flag
 		has_fleet_flag = auto_construct_hyper_relays_flag
 	}
-
 	immediate = {
 		set_fleet_flag = auto_mega_ship_flag
 		clear_fleet_actions = this
@@ -372,7 +349,7 @@ fleet_event = {
 						# 		has_fleet_order = jumpdrive_order
 						# 		has_fleet_order = jumpdrive_windup
 						# 		has_fleet_order = follow_order
-						# 		has_fleet_order = move_to_system_point_order	
+						# 		has_fleet_order = move_to_system_point_order
 						# 	}
 						# }
 						exists = starbase
@@ -382,7 +359,9 @@ fleet_event = {
 								exists = owner
 								owner = {
 									is_subject = yes
-									overlord = { is_same_value = root.owner }
+									overlord = {
+										is_same_value = root.owner
+									}
 								}
 							}
 						}
@@ -399,7 +378,9 @@ fleet_event = {
 								exists = owner
 								owner = {
 									is_subject = yes
-									overlord = { is_same_value = root.owner }
+									overlord = {
+										is_same_value = root.owner
+									}
 								}
 							}
 						}
@@ -472,12 +453,10 @@ fleet_event = {
 											random_pos = yes
 											orbit_angle = 360
 											graphical_culture = root.owner
-
 											init_effect = {
 												prev = {
 													spawn_planet = {
 														class = pc_asteroid
-														
 														size = 1
 														location = prev
 														init_effect = {
@@ -511,7 +490,6 @@ fleet_event = {
 													coords_from = prev
 													orbit_angle = 360
 													graphical_culture = root.owner
-		
 													init_effect = {
 														set_megastructure_flag = constructing_mega_with_@root
 														prev = {
@@ -540,7 +518,9 @@ fleet_event = {
 																exists = owner
 																owner = {
 																	is_subject = yes
-																	overlord = { is_same_value = root.owner }
+																	overlord = {
+																		is_same_value = root.owner
+																	}
 																}
 															}
 														}
@@ -557,7 +537,9 @@ fleet_event = {
 																exists = owner
 																owner = {
 																	is_subject = yes
-																	overlord = { is_same_value = root.owner }
+																	overlord = {
+																		is_same_value = root.owner
+																	}
 																}
 															}
 														}
@@ -721,12 +703,10 @@ fleet_event = {
 	id = lazy_con_meg_events.3
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		has_fleet_flag = auto_mega_ship_flag
 		has_fleet_flag = auto_construct_gateway_flag
 	}
-
 	immediate = {
 		set_fleet_flag = auto_mega_ship_flag
 		clear_fleet_actions = this
@@ -751,7 +731,7 @@ fleet_event = {
 						# 		has_fleet_order = jumpdrive_order
 						# 		has_fleet_order = jumpdrive_windup
 						# 		has_fleet_order = follow_order
-						# 		has_fleet_order = move_to_system_point_order	
+						# 		has_fleet_order = move_to_system_point_order
 						# 	}
 						# }
 						exists = starbase
@@ -761,7 +741,9 @@ fleet_event = {
 								exists = owner
 								owner = {
 									is_subject = yes
-									overlord = { is_same_value = root.owner }
+									overlord = {
+										is_same_value = root.owner
+									}
 								}
 							}
 						}
@@ -778,7 +760,9 @@ fleet_event = {
 								exists = owner
 								owner = {
 									is_subject = yes
-									overlord = { is_same_value = root.owner }
+									overlord = {
+										is_same_value = root.owner
+									}
 								}
 							}
 						}
@@ -868,12 +852,10 @@ fleet_event = {
 											random_pos = yes
 											orbit_angle = 360
 											graphical_culture = root.owner
-
 											init_effect = {
 												prev = {
 													spawn_planet = {
 														class = pc_asteroid
-														
 														size = 1
 														location = prev
 														init_effect = {
@@ -907,7 +889,6 @@ fleet_event = {
 													coords_from = prev
 													orbit_angle = 360
 													graphical_culture = root.owner
-		
 													init_effect = {
 														set_megastructure_flag = constructing_mega_with_@root
 														prev = {
@@ -936,7 +917,9 @@ fleet_event = {
 																exists = owner
 																owner = {
 																	is_subject = yes
-																	overlord = { is_same_value = root.owner }
+																	overlord = {
+																		is_same_value = root.owner
+																	}
 																}
 															}
 														}
@@ -953,7 +936,9 @@ fleet_event = {
 																exists = owner
 																owner = {
 																	is_subject = yes
-																	overlord = { is_same_value = root.owner }
+																	overlord = {
+																		is_same_value = root.owner
+																	}
 																}
 															}
 														}
@@ -1172,12 +1157,10 @@ fleet_event = {
 	id = lazy_con_meg_events.4
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		has_fleet_flag = auto_mega_ship_flag
 		has_fleet_flag = auto_construct_habitat_central_flag
 	}
-
 	immediate = {
 		set_fleet_flag = auto_mega_ship_flag
 		clear_fleet_actions = this
@@ -1202,7 +1185,7 @@ fleet_event = {
 						# 		has_fleet_order = jumpdrive_order
 						# 		has_fleet_order = jumpdrive_windup
 						# 		has_fleet_order = follow_order
-						# 		has_fleet_order = move_to_system_point_order	
+						# 		has_fleet_order = move_to_system_point_order
 						# 	}
 						# }
 						exists = starbase
@@ -1232,7 +1215,6 @@ fleet_event = {
 								}
 							}
 						}
-
 						any_system_planet = {
 							NOT = {
 								has_planet_flag = has_orbital_debris
@@ -1241,7 +1223,9 @@ fleet_event = {
 								who = root.owner
 								status = yes
 							}
-							NOT = { has_anomaly = yes }
+							NOT = {
+								has_anomaly = yes
+							}
 							NOR = {
 								has_planet_flag = megastructure
 								has_planet_flag = has_megastructure
@@ -1300,7 +1284,9 @@ fleet_event = {
 									who = prev.from
 									status = yes
 								}
-								NOT = { has_anomaly = yes }
+								NOT = {
+									has_anomaly = yes
+								}
 								NOR = {
 									has_planet_flag = megastructure
 									has_planet_flag = has_megastructure
@@ -1346,7 +1332,6 @@ fleet_event = {
 											planet = prev
 											orbit_angle = 360
 											graphical_culture = root.owner
-
 											init_effect = {
 												set_megastructure_flag = constructing_mega_with_@root
 												prev = {
@@ -1371,7 +1356,9 @@ fleet_event = {
 												who = prev.from
 												status = yes
 											}
-											NOT = { has_anomaly = yes }
+											NOT = {
+												has_anomaly = yes
+											}
 											NOR = {
 												has_planet_flag = megastructure
 												has_planet_flag = has_megastructure
@@ -1448,7 +1435,6 @@ fleet_event = {
 											}
 										}
 									}
-
 								}
 							}
 							failed = {
@@ -1491,12 +1477,10 @@ fleet_event = {
 	id = lazy_con_meg_events.5
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		has_fleet_flag = auto_mega_ship_flag
 		has_fleet_flag = auto_construct_major_orbital_flag
 	}
-
 	immediate = {
 		set_fleet_flag = auto_mega_ship_flag
 		clear_fleet_actions = this
@@ -1521,7 +1505,7 @@ fleet_event = {
 						# 		has_fleet_order = jumpdrive_order
 						# 		has_fleet_order = jumpdrive_windup
 						# 		has_fleet_order = follow_order
-						# 		has_fleet_order = move_to_system_point_order	
+						# 		has_fleet_order = move_to_system_point_order
 						# 	}
 						# }
 						exists = starbase
@@ -1545,7 +1529,9 @@ fleet_event = {
 								who = root.owner
 								status = yes
 							}
-							NOT = { has_anomaly = yes }
+							NOT = {
+								has_anomaly = yes
+							}
 							NOR = {
 								has_planet_flag = megastructure
 								has_planet_flag = has_megastructure
@@ -1605,7 +1591,9 @@ fleet_event = {
 									who = prev.from
 									status = yes
 								}
-								NOT = { has_anomaly = yes }
+								NOT = {
+									has_anomaly = yes
+								}
 								NOR = {
 									has_planet_flag = megastructure
 									has_planet_flag = has_megastructure
@@ -1654,7 +1642,6 @@ fleet_event = {
 											planet = prev
 											orbit_angle = 360
 											graphical_culture = root.owner
-
 											init_effect = {
 												set_megastructure_flag = constructing_mega_with_@root
 												prev = {
@@ -1679,7 +1666,9 @@ fleet_event = {
 												who = prev.from
 												status = yes
 											}
-											NOT = { has_anomaly = yes }
+											NOT = {
+												has_anomaly = yes
+											}
 											NOR = {
 												has_planet_flag = megastructure
 												has_planet_flag = has_megastructure
@@ -1750,7 +1739,6 @@ fleet_event = {
 											}
 										}
 									}
-
 								}
 							}
 							failed = {
@@ -1793,12 +1781,10 @@ fleet_event = {
 	id = lazy_con_meg_events.6
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		has_fleet_flag = auto_mega_ship_flag
 		has_fleet_flag = auto_construct_minor_orbital_flag
 	}
-
 	immediate = {
 		set_fleet_flag = auto_mega_ship_flag
 		clear_fleet_actions = this
@@ -1823,7 +1809,7 @@ fleet_event = {
 						# 		has_fleet_order = jumpdrive_order
 						# 		has_fleet_order = jumpdrive_windup
 						# 		has_fleet_order = follow_order
-						# 		has_fleet_order = move_to_system_point_order	
+						# 		has_fleet_order = move_to_system_point_order
 						# 	}
 						# }
 						exists = starbase
@@ -1847,7 +1833,9 @@ fleet_event = {
 								who = root.owner
 								status = yes
 							}
-							NOT = { has_anomaly = yes }
+							NOT = {
+								has_anomaly = yes
+							}
 							NOR = {
 								has_planet_flag = megastructure
 								has_planet_flag = has_megastructure
@@ -1908,7 +1896,9 @@ fleet_event = {
 									who = root.owner
 									status = yes
 								}
-								NOT = { has_anomaly = yes }
+								NOT = {
+									has_anomaly = yes
+								}
 								NOR = {
 									has_planet_flag = megastructure
 									has_planet_flag = has_megastructure
@@ -1957,7 +1947,6 @@ fleet_event = {
 											planet = prev
 											orbit_angle = 360
 											graphical_culture = root.owner
-
 											init_effect = {
 												set_megastructure_flag = constructing_mega_with_@root
 												prev = {
@@ -1982,7 +1971,9 @@ fleet_event = {
 												who = prev.from
 												status = yes
 											}
-											NOT = { has_anomaly = yes }
+											NOT = {
+												has_anomaly = yes
+											}
 											NOR = {
 												has_planet_flag = megastructure
 												has_planet_flag = has_megastructure
@@ -2053,7 +2044,6 @@ fleet_event = {
 											}
 										}
 									}
-
 								}
 							}
 							failed = {
@@ -2096,12 +2086,10 @@ fleet_event = {
 	id = lazy_con_meg_events.7
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		has_fleet_flag = auto_mega_ship_flag
 		has_fleet_flag = auto_construct_frameworld_outpost_flag
 	}
-
 	immediate = {
 		set_fleet_flag = auto_mega_ship_flag
 		clear_fleet_actions = this
@@ -2126,7 +2114,7 @@ fleet_event = {
 						# 		has_fleet_order = jumpdrive_order
 						# 		has_fleet_order = jumpdrive_windup
 						# 		has_fleet_order = follow_order
-						# 		has_fleet_order = move_to_system_point_order	
+						# 		has_fleet_order = move_to_system_point_order
 						# 	}
 						# }
 						exists = starbase
@@ -2202,7 +2190,6 @@ fleet_event = {
 											planet = prev
 											orbit_angle = 360
 											graphical_culture = root.owner
-
 											init_effect = {
 												set_megastructure_flag = constructing_mega_with_@root
 												prev = {
@@ -2570,7 +2557,6 @@ fleet_event = {
 											}
 										}
 									}
-
 								}
 							}
 							failed = {
@@ -2613,12 +2599,10 @@ fleet_event = {
 	id = lazy_con_meg_events.8
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		has_fleet_flag = auto_mega_ship_flag
 		has_fleet_flag = auto_construct_frameworld_harvest_flag
 	}
-
 	immediate = {
 		set_fleet_flag = auto_mega_ship_flag
 		clear_fleet_actions = this
@@ -2643,7 +2627,7 @@ fleet_event = {
 						# 		has_fleet_order = jumpdrive_order
 						# 		has_fleet_order = jumpdrive_windup
 						# 		has_fleet_order = follow_order
-						# 		has_fleet_order = move_to_system_point_order	
+						# 		has_fleet_order = move_to_system_point_order
 						# 	}
 						# }
 						exists = starbase
@@ -2708,7 +2692,6 @@ fleet_event = {
 											planet = prev
 											orbit_angle = 360
 											graphical_culture = root.owner
-
 											init_effect = {
 												set_megastructure_flag = constructing_mega_with_@root
 												prev = {
@@ -2796,7 +2779,6 @@ fleet_event = {
 											}
 										}
 									}
-
 								}
 							}
 							failed = {
@@ -2839,12 +2821,10 @@ fleet_event = {
 	id = lazy_con_meg_events.9
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		has_fleet_flag = auto_mega_ship_flag
 		has_fleet_flag = auto_construct_frameworld_salvage_habitat_flag
 	}
-
 	immediate = {
 		set_fleet_flag = auto_mega_ship_flag
 		clear_fleet_actions = this
@@ -2869,7 +2849,7 @@ fleet_event = {
 						# 		has_fleet_order = jumpdrive_order
 						# 		has_fleet_order = jumpdrive_windup
 						# 		has_fleet_order = follow_order
-						# 		has_fleet_order = move_to_system_point_order	
+						# 		has_fleet_order = move_to_system_point_order
 						# 	}
 						# }
 						exists = starbase
@@ -2933,7 +2913,6 @@ fleet_event = {
 											planet = prev
 											orbit_angle = 360
 											graphical_culture = root.owner
-
 											init_effect = {
 												set_megastructure_flag = constructing_mega_with_@root
 												prev = {
@@ -3021,7 +3000,6 @@ fleet_event = {
 											}
 										}
 									}
-
 								}
 							}
 							failed = {
@@ -3064,12 +3042,10 @@ fleet_event = {
 	id = lazy_con_meg_events.10
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		has_fleet_flag = auto_mega_ship_flag
 		has_fleet_flag = auto_construct_orbital_ring_flag
 	}
-
 	immediate = {
 		set_fleet_flag = auto_mega_ship_flag
 		clear_fleet_actions = this
@@ -3094,7 +3070,7 @@ fleet_event = {
 						# 		has_fleet_order = jumpdrive_order
 						# 		has_fleet_order = jumpdrive_windup
 						# 		has_fleet_order = follow_order
-						# 		has_fleet_order = move_to_system_point_order	
+						# 		has_fleet_order = move_to_system_point_order
 						# 	}
 						# }
 						exists = starbase
@@ -3107,7 +3083,6 @@ fleet_event = {
 								}
 							}
 						}
-
 						any_system_planet = {
 							NOT = {
 								has_planet_flag = auto_construct_planet_flag
@@ -3231,7 +3206,6 @@ fleet_event = {
 											planet = prev
 											orbit_angle = 360
 											graphical_culture = root.owner
-
 											init_effect = {
 												set_megastructure_flag = constructing_mega_with_@root
 												prev = {
@@ -3342,7 +3316,6 @@ fleet_event = {
 											}
 										}
 									}
-
 								}
 							}
 							failed = {
@@ -3385,7 +3358,6 @@ system_event = {
 	id = lazy_con_meg_events.11
 	hide_window = yes
 	is_triggered_only = yes
-
 	immediate = {
 		random_system_megastructure = {
 			limit = {
