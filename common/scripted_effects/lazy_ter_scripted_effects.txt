@@ -130,98 +130,98 @@ planet_terraforming_type = {
 						cost = 2000
 						planet_class = pc_arctic
 					}
-                    break = yes
+					break = yes
 				}
 				pc_tundra = {
 					planet_terraforming = {
 						cost = 2000
 						planet_class = pc_arctic
 					}
-                    break = yes
+					break = yes
 				}
 				pc_arid = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_arctic
 					}
-                    break = yes
+					break = yes
 				}
 				pc_desert = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_arctic
 					}
-                    break = yes
+					break = yes
 				}
 				pc_savannah = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_arctic
 					}
-                    break = yes
+					break = yes
 				}
 				pc_continental = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_arctic
 					}
-                    break = yes
+					break = yes
 				}
 				pc_ocean = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_arctic
 					}
-                    break = yes
+					break = yes
 				}
 				pc_tropical = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_arctic
 					}
-                    break = yes
+					break = yes
 				}
 				pc_hive = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_arctic
 					}
-                    break = yes
+					break = yes
 				}
 				pc_machine = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_arctic
 					}
-                    break = yes
+					break = yes
 				}
 				pc_barren = {
 					planet_terraforming = {
 						cost = 15000
 						planet_class = pc_arctic
 					}
-                    break = yes
+					break = yes
 				}
 				pc_barren_cold = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_arctic
 					}
-                    break = yes
+					break = yes
 				}
 				pc_gray_goo = {
 					planet_terraforming = {
 						cost = 1000
 						planet_class = pc_arctic
 					}
-                    break = yes
+					break = yes
 				}
 				pc_nuked = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_arctic
 					}
-                    break = yes
+					break = yes
 				}
 			}
 			break = yes
@@ -234,98 +234,98 @@ planet_terraforming_type = {
 						cost = 2000
 						planet_class = pc_tundra
 					}
-                    break = yes
+					break = yes
 				}
 				pc_arctic = {
 					planet_terraforming = {
 						cost = 2000
 						planet_class = pc_tundra
 					}
-                    break = yes
+					break = yes
 				}
 				pc_arid = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_tundra
 					}
-                    break = yes
+					break = yes
 				}
 				pc_desert = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_tundra
 					}
-                    break = yes
+					break = yes
 				}
 				pc_savannah = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_tundra
 					}
-                    break = yes
+					break = yes
 				}
 				pc_continental = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_tundra
 					}
-                    break = yes
+					break = yes
 				}
 				pc_ocean = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_tundra
 					}
-                    break = yes
+					break = yes
 				}
 				pc_tropical = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_tundra
 					}
-                    break = yes
+					break = yes
 				}
 				pc_hive = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_tundra
 					}
-                    break = yes
+					break = yes
 				}
 				pc_machine = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_tundra
 					}
-                    break = yes
+					break = yes
 				}
 				pc_barren = {
 					planet_terraforming = {
 						cost = 15000
 						planet_class = pc_tundra
 					}
-                    break = yes
+					break = yes
 				}
 				pc_barren_cold = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_tundra
 					}
-                    break = yes
+					break = yes
 				}
 				pc_gray_goo = {
 					planet_terraforming = {
 						cost = 1000
 						planet_class = pc_tundra
 					}
-                    break = yes
+					break = yes
 				}
 				pc_nuked = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_tundra
 					}
-                    break = yes
+					break = yes
 				}
 			}
 			break = yes
@@ -338,98 +338,98 @@ planet_terraforming_type = {
 						cost = 5000
 						planet_class = pc_arid
 					}
-                    break = yes
+					break = yes
 				}
 				pc_arctic = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_arid
 					}
-                    break = yes
+					break = yes
 				}
 				pc_tundra = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_arid
 					}
-                    break = yes
+					break = yes
 				}
 				pc_desert = {
 					planet_terraforming = {
 						cost = 2000
 						planet_class = pc_arid
 					}
-                    break = yes
+					break = yes
 				}
 				pc_savannah = {
 					planet_terraforming = {
 						cost = 2000
 						planet_class = pc_arid
 					}
-                    break = yes
+					break = yes
 				}
 				pc_continental = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_arid
 					}
-                    break = yes
+					break = yes
 				}
 				pc_ocean = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_arid
 					}
-                    break = yes
+					break = yes
 				}
 				pc_tropical = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_arid
 					}
-                    break = yes
+					break = yes
 				}
 				pc_hive = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_arid
 					}
-                    break = yes
+					break = yes
 				}
 				pc_machine = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_arid
 					}
-                    break = yes
+					break = yes
 				}
 				pc_barren = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_arid
 					}
-                    break = yes
+					break = yes
 				}
 				pc_barren_cold = {
 					planet_terraforming = {
 						cost = 15000
 						planet_class = pc_arid
 					}
-                    break = yes
+					break = yes
 				}
 				pc_gray_goo = {
 					planet_terraforming = {
 						cost = 1000
 						planet_class = pc_arid
 					}
-                    break = yes
+					break = yes
 				}
 				pc_nuked = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_arid
 					}
-                    break = yes
+					break = yes
 				}
 			}
 			break = yes
@@ -442,98 +442,98 @@ planet_terraforming_type = {
 						cost = 5000
 						planet_class = pc_desert
 					}
-                    break = yes
+					break = yes
 				}
 				pc_arctic = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_desert
 					}
-                    break = yes
+					break = yes
 				}
 				pc_tundra = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_desert
 					}
-                    break = yes
+					break = yes
 				}
 				pc_arid = {
 					planet_terraforming = {
 						cost = 2000
 						planet_class = pc_desert
 					}
-                    break = yes
+					break = yes
 				}
 				pc_savannah = {
 					planet_terraforming = {
 						cost = 2000
 						planet_class = pc_desert
 					}
-                    break = yes
+					break = yes
 				}
 				pc_continental = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_desert
 					}
-                    break = yes
+					break = yes
 				}
 				pc_ocean = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_desert
 					}
-                    break = yes
+					break = yes
 				}
 				pc_tropical = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_desert
 					}
-                    break = yes
+					break = yes
 				}
 				pc_hive = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_desert
 					}
-                    break = yes
+					break = yes
 				}
 				pc_machine = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_desert
 					}
-                    break = yes
+					break = yes
 				}
 				pc_barren = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_desert
 					}
-                    break = yes
+					break = yes
 				}
 				pc_barren_cold = {
 					planet_terraforming = {
 						cost = 15000
 						planet_class = pc_desert
 					}
-                    break = yes
+					break = yes
 				}
 				pc_gray_goo = {
 					planet_terraforming = {
 						cost = 1000
 						planet_class = pc_desert
 					}
-                    break = yes
+					break = yes
 				}
 				pc_nuked = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_desert
 					}
-                    break = yes
+					break = yes
 				}
 			}
 			break = yes
@@ -546,98 +546,98 @@ planet_terraforming_type = {
 						cost = 5000
 						planet_class = pc_savannah
 					}
-                    break = yes
+					break = yes
 				}
 				pc_arctic = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_savannah
 					}
-                    break = yes
+					break = yes
 				}
 				pc_tundra = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_savannah
 					}
-                    break = yes
+					break = yes
 				}
 				pc_arid = {
 					planet_terraforming = {
 						cost = 2000
 						planet_class = pc_savannah
 					}
-                    break = yes
+					break = yes
 				}
 				pc_desert = {
 					planet_terraforming = {
 						cost = 2000
 						planet_class = pc_savannah
 					}
-                    break = yes
+					break = yes
 				}
 				pc_continental = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_savannah
 					}
-                    break = yes
+					break = yes
 				}
 				pc_ocean = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_savannah
 					}
-                    break = yes
+					break = yes
 				}
 				pc_tropical = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_savannah
 					}
-                    break = yes
+					break = yes
 				}
 				pc_hive = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_savannah
 					}
-                    break = yes
+					break = yes
 				}
 				pc_machine = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_savannah
 					}
-                    break = yes
+					break = yes
 				}
 				pc_barren = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_savannah
 					}
-                    break = yes
+					break = yes
 				}
 				pc_barren_cold = {
 					planet_terraforming = {
 						cost = 15000
 						planet_class = pc_savannah
 					}
-                    break = yes
+					break = yes
 				}
 				pc_gray_goo = {
 					planet_terraforming = {
 						cost = 1000
 						planet_class = pc_savannah
 					}
-                    break = yes
+					break = yes
 				}
 				pc_nuked = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_savannah
 					}
-                    break = yes
+					break = yes
 				}
 			}
 			break = yes
@@ -650,98 +650,98 @@ planet_terraforming_type = {
 						cost = 5000
 						planet_class = pc_continental
 					}
-                    break = yes
+					break = yes
 				}
 				pc_arctic = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_continental
 					}
-                    break = yes
+					break = yes
 				}
 				pc_tundra = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_continental
 					}
-                    break = yes
+					break = yes
 				}
 				pc_arid = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_continental
 					}
-                    break = yes
+					break = yes
 				}
 				pc_desert = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_continental
 					}
-                    break = yes
+					break = yes
 				}
 				pc_savannah = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_continental
 					}
-                    break = yes
+					break = yes
 				}
 				pc_ocean = {
 					planet_terraforming = {
 						cost = 2000
 						planet_class = pc_continental
 					}
-                    break = yes
+					break = yes
 				}
 				pc_tropical = {
 					planet_terraforming = {
 						cost = 2000
 						planet_class = pc_continental
 					}
-                    break = yes
+					break = yes
 				}
 				pc_hive = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_continental
 					}
-                    break = yes
+					break = yes
 				}
 				pc_machine = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_continental
 					}
-                    break = yes
+					break = yes
 				}
 				pc_barren = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_continental
 					}
-                    break = yes
+					break = yes
 				}
 				pc_barren_cold = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_continental
 					}
-                    break = yes
+					break = yes
 				}
 				pc_gray_goo = {
 					planet_terraforming = {
 						cost = 1000
 						planet_class = pc_continental
 					}
-                    break = yes
+					break = yes
 				}
 				pc_nuked = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_continental
 					}
-                    break = yes
+					break = yes
 				}
 			}
 			break = yes
@@ -754,98 +754,98 @@ planet_terraforming_type = {
 						cost = 5000
 						planet_class = pc_ocean
 					}
-                    break = yes
+					break = yes
 				}
 				pc_arctic = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_ocean
 					}
-                    break = yes
+					break = yes
 				}
 				pc_tundra = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_ocean
 					}
-                    break = yes
+					break = yes
 				}
 				pc_arid = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_ocean
 					}
-                    break = yes
+					break = yes
 				}
 				pc_desert = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_ocean
 					}
-                    break = yes
+					break = yes
 				}
 				pc_savannah = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_ocean
 					}
-                    break = yes
+					break = yes
 				}
 				pc_continental = {
 					planet_terraforming = {
 						cost = 2000
 						planet_class = pc_ocean
 					}
-                    break = yes
+					break = yes
 				}
 				pc_tropical = {
 					planet_terraforming = {
 						cost = 2000
 						planet_class = pc_ocean
 					}
-                    break = yes
+					break = yes
 				}
 				pc_hive = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_ocean
 					}
-                    break = yes
+					break = yes
 				}
 				pc_machine = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_ocean
 					}
-                    break = yes
+					break = yes
 				}
 				pc_barren = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_ocean
 					}
-                    break = yes
+					break = yes
 				}
 				pc_barren_cold = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_ocean
 					}
-                    break = yes
+					break = yes
 				}
 				pc_gray_goo = {
 					planet_terraforming = {
 						cost = 1000
 						planet_class = pc_ocean
 					}
-                    break = yes
+					break = yes
 				}
 				pc_nuked = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_ocean
 					}
-                    break = yes
+					break = yes
 				}
 			}
 			break = yes
@@ -858,98 +858,98 @@ planet_terraforming_type = {
 						cost = 5000
 						planet_class = pc_tropical
 					}
-                    break = yes
+					break = yes
 				}
 				pc_arctic = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_tropical
 					}
-                    break = yes
+					break = yes
 				}
 				pc_tundra = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_tropical
 					}
-                    break = yes
+					break = yes
 				}
 				pc_arid = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_tropical
 					}
-                    break = yes
+					break = yes
 				}
 				pc_desert = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_tropical
 					}
-                    break = yes
+					break = yes
 				}
 				pc_savannah = {
 					planet_terraforming = {
 						cost = 5000
 						planet_class = pc_tropical
 					}
-                    break = yes
+					break = yes
 				}
 				pc_continental = {
 					planet_terraforming = {
 						cost = 2000
 						planet_class = pc_tropical
 					}
-                    break = yes
+					break = yes
 				}
 				pc_ocean = {
 					planet_terraforming = {
 						cost = 2000
 						planet_class = pc_tropical
 					}
-                    break = yes
+					break = yes
 				}
 				pc_hive = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_tropical
 					}
-                    break = yes
+					break = yes
 				}
 				pc_machine = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_tropical
 					}
-                    break = yes
+					break = yes
 				}
 				pc_barren = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_tropical
 					}
-                    break = yes
+					break = yes
 				}
 				pc_barren_cold = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_tropical
 					}
-                    break = yes
+					break = yes
 				}
 				pc_gray_goo = {
 					planet_terraforming = {
 						cost = 1000
 						planet_class = pc_tropical
 					}
-                    break = yes
+					break = yes
 				}
 				pc_nuked = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_tropical
 					}
-                    break = yes
+					break = yes
 				}
 			}
 			break = yes
@@ -962,84 +962,84 @@ planet_terraforming_type = {
 						cost = 7500
 						planet_class = pc_gaia
 					}
-                    break = yes
+					break = yes
 				}
 				pc_arctic = {
 					planet_terraforming = {
 						cost = 7500
 						planet_class = pc_gaia
 					}
-                    break = yes
+					break = yes
 				}
 				pc_tundra = {
 					planet_terraforming = {
 						cost = 7500
 						planet_class = pc_gaia
 					}
-                    break = yes
+					break = yes
 				}
 				pc_arid = {
 					planet_terraforming = {
 						cost = 7500
 						planet_class = pc_gaia
 					}
-                    break = yes
+					break = yes
 				}
 				pc_desert = {
 					planet_terraforming = {
 						cost = 7500
 						planet_class = pc_gaia
 					}
-                    break = yes
+					break = yes
 				}
 				pc_savannah = {
 					planet_terraforming = {
 						cost = 7500
 						planet_class = pc_gaia
 					}
-                    break = yes
+					break = yes
 				}
 				pc_continental = {
 					planet_terraforming = {
 						cost = 7500
 						planet_class = pc_gaia
 					}
-                    break = yes
+					break = yes
 				}
 				pc_ocean = {
 					planet_terraforming = {
 						cost = 7500
 						planet_class = pc_gaia
 					}
-                    break = yes
+					break = yes
 				}
 				pc_tropical = {
 					planet_terraforming = {
 						cost = 7500
 						planet_class = pc_gaia
 					}
-                    break = yes
+					break = yes
 				}
 				pc_barren = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_gaia
 					}
-                    break = yes
+					break = yes
 				}
 				pc_barren_cold = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_gaia
 					}
-                    break = yes
+					break = yes
 				}
 				pc_gray_goo = {
 					planet_terraforming = {
 						cost = 1000
 						planet_class = pc_gaia
 					}
-                    break = yes
+					break = yes
 				}
 			}
 			break = yes
@@ -1052,105 +1052,105 @@ planet_terraforming_type = {
 						cost = 10000
 						planet_class = pc_hive
 					}
-                    break = yes
+					break = yes
 				}
 				pc_arctic = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_hive
 					}
-                    break = yes
+					break = yes
 				}
 				pc_tundra = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_hive
 					}
-                    break = yes
+					break = yes
 				}
 				pc_arid = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_hive
 					}
-                    break = yes
+					break = yes
 				}
 				pc_desert = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_hive
 					}
-                    break = yes
+					break = yes
 				}
 				pc_savannah = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_hive
 					}
-                    break = yes
+					break = yes
 				}
 				pc_continental = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_hive
 					}
-                    break = yes
+					break = yes
 				}
 				pc_ocean = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_hive
 					}
-                    break = yes
+					break = yes
 				}
 				pc_tropical = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_hive
 					}
-                    break = yes
+					break = yes
 				}
 				pc_gaia = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_hive
 					}
-                    break = yes
+					break = yes
 				}
 				pc_machine = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_hive
 					}
-                    break = yes
+					break = yes
 				}
 				pc_barren = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_hive
 					}
-                    break = yes
+					break = yes
 				}
 				pc_barren_cold = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_hive
 					}
-                    break = yes
+					break = yes
 				}
 				pc_gray_goo = {
 					planet_terraforming = {
 						cost = 1000
 						planet_class = pc_hive
 					}
-                    break = yes
+					break = yes
 				}
 				pc_nuked = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_hive
 					}
-                    break = yes
+					break = yes
 				}
 			}
 			break = yes
@@ -1163,105 +1163,105 @@ planet_terraforming_type = {
 						cost = 10000
 						planet_class = pc_machine
 					}
-                    break = yes
+					break = yes
 				}
 				pc_arctic = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_machine
 					}
-                    break = yes
+					break = yes
 				}
 				pc_tundra = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_machine
 					}
-                    break = yes
+					break = yes
 				}
 				pc_arid = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_machine
 					}
-                    break = yes
+					break = yes
 				}
 				pc_desert = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_machine
 					}
-                    break = yes
+					break = yes
 				}
 				pc_savannah = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_machine
 					}
-                    break = yes
+					break = yes
 				}
 				pc_continental = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_machine
 					}
-                    break = yes
+					break = yes
 				}
 				pc_ocean = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_machine
 					}
-                    break = yes
+					break = yes
 				}
 				pc_tropical = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_machine
 					}
-                    break = yes
+					break = yes
 				}
 				pc_gaia = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_machine
 					}
-                    break = yes
+					break = yes
 				}
 				pc_hive = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_machine
 					}
-                    break = yes
+					break = yes
 				}
 				pc_barren = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_machine
 					}
-                    break = yes
+					break = yes
 				}
 				pc_barren_cold = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_machine
 					}
-                    break = yes
+					break = yes
 				}
 				pc_gray_goo = {
 					planet_terraforming = {
 						cost = 1000
 						planet_class = pc_machine
 					}
-                    break = yes
+					break = yes
 				}
 				pc_nuked = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_machine
 					}
-                    break = yes
+					break = yes
 				}
 			}
 			break = yes
@@ -1274,14 +1274,14 @@ planet_terraforming_type = {
 						cost = 10000
 						planet_class = pc_nuked
 					}
-                    break = yes
+					break = yes
 				}
 				pc_machine = {
 					planet_terraforming = {
 						cost = 10000
 						planet_class = pc_nuked
 					}
-                    break = yes
+					break = yes
 				}
 			}
 			break = yes
@@ -1325,7 +1325,8 @@ planet_terraforming = {
 					}
 				}
 				add_modifier = {
-					modifier = terraforming_notification years = 10
+					modifier = terraforming_notification
+					years = 10
 				}
 				planet_event = {
 					id = lazy_ter_events.3
@@ -1355,7 +1356,8 @@ planet_terraforming = {
 					}
 				}
 				add_modifier = {
-					modifier = terraforming_notification years = 16
+					modifier = terraforming_notification
+					years = 16
 				}
 				planet_event = {
 					id = lazy_ter_events.3
@@ -1364,7 +1366,8 @@ planet_terraforming = {
 			}
 			else = {
 				add_modifier = {
-					modifier = terraforming_notification years = 20
+					modifier = terraforming_notification
+					years = 20
 				}
 				planet_event = {
 					id = lazy_ter_events.3
@@ -1388,7 +1391,8 @@ planet_terraforming = {
 					}
 				}
 				add_modifier = {
-					modifier = terraforming_notification years = 10
+					modifier = terraforming_notification
+					years = 10
 				}
 				planet_event = {
 					id = lazy_ter_events.3
@@ -1418,7 +1422,8 @@ planet_terraforming = {
 					}
 				}
 				add_modifier = {
-					modifier = terraforming_notification years = 16
+					modifier = terraforming_notification
+					years = 16
 				}
 				planet_event = {
 					id = lazy_ter_events.3
@@ -1427,7 +1432,8 @@ planet_terraforming = {
 			}
 			else = {
 				add_modifier = {
-					modifier = terraforming_notification years = 20
+					modifier = terraforming_notification
+					years = 20
 				}
 				planet_event = {
 					id = lazy_ter_events.3
@@ -1451,7 +1457,8 @@ planet_terraforming = {
 					}
 				}
 				add_modifier = {
-					modifier = terraforming_notification days = 2700
+					modifier = terraforming_notification
+					days = 2700
 				}
 				planet_event = {
 					id = lazy_ter_events.3
@@ -1481,7 +1488,8 @@ planet_terraforming = {
 					}
 				}
 				add_modifier = {
-					modifier = terraforming_notification days = 4320
+					modifier = terraforming_notification
+					days = 4320
 				}
 				planet_event = {
 					id = lazy_ter_events.3
@@ -1490,7 +1498,8 @@ planet_terraforming = {
 			}
 			else = {
 				add_modifier = {
-					modifier = terraforming_notification days = 5400
+					modifier = terraforming_notification
+					days = 5400
 				}
 				planet_event = {
 					id = lazy_ter_events.3
@@ -1520,7 +1529,8 @@ planet_terraforming = {
 					}
 				}
 				add_modifier = {
-					modifier = terraforming_notification years = 5
+					modifier = terraforming_notification
+					years = 5
 				}
 				planet_event = {
 					id = lazy_ter_events.3
@@ -1550,7 +1560,8 @@ planet_terraforming = {
 					}
 				}
 				add_modifier = {
-					modifier = terraforming_notification days = 2880
+					modifier = terraforming_notification
+					days = 2880
 				}
 				planet_event = {
 					id = lazy_ter_events.3
@@ -1559,7 +1570,8 @@ planet_terraforming = {
 			}
 			else = {
 				add_modifier = {
-					modifier = terraforming_notification days = 3600
+					modifier = terraforming_notification
+					days = 3600
 				}
 				planet_event = {
 					id = lazy_ter_events.3
@@ -1575,7 +1587,8 @@ planet_terraforming = {
 					}
 				}
 				add_modifier = {
-					modifier = terraforming_notification days = 900
+					modifier = terraforming_notification
+					days = 900
 				}
 				planet_event = {
 					id = lazy_ter_events.3
@@ -1605,7 +1618,8 @@ planet_terraforming = {
 					}
 				}
 				add_modifier = {
-					modifier = terraforming_notification days = 1440
+					modifier = terraforming_notification
+					days = 1440
 				}
 				planet_event = {
 					id = lazy_ter_events.3
@@ -1614,7 +1628,8 @@ planet_terraforming = {
 			}
 			else = {
 				add_modifier = {
-					modifier = terraforming_notification days = 1800
+					modifier = terraforming_notification
+					days = 1800
 				}
 				planet_event = {
 					id = lazy_ter_events.3
