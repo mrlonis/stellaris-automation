@@ -10,33 +10,27 @@ constructing_og_megastructure = {
 	overlord_can_upgrade = no
 	# hide_name = yes
 	build_time = 1
-
 	resources = {
 		category = megastructures
 		cost = {
-
 		}
 	}
-
 	potential = {
 		always = no
 	}
-
 	possible = {
 		always = no
 	}
-
 	placement_rules = {
-
 	}
-
 	ai_weight = {
-
 	}
-
-	on_build_start = {}
-	on_build_cancel = {}
-	on_build_complete = {}
+	on_build_start = {
+	}
+	on_build_cancel = {
+	}
+	on_build_complete = {
+	}
 }
 
 constructing_megastructure = {
@@ -50,31 +44,25 @@ constructing_megastructure = {
 	overlord_can_upgrade = no
 	# hide_name = yes
 	build_time = 1
-
 	resources = {
 		category = megastructures
 		cost = {
-
 		}
 	}
-
 	potential = {
 		always = no
 	}
-
 	possible = {
 		always = no
 	}
-
 	placement_rules = {
-
 	}
-
 	ai_weight = {
-
 	}
-
-	on_build_start = {}
-	on_build_cancel = {}
-	on_build_complete = {}
+	on_build_start = {
+	}
+	on_build_cancel = {
+	}
+	on_build_complete = {
+	}
 }
