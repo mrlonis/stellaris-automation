@@ -1,14 +1,11 @@
 namespace = lazy_col_events
-
 fleet_event = {
 	id = lazy_col_events.1
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		has_fleet_flag = auto_colonizer_flag
 	}
-
 	immediate = {
 		set_timed_fleet_flag = {
 			flag = auto_colonizer_flag
@@ -106,11 +103,9 @@ country_event = {
 	id = lazy_col_events.2
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		has_country_flag = auto_colonizer_enable_flag
 	}
-
 	immediate = {
 		random_planet_within_border = {
 			limit = {
@@ -236,12 +231,10 @@ country_event = {
 	id = lazy_col_events.3
 	hide_window = yes
 	is_triggered_only = yes
-
 	immediate = {
 		create_fleet = {
 			effect = {
 				set_owner = prev
-
 				create_ship = {
 					name = "auto_colonizer"
 					random_existing_design = colonizer
@@ -253,7 +246,6 @@ country_event = {
 				fleet_event = {
 					id = lazy_col_events.1
 				}
-
 				set_fleet_stance = evasive
 				set_location = prev.capital_star
 			}
