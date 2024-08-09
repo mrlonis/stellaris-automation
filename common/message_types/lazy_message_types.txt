@@ -10,15 +10,12 @@
 #	auto_opens = others										# Specifies if the message should be auto opened or not, valid: 'none', 'player', 'others' and 'all' (default: 'player). Some messages as events are ignoring this since thay have their own option.
 #	ping = "ping_notification_green"						# Ping map to use for map visualization.
 #}
-
 message_type = {
 	key = "AUTO_MEGA_MESSAGE_TYPE"
 	icon = "GFX_message_megastructure_upgraded"
 	icon_frame = 1
-
 	name = "MESSAGE_MEGASTRUCTURE_UPGRADING_TITLE"
 	sound = "notification"
-
 	#auto_opens = others
 	ping = "ping_notification_green"
 }
@@ -27,10 +24,8 @@ message_type = {
 	key = "AUTO_COLONY_MESSAGE_TYPE"
 	icon = "GFX_message_colonization"
 	icon_frame = 1
-
 	name = "MESSAGE_AUTO_COLONY_STARTED_TITLE"
 	sound = "notification"
-
 	#auto_opens = others
 	ping = "ping_notification_green"
 }
@@ -39,10 +34,8 @@ message_type = {
 	key = "AUTO_STARBASE_MESSAGE_TYPE"
 	icon = "GFX_message_other_construction_spaceport"
 	icon_frame = 1
-
 	name = "MESSAGE_STARBASE_UPGRADING_TITLE"
 	sound = "notification"
-
 	#auto_opens = others
 	ping = "ping_notification_green"
 }
@@ -51,10 +44,8 @@ message_type = {
 	key = "AUTO_TERRAFORM_MESSAGE_TYPE"
 	icon = "GFX_message_terraforming"
 	icon_frame = 1
-
 	name = "MESSAGE_AUTO_TERRAFORM_STARTED_TITLE"
 	sound = "notification"
-
 	#auto_opens = others
 	ping = "ping_notification_green"
 }
