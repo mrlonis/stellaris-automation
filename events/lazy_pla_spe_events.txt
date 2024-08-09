@@ -1,5 +1,4 @@
 # namespace = lazy_pla_spe_events
-
 # planet_event = {
 # 	id = lazy_pla_spe_events.1
 # 	title = "lazy_pla_spe_events.1.name"
@@ -7,10 +6,8 @@
 # 	picture = GFX_evt_ai_planet
 # 	show_sound = event_ai_started
 # 	hide_window = no
-
 # 	is_triggered_only = yes
-
-# 	option = { 
+# 	option = {
 # 		name = "lazy_pla_spe_events.1.a" #custom_tooltip = "_event.1.custom_tooltip.a"
 # 		allow = {
 # 			hidden_trigger = {
@@ -41,8 +38,7 @@
 # 			remove_modifier = building_notification_unity
 # 		}
 # 	}
-
-# 	# option = { 
+# 	# option = {
 # 	# 	name = "lazy_pla_spe_events.1.b" #custom_tooltip = "_event.2.custom_tooltip.b"
 # 	# 	allow = {
 # 	# 		hidden_trigger = {
@@ -73,8 +69,7 @@
 # 	# 		remove_modifier = building_notification_unity
 # 	# 	}
 # 	# }
-
-# 	# option = { 
+# 	# option = {
 # 	# 	name = "lazy_pla_spe_events.1.c" #custom_tooltip = "_event.3.custom_tooltip.c"
 # 	# 	allow = {
 # 	# 		hidden_trigger = {
@@ -114,8 +109,7 @@
 # 	# 		remove_modifier = building_notification_unity
 # 	# 	}
 # 	# }
-
-# 	option = { 
+# 	option = {
 # 		name = "lazy_pla_spe_events.1.d" #custom_tooltip = "_event.3.custom_tooltip.c"
 # 		allow = {
 # 			hidden_trigger = {
@@ -146,8 +140,7 @@
 # 			remove_modifier = building_notification_rare_crystals
 # 		}
 # 	}
-
-# 	# option = { 
+# 	# option = {
 # 	# 	name = "lazy_pla_spe_events.1.e" #custom_tooltip = "_event.4.custom_tooltip.d"
 # 	# 	allow = {
 # 	# 		hidden_trigger = {
@@ -178,8 +171,7 @@
 # 	# 		remove_modifier = building_notification_unity
 # 	# 	}
 # 	# }
-
-# 	option = { 
+# 	option = {
 # 		name = "lazy_pla_spe_events.1.f" #custom_tooltip = "_event.5.custom_tooltip.e"
 # 		hidden_effect = {
 # 			set_planet_flag = gas_refiner_planet_flag
@@ -203,8 +195,7 @@
 # 			remove_modifier = building_notification_unity
 # 		}
 # 	}
-
-# 	option = { 
+# 	option = {
 # 		name = "lazy_pla_spe_events.1.g" #custom_tooltip = "_event.5.custom_tooltip.e"
 # 		allow = {
 # 			hidden_trigger = {
@@ -235,8 +226,7 @@
 # 			remove_modifier = building_notification_unity
 # 		}
 # 	}
-
-# 	option = { 
+# 	option = {
 # 		name = "lazy_pla_spe_events.1.h" #custom_tooltip = "_event.5.custom_tooltip.e"
 # 		allow = {
 # 			hidden_trigger = {
@@ -267,8 +257,7 @@
 # 			remove_modifier = building_notification_unity
 # 		}
 # 	}
-
-# 	option = { 
+# 	option = {
 # 		name = "lazy_pla_spe_events.1.i" #custom_tooltip = "_event.5.custom_tooltip.e"
 # 		allow = {
 # 			hidden_trigger = {
@@ -299,8 +288,7 @@
 # 			remove_modifier = building_notification_unity
 # 		}
 # 	}
-
-# 	option = { 
+# 	option = {
 # 		name = "lazy_pla_spe_events.1.j" #custom_tooltip = "_event.5.custom_tooltip.e"
 # 		allow = {
 # 			hidden_trigger = {
@@ -330,8 +318,7 @@
 # 			remove_modifier = building_notification_amenities
 # 		}
 # 	}
-
-# 	option = { 
+# 	option = {
 # 		name = "lazy_pla_spe_events.1.r" #custom_tooltip = "_event.5.custom_tooltip.e"
 # 		allow = {
 # 			hidden_trigger = {
@@ -361,8 +348,7 @@
 # 			remove_modifier = building_notification_amenities
 # 		}
 # 	}
-
-# 	option = { 
+# 	option = {
 # 		name = "lazy_pla_spe_events.1.k" #custom_tooltip = "_event.5.custom_tooltip.e"
 # 		allow = {
 # 			hidden_trigger = {
@@ -392,8 +378,7 @@
 # 			remove_modifier = building_notification_amenities
 # 		}
 # 	}
-
-# 	option = { 
+# 	option = {
 # 		name = "lazy_pla_spe_events.1.l" #custom_tooltip = "_event.5.custom_tooltip.e"
 # 		allow = {
 # 			hidden_trigger = {
@@ -423,8 +408,7 @@
 # 			remove_modifier = building_notification_amenities
 # 		}
 # 	}
-
-# 	option = { 
+# 	option = {
 # 		name = "lazy_pla_spe_events.1.m" #custom_tooltip = "_event.5.custom_tooltip.e"
 # 		allow = {
 # 			hidden_trigger = {
@@ -455,8 +439,7 @@
 # 			remove_modifier = building_notification_amenities
 # 		}
 # 	}
-
-# 	option = { 
+# 	option = {
 # 		name = "lazy_pla_spe_events.1.n" #custom_tooltip = "_event.5.custom_tooltip.e"
 # 		trigger = {
 # 			hidden_trigger = {
@@ -491,8 +474,7 @@
 # 			remove_modifier = building_notification_amenities
 # 		}
 # 	}
-
-# 	option = { 
+# 	option = {
 # 		name = "lazy_pla_spe_events.1.o" #custom_tooltip = "_event.5.custom_tooltip.e"
 # 		trigger = {
 # 			hidden_trigger = {
@@ -525,11 +507,9 @@
 # 			remove_modifier = building_notification_energy
 # 			remove_modifier = building_notification_trade
 # 			remove_modifier = building_notification_amenities
-			
 # 		}
 # 	}
-
-# 	option = { 
+# 	option = {
 # 		name = "lazy_pla_spe_events.1.p" #custom_tooltip = "_event.5.custom_tooltip.e"
 # 		trigger = {
 # 			hidden_trigger = {
@@ -564,8 +544,7 @@
 # 			remove_modifier = building_notification_research_d
 # 		}
 # 	}
-
-# 	option = { 
+# 	option = {
 # 		name = "lazy_pla_spe_events.1.q" #custom_tooltip = "_event.5.custom_tooltip.e"
 # 		hidden_effect = {
 # 			remove_planet_flag = translucer_planet_flag
@@ -602,21 +581,17 @@
 # 			remove_modifier = building_notification_unity
 # 		}
 # 	}
-
-# 	option = { 
+# 	option = {
 # 		name = "EXIT"
 # 	}
 # }
-
 # country_event = {
 # 	id = lazy_pla_spe_events.2
 # 	hide_window = yes
 # 	is_triggered_only = yes
-
 # 	trigger = {
 # 		has_country_flag = auto_build_decision_flag
 # 	}
-
 # 	immediate = {
 # 		every_owned_planet = {
 # 			limit = {
@@ -636,16 +611,13 @@
 # 		}
 # 	}
 # }
-
 # country_event = {
 # 	id = lazy_pla_spe_events.3
 # 	hide_window = yes
 # 	is_triggered_only = yes
-
 # 	trigger = {
 # 		has_country_flag = auto_colony_support_flag
 # 	}
-
 # 	immediate = {
 # 		every_owned_planet = {
 # 			limit = {
