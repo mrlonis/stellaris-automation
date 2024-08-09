@@ -1,18 +1,14 @@
 namespace = lazy_ter_events
-
 country_event = {
 	id = lazy_ter_events.1
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		has_country_flag = auto_terraforming_flag
 	}
-
 	immediate = {
 		while = {
 			count = auto_ter_speed
-
 			switch = {
 				trigger = has_country_flag
 				auto_alpine_terraform_flag = {
@@ -39,7 +35,7 @@ country_event = {
 								# 	limit = {
 								# 		root = {
 								# 			has_technology = tech_climate_restoration
-								# 		}	
+								# 		}
 								# 		has_modifier = terraforming_candidate
 								# 	}
 								# 	is_planet_class = pc_barren
@@ -87,7 +83,7 @@ country_event = {
 								# 	limit = {
 								# 		root = {
 								# 			has_technology = tech_climate_restoration
-								# 		}	
+								# 		}
 								# 		has_modifier = terraforming_candidate
 								# 	}
 								# 	is_planet_class = pc_barren
@@ -135,7 +131,7 @@ country_event = {
 								# 	limit = {
 								# 		root = {
 								# 			has_technology = tech_climate_restoration
-								# 		}	
+								# 		}
 								# 		has_modifier = terraforming_candidate
 								# 	}
 								# 	is_planet_class = pc_barren
@@ -183,7 +179,7 @@ country_event = {
 								# 	limit = {
 								# 		root = {
 								# 			has_technology = tech_climate_restoration
-								# 		}	
+								# 		}
 								# 		has_modifier = terraforming_candidate
 								# 	}
 								# 	is_planet_class = pc_barren
@@ -231,7 +227,7 @@ country_event = {
 								# 	limit = {
 								# 		root = {
 								# 			has_technology = tech_climate_restoration
-								# 		}	
+								# 		}
 								# 		has_modifier = terraforming_candidate
 								# 	}
 								# 	is_planet_class = pc_barren
@@ -279,7 +275,7 @@ country_event = {
 								# 	limit = {
 								# 		root = {
 								# 			has_technology = tech_climate_restoration
-								# 		}	
+								# 		}
 								# 		has_modifier = terraforming_candidate
 								# 	}
 								# 	is_planet_class = pc_barren
@@ -327,7 +323,7 @@ country_event = {
 								# 	limit = {
 								# 		root = {
 								# 			has_technology = tech_climate_restoration
-								# 		}	
+								# 		}
 								# 		has_modifier = terraforming_candidate
 								# 	}
 								# 	is_planet_class = pc_barren
@@ -375,7 +371,7 @@ country_event = {
 								# 	limit = {
 								# 		root = {
 								# 			has_technology = tech_climate_restoration
-								# 		}	
+								# 		}
 								# 		has_modifier = terraforming_candidate
 								# 	}
 								# 	is_planet_class = pc_barren
@@ -423,7 +419,7 @@ country_event = {
 								# 	limit = {
 								# 		root = {
 								# 			has_technology = tech_climate_restoration
-								# 		}	
+								# 		}
 								# 		has_modifier = terraforming_candidate
 								# 	}
 								# 	is_planet_class = pc_barren
@@ -538,15 +534,12 @@ country_event = {
 	id = lazy_ter_events.2
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		has_country_flag = auto_terraforming_flag
 	}
-
 	immediate = {
 		while = {
 			count = auto_ter_speed
-
 			random_planet_within_border = {
 				limit = {
 					NOR = {
@@ -603,7 +596,6 @@ planet_event = {
 	id = lazy_ter_events.3
 	hide_window = yes
 	is_triggered_only = yes
-
 	immediate = {
 		set_planet_flag = auto_terraforming_ready_flag
 		solar_system.owner = {
@@ -622,9 +614,7 @@ country_event = {
 	picture = GFX_evt_alien_nature
 	show_sound = event_alien_nature
 	location = from
-
 	is_triggered_only = yes
-
 	option = {
 		name = EXCELLENT
 	}
