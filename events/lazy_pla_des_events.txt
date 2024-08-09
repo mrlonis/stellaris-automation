@@ -1,16 +1,13 @@
 namespace = lazy_pla_des_events
-
 fleet_event = {
 	id = lazy_pla_des_events.1
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		owner = {
 			has_country_flag = auto_planet_destroyer_enable_flag
 		}
 	}
-
 	immediate = {
 		set_fleet_flag = auto_planet_destroyer_flag
 		clear_fleet_actions = this
