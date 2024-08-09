@@ -1,14 +1,11 @@
 namespace = lazy_con_events
-
 fleet_event = {
 	id = lazy_con_events.1
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		has_fleet_flag = auto_outpost_ship_flag
 	}
-
 	immediate = {
 		set_fleet_flag = auto_outpost_ship_flag
 		clear_fleet_actions = this
@@ -33,13 +30,13 @@ fleet_event = {
 						# 		has_fleet_order = jumpdrive_order
 						# 		has_fleet_order = jumpdrive_windup
 						# 		has_fleet_order = follow_order
-						# 		has_fleet_order = move_to_system_point_order	
+						# 		has_fleet_order = move_to_system_point_order
 						# 	}
 						# }
 						is_surveyed = {
 							who = root.owner
 							status = yes
-						}	
+						}
 						NOR = {
 							exists = owner
 							system_star = {
@@ -202,11 +199,11 @@ fleet_event = {
 		}
 	}
 }
+
 # fleet_event = {
 # 	id = lazy_con_events.1
 # 	hide_window = yes
 # 	is_triggered_only = yes
-
 # 	immediate = {
 # 		if = {
 # 			limit = {
@@ -244,7 +241,7 @@ fleet_event = {
 # 									is_surveyed = {
 # 										who = root.owner
 # 										status = yes
-# 									}	
+# 									}
 # 									NOR = {
 # 										exists = owner
 # 										system_star = {
