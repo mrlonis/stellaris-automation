@@ -1,7 +1,6 @@
 # planet_specialisation_check = {
 # 	switch = {
 # 		trigger = has_planet_flag
-
 # 		auto_city_planet_flag = {
 # 			if = {
 # 				limit = {
@@ -323,7 +322,6 @@
 # 	# 	}
 # 	# }
 # }
-
 # planet_specialisation = {
 # 	if = {
 # 		limit = {
@@ -417,7 +415,6 @@
 # 		break = yes
 # 	}
 # }
-
 # planet_d_specialisation = {
 # 	if = {
 # 		limit = {
