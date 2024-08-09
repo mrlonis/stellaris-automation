@@ -12,7 +12,7 @@
 
   lazy_config_events.4.name:0 "Auto Construct Megastructures"
   lazy_config_events.4.desc:0 "Enabling this automation will make a new button appear on the left side of the screen whenever a construction ship is selected. The button will make the construction ship automatically construct megastructures but only the one that was selected in the settings menu, as many as it's allowed (capped)."
-  
+
   lazy_config_events.5.name:0 "Auto Fleet Attack"
   lazy_config_events.5.desc:0 "Enabling this automation will make a new button appear on the left side of the screen whenever a fleet is selected. The button will make the selected fleet automatically attack the nearest enemy and/or bombard planets with the bombardment stance selected from the settings below."
 
