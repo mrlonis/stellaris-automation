@@ -1,0 +1,32 @@
+#Lists the categories of planetary automation that you can select in the planet interface
+#Available trigger governs whether it is shown in the list.
+
+# planet_automation_deficit_restriction = {}
+
+# planet_automation_designation_construction = {}
+
+# planet_automation_upgrade_buildings = {}
+
+# planet_automation_amenities = {}
+
+# planet_automation_rare_resources = {}
+
+# planet_automation_pop_assembly = {}
+
+# planet_automation_housing = {}
+
+# planet_automation_building_slot = {}
+
+# planet_automation_crime = {}
+
+# planet_automation_clear_blockers = {}
+
+planet_automation_pop_growth = {
+	available = {
+		exists = owner
+		owner = {
+			has_country_flag = auto_colony_manager_flag
+			is_regular_empire = yes
+		}
+	}
+}

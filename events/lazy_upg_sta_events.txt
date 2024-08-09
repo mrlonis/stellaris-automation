@@ -1,0 +1,320 @@
+namespace = lazy_upg_sta_events
+
+country_event = {
+	id = lazy_upg_sta_events.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = auto_upgrade_starbases_flag
+		# used_starbase_capacity_percent < 1
+	}
+
+	immediate = {
+		while = {
+			count = auto_upg_sta_speed
+
+			set_variable = {
+				which = auto_upg_sta_cap
+				value = trigger:max_starbase_capacity
+			}
+			set_variable = {
+				which = auto_upg_sta_count
+				value = value:starbases_upgrading_cap_trigger
+			}
+			if = {
+				limit = {
+					any_owned_starbase = {
+						has_starbase_size = starbase_outpost
+						NOT = {
+							has_starbase_flag = auto_upgrading_starbase_flag
+						}
+					}
+					check_variable = {
+						which = auto_upg_sta_cap
+						value > auto_upg_sta_count
+					}
+				}
+				random_owned_starbase = {
+					limit = {
+						NOT = {
+							has_starbase_flag = auto_upgrading_starbase_flag
+						}
+						has_starbase_size = starbase_outpost
+					}
+					auto_upgrade_starbases_check = yes
+				}
+			}
+			else = {
+				random_owned_starbase = {
+					limit = {
+						NOR = {
+							has_starbase_size = starbase_outpost
+							has_starbase_flag = auto_upgrading_starbase_flag
+						}
+						if = {
+							limit = {
+								prev = {
+									has_country_flag = auto_upgrading_starbase_outpost_flag
+								}
+							}
+							has_starbase_size > starbase_outpost
+						}
+						else_if = {
+							limit = {
+								prev = {
+									has_country_flag = auto_upgrading_starbase_starport_flag
+								}
+							}
+							has_starbase_size > starbase_starport
+						}
+						else_if = {
+							limit = {
+								prev = {
+									has_country_flag = auto_upgrading_starbase_starhold_flag
+								}
+							}
+							has_starbase_size > starbase_starhold
+						}
+						else_if = {
+							limit = {
+								prev = {
+									has_country_flag = auto_upgrading_starbase_starfortress_flag
+								}
+							}
+							has_starbase_size > starbase_starfortress
+						}
+						else_if = {
+							limit = {
+								prev = {
+									has_country_flag = auto_upgrading_starbase_citadel_flag
+								}
+							}
+							has_starbase_size > starbase_citadel
+						}
+						else_if = {
+							limit = {
+								prev = {
+									has_country_flag = auto_upgrading_starbase_stronghold_flag
+								}
+							}
+							has_starbase_size > starbase_stronghold
+						}
+					}
+					auto_upgrade_starbases_check = yes
+				}
+			}
+		}
+	}
+}
+
+starbase_event = {
+	id = lazy_upg_sta_events.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_starbase_size = starbase_outpost
+		has_starbase_flag = auto_upgrading_starbase_flag
+	}
+
+	immediate = {
+		set_starbase_size = starbase_starport
+		remove_starbase_flag = auto_upgrading_starbase_flag
+	}
+}
+
+starbase_event = {
+	id = lazy_upg_sta_events.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_starbase_size = starbase_starport
+		has_starbase_flag = auto_upgrading_starbase_flag
+	}
+
+	immediate = {
+		set_starbase_size = starbase_starhold
+		remove_starbase_flag = auto_upgrading_starbase_flag
+	}
+}
+
+starbase_event = {
+	id = lazy_upg_sta_events.4
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_starbase_size = starbase_starhold
+		has_starbase_flag = auto_upgrading_starbase_flag
+	}
+
+	immediate = {
+		set_starbase_size = starbase_starfortress
+		remove_starbase_flag = auto_upgrading_starbase_flag
+	}
+}
+
+starbase_event = {
+	id = lazy_upg_sta_events.5
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_starbase_size = starbase_starfortress
+		has_starbase_flag = auto_upgrading_starbase_flag
+	}
+
+	immediate = {
+		set_starbase_size = starbase_citadel
+		remove_starbase_flag = auto_upgrading_starbase_flag
+	}
+}
+
+starbase_event = {
+	id = lazy_upg_sta_events.6
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_starbase_size = starbase_citadel
+		has_starbase_flag = auto_upgrading_starbase_flag
+	}
+
+	immediate = {
+		set_starbase_size = starbase_stronghold
+		remove_starbase_flag = auto_upgrading_starbase_flag
+	}
+}
+
+starbase_event = {
+	id = lazy_upg_sta_events.7
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_starbase_size = starbase_stronghold
+		has_starbase_flag = auto_upgrading_starbase_flag
+	}
+
+	immediate = {
+		set_starbase_size = starbase_headquarters
+		remove_starbase_flag = auto_upgrading_starbase_flag
+	}
+}
+
+country_event = {
+	id = lazy_upg_sta_events.8
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_owned_starbase = {
+			limit = {
+				has_starbase_size = starbase_starport
+			}
+			set_starbase_size = starbase_outpost
+		}
+	}
+}
+
+country_event = {
+	id = lazy_upg_sta_events.9
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_owned_starbase = {
+			limit = {
+				OR = {
+					has_starbase_size = starbase_starport
+					has_starbase_size = starbase_starhold
+				}
+			}
+			set_starbase_size = starbase_outpost
+		}
+	}
+}
+
+country_event = {
+	id = lazy_upg_sta_events.10
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_owned_starbase = {
+			limit = {
+				OR = {
+					has_starbase_size = starbase_starport
+					has_starbase_size = starbase_starhold
+					has_starbase_size = starbase_starfortress
+				}
+			}
+			set_starbase_size = starbase_outpost
+		}
+	}
+}
+
+country_event = {
+	id = lazy_upg_sta_events.11
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_owned_starbase = {
+			limit = {
+				OR = {
+					has_starbase_size = starbase_starport
+					has_starbase_size = starbase_starhold
+					has_starbase_size = starbase_starfortress
+					has_starbase_size = starbase_citadel
+				}
+			}
+			set_starbase_size = starbase_outpost
+		}
+	}
+}
+
+country_event = {
+	id = lazy_upg_sta_events.12
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_owned_starbase = {
+			limit = {
+				OR = {
+					has_starbase_size = starbase_starport
+					has_starbase_size = starbase_starhold
+					has_starbase_size = starbase_starfortress
+					has_starbase_size = starbase_citadel
+					has_starbase_size = starbase_stronghold
+				}
+			}
+			set_starbase_size = starbase_outpost
+		}
+	}
+}
+
+country_event = {
+	id = lazy_upg_sta_events.13
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_owned_starbase = {
+			limit = {
+				OR = {
+					has_starbase_size = starbase_starport
+					has_starbase_size = starbase_starhold
+					has_starbase_size = starbase_starfortress
+					has_starbase_size = starbase_citadel
+					has_starbase_size = starbase_stronghold
+					has_starbase_size = starbase_headquarters
+				}
+			}
+			set_starbase_size = starbase_outpost
+		}
+	}
+}

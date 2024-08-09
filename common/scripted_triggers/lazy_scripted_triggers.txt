@@ -1,0 +1,165 @@
+# auto_construct_planet_check = {
+# 	is_surveyed = {
+# 		who = root.owner
+# 		status = yes
+# 	}
+# 	OR = {
+# 		has_deposit_for = shipclass_mining_station
+# 		#has_deposit_for = shipclass_observation_station
+# 		has_deposit_for = shipclass_research_station
+# 	}
+# 	has_orbital_station = no
+# 	has_any_megastructure = no
+# 	NOR = {
+# 		exists = owner
+# 		has_deposit = d_trade_value_1
+# 		has_deposit = d_trade_value_2
+# 		has_deposit = d_trade_value_3
+# 		has_deposit = d_trade_value_4
+# 		has_deposit = d_trade_value_5
+# 		has_deposit = d_trade_value_6
+# 		has_deposit = d_trade_value_7
+# 		has_deposit = d_trade_value_8
+# 		has_deposit = d_trade_value_9
+# 		has_deposit = d_trade_value_10
+# 		AND = {
+# 			has_resource = {
+# 				type = sr_dark_matter amount > 0
+# 			}
+# 			root.owner = {
+# 				NOT = {
+# 					has_technology = tech_mine_dark_matter
+# 				}
+# 			}
+# 		}
+# 		AND = {
+# 			has_resource = {
+# 				type = volatile_motes amount > 0
+# 			}
+# 			root.owner = {
+# 				NOT = {
+# 					has_technology = tech_mine_volatile_motes
+# 				}
+# 			}
+# 		}
+# 		AND = {
+# 			has_resource = {
+# 				type = sr_living_metal amount > 0
+# 			}
+# 			root.owner = {
+# 				NOT = {
+# 					has_technology = tech_mine_living_metal
+# 				}
+# 			}
+# 		}
+# 		AND = {
+# 			has_resource = {
+# 				type = rare_crystals amount > 0
+# 			}
+# 			root.owner = {
+# 				NOT = {
+# 					has_technology = tech_mine_rare_crystals
+# 				}
+# 			}
+# 		}
+# 		AND = {
+# 			has_resource = { 
+# 				type = exotic_gases amount > 0
+# 			}
+# 			root.owner = {
+# 				NOT = {
+# 					has_technology = tech_mine_exotic_gases
+# 				}
+# 			}
+# 		}
+# 		AND = {
+# 			has_resource = { 
+# 				type = sr_zro amount > 0
+# 			}
+# 			root.owner = {
+# 				NOT = {
+# 					has_technology = tech_mine_zro
+# 				}
+# 			}
+# 		}
+# 		has_planet_flag = auto_construct_planet_flag
+# 	}
+# }
+
+species_coloniseable_planet = {
+	is_colony = no
+	has_anomaly = no
+	colonizable_planet = yes
+	if = {
+		limit = {
+			root.owner = {
+				has_country_flag = habitability_threshold_1
+			}
+		}
+		habitability = {
+			who = root.owner.owner_species
+			value >= 0.1
+		}
+	}
+	else_if = {
+		limit = {
+			root.owner = {
+				has_country_flag = habitability_threshold_2
+			}
+		}
+		habitability = {
+			who = root.owner.owner_species
+			value >= 0.2
+		}
+	}
+	else_if = {
+		limit = {
+			root.owner = {
+				has_country_flag = habitability_threshold_3
+			}
+		}
+		habitability = {
+			who = root.owner.owner_species
+			value >= 0.3
+		}
+	}
+	else_if = {
+		limit = {
+			root.owner = {
+				has_country_flag = habitability_threshold_4
+			}
+		}
+		habitability = {
+			who = root.owner.owner_species
+			value >= 0.4
+		}
+	}
+	else_if = {
+		limit = {
+			root.owner = {
+				has_country_flag = habitability_threshold_5
+			}
+		}
+		habitability = {
+			who = root.owner.owner_species
+			value >= 0.5
+		}
+	}
+	else_if = {
+		limit = {
+			root.owner = {
+				has_country_flag = habitability_threshold_6
+			}
+		}
+		habitability = {
+			who = root.owner.owner_species
+			value >= 0.6
+		}
+	}
+	else = {
+		habitability = {
+			who = root.owner.owner_species
+			value >= 0.7
+		}
+	}
+}

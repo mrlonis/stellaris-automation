@@ -1,0 +1,30 @@
+automate_pop_growth_planet = {
+	category = "planet_automation_pop_growth"
+
+	available = {
+		
+	}
+
+	prio_districts = {
+		
+	}
+
+	buildings = {
+		1 = {
+			building = building_capital
+			available = {
+				always = yes
+			}
+		}
+
+		2 = {
+			building = building_clinic
+			available = {
+				NOR = {
+					owner = { has_authority = auth_hive_mind }
+					owner = { has_authority = auth_machine_intelligence }
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,2161 @@
+namespace = lazy_config_events
+
+country_event = {
+	id = lazy_config_events.1
+	title = "lazy_config_events.1.name"
+	desc = "lazy_config_events.1.desc"
+	diplomatic = yes
+	custom_gui = "lazy_automation_main_window"
+	is_triggered_only = yes
+	force_open = yes
+	auto_opens = yes
+
+	option = {
+		name = OK
+	}
+}
+
+country_event = {
+	id = lazy_config_events.2
+	title = "lazy_config_events.2.name"
+	desc = "lazy_config_events.2.desc"
+	diplomatic = yes
+	custom_gui = "lazy_automation_speed_window"
+	is_triggered_only = yes
+	force_open = yes
+	auto_opens = yes
+
+	option = {
+		name = OK
+	}
+}
+
+country_event = {
+	id = lazy_config_events.3
+	title = "lazy_config_events.3.name"
+	desc = "lazy_config_events.3.desc"
+	picture = GFX_evt_machine_sapience
+	show_sound = event_administrative_work
+	hide_window = no
+
+	is_triggered_only = yes
+
+	option = { 
+		name = "lazy_config_events.3.b"
+		hidden_effect = {
+			set_country_flag = lazy_resettle_unemployed_to_free_jobs
+			country_event = {
+				id = lazy_config_events.3
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.3.c"
+		hidden_effect = {
+			set_country_flag = lazy_resettle_to_synaptic_lathe_flag
+			country_event = {
+				id = lazy_config_events.3
+			}
+		}
+	}
+
+	option = { 
+		name = "EXIT"
+	}
+}
+
+country_event = {
+	id = lazy_config_events.4
+	title = "lazy_config_events.4.name"
+	desc = "lazy_config_events.4.desc"
+	picture = GFX_evt_machine_sapience
+	show_sound = event_administrative_work
+	hide_window = no
+
+	is_triggered_only = yes
+	
+	# option = { 
+	# 	name = "lazy_config_events.4.b"
+	# 	allow = {
+	# 		has_technology = tech_hyper_relays
+	# 		hidden_trigger = {
+	# 			NOT = {
+	# 				has_country_flag = auto_construct_hyper_relays_flag
+	# 			}
+	# 		}
+	# 	}
+	# 	hidden_effect = {
+	# 		set_country_flag = auto_construct_hyper_relays_flag
+	# 		remove_country_flag = auto_construct_gateway_flag
+	# 		remove_country_flag = auto_construct_habitat_central_flag
+	# 		remove_country_flag = auto_construct_major_orbital_flag
+	# 		remove_country_flag = auto_construct_minor_orbital_flag
+	# 		country_event = {
+	# 			id = lazy_config_events.4
+	# 		}
+	# 	}
+	# }
+
+	# option = { 
+	# 	name = "lazy_config_events.4.c"
+	# 	allow = {
+	# 		has_technology = tech_gateway_construction
+	# 		hidden_trigger = {
+	# 			NOT = {
+	# 				has_country_flag = auto_construct_gateway_flag
+	# 			}
+	# 		}
+	# 	}
+	# 	hidden_effect = {
+	# 		set_country_flag = auto_construct_gateway_flag
+	# 		remove_country_flag = auto_construct_hyper_relays_flag
+	# 		remove_country_flag = auto_construct_habitat_central_flag
+	# 		remove_country_flag = auto_construct_major_orbital_flag
+	# 		remove_country_flag = auto_construct_minor_orbital_flag
+	# 		country_event = {
+	# 			id = lazy_config_events.4
+	# 		}
+	# 	}
+	# }
+
+	# option = { 
+	# 	name = "lazy_config_events.4.d"
+	# 	allow = {
+	# 		hidden_trigger = {
+	# 			# OR = {
+	# 			# 	has_technology = tech_habitat_1
+	# 			# 	has_civic = civic_diadochi
+	# 			# 	has_civic = civic_great_khans_legacy
+	# 			# 	has_country_flag = democratic_khanate_flag
+	# 			# }
+	# 			NOT = {
+	# 				has_country_flag = auto_construct_habitat_central_flag
+	# 			}
+	# 		}
+	# 	}
+	# 	hidden_effect = {
+	# 		set_country_flag = auto_construct_habitat_central_flag
+	# 		remove_country_flag = auto_construct_hyper_relays_flag
+	# 		remove_country_flag = auto_construct_gateway_flag
+	# 		remove_country_flag = auto_construct_major_orbital_flag
+	# 		remove_country_flag = auto_construct_minor_orbital_flag
+	# 		country_event = {
+	# 			id = lazy_config_events.4
+	# 		}
+	# 	}
+	# }
+
+	# option = { 
+	# 	name = "lazy_config_events.4.e"
+	# 	allow = {
+	# 		hidden_trigger = {
+	# 			OR = {
+	# 				has_technology = tech_habitat_1
+	# 				has_civic = civic_diadochi
+	# 				has_civic = civic_great_khans_legacy
+	# 				has_country_flag = democratic_khanate_flag
+	# 			}
+	# 			NOT = {
+	# 				has_country_flag = auto_construct_major_orbital_flag
+	# 			}
+	# 		}
+	# 	}
+	# 	hidden_effect = {
+	# 		set_country_flag = auto_construct_major_orbital_flag
+	# 		remove_country_flag = auto_construct_habitat_central_flag
+	# 		remove_country_flag = auto_construct_minor_orbital_flag
+	# 		remove_country_flag = auto_construct_hyper_relays_flag
+	# 		remove_country_flag = auto_construct_gateway_flag
+	# 		country_event = {
+	# 			id = lazy_config_events.4
+	# 		}
+	# 	}
+	# }
+
+	# option = { 
+	# 	name = "lazy_config_events.4.f"
+	# 	allow = {
+	# 		hidden_trigger = {
+	# 			OR = {
+	# 				has_technology = tech_habitat_1
+	# 				has_civic = civic_diadochi
+	# 				has_civic = civic_great_khans_legacy
+	# 				has_country_flag = democratic_khanate_flag
+	# 			}
+	# 			NOT = {
+	# 				has_country_flag = auto_construct_minor_orbital_flag
+	# 			}
+	# 		}
+	# 	}
+	# 	hidden_effect = {
+	# 		set_country_flag = auto_construct_minor_orbital_flag
+	# 		remove_country_flag = auto_construct_habitat_central_flag
+	# 		remove_country_flag = auto_construct_major_orbital_flag
+	# 		remove_country_flag = auto_construct_hyper_relays_flag
+	# 		remove_country_flag = auto_construct_gateway_flag
+	# 		country_event = {
+	# 			id = lazy_config_events.4
+	# 		}
+	# 	}
+	# }
+
+	option = { 
+		name = "EXIT"
+	}
+}
+
+country_event = {
+	id = lazy_config_events.5
+	title = "lazy_config_events.5.name"
+	desc = "lazy_config_events.5.desc"
+	picture = GFX_evt_machine_sapience
+	show_sound = event_administrative_work
+	hide_window = no
+
+	is_triggered_only = yes
+
+	option = { 
+		name = "lazy_config_events.5.b"
+		allow = {
+			hidden_trigger = {
+				OR = {
+					has_country_flag = auto_fleet_bombardment_selective_flag
+					has_country_flag = auto_fleet_bombardment_indiscriminate_flag
+					has_country_flag = auto_fleet_bombardment_armageddon_flag
+					has_country_flag = auto_fleet_bombardment_javorian_pox_flag
+					has_country_flag = auto_fleet_bombardment_raiding_flag
+					has_country_flag = auto_fleet_bombardment_punishment_flag
+					has_country_flag = auto_fleet_bombardment_exterminatus_flag
+				}
+			}
+		}
+		hidden_effect = {
+			remove_country_flag = auto_fleet_bombardment_selective_flag
+			remove_country_flag = auto_fleet_bombardment_indiscriminate_flag
+			remove_country_flag = auto_fleet_bombardment_armageddon_flag
+			remove_country_flag = auto_fleet_bombardment_javorian_pox_flag
+			remove_country_flag = auto_fleet_bombardment_raiding_flag
+			remove_country_flag = auto_fleet_bombardment_punishment_flag
+			remove_country_flag = auto_fleet_bombardment_exterminatus_flag
+			country_event = {
+				id = lazy_config_events.5
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.5.c"
+		allow = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = auto_fleet_bombardment_selective_flag
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = auto_fleet_bombardment_selective_flag
+			remove_country_flag = auto_fleet_bombardment_indiscriminate_flag
+			remove_country_flag = auto_fleet_bombardment_armageddon_flag
+			remove_country_flag = auto_fleet_bombardment_javorian_pox_flag
+			remove_country_flag = auto_fleet_bombardment_raiding_flag
+			remove_country_flag = auto_fleet_bombardment_punishment_flag
+			remove_country_flag = auto_fleet_bombardment_exterminatus_flag
+			country_event = {
+				id = lazy_config_events.5
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.5.d"
+		allow = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = auto_fleet_bombardment_indiscriminate_flag
+				}
+				is_pacifist = no
+			}
+		}
+		hidden_effect = {
+			set_country_flag = auto_fleet_bombardment_indiscriminate_flag
+			remove_country_flag = auto_fleet_bombardment_selective_flag
+			remove_country_flag = auto_fleet_bombardment_armageddon_flag
+			remove_country_flag = auto_fleet_bombardment_javorian_pox_flag
+			remove_country_flag = auto_fleet_bombardment_raiding_flag
+			remove_country_flag = auto_fleet_bombardment_punishment_flag
+			remove_country_flag = auto_fleet_bombardment_exterminatus_flag
+			country_event = {
+				id = lazy_config_events.5
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.5.e"
+		allow = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = auto_fleet_bombardment_armageddon_flag
+				}
+				OR = {
+					has_civic = civic_fanatic_purifiers
+					has_civic = civic_machine_terminator
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = auto_fleet_bombardment_armageddon_flag
+			remove_country_flag = auto_fleet_bombardment_selective_flag
+			remove_country_flag = auto_fleet_bombardment_indiscriminate_flag
+			remove_country_flag = auto_fleet_bombardment_javorian_pox_flag
+			remove_country_flag = auto_fleet_bombardment_raiding_flag
+			remove_country_flag = auto_fleet_bombardment_punishment_flag
+			remove_country_flag = auto_fleet_bombardment_exterminatus_flag
+			country_event = {
+				id = lazy_config_events.5
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.5.f"
+		allow = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = auto_fleet_bombardment_javorian_pox_flag
+				}
+				last_activated_relic = r_pox_sample
+				is_pacifist = no
+			}
+		}
+		hidden_effect = {
+			set_country_flag = auto_fleet_bombardment_javorian_pox_flag
+			remove_country_flag = auto_fleet_bombardment_selective_flag
+			remove_country_flag = auto_fleet_bombardment_indiscriminate_flag
+			remove_country_flag = auto_fleet_bombardment_armageddon_flag
+			remove_country_flag = auto_fleet_bombardment_raiding_flag
+			remove_country_flag = auto_fleet_bombardment_punishment_flag
+			remove_country_flag = auto_fleet_bombardment_exterminatus_flag
+			country_event = {
+				id = lazy_config_events.5
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.5.g"
+		allow = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = auto_fleet_bombardment_raiding_flag
+				}
+				OR = {
+					has_civic = civic_barbaric_despoilers
+					has_ascension_perk = ap_nihilistic_acquisition
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = auto_fleet_bombardment_raiding_flag
+			remove_country_flag = auto_fleet_bombardment_selective_flag
+			remove_country_flag = auto_fleet_bombardment_indiscriminate_flag
+			remove_country_flag = auto_fleet_bombardment_armageddon_flag
+			remove_country_flag = auto_fleet_bombardment_javorian_pox_flag
+			remove_country_flag = auto_fleet_bombardment_punishment_flag
+			remove_country_flag = auto_fleet_bombardment_exterminatus_flag
+			country_event = {
+				id = lazy_config_events.5
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.5.h"
+		trigger = {
+			has_global_flag = acot_activated
+		}
+		allow = {
+			hidden_trigger = {
+				NOR = {
+					has_country_flag = auto_fleet_bombardment_punishment_flag
+					has_global_flag = acot_exterminatus_forbidden
+				}
+				OR = {
+					is_country_type = awakened_fallen_empire
+					is_country_type = fallen_empire		
+					has_technology = tech_bombardment_dm
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = auto_fleet_bombardment_punishment_flag
+			remove_country_flag = auto_fleet_bombardment_raiding_flag
+			remove_country_flag = auto_fleet_bombardment_selective_flag
+			remove_country_flag = auto_fleet_bombardment_indiscriminate_flag
+			remove_country_flag = auto_fleet_bombardment_armageddon_flag
+			remove_country_flag = auto_fleet_bombardment_javorian_pox_flag
+			remove_country_flag = auto_fleet_bombardment_exterminatus_flag
+			country_event = {
+				id = lazy_config_events.5
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.5.i"
+		trigger = {
+			has_global_flag = acot_activated
+		}
+		allow = {
+			hidden_trigger = {
+				NOR = {
+					has_country_flag = auto_fleet_bombardment_exterminatus_flag
+					has_global_flag = acot_exterminatus_forbidden
+				}
+				has_technology = tech_bombardment_ae
+			}
+		}
+		
+		hidden_effect = {
+			set_country_flag = auto_fleet_bombardment_exterminatus_flag
+			remove_country_flag = auto_fleet_bombardment_raiding_flag
+			remove_country_flag = auto_fleet_bombardment_selective_flag
+			remove_country_flag = auto_fleet_bombardment_indiscriminate_flag
+			remove_country_flag = auto_fleet_bombardment_armageddon_flag
+			remove_country_flag = auto_fleet_bombardment_javorian_pox_flag
+			remove_country_flag = auto_fleet_bombardment_punishment_flag
+			country_event = {
+				id = lazy_config_events.5
+			}
+		}
+	}
+
+	option = { 
+		name = "EXIT"
+	}
+}
+
+country_event = {
+	id = lazy_config_events.6
+	title = "lazy_config_events.6.name"
+	desc = "lazy_config_events.6.desc"
+	picture = GFX_evt_machine_sapience
+	show_sound = event_administrative_work
+	hide_window = no
+
+	is_triggered_only = yes
+
+	option = { 
+		name = "lazy_config_events.6.a" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+		allow = {
+			hidden_trigger = {
+				has_technology = tech_assault_armies
+				NOR = {
+					has_country_flag = auto_recruit_slave_army_flag
+					species = {
+						has_trait = "trait_mechanical"
+						has_trait = "trait_machine_unit"
+						is_sapient = no
+					}
+				}
+				OR = {
+					has_country_flag = auto_recruit_clone_army_flag
+					has_country_flag = auto_recruit_slave_army_flag
+					has_country_flag = auto_recruit_robotic_army_flag
+					has_country_flag = auto_recruit_psionic_army_flag
+					has_country_flag = auto_recruit_xenomorph_army_flag
+					has_country_flag = auto_recruit_gene_warrior_army_flag
+					has_country_flag = auto_recruit_machine_assault_2_army_flag
+					has_country_flag = auto_recruit_machine_assault_3_army_flag
+					has_country_flag = auto_recruit_undead_army_flag
+				}
+			}
+		}
+		hidden_effect = {
+			remove_country_flag = auto_recruit_clone_army_flag
+			remove_country_flag = auto_recruit_slave_army_flag
+			remove_country_flag = auto_recruit_robotic_army_flag
+			remove_country_flag = auto_recruit_psionic_army_flag
+			remove_country_flag = auto_recruit_xenomorph_army_flag
+			remove_country_flag = auto_recruit_gene_warrior_army_flag
+			remove_country_flag = auto_recruit_machine_assault_2_army_flag
+			remove_country_flag = auto_recruit_machine_assault_3_army_flag
+			remove_country_flag = auto_recruit_undead_army_flag
+			country_event = {
+				id = lazy_config_events.6
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.6.b" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+		allow = {
+			hidden_trigger = {
+				has_technology = tech_neural_implants
+				has_policy_flag = slavery_allowed
+				any_owned_pop = {
+					is_pop_category = slave
+					is_same_species = from
+				}
+				NOR = {
+					has_country_flag = auto_recruit_slave_army_flag
+					has_authority = auth_machine_intelligence
+					species = {
+						has_trait = "trait_mechanical"
+						has_trait = "trait_machine_unit"
+						is_sapient = no
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = auto_recruit_slave_army_flag
+			remove_country_flag = auto_recruit_clone_army_flag
+			remove_country_flag = auto_recruit_robotic_army_flag
+			remove_country_flag = auto_recruit_psionic_army_flag
+			remove_country_flag = auto_recruit_xenomorph_army_flag
+			remove_country_flag = auto_recruit_gene_warrior_army_flag
+			remove_country_flag = auto_recruit_machine_assault_2_army_flag
+			remove_country_flag = auto_recruit_machine_assault_3_army_flag
+			remove_country_flag = auto_recruit_undead_army_flag
+			country_event = {
+				id = lazy_config_events.6
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.6.c" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+		allow = {
+			hidden_trigger = {
+				has_technology = tech_gene_banks
+				NOR = {
+					has_country_flag = auto_recruit_clone_army_flag
+					species = {
+						has_trait = "trait_mechanical"
+						has_trait = "trait_machine_unit"
+						is_sapient = no
+					}
+				}
+				OR = {
+					NOT = { has_authority = auth_machine_intelligence }
+					has_civic = civic_machine_assimilator
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = auto_recruit_clone_army_flag
+			remove_country_flag = auto_recruit_slave_army_flag
+			remove_country_flag = auto_recruit_robotic_army_flag
+			remove_country_flag = auto_recruit_psionic_army_flag
+			remove_country_flag = auto_recruit_xenomorph_army_flag
+			remove_country_flag = auto_recruit_gene_warrior_army_flag
+			remove_country_flag = auto_recruit_machine_assault_2_army_flag
+			remove_country_flag = auto_recruit_machine_assault_3_army_flag
+			remove_country_flag = auto_recruit_undead_army_flag
+			country_event = {
+				id = lazy_config_events.6
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.6.d" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+		allow = {
+			hidden_trigger = {
+				has_technology = tech_droid_workers
+				NOR = {
+					has_country_flag = auto_recruit_robotic_army_flag
+					has_authority = auth_machine_intelligence
+					has_policy_flag = robots_outlawed
+				}
+				species = {
+					has_trait = "trait_mechanical"
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = auto_recruit_robotic_army_flag
+			remove_country_flag = auto_recruit_clone_army_flag
+			remove_country_flag = auto_recruit_slave_army_flag
+			remove_country_flag = auto_recruit_psionic_army_flag
+			remove_country_flag = auto_recruit_xenomorph_army_flag
+			remove_country_flag = auto_recruit_gene_warrior_army_flag
+			remove_country_flag = auto_recruit_machine_assault_2_army_flag
+			remove_country_flag = auto_recruit_machine_assault_3_army_flag
+			remove_country_flag = auto_recruit_undead_army_flag
+			country_event = {
+				id = lazy_config_events.6
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.6.e" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+		allow = {
+			hidden_trigger = {
+				has_technology = tech_telepathy
+				NOR = {
+					has_country_flag = auto_recruit_psionic_army_flag
+					has_authority = auth_machine_intelligence
+				}
+				species = {
+					OR = {
+						NOT = {
+							host_has_dlc = "Utopia"
+						}
+						has_trait = trait_latent_psionic
+						has_trait = trait_psionic
+					}
+					NOR = {
+						has_trait = "trait_mechanical"
+						has_trait = "trait_machine_unit"
+						is_sapient = no
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = auto_recruit_psionic_army_flag
+			remove_country_flag = auto_recruit_clone_army_flag
+			remove_country_flag = auto_recruit_slave_army_flag
+			remove_country_flag = auto_recruit_robotic_army_flag
+			remove_country_flag = auto_recruit_xenomorph_army_flag
+			remove_country_flag = auto_recruit_gene_warrior_army_flag
+			remove_country_flag = auto_recruit_machine_assault_2_army_flag
+			remove_country_flag = auto_recruit_machine_assault_3_army_flag
+			remove_country_flag = auto_recruit_undead_army_flag
+			country_event = {
+				id = lazy_config_events.6
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.6.f" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+		allow = {
+			hidden_trigger = {
+				has_technology = tech_morphogenetic_field_mastery
+				NOR = {
+					has_authority = auth_machine_intelligence
+					has_country_flag = auto_recruit_xenomorph_army_flag
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = auto_recruit_xenomorph_army_flag
+			remove_country_flag = auto_recruit_clone_army_flag
+			remove_country_flag = auto_recruit_slave_army_flag
+			remove_country_flag = auto_recruit_robotic_army_flag
+			remove_country_flag = auto_recruit_psionic_army_flag
+			remove_country_flag = auto_recruit_gene_warrior_army_flag
+			remove_country_flag = auto_recruit_machine_assault_2_army_flag
+			remove_country_flag = auto_recruit_machine_assault_3_army_flag
+			remove_country_flag = auto_recruit_undead_army_flag
+			country_event = {
+				id = lazy_config_events.6
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.6.g" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+		allow = {
+			hidden_trigger = {
+				has_technology = tech_gene_seed_purification
+				NOR = {
+					has_country_flag = auto_recruit_gene_warrior_army_flag
+					has_authority = auth_machine_intelligence
+					species = {
+						has_trait = "trait_mechanical"
+						has_trait = "trait_machine_unit"
+						is_sapient = no
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = auto_recruit_gene_warrior_army_flag
+			remove_country_flag = auto_recruit_clone_army_flag
+			remove_country_flag = auto_recruit_slave_army_flag
+			remove_country_flag = auto_recruit_robotic_army_flag
+			remove_country_flag = auto_recruit_psionic_army_flag
+			remove_country_flag = auto_recruit_xenomorph_army_flag
+			remove_country_flag = auto_recruit_machine_assault_2_army_flag
+			remove_country_flag = auto_recruit_machine_assault_3_army_flag
+			remove_country_flag = auto_recruit_undead_army_flag
+			country_event = {
+				id = lazy_config_events.6
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.6.h" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+		allow = {
+			hidden_trigger = {
+				has_technology = tech_adaptive_combat_algorithms
+				has_authority = auth_machine_intelligence
+				species = {
+					has_trait = "trait_machine_unit"
+				}
+				NOT = {
+					has_country_flag = auto_recruit_machine_assault_2_army_flag
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = auto_recruit_machine_assault_2_army_flag
+			remove_country_flag = auto_recruit_clone_army_flag
+			remove_country_flag = auto_recruit_slave_army_flag
+			remove_country_flag = auto_recruit_robotic_army_flag
+			remove_country_flag = auto_recruit_psionic_army_flag
+			remove_country_flag = auto_recruit_xenomorph_army_flag
+			remove_country_flag = auto_recruit_gene_warrior_army_flag
+			remove_country_flag = auto_recruit_machine_assault_3_army_flag
+			remove_country_flag = auto_recruit_undead_army_flag
+			country_event = {
+				id = lazy_config_events.6
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.6.i" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+		allow = {
+			hidden_trigger = {
+				has_technology = tech_biomechanics
+				has_authority = auth_machine_intelligence
+				NOT = {
+					has_country_flag = auto_recruit_machine_assault_3_army_flag
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = auto_recruit_machine_assault_3_army_flag
+			remove_country_flag = auto_recruit_clone_army_flag
+			remove_country_flag = auto_recruit_slave_army_flag
+			remove_country_flag = auto_recruit_robotic_army_flag
+			remove_country_flag = auto_recruit_psionic_army_flag
+			remove_country_flag = auto_recruit_xenomorph_army_flag
+			remove_country_flag = auto_recruit_gene_warrior_army_flag
+			remove_country_flag = auto_recruit_machine_assault_2_army_flag
+			remove_country_flag = auto_recruit_undead_army_flag
+			country_event = {
+				id = lazy_config_events.6
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.6.j" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+		allow = {
+			hidden_trigger = {
+				has_technology = tech_assault_armies
+				has_valid_civic = civic_reanimated_armies
+				NOR = {
+					has_country_flag = auto_recruit_undead_army_flag
+					species = {
+						has_trait = "trait_mechanical"
+						has_trait = "trait_machine_unit"
+						is_sapient = no
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = auto_recruit_undead_army_flag
+			remove_country_flag = auto_recruit_clone_army_flag
+			remove_country_flag = auto_recruit_slave_army_flag
+			remove_country_flag = auto_recruit_robotic_army_flag
+			remove_country_flag = auto_recruit_psionic_army_flag
+			remove_country_flag = auto_recruit_xenomorph_army_flag
+			remove_country_flag = auto_recruit_gene_warrior_army_flag
+			remove_country_flag = auto_recruit_machine_assault_2_army_flag
+			remove_country_flag = auto_recruit_machine_assault_3_army_flag
+			country_event = {
+				id = lazy_config_events.6
+			}
+		}
+	}
+
+	option = { 
+		name = "EXIT"
+	}
+}
+
+country_event = {
+	id = lazy_config_events.7
+	title = "lazy_config_events.7.name"
+	desc = "lazy_config_events.7.desc"
+	picture = GFX_evt_machine_sapience
+	show_sound = event_administrative_work
+	hide_window = no
+
+	is_triggered_only = yes
+
+	option = { 
+		name = "lazy_config_events.7.a" #custom_tooltip = "lazy_config_events.2.custom_tooltip.b"
+		allow = {
+			hidden_trigger = {
+				OR = {
+					has_country_flag = auto_fleet_merger_fleet_flag
+					has_country_flag = auto_fleet_merger_army_flag
+				}
+			}
+		}
+		hidden_effect = {
+			remove_country_flag = auto_fleet_merger_fleet_flag
+			remove_country_flag = auto_fleet_merger_army_flag
+			country_event = {
+				id = lazy_config_events.7
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.7.b" #custom_tooltip = "lazy_config_events.2.custom_tooltip.b"
+		allow = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = auto_fleet_merger_fleet_flag
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = auto_fleet_merger_fleet_flag
+			remove_country_flag = auto_fleet_merger_army_flag
+			country_event = {
+				id = lazy_config_events.7
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.7.c" #custom_tooltip = "lazy_config_events.2.custom_tooltip.b"
+		allow = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = auto_fleet_merger_army_flag
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = auto_fleet_merger_army_flag
+			remove_country_flag = auto_fleet_merger_fleet_flag
+			country_event = {
+				id = lazy_config_events.7
+			}
+		}
+	}
+	
+	option = { 
+		name = "EXIT"
+	}
+}
+
+country_event = {
+	id = lazy_config_events.8
+	title = "lazy_config_events.8.name"
+	desc = "lazy_config_events.8.desc"
+	picture = GFX_evt_machine_sapience
+	show_sound = event_administrative_work
+	hide_window = no
+
+	is_triggered_only = yes
+
+	option = { 
+		name = "lazy_config_events.8.b"
+		allow = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = habitability_threshold_1
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = habitability_threshold_1
+			remove_country_flag = habitability_threshold_2
+			remove_country_flag = habitability_threshold_3
+			remove_country_flag = habitability_threshold_4
+			remove_country_flag = habitability_threshold_5
+			remove_country_flag = habitability_threshold_6
+			country_event = {
+				id = lazy_config_events.8
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.8.c"
+		allow = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = habitability_threshold_2
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = habitability_threshold_2
+			remove_country_flag = habitability_threshold_1
+			remove_country_flag = habitability_threshold_3
+			remove_country_flag = habitability_threshold_4
+			remove_country_flag = habitability_threshold_5
+			remove_country_flag = habitability_threshold_6
+			country_event = {
+				id = lazy_config_events.8
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.8.d"
+		allow = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = habitability_threshold_3
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = habitability_threshold_3
+			remove_country_flag = habitability_threshold_1
+			remove_country_flag = habitability_threshold_2
+			remove_country_flag = habitability_threshold_4
+			remove_country_flag = habitability_threshold_5
+			remove_country_flag = habitability_threshold_6
+			country_event = {
+				id = lazy_config_events.8
+			}
+		}
+	}
+	
+	option = { 
+		name = "lazy_config_events.8.e"
+		allow = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = habitability_threshold_4
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = habitability_threshold_4
+			remove_country_flag = habitability_threshold_1
+			remove_country_flag = habitability_threshold_2
+			remove_country_flag = habitability_threshold_3
+			remove_country_flag = habitability_threshold_5
+			remove_country_flag = habitability_threshold_6
+			country_event = {
+				id = lazy_config_events.8
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.8.f"
+		allow = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = habitability_threshold_5
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = habitability_threshold_5
+			remove_country_flag = habitability_threshold_1
+			remove_country_flag = habitability_threshold_2
+			remove_country_flag = habitability_threshold_3
+			remove_country_flag = habitability_threshold_4
+			remove_country_flag = habitability_threshold_6
+			country_event = {
+				id = lazy_config_events.8
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.8.g"
+		allow = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = habitability_threshold_6
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = habitability_threshold_6
+			remove_country_flag = habitability_threshold_1
+			remove_country_flag = habitability_threshold_2
+			remove_country_flag = habitability_threshold_3
+			remove_country_flag = habitability_threshold_4
+			remove_country_flag = habitability_threshold_5
+			country_event = {
+				id = lazy_config_events.8
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.8.h"
+		allow = {
+			hidden_trigger = {
+				OR = {
+					has_country_flag = habitability_threshold_1
+					has_country_flag = habitability_threshold_2
+					has_country_flag = habitability_threshold_3
+					has_country_flag = habitability_threshold_4
+					has_country_flag = habitability_threshold_5
+					has_country_flag = habitability_threshold_6
+				}
+			}
+		}
+		hidden_effect = {
+			remove_country_flag = habitability_threshold_1
+			remove_country_flag = habitability_threshold_2
+			remove_country_flag = habitability_threshold_3
+			remove_country_flag = habitability_threshold_4
+			remove_country_flag = habitability_threshold_5
+			remove_country_flag = habitability_threshold_6
+			country_event = {
+				id = lazy_config_events.8
+			}
+		}
+	}
+
+	option = { 
+		name = "EXIT"
+	}
+}
+
+country_event = {
+	id = lazy_config_events.9
+	title = "lazy_config_events.9.name"
+	desc = "lazy_config_events.9.desc"
+	picture = GFX_evt_machine_sapience
+	show_sound = event_administrative_work
+	hide_window = no
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = "EXIT"
+	}
+}
+
+country_event = {
+	id = lazy_config_events.10
+	title = "lazy_config_events.10.name"
+	desc = "lazy_config_events.10.desc"
+	picture = GFX_evt_machine_sapience
+	show_sound = event_administrative_work
+	hide_window = no
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = "EXIT"
+	}
+}
+
+country_event = {
+	id = lazy_config_events.11
+	title = "lazy_config_events.11.name"
+	desc = "lazy_config_events.11.desc"
+	picture = GFX_evt_machine_sapience
+	show_sound = event_administrative_work
+	hide_window = no
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = "lazy_config_events.11.b"
+		allow = {
+			hidden_trigger = {
+				has_technology = tech_terrestrial_sculpting
+				NOT = {
+					has_country_flag = auto_alpine_terraform_flag
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = auto_alpine_terraform_flag
+			remove_country_flag = auto_arctic_terraform_flag
+			remove_country_flag = auto_tundra_terraform_flag
+			remove_country_flag = auto_desert_terraform_flag
+			remove_country_flag = auto_arid_terraform_flag
+			remove_country_flag = auto_savannah_terraform_flag
+			remove_country_flag = auto_tropical_terraform_flag
+			remove_country_flag = auto_continental_terraform_flag
+			remove_country_flag = auto_ocean_terraform_flag
+			remove_country_flag = auto_gaia_terraform_flag
+			remove_country_flag = auto_hive_terraform_flag
+			remove_country_flag = auto_machine_terraform_flag
+			remove_country_flag = auto_nuked_terraform_flag
+			every_planet_within_border = {
+				limit = {
+					OR = {
+						has_planet_flag = auto_planet_alpine_terraform_flag
+						has_planet_flag = auto_planet_arctic_terraform_flag
+						has_planet_flag = auto_planet_tundra_terraform_flag
+						has_planet_flag = auto_planet_desert_terraform_flag
+						has_planet_flag = auto_planet_arid_terraform_flag
+						has_planet_flag = auto_planet_savannah_terraform_flag
+						has_planet_flag = auto_planet_tropical_terraform_flag
+						has_planet_flag = auto_planet_continental_terraform_flag
+						has_planet_flag = auto_planet_ocean_terraform_flag
+						has_planet_flag = auto_planet_gaia_terraform_flag
+						has_planet_flag = auto_planet_hive_terraform_flag
+						has_planet_flag = auto_planet_machine_terraform_flag
+						has_planet_flag = auto_planet_nuked_terraform_flag
+					}
+				}
+				remove_planet_flag = auto_planet_alpine_terraform_flag
+				remove_planet_flag = auto_planet_arctic_terraform_flag
+				remove_planet_flag = auto_planet_tundra_terraform_flag
+				remove_planet_flag = auto_planet_desert_terraform_flag
+				remove_planet_flag = auto_planet_arid_terraform_flag
+				remove_planet_flag = auto_planet_savannah_terraform_flag
+				remove_planet_flag = auto_planet_tropical_terraform_flag
+				remove_planet_flag = auto_planet_continental_terraform_flag
+				remove_planet_flag = auto_planet_ocean_terraform_flag
+				remove_planet_flag = auto_planet_gaia_terraform_flag
+				remove_planet_flag = auto_planet_hive_terraform_flag
+				remove_planet_flag = auto_planet_machine_terraform_flag
+				remove_planet_flag = auto_planet_nuked_terraform_flag
+			}
+			country_event = {
+				id = lazy_config_events.11
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.11.c"
+		allow = {
+			hidden_trigger = {
+				has_technology = tech_terrestrial_sculpting
+				NOT = {
+					has_country_flag = auto_arctic_terraform_flag
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = auto_arctic_terraform_flag
+			remove_country_flag = auto_alpine_terraform_flag
+			remove_country_flag = auto_tundra_terraform_flag
+			remove_country_flag = auto_desert_terraform_flag
+			remove_country_flag = auto_arid_terraform_flag
+			remove_country_flag = auto_savannah_terraform_flag
+			remove_country_flag = auto_tropical_terraform_flag
+			remove_country_flag = auto_continental_terraform_flag
+			remove_country_flag = auto_ocean_terraform_flag
+			remove_country_flag = auto_gaia_terraform_flag
+			remove_country_flag = auto_hive_terraform_flag
+			remove_country_flag = auto_machine_terraform_flag
+			remove_country_flag = auto_nuked_terraform_flag
+			every_planet_within_border = {
+				remove_planet_flag = auto_planet_alpine_terraform_flag
+				remove_planet_flag = auto_planet_arctic_terraform_flag
+				remove_planet_flag = auto_planet_tundra_terraform_flag
+				remove_planet_flag = auto_planet_desert_terraform_flag
+				remove_planet_flag = auto_planet_arid_terraform_flag
+				remove_planet_flag = auto_planet_savannah_terraform_flag
+				remove_planet_flag = auto_planet_tropical_terraform_flag
+				remove_planet_flag = auto_planet_continental_terraform_flag
+				remove_planet_flag = auto_planet_ocean_terraform_flag
+				remove_planet_flag = auto_planet_gaia_terraform_flag
+				remove_planet_flag = auto_planet_hive_terraform_flag
+				remove_planet_flag = auto_planet_machine_terraform_flag
+				remove_planet_flag = auto_planet_nuked_terraform_flag
+			}
+			country_event = {
+				id = lazy_config_events.11
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.11.d"
+		allow = {
+			hidden_trigger = {
+				has_technology = tech_terrestrial_sculpting
+				NOT = {
+					has_country_flag = auto_tundra_terraform_flag
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = auto_tundra_terraform_flag
+			remove_country_flag = auto_alpine_terraform_flag
+			remove_country_flag = auto_arctic_terraform_flag
+			remove_country_flag = auto_desert_terraform_flag
+			remove_country_flag = auto_arid_terraform_flag
+			remove_country_flag = auto_savannah_terraform_flag
+			remove_country_flag = auto_tropical_terraform_flag
+			remove_country_flag = auto_continental_terraform_flag
+			remove_country_flag = auto_ocean_terraform_flag
+			remove_country_flag = auto_gaia_terraform_flag
+			remove_country_flag = auto_hive_terraform_flag
+			remove_country_flag = auto_machine_terraform_flag
+			remove_country_flag = auto_nuked_terraform_flag
+			every_planet_within_border = {
+				remove_planet_flag = auto_planet_alpine_terraform_flag
+				remove_planet_flag = auto_planet_arctic_terraform_flag
+				remove_planet_flag = auto_planet_tundra_terraform_flag
+				remove_planet_flag = auto_planet_desert_terraform_flag
+				remove_planet_flag = auto_planet_arid_terraform_flag
+				remove_planet_flag = auto_planet_savannah_terraform_flag
+				remove_planet_flag = auto_planet_tropical_terraform_flag
+				remove_planet_flag = auto_planet_continental_terraform_flag
+				remove_planet_flag = auto_planet_ocean_terraform_flag
+				remove_planet_flag = auto_planet_gaia_terraform_flag
+				remove_planet_flag = auto_planet_hive_terraform_flag
+				remove_planet_flag = auto_planet_machine_terraform_flag
+				remove_planet_flag = auto_planet_nuked_terraform_flag
+			}
+			country_event = {
+				id = lazy_config_events.11
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.11.e"
+		allow = {
+			hidden_trigger = {
+				has_technology = tech_terrestrial_sculpting
+				NOT = {
+					has_country_flag = auto_arid_terraform_flag
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = auto_arid_terraform_flag
+			remove_country_flag = auto_alpine_terraform_flag
+			remove_country_flag = auto_arctic_terraform_flag
+			remove_country_flag = auto_tundra_terraform_flag
+			remove_country_flag = auto_desert_terraform_flag
+			remove_country_flag = auto_savannah_terraform_flag
+			remove_country_flag = auto_tropical_terraform_flag
+			remove_country_flag = auto_continental_terraform_flag
+			remove_country_flag = auto_ocean_terraform_flag
+			remove_country_flag = auto_gaia_terraform_flag
+			remove_country_flag = auto_hive_terraform_flag
+			remove_country_flag = auto_machine_terraform_flag
+			remove_country_flag = auto_nuked_terraform_flag
+			every_planet_within_border = {
+				remove_planet_flag = auto_planet_alpine_terraform_flag
+				remove_planet_flag = auto_planet_arctic_terraform_flag
+				remove_planet_flag = auto_planet_tundra_terraform_flag
+				remove_planet_flag = auto_planet_desert_terraform_flag
+				remove_planet_flag = auto_planet_arid_terraform_flag
+				remove_planet_flag = auto_planet_savannah_terraform_flag
+				remove_planet_flag = auto_planet_tropical_terraform_flag
+				remove_planet_flag = auto_planet_continental_terraform_flag
+				remove_planet_flag = auto_planet_ocean_terraform_flag
+				remove_planet_flag = auto_planet_gaia_terraform_flag
+				remove_planet_flag = auto_planet_hive_terraform_flag
+				remove_planet_flag = auto_planet_machine_terraform_flag
+				remove_planet_flag = auto_planet_nuked_terraform_flag
+			}
+			country_event = {
+				id = lazy_config_events.11
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.11.f"
+		allow = {
+			hidden_trigger = {
+				has_technology = tech_terrestrial_sculpting
+				NOT = {
+					has_country_flag = auto_desert_terraform_flag
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = auto_desert_terraform_flag
+			remove_country_flag = auto_alpine_terraform_flag
+			remove_country_flag = auto_arctic_terraform_flag
+			remove_country_flag = auto_tundra_terraform_flag
+			remove_country_flag = auto_arid_terraform_flag
+			remove_country_flag = auto_savannah_terraform_flag
+			remove_country_flag = auto_tropical_terraform_flag
+			remove_country_flag = auto_continental_terraform_flag
+			remove_country_flag = auto_ocean_terraform_flag
+			remove_country_flag = auto_gaia_terraform_flag
+			remove_country_flag = auto_hive_terraform_flag
+			remove_country_flag = auto_machine_terraform_flag
+			remove_country_flag = auto_nuked_terraform_flag
+			every_planet_within_border = {
+				remove_planet_flag = auto_planet_alpine_terraform_flag
+				remove_planet_flag = auto_planet_arctic_terraform_flag
+				remove_planet_flag = auto_planet_tundra_terraform_flag
+				remove_planet_flag = auto_planet_desert_terraform_flag
+				remove_planet_flag = auto_planet_arid_terraform_flag
+				remove_planet_flag = auto_planet_savannah_terraform_flag
+				remove_planet_flag = auto_planet_tropical_terraform_flag
+				remove_planet_flag = auto_planet_continental_terraform_flag
+				remove_planet_flag = auto_planet_ocean_terraform_flag
+				remove_planet_flag = auto_planet_gaia_terraform_flag
+				remove_planet_flag = auto_planet_hive_terraform_flag
+				remove_planet_flag = auto_planet_machine_terraform_flag
+				remove_planet_flag = auto_planet_nuked_terraform_flag
+			}
+			country_event = {
+				id = lazy_config_events.11
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.11.g"
+		allow = {
+			hidden_trigger = {
+				has_technology = tech_terrestrial_sculpting
+				NOT = {
+					has_country_flag = auto_savannah_terraform_flag
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = auto_savannah_terraform_flag
+			remove_country_flag = auto_alpine_terraform_flag
+			remove_country_flag = auto_arctic_terraform_flag
+			remove_country_flag = auto_tundra_terraform_flag
+			remove_country_flag = auto_desert_terraform_flag
+			remove_country_flag = auto_arid_terraform_flag
+			remove_country_flag = auto_tropical_terraform_flag
+			remove_country_flag = auto_continental_terraform_flag
+			remove_country_flag = auto_ocean_terraform_flag
+			remove_country_flag = auto_gaia_terraform_flag
+			remove_country_flag = auto_hive_terraform_flag
+			remove_country_flag = auto_machine_terraform_flag
+			remove_country_flag = auto_nuked_terraform_flag
+			every_planet_within_border = {
+				remove_planet_flag = auto_planet_alpine_terraform_flag
+				remove_planet_flag = auto_planet_arctic_terraform_flag
+				remove_planet_flag = auto_planet_tundra_terraform_flag
+				remove_planet_flag = auto_planet_desert_terraform_flag
+				remove_planet_flag = auto_planet_arid_terraform_flag
+				remove_planet_flag = auto_planet_savannah_terraform_flag
+				remove_planet_flag = auto_planet_tropical_terraform_flag
+				remove_planet_flag = auto_planet_continental_terraform_flag
+				remove_planet_flag = auto_planet_ocean_terraform_flag
+				remove_planet_flag = auto_planet_gaia_terraform_flag
+				remove_planet_flag = auto_planet_hive_terraform_flag
+				remove_planet_flag = auto_planet_machine_terraform_flag
+				remove_planet_flag = auto_planet_nuked_terraform_flag
+			}
+			country_event = {
+				id = lazy_config_events.11
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.11.h"
+		allow = {
+			hidden_trigger = {
+				has_technology = tech_terrestrial_sculpting
+				NOT = {
+					has_country_flag = auto_continental_terraform_flag
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = auto_continental_terraform_flag
+			remove_country_flag = auto_alpine_terraform_flag
+			remove_country_flag = auto_arctic_terraform_flag
+			remove_country_flag = auto_tundra_terraform_flag
+			remove_country_flag = auto_desert_terraform_flag
+			remove_country_flag = auto_arid_terraform_flag
+			remove_country_flag = auto_savannah_terraform_flag
+			remove_country_flag = auto_tropical_terraform_flag
+			remove_country_flag = auto_ocean_terraform_flag
+			remove_country_flag = auto_gaia_terraform_flag
+			remove_country_flag = auto_hive_terraform_flag
+			remove_country_flag = auto_machine_terraform_flag
+			remove_country_flag = auto_nuked_terraform_flag
+			every_planet_within_border = {
+				remove_planet_flag = auto_planet_alpine_terraform_flag
+				remove_planet_flag = auto_planet_arctic_terraform_flag
+				remove_planet_flag = auto_planet_tundra_terraform_flag
+				remove_planet_flag = auto_planet_desert_terraform_flag
+				remove_planet_flag = auto_planet_arid_terraform_flag
+				remove_planet_flag = auto_planet_savannah_terraform_flag
+				remove_planet_flag = auto_planet_tropical_terraform_flag
+				remove_planet_flag = auto_planet_continental_terraform_flag
+				remove_planet_flag = auto_planet_ocean_terraform_flag
+				remove_planet_flag = auto_planet_gaia_terraform_flag
+				remove_planet_flag = auto_planet_hive_terraform_flag
+				remove_planet_flag = auto_planet_machine_terraform_flag
+				remove_planet_flag = auto_planet_nuked_terraform_flag
+			}
+			country_event = {
+				id = lazy_config_events.11
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.11.i"
+		allow = {
+			hidden_trigger = {
+				has_technology = tech_terrestrial_sculpting
+				NOT = {
+					has_country_flag = auto_ocean_terraform_flag
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = auto_ocean_terraform_flag
+			remove_country_flag = auto_alpine_terraform_flag
+			remove_country_flag = auto_arctic_terraform_flag
+			remove_country_flag = auto_tundra_terraform_flag
+			remove_country_flag = auto_desert_terraform_flag
+			remove_country_flag = auto_arid_terraform_flag
+			remove_country_flag = auto_savannah_terraform_flag
+			remove_country_flag = auto_tropical_terraform_flag
+			remove_country_flag = auto_continental_terraform_flag
+			remove_country_flag = auto_gaia_terraform_flag
+			remove_country_flag = auto_hive_terraform_flag
+			remove_country_flag = auto_machine_terraform_flag
+			remove_country_flag = auto_nuked_terraform_flag
+			every_planet_within_border = {
+				remove_planet_flag = auto_planet_alpine_terraform_flag
+				remove_planet_flag = auto_planet_arctic_terraform_flag
+				remove_planet_flag = auto_planet_tundra_terraform_flag
+				remove_planet_flag = auto_planet_desert_terraform_flag
+				remove_planet_flag = auto_planet_arid_terraform_flag
+				remove_planet_flag = auto_planet_savannah_terraform_flag
+				remove_planet_flag = auto_planet_tropical_terraform_flag
+				remove_planet_flag = auto_planet_continental_terraform_flag
+				remove_planet_flag = auto_planet_ocean_terraform_flag
+				remove_planet_flag = auto_planet_gaia_terraform_flag
+				remove_planet_flag = auto_planet_hive_terraform_flag
+				remove_planet_flag = auto_planet_machine_terraform_flag
+				remove_planet_flag = auto_planet_nuked_terraform_flag
+			}
+			country_event = {
+				id = lazy_config_events.11
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.11.j"
+		allow = {
+			hidden_trigger = {
+				has_technology = tech_terrestrial_sculpting
+				NOT = {
+					has_country_flag = auto_tropical_terraform_flag
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = auto_tropical_terraform_flag
+			remove_country_flag = auto_alpine_terraform_flag
+			remove_country_flag = auto_arctic_terraform_flag
+			remove_country_flag = auto_tundra_terraform_flag
+			remove_country_flag = auto_desert_terraform_flag
+			remove_country_flag = auto_arid_terraform_flag
+			remove_country_flag = auto_savannah_terraform_flag
+			remove_country_flag = auto_continental_terraform_flag
+			remove_country_flag = auto_ocean_terraform_flag
+			remove_country_flag = auto_gaia_terraform_flag
+			remove_country_flag = auto_hive_terraform_flag
+			remove_country_flag = auto_machine_terraform_flag
+			remove_country_flag = auto_nuked_terraform_flag
+			every_planet_within_border = {
+				remove_planet_flag = auto_planet_alpine_terraform_flag
+				remove_planet_flag = auto_planet_arctic_terraform_flag
+				remove_planet_flag = auto_planet_tundra_terraform_flag
+				remove_planet_flag = auto_planet_desert_terraform_flag
+				remove_planet_flag = auto_planet_arid_terraform_flag
+				remove_planet_flag = auto_planet_savannah_terraform_flag
+				remove_planet_flag = auto_planet_tropical_terraform_flag
+				remove_planet_flag = auto_planet_continental_terraform_flag
+				remove_planet_flag = auto_planet_ocean_terraform_flag
+				remove_planet_flag = auto_planet_gaia_terraform_flag
+				remove_planet_flag = auto_planet_hive_terraform_flag
+				remove_planet_flag = auto_planet_machine_terraform_flag
+				remove_planet_flag = auto_planet_nuked_terraform_flag
+			}
+			country_event = {
+				id = lazy_config_events.11
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.11.k"
+		allow = {
+			hidden_trigger = {
+				has_ascension_perk = ap_world_shaper
+				NOT = {
+					has_country_flag = auto_gaia_terraform_flag
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = auto_gaia_terraform_flag
+			remove_country_flag = auto_alpine_terraform_flag
+			remove_country_flag = auto_arctic_terraform_flag
+			remove_country_flag = auto_tundra_terraform_flag
+			remove_country_flag = auto_desert_terraform_flag
+			remove_country_flag = auto_arid_terraform_flag
+			remove_country_flag = auto_savannah_terraform_flag
+			remove_country_flag = auto_tropical_terraform_flag
+			remove_country_flag = auto_continental_terraform_flag
+			remove_country_flag = auto_ocean_terraform_flag
+			remove_country_flag = auto_hive_terraform_flag
+			remove_country_flag = auto_machine_terraform_flag
+			remove_country_flag = auto_nuked_terraform_flag
+			every_planet_within_border = {
+				remove_planet_flag = auto_planet_alpine_terraform_flag
+				remove_planet_flag = auto_planet_arctic_terraform_flag
+				remove_planet_flag = auto_planet_tundra_terraform_flag
+				remove_planet_flag = auto_planet_desert_terraform_flag
+				remove_planet_flag = auto_planet_arid_terraform_flag
+				remove_planet_flag = auto_planet_savannah_terraform_flag
+				remove_planet_flag = auto_planet_tropical_terraform_flag
+				remove_planet_flag = auto_planet_continental_terraform_flag
+				remove_planet_flag = auto_planet_ocean_terraform_flag
+				remove_planet_flag = auto_planet_gaia_terraform_flag
+				remove_planet_flag = auto_planet_hive_terraform_flag
+				remove_planet_flag = auto_planet_machine_terraform_flag
+				remove_planet_flag = auto_planet_nuked_terraform_flag
+			}
+			country_event = {
+				id = lazy_config_events.11
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.11.l"
+		allow = {
+			hidden_trigger = {
+				has_ascension_perk = ap_hive_worlds
+				NOT = {
+					has_country_flag = auto_hive_terraform_flag
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = auto_hive_terraform_flag
+			remove_country_flag = auto_alpine_terraform_flag
+			remove_country_flag = auto_arctic_terraform_flag
+			remove_country_flag = auto_tundra_terraform_flag
+			remove_country_flag = auto_desert_terraform_flag
+			remove_country_flag = auto_arid_terraform_flag
+			remove_country_flag = auto_savannah_terraform_flag
+			remove_country_flag = auto_tropical_terraform_flag
+			remove_country_flag = auto_continental_terraform_flag
+			remove_country_flag = auto_ocean_terraform_flag
+			remove_country_flag = auto_gaia_terraform_flag
+			remove_country_flag = auto_machine_terraform_flag
+			remove_country_flag = auto_nuked_terraform_flag
+			every_planet_within_border = {
+				remove_planet_flag = auto_planet_alpine_terraform_flag
+				remove_planet_flag = auto_planet_arctic_terraform_flag
+				remove_planet_flag = auto_planet_tundra_terraform_flag
+				remove_planet_flag = auto_planet_desert_terraform_flag
+				remove_planet_flag = auto_planet_arid_terraform_flag
+				remove_planet_flag = auto_planet_savannah_terraform_flag
+				remove_planet_flag = auto_planet_tropical_terraform_flag
+				remove_planet_flag = auto_planet_continental_terraform_flag
+				remove_planet_flag = auto_planet_ocean_terraform_flag
+				remove_planet_flag = auto_planet_gaia_terraform_flag
+				remove_planet_flag = auto_planet_hive_terraform_flag
+				remove_planet_flag = auto_planet_machine_terraform_flag
+				remove_planet_flag = auto_planet_nuked_terraform_flag
+			}
+			country_event = {
+				id = lazy_config_events.11
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.11.m"
+		allow = {
+			hidden_trigger = {
+				has_ascension_perk = ap_machine_worlds
+				NOT = {
+					has_country_flag = auto_machine_terraform_flag
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = auto_machine_terraform_flag
+			remove_country_flag = auto_alpine_terraform_flag
+			remove_country_flag = auto_arctic_terraform_flag
+			remove_country_flag = auto_tundra_terraform_flag
+			remove_country_flag = auto_desert_terraform_flag
+			remove_country_flag = auto_arid_terraform_flag
+			remove_country_flag = auto_savannah_terraform_flag
+			remove_country_flag = auto_tropical_terraform_flag
+			remove_country_flag = auto_continental_terraform_flag
+			remove_country_flag = auto_ocean_terraform_flag
+			remove_country_flag = auto_gaia_terraform_flag
+			remove_country_flag = auto_hive_terraform_flag
+			remove_country_flag = auto_nuked_terraform_flag
+			every_planet_within_border = {
+				remove_planet_flag = auto_planet_alpine_terraform_flag
+				remove_planet_flag = auto_planet_arctic_terraform_flag
+				remove_planet_flag = auto_planet_tundra_terraform_flag
+				remove_planet_flag = auto_planet_desert_terraform_flag
+				remove_planet_flag = auto_planet_arid_terraform_flag
+				remove_planet_flag = auto_planet_savannah_terraform_flag
+				remove_planet_flag = auto_planet_tropical_terraform_flag
+				remove_planet_flag = auto_planet_continental_terraform_flag
+				remove_planet_flag = auto_planet_ocean_terraform_flag
+				remove_planet_flag = auto_planet_gaia_terraform_flag
+				remove_planet_flag = auto_planet_hive_terraform_flag
+				remove_planet_flag = auto_planet_machine_terraform_flag
+				remove_planet_flag = auto_planet_nuked_terraform_flag
+			}
+			country_event = {
+				id = lazy_config_events.11
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.11.n"
+		allow = {
+			hidden_trigger = {
+				has_technology = tech_climate_restoration
+				NOT = {
+					has_country_flag = auto_nuked_terraform_flag
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = auto_nuked_terraform_flag
+			remove_country_flag = auto_alpine_terraform_flag
+			remove_country_flag = auto_arctic_terraform_flag
+			remove_country_flag = auto_tundra_terraform_flag
+			remove_country_flag = auto_desert_terraform_flag
+			remove_country_flag = auto_arid_terraform_flag
+			remove_country_flag = auto_savannah_terraform_flag
+			remove_country_flag = auto_tropical_terraform_flag
+			remove_country_flag = auto_continental_terraform_flag
+			remove_country_flag = auto_ocean_terraform_flag
+			remove_country_flag = auto_gaia_terraform_flag
+			remove_country_flag = auto_hive_terraform_flag
+			remove_country_flag = auto_machine_terraform_flag
+			every_planet_within_border = {
+				remove_planet_flag = auto_planet_alpine_terraform_flag
+				remove_planet_flag = auto_planet_arctic_terraform_flag
+				remove_planet_flag = auto_planet_tundra_terraform_flag
+				remove_planet_flag = auto_planet_desert_terraform_flag
+				remove_planet_flag = auto_planet_arid_terraform_flag
+				remove_planet_flag = auto_planet_savannah_terraform_flag
+				remove_planet_flag = auto_planet_tropical_terraform_flag
+				remove_planet_flag = auto_planet_continental_terraform_flag
+				remove_planet_flag = auto_planet_ocean_terraform_flag
+				remove_planet_flag = auto_planet_gaia_terraform_flag
+				remove_planet_flag = auto_planet_hive_terraform_flag
+				remove_planet_flag = auto_planet_machine_terraform_flag
+				remove_planet_flag = auto_planet_nuked_terraform_flag
+			}
+			country_event = {
+				id = lazy_config_events.11
+			}
+		}
+	}
+
+	option = { 
+		name = "EXIT"
+	}
+}
+
+country_event = {
+	id = lazy_config_events.12
+	title = "lazy_config_events.12.name"
+	desc = "lazy_config_events.12.desc"
+	picture = GFX_evt_machine_sapience
+	show_sound = event_administrative_work
+	hide_window = no
+
+	is_triggered_only = yes
+
+	option = { 
+		name = "lazy_config_events.12.a" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+		allow = {
+			hidden_trigger = {
+				OR = {
+					has_country_flag = auto_upgrading_starbase_outpost_flag
+					has_country_flag = auto_upgrading_starbase_starport_flag
+					has_country_flag = auto_upgrading_starbase_starhold_flag
+					has_country_flag = auto_upgrading_starbase_starfortress_flag
+					has_country_flag = auto_upgrading_starbase_citadel_flag
+					has_country_flag = auto_upgrading_starbase_stronghold_flag
+				}
+			}
+		}
+
+		hidden_effect = {
+			remove_country_flag = auto_upgrading_starbase_outpost_flag
+			remove_country_flag = auto_upgrading_starbase_starport_flag
+			remove_country_flag = auto_upgrading_starbase_starhold_flag
+			remove_country_flag = auto_upgrading_starbase_starfortress_flag
+			remove_country_flag = auto_upgrading_starbase_citadel_flag
+			remove_country_flag = auto_upgrading_starbase_stronghold_flag
+			country_event = {
+				id = lazy_config_events.12
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.12.b" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+		allow = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = auto_upgrading_starbase_outpost_flag
+				}
+			}
+		}
+
+		hidden_effect = {
+			set_country_flag = auto_upgrading_starbase_outpost_flag
+			remove_country_flag = auto_upgrading_starbase_starport_flag
+			remove_country_flag = auto_upgrading_starbase_starhold_flag
+			remove_country_flag = auto_upgrading_starbase_starfortress_flag
+			remove_country_flag = auto_upgrading_starbase_citadel_flag
+			remove_country_flag = auto_upgrading_starbase_stronghold_flag
+			country_event = {
+				id = lazy_config_events.12
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.12.c" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+		allow = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = auto_upgrading_starbase_starport_flag
+				}
+			}
+		}
+
+		hidden_effect = {
+			set_country_flag = auto_upgrading_starbase_starport_flag
+			remove_country_flag = auto_upgrading_starbase_outpost_flag
+			remove_country_flag = auto_upgrading_starbase_starhold_flag
+			remove_country_flag = auto_upgrading_starbase_starfortress_flag
+			remove_country_flag = auto_upgrading_starbase_citadel_flag
+			remove_country_flag = auto_upgrading_starbase_stronghold_flag
+			country_event = {
+				id = lazy_config_events.12
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.12.d" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+		allow = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = auto_upgrading_starbase_starhold_flag
+				}
+			}
+		}
+
+		hidden_effect = {
+			set_country_flag = auto_upgrading_starbase_starhold_flag
+			remove_country_flag = auto_upgrading_starbase_outpost_flag
+			remove_country_flag = auto_upgrading_starbase_starport_flag
+			remove_country_flag = auto_upgrading_starbase_starfortress_flag
+			remove_country_flag = auto_upgrading_starbase_citadel_flag
+			remove_country_flag = auto_upgrading_starbase_stronghold_flag
+			country_event = {
+				id = lazy_config_events.12
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.12.e" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+		allow = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = auto_upgrading_starbase_starfortress_flag
+				}
+			}
+		}
+
+		hidden_effect = {
+			set_country_flag = auto_upgrading_starbase_starfortress_flag
+			remove_country_flag = auto_upgrading_starbase_outpost_flag
+			remove_country_flag = auto_upgrading_starbase_starport_flag
+			remove_country_flag = auto_upgrading_starbase_starhold_flag
+			remove_country_flag = auto_upgrading_starbase_citadel_flag
+			remove_country_flag = auto_upgrading_starbase_stronghold_flag
+			country_event = {
+				id = lazy_config_events.12
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.12.f" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+		trigger = {
+			has_global_flag = has_nsc_active
+		}
+		allow = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = auto_upgrading_starbase_citadel_flag
+				}
+			}
+		}
+
+		hidden_effect = {
+			set_country_flag = auto_upgrading_starbase_citadel_flag
+			remove_country_flag = auto_upgrading_starbase_outpost_flag
+			remove_country_flag = auto_upgrading_starbase_starport_flag
+			remove_country_flag = auto_upgrading_starbase_starhold_flag
+			remove_country_flag = auto_upgrading_starbase_starfortress_flag
+			remove_country_flag = auto_upgrading_starbase_stronghold_flag
+			country_event = {
+				id = lazy_config_events.12
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.12.g" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+		trigger = {
+			has_global_flag = has_nsc_active
+		}
+		allow = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = auto_upgrading_starbase_stronghold_flag
+				}
+			}
+		}
+
+		hidden_effect = {
+			set_country_flag = auto_upgrading_starbase_stronghold_flag
+			remove_country_flag = auto_upgrading_starbase_outpost_flag
+			remove_country_flag = auto_upgrading_starbase_starport_flag
+			remove_country_flag = auto_upgrading_starbase_starhold_flag
+			remove_country_flag = auto_upgrading_starbase_starfortress_flag
+			remove_country_flag = auto_upgrading_starbase_citadel_flag
+			country_event = {
+				id = lazy_config_events.12
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.12.h" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+		allow = {
+			hidden_trigger = {
+				count_owned_starbase = {
+					limit = {
+						has_starbase_size = starbase_starport
+					}
+					count > 0
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = lazy_upg_sta_events.8
+			}
+			country_event = {
+				id = lazy_config_events.12
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.12.i" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+		allow = {
+			hidden_trigger = {
+				count_owned_starbase = {
+					limit = {
+						OR = {
+							has_starbase_size = starbase_starport
+							has_starbase_size = starbase_starhold
+						}
+					}
+					count > 0
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = lazy_upg_sta_events.9
+			}
+			country_event = {
+				id = lazy_config_events.12
+			}
+		}
+	}
+	
+	option = { 
+		name = "lazy_config_events.12.j" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+		allow = {
+			hidden_trigger = {
+				count_owned_starbase = {
+					limit = {
+						OR = {
+							has_starbase_size = starbase_starport
+							has_starbase_size = starbase_starhold
+							has_starbase_size = starbase_starfortress
+						}
+					}
+					count > 0
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = lazy_upg_sta_events.10
+			}
+			country_event = {
+				id = lazy_config_events.12
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.12.k" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+		allow = {
+			hidden_trigger = {
+				count_owned_starbase = {
+					limit = {
+						OR = {
+							has_starbase_size = starbase_starport
+							has_starbase_size = starbase_starhold
+							has_starbase_size = starbase_starfortress
+							has_starbase_size = starbase_citadel
+						}
+					}
+					count > 0
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = lazy_upg_sta_events.11
+			}
+			country_event = {
+				id = lazy_config_events.12
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.12.l" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+		trigger = {
+			has_global_flag = has_nsc_active
+		}
+		allow = {
+			hidden_trigger = {
+				count_owned_starbase = {
+					limit = {
+						OR = {
+							has_starbase_size = starbase_starport
+							has_starbase_size = starbase_starhold
+							has_starbase_size = starbase_starfortress
+							has_starbase_size = starbase_citadel
+							has_starbase_size = starbase_stronghold
+						}
+					}
+					count > 0
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = lazy_upg_sta_events.12
+			}
+			country_event = {
+				id = lazy_config_events.12
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.12.m" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+		trigger = {
+			has_global_flag = has_nsc_active
+		}
+		allow = {
+			hidden_trigger = {
+				count_owned_starbase = {
+					limit = {
+						OR = {
+							has_starbase_size = starbase_starport
+							has_starbase_size = starbase_starhold
+							has_starbase_size = starbase_starfortress
+							has_starbase_size = starbase_citadel
+							has_starbase_size = starbase_stronghold
+							has_starbase_size = starbase_headquarters
+						}
+					}
+					count > 0
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = lazy_upg_sta_events.13
+			}
+			country_event = {
+				id = lazy_config_events.12
+			}
+		}
+	}
+
+	option = { 
+		name = "EXIT"
+	}
+}
+
+country_event = {
+	id = lazy_config_events.13
+	title = "lazy_config_events.13.name"
+	desc = "lazy_config_events.13.desc"
+	picture = GFX_evt_machine_sapience
+	show_sound = event_administrative_work
+	hide_window = no
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = "EXIT"
+	}
+}
+
+country_event = {
+	id = lazy_config_events.14
+	title = "lazy_config_events.14.name"
+	desc = "lazy_config_events.14.desc"
+	picture = GFX_evt_machine_sapience
+	show_sound = event_administrative_work
+	hide_window = no
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = "EXIT"
+	}
+}
+
+country_event = {
+	id = lazy_config_events.15
+	title = "lazy_config_events.15.name"
+	desc = "lazy_config_events.15.desc"
+	picture = GFX_evt_machine_sapience
+	show_sound = event_administrative_work
+	hide_window = no
+
+	is_triggered_only = yes
+
+	# option = { 
+	# 	name = "lazy_config_events.2.b" #custom_tooltip = "lazy_config_events.2.custom_tooltip.b"
+	# 	allow = {
+	# 		hidden_trigger = {
+	# 			NOT = {
+	# 				has_country_flag = auto_colony_manager_flag
+	# 			}
+	# 		}
+	# 	}
+	# 	hidden_effect = {
+	# 		set_country_flag = auto_colony_manager_flag
+	# 		country_event = {
+	# 			id = lazy_config_events.2
+	# 		}
+	# 	}
+	# }
+
+	option = { 
+		name = "EXIT"
+	}
+}
+
+country_event = {
+	id = lazy_config_events.16
+	title = "lazy_config_events.16.name"
+	desc = "lazy_config_events.16.desc"
+	picture = GFX_evt_machine_sapience
+	show_sound = event_administrative_work
+	hide_window = no
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = "lazy_config_events.16.b"
+		allow = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = auto_assign_planet_army_leader_flag
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = auto_assign_planet_army_leader_flag
+			remove_country_flag = auto_assign_army_leader_flag
+			remove_country_flag = auto_assign_fleet_leader_flag
+			country_event = {
+				id = lazy_config_events.16
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.16.c"
+		allow = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = auto_assign_army_leader_flag
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = auto_assign_army_leader_flag
+			remove_country_flag = auto_assign_planet_army_leader_flag
+			remove_country_flag = auto_assign_fleet_leader_flag
+			country_event = {
+				id = lazy_config_events.16
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_config_events.16.d"
+		allow = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = auto_assign_fleet_leader_flag
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = auto_assign_fleet_leader_flag
+			remove_country_flag = auto_assign_planet_army_leader_flag
+			remove_country_flag = auto_assign_army_leader_flag
+			country_event = {
+				id = lazy_config_events.16
+			}
+		}
+	}
+
+	option = { 
+		name = "EXIT"
+	}
+}

@@ -1,0 +1,182 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_lazy_automation_sidebar_background"
+		textureFile = "gfx/interface/main/lazy_automation_sidebar_background.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_lazy_automation_background"
+		textureFile = "gfx/interface/main/lazy_automation_background.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_lazy_automation_background_frame"
+		textureFile = "gfx/interface/main/lazy_automation_background_frame.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_lazy_automation_background_hex"
+		textureFile = "gfx/interface/main/lazy_automation_background_hex.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_lazy_automation_background_heading_frame"
+		textureFile = "gfx/interface/main/lazy_automation_background_heading_frame.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_lazy_automation_option_all"
+		textureFile = "gfx/interface/main/lazy_automation_option_all.dds"
+		noOfFrames = 3
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_lazy_automation_exit"
+		textureFile = "gfx/interface/main/lazy_automation_exit.dds"
+		noOfFrames = 3
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_lazy_automation_option"
+		textureFile = "gfx/interface/main/lazy_automation_option.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_lazy_automation_option_underliner"
+		textureFile = "gfx/interface/main/lazy_automation_option_underliner.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_lazy_automation_option_underliner_l"
+		textureFile = "gfx/interface/main/lazy_automation_option_underliner_l.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_lazy_automation_option_underliner_r"
+		textureFile = "gfx/interface/main/lazy_automation_option_underliner_r.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_lazy_automation_option_settings"
+		textureFile = "gfx/interface/main/lazy_automation_option_settings.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_lazy_automation_option_disable"
+		textureFile = "gfx/interface/main/lazy_automation_option_disable.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_lazy_automation_speed_left"
+		textureFile = "gfx/interface/main/lazy_automation_speed_left.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_lazy_automation_speed_right"
+		textureFile = "gfx/interface/main/lazy_automation_speed_right.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_lazy_automation_speed_menu"
+		textureFile = "gfx/interface/main/lazy_automation_speed_menu.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_lazy_automation_speed_text_background"
+		textureFile = "gfx/interface/main/lazy_automation_speed_text_background.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_lazy_automation_sidebar_background_feature"
+		textureFile = "gfx/interface/main/lazy_automation_sidebar_background_feature.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_lazy_automation_outpost_button"
+		textureFile = "gfx/interface/main/lazy_automation_outpost_button.dds"
+		noOfFrames = 3
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_lazy_automation_outpost_button_active"
+		textureFile = "gfx/interface/main/lazy_automation_outpost_button_active.dds"
+		noOfFrames = 3
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_lazy_automation_fleet_button"
+		textureFile = "gfx/interface/main/lazy_automation_fleet_button.dds"
+		noOfFrames = 3
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_lazy_automation_fleet_button_active"
+		textureFile = "gfx/interface/main/lazy_automation_fleet_button_active.dds"
+		noOfFrames = 3
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_lazy_automation_megastructure_button"
+		textureFile = "gfx/interface/main/lazy_automation_megastructure_button.dds"
+		noOfFrames = 3
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_lazy_automation_megastructure_button_active"
+		textureFile = "gfx/interface/main/lazy_automation_megastructure_button_active.dds"
+		noOfFrames = 3
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_lazy_automation_sidebar_background_feature_2"
+		textureFile = "gfx/interface/main/lazy_automation_sidebar_background_feature_2.dds"
+	}
+}

@@ -1,0 +1,46 @@
+on_game_start_country = {
+	events = {
+		lazy_shared_events.1
+	}
+}
+on_monthly_pulse_country = {
+	events = {
+		lazy_shared_events.1
+		# lazy_pla_spe_events.2
+		# lazy_pla_spe_events.3
+		lazy_mig_une_pop_events.1
+		lazy_mig_une_pop_events.2
+		lazy_arm_inv_events.1
+		lazy_arm_rec_events.1
+		lazy_col_events.2
+		lazy_meg_upg_events.1
+		lazy_upg_sta_events.1
+		lazy_ter_events.1
+		lazy_ter_events.2
+		lazy_rec_lea_events.1
+		# lazy_shared_events.1
+	}
+}
+# Planet has taken damage from orbital bombardment - Damage is applied daily
+# This = Planet
+# From = Bombarder
+on_planet_bombarded = {
+	events = {
+		lazy_fle_att_events.2
+	}
+}
+
+# # A ship has started a new order
+# # Root = Ship
+# # From = Country
+# on_ship_order = {
+# 	events = {
+		
+# 	}
+# }
+
+# on_bi_yearly_pulse_country = {
+# 	events = {
+# 		lazy_config_events.15 # Buttom that breaks auto-unpause
+# 	}
+# }

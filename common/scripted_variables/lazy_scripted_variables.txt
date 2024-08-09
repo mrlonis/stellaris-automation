@@ -1,0 +1,159 @@
+@dyson_p1_minus_cost_alloys_b_star			= -25000		# 250%
+@dyson_p1_minus_cost_alloys_m_giant_star		= -20000		# 200%
+@dyson_p1_minus_cost_alloys_a_star			= -15000		# 150%
+@dyson_p1_minus_cost_alloys_f_star			= -12500		# 125%
+@dyson_p1_minus_cost_alloys_g_star			= -10000		# 100% Vanilla
+@dyson_p1_minus_cost_alloys_k_star			= -7500		# 75%
+@dyson_p1_minus_cost_alloys_m_star			= -5000		# 50%
+
+@dyson_p2_minus_cost_alloys_b_star			= -25000		# 250%
+@dyson_p2_minus_cost_alloys_m_giant_star		= -20000		# 200%
+@dyson_p2_minus_cost_alloys_a_star			= -15000		# 150%
+@dyson_p2_minus_cost_alloys_f_star			= -12500		# 125%
+@dyson_p2_minus_cost_alloys_g_star			= -10000		# 100% Vanilla
+@dyson_p2_minus_cost_alloys_k_star			= -7500		# 75%
+@dyson_p2_minus_cost_alloys_m_star			= -5000		# 50%
+
+@dyson_p3_minus_cost_alloys_b_star			= -25000		# 250%
+@dyson_p3_minus_cost_alloys_m_giant_star		= -20000		# 200%
+@dyson_p3_minus_cost_alloys_a_star			= -15000		# 150%
+@dyson_p3_minus_cost_alloys_f_star			= -12500		# 125%
+@dyson_p3_minus_cost_alloys_g_star			= -10000		# 100% Vanilla
+@dyson_p3_minus_cost_alloys_k_star			= -7500		# 75%
+@dyson_p3_minus_cost_alloys_m_star			= -5000		# 50%
+
+@dyson_p4_minus_cost_alloys_b_star			= -25000		# 250%
+@dyson_p4_minus_cost_alloys_m_giant_star		= -20000		# 200%
+@dyson_p4_minus_cost_alloys_a_star			= -15000		# 150%
+@dyson_p4_minus_cost_alloys_f_star			= -12500		# 125%
+@dyson_p4_minus_cost_alloys_g_star			= -10000		# 100% Vanilla
+@dyson_p4_minus_cost_alloys_k_star			= -7500		# 75%
+@dyson_p4_minus_cost_alloys_m_star			= -5000		# 50%
+
+@dyson_p5_minus_cost_alloys_b_star			= -25000		# 250%
+@dyson_p5_minus_cost_alloys_m_giant_star		= -20000		# 200%
+@dyson_p5_minus_cost_alloys_a_star			= -15000		# 150%
+@dyson_p5_minus_cost_alloys_f_star			= -12500		# 125%
+@dyson_p5_minus_cost_alloys_g_star			= -10000		# 100% Vanilla
+@dyson_p5_minus_cost_alloys_k_star			= -7500		# 75%
+@dyson_p5_minus_cost_alloys_m_star			= -5000		# 50%
+
+@dyson_r_minus_cost_alloys_b_star				= -50000		# 250%
+@dyson_r_minus_cost_alloys_m_giant_star		= -40000		# 200%
+@dyson_r_minus_cost_alloys_a_star				= -30000		# 150%
+@dyson_r_minus_cost_alloys_f_star				= -25000		# 125%
+@dyson_r_minus_cost_alloys_g_star				= -20000		# 100% Vanilla
+@dyson_r_minus_cost_alloys_k_star				= -15000		# 75%
+@dyson_r_minus_cost_alloys_m_star				= -5000			# 50%
+
+@matrioshka_p1_minus_cost_alloys_b_star				= -75000		# 250%
+@matrioshka_p1_minus_cost_alloys_m_giant_star			= -60000		# 200%
+@matrioshka_p1_minus_cost_alloys_a_star				= -45000		# 150%
+@matrioshka_p1_minus_cost_alloys_f_star				= -37500		# 125%
+@matrioshka_p1_minus_cost_alloys_g_star				= -30000		# 100% Vanilla
+@matrioshka_p1_minus_cost_alloys_k_star				= -22500		# 75%
+@matrioshka_p1_minus_cost_alloys_m_star				= -15000		# 50%
+
+@matrioshka_p2_minus_cost_alloys_b_star				= -87500		# 250%
+@matrioshka_p2_minus_cost_alloys_m_giant_star			= -70000		# 200%
+@matrioshka_p2_minus_cost_alloys_a_star				= -52500		# 150%
+@matrioshka_p2_minus_cost_alloys_f_star				= -43750		# 125%
+@matrioshka_p2_minus_cost_alloys_g_star				= -35000		# 100% Vanilla
+@matrioshka_p2_minus_cost_alloys_k_star				= -26250		# 75%
+@matrioshka_p2_minus_cost_alloys_m_star				= -17500		# 50%
+
+@matrioshka_p3_minus_cost_alloys_b_star				= -100000	# 250%
+@matrioshka_p3_minus_cost_alloys_m_giant_star			= -80000		# 200%
+@matrioshka_p3_minus_cost_alloys_a_star				= -60000		# 150%
+@matrioshka_p3_minus_cost_alloys_f_star				= -50000		# 125%
+@matrioshka_p3_minus_cost_alloys_g_star				= -40000		# 100% Vanilla
+@matrioshka_p3_minus_cost_alloys_k_star				= -30000		# 75%
+@matrioshka_p3_minus_cost_alloys_m_star				= -20000		# 50%
+
+@matrioshka_p4_minus_cost_alloys_b_star				= -112500	# 250%
+@matrioshka_p4_minus_cost_alloys_m_giant_star			= -90000		# 200%
+@matrioshka_p4_minus_cost_alloys_a_star				= -67500		# 150%
+@matrioshka_p4_minus_cost_alloys_f_star				= -56250		# 125%
+@matrioshka_p4_minus_cost_alloys_g_star				= -45000		# 100% Vanilla
+@matrioshka_p4_minus_cost_alloys_k_star				= -33750		# 75%
+@matrioshka_p4_minus_cost_alloys_m_star				= -22500		# 50%
+
+@matrioshka_p5_minus_cost_alloys_b_star				= -125000	# 250%
+@matrioshka_p5_minus_cost_alloys_m_giant_star			= -100000	# 200%
+@matrioshka_p5_minus_cost_alloys_a_star				= -75000		# 150%
+@matrioshka_p5_minus_cost_alloys_f_star				= -62500		# 125%
+@matrioshka_p5_minus_cost_alloys_g_star				= -50000		# 100% Vanilla
+@matrioshka_p5_minus_cost_alloys_k_star				= -37500		# 75%
+@matrioshka_p5_minus_cost_alloys_m_star				= -25000		# 50%
+
+@matrioshka_p6_minus_cost_alloys_b_star				= -31250		# 250%
+@matrioshka_p6_minus_cost_alloys_m_giant_star			= -25000		# 200%
+@matrioshka_p6_minus_cost_alloys_a_star				= -18750		# 150%
+@matrioshka_p6_minus_cost_alloys_f_star				= -15625		# 125%
+@matrioshka_p6_minus_cost_alloys_g_star				= -12500		# 100% Vanilla
+@matrioshka_p6_minus_cost_alloys_k_star				= -9375		# 75%
+@matrioshka_p6_minus_cost_alloys_m_star				= -6250		# 50%
+
+@matrioshka_p7_minus_cost_alloys_b_star				= -31250		# 250%
+@matrioshka_p7_minus_cost_alloys_m_giant_star			= -25000		# 200%
+@matrioshka_p7_minus_cost_alloys_a_star				= -18750		# 150%
+@matrioshka_p7_minus_cost_alloys_f_star				= -15625		# 125%
+@matrioshka_p7_minus_cost_alloys_g_star				= -12500		# 100% Vanilla
+@matrioshka_p7_minus_cost_alloys_k_star				= -9375		# 75%
+@matrioshka_p7_minus_cost_alloys_m_star				= -6250		# 50%
+
+@matrioshka_p8_minus_cost_alloys_b_star				= -31250		# 250%
+@matrioshka_p8_minus_cost_alloys_m_giant_star			= -25000		# 200%
+@matrioshka_p8_minus_cost_alloys_a_star				= -18750		# 150%
+@matrioshka_p8_minus_cost_alloys_f_star				= -15625		# 125%
+@matrioshka_p8_minus_cost_alloys_g_star				= -12500		# 100% Vanilla
+@matrioshka_p8_minus_cost_alloys_k_star				= -9375		# 75%
+@matrioshka_p8_minus_cost_alloys_m_star				= -6250		# 50%
+
+@matrioshka_p9_minus_cost_alloys_b_star				= -31250		# 250%
+@matrioshka_p9_minus_cost_alloys_m_giant_star			= -25000		# 200%
+@matrioshka_p9_minus_cost_alloys_a_star				= -18750		# 150%
+@matrioshka_p9_minus_cost_alloys_f_star				= -15625		# 125%
+@matrioshka_p9_minus_cost_alloys_g_star				= -12500		# 100% Vanilla
+@matrioshka_p9_minus_cost_alloys_k_star				= -9375		# 75%
+@matrioshka_p9_minus_cost_alloys_m_star				= -6250		# 50%
+
+@starlifter_p1_minus_cost_alloys_b_star				= -37500		# 250%
+@starlifter_p1_minus_cost_alloys_m_giant_star			= -30000		# 200%
+@starlifter_p1_minus_cost_alloys_a_star				= -22500		# 150%
+@starlifter_p1_minus_cost_alloys_f_star				= -18750		# 125%
+@starlifter_p1_minus_cost_alloys_g_star				= -15000		# 100% Vanilla
+@starlifter_p1_minus_cost_alloys_k_star				= -11250		# 75%
+@starlifter_p1_minus_cost_alloys_m_star				= -7500		# 50%
+
+@starlifter_p2_minus_cost_alloys_b_star				= -37500		# 250%
+@starlifter_p2_minus_cost_alloys_m_giant_star			= -30000		# 200%
+@starlifter_p2_minus_cost_alloys_a_star				= -22500		# 150%
+@starlifter_p2_minus_cost_alloys_f_star				= -18750		# 125%
+@starlifter_p2_minus_cost_alloys_g_star				= -15000		# 100% Vanilla
+@starlifter_p2_minus_cost_alloys_k_star				= -11250		# 75%
+@starlifter_p2_minus_cost_alloys_m_star				= -7500		# 50%
+
+@starlifter_p3_minus_cost_alloys_b_star				= -37500		# 250%
+@starlifter_p3_minus_cost_alloys_m_giant_star			= -30000		# 200%
+@starlifter_p3_minus_cost_alloys_a_star				= -22500		# 150%
+@starlifter_p3_minus_cost_alloys_f_star				= -18750		# 125%
+@starlifter_p3_minus_cost_alloys_g_star				= -15000		# 100% Vanilla
+@starlifter_p3_minus_cost_alloys_k_star				= -11250		# 75%
+@starlifter_p3_minus_cost_alloys_m_star				= -7500		# 50%
+
+@starlifter_p4_minus_cost_alloys_b_star				= -37500		# 250%
+@starlifter_p4_minus_cost_alloys_m_giant_star			= -30000		# 200%
+@starlifter_p4_minus_cost_alloys_a_star				= -22500		# 150%
+@starlifter_p4_minus_cost_alloys_f_star				= -18750		# 125%
+@starlifter_p4_minus_cost_alloys_g_star				= -15000		# 100% Vanilla
+@starlifter_p4_minus_cost_alloys_k_star				= -11250		# 75%
+@starlifter_p4_minus_cost_alloys_m_star				= -7500		# 50%
+
+@starlifter_p5_minus_cost_alloys_b_star				= -37500		# 250%
+@starlifter_p5_minus_cost_alloys_m_giant_star			= -30000		# 200%
+@starlifter_p5_minus_cost_alloys_a_star				= -22500		# 150%
+@starlifter_p5_minus_cost_alloys_f_star				= -18750		# 125%
+@starlifter_p5_minus_cost_alloys_g_star				= -15000		# 100% Vanilla
+@starlifter_p5_minus_cost_alloys_k_star				= -11250		# 75%
+@starlifter_p5_minus_cost_alloys_m_star				= -7500		# 50%

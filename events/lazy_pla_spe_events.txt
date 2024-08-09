@@ -1,0 +1,799 @@
+# namespace = lazy_pla_spe_events
+
+# planet_event = {
+# 	id = lazy_pla_spe_events.1
+# 	title = "lazy_pla_spe_events.1.name"
+# 	desc = "lazy_pla_spe_events.1.desc"
+# 	picture = GFX_evt_ai_planet
+# 	show_sound = event_ai_started
+# 	hide_window = no
+
+# 	is_triggered_only = yes
+
+# 	option = { 
+# 		name = "lazy_pla_spe_events.1.a" #custom_tooltip = "_event.1.custom_tooltip.a"
+# 		allow = {
+# 			hidden_trigger = {
+# 				NOT = {
+# 					has_planet_flag = researcher_planet_flag
+# 				}
+# 			}
+# 		}
+# 		hidden_effect = {
+# 			set_planet_flag = researcher_planet_flag
+# 			#remove_planet_flag = metallurgist_planet_flag
+# 			#remove_planet_flag = artisan_planet_flag
+# 			#remove_planet_flag = bureaucrat_planet_flag
+# 			remove_planet_flag = gas_refiner_planet_flag
+# 			remove_planet_flag = chemist_planet_flag
+# 			remove_planet_flag = translucer_planet_flag
+# 			remove_planet_flag = unification_planet_flag
+# 			add_modifier = {
+# 				modifier = building_notification_research
+# 			}
+# 			#remove_modifier = building_notification_alloy
+# 			#remove_modifier = building_notification_consumer_goods
+# 			#remove_modifier = building_notification_administrative_cap
+# 			remove_modifier = building_notification_eg_rc_vm
+# 			remove_modifier = building_notification_exotic_gases
+# 			remove_modifier = building_notification_volatile_motes
+# 			remove_modifier = building_notification_rare_crystals
+# 			remove_modifier = building_notification_unity
+# 		}
+# 	}
+
+# 	# option = { 
+# 	# 	name = "lazy_pla_spe_events.1.b" #custom_tooltip = "_event.2.custom_tooltip.b"
+# 	# 	allow = {
+# 	# 		hidden_trigger = {
+# 	# 			NOT = {
+# 	# 				has_planet_flag = metallurgist_planet_flag
+# 	# 			}
+# 	# 		}
+# 	# 	}
+# 	# 	hidden_effect = {
+# 	# 		set_planet_flag = metallurgist_planet_flag
+# 	# 		remove_planet_flag = researcher_planet_flag
+# 	# 		remove_planet_flag = artisan_planet_flag
+# 	# 		remove_planet_flag = bureaucrat_planet_flag
+# 	# 		remove_planet_flag = gas_refiner_planet_flag
+# 	# 		remove_planet_flag = chemist_planet_flag
+# 	# 		remove_planet_flag = translucer_planet_flag
+# 	# 		remove_planet_flag = unification_planet_flag
+# 	# 		add_modifier = {
+# 	# 			modifier = building_notification_alloy
+# 	# 		}
+# 	# 		remove_modifier = building_notification_research
+# 	# 		remove_modifier = building_notification_consumer_goods
+# 	# 		remove_modifier = building_notification_administrative_cap
+# 	# 		remove_modifier = building_notification_eg_rc_vm
+# 	# 		remove_modifier = building_notification_exotic_gases
+# 	# 		remove_modifier = building_notification_volatile_motes
+# 	# 		remove_modifier = building_notification_rare_crystals
+# 	# 		remove_modifier = building_notification_unity
+# 	# 	}
+# 	# }
+
+# 	# option = { 
+# 	# 	name = "lazy_pla_spe_events.1.c" #custom_tooltip = "_event.3.custom_tooltip.c"
+# 	# 	allow = {
+# 	# 		hidden_trigger = {
+# 	# 			NOT = {
+# 	# 				has_planet_flag = artisan_planet_flag
+# 	# 			}
+# 	# 			owner = {
+# 	# 				OR = {
+# 	# 					has_civic = civic_machine_servitor
+# 	# 					NOR = {
+# 	# 						has_authority = auth_hive_mind
+# 	# 						has_authority = auth_machine_intelligence
+# 	# 					}
+# 	# 				}
+# 	# 			}
+# 	# 		}
+# 	# 	}
+# 	# 	hidden_effect = {
+# 	# 		set_planet_flag = artisan_planet_flag
+# 	# 		remove_planet_flag = researcher_planet_flag
+# 	# 		remove_planet_flag = metallurgist_planet_flag
+# 	# 		remove_planet_flag = bureaucrat_planet_flag
+# 	# 		remove_planet_flag = gas_refiner_planet_flag
+# 	# 		remove_planet_flag = chemist_planet_flag
+# 	# 		remove_planet_flag = translucer_planet_flag
+# 	# 		remove_planet_flag = unification_planet_flag
+# 	# 		add_modifier = {
+# 	# 			modifier = building_notification_consumer_goods
+# 	# 		}
+# 	# 		remove_modifier = building_notification_research
+# 	# 		remove_modifier = building_notification_alloy
+# 	# 		remove_modifier = building_notification_administrative_cap
+# 	# 		remove_modifier = building_notification_eg_rc_vm
+# 	# 		remove_modifier = building_notification_exotic_gases
+# 	# 		remove_modifier = building_notification_volatile_motes
+# 	# 		remove_modifier = building_notification_rare_crystals
+# 	# 		remove_modifier = building_notification_unity
+# 	# 	}
+# 	# }
+
+# 	option = { 
+# 		name = "lazy_pla_spe_events.1.d" #custom_tooltip = "_event.3.custom_tooltip.c"
+# 		allow = {
+# 			hidden_trigger = {
+# 				NOT = {
+# 					has_planet_flag = unification_planet_flag
+# 				}
+# 			}
+# 		}
+# 		hidden_effect = {
+# 			set_planet_flag = unification_planet_flag
+# 			remove_planet_flag = researcher_planet_flag
+# 			#remove_planet_flag = metallurgist_planet_flag
+# 			#remove_planet_flag = artisan_planet_flag
+# 			#remove_planet_flag = bureaucrat_planet_flag
+# 			remove_planet_flag = gas_refiner_planet_flag
+# 			remove_planet_flag = chemist_planet_flag
+# 			remove_planet_flag = translucer_planet_flag
+# 			add_modifier = {
+# 				modifier = building_notification_unity
+# 			}
+# 			remove_modifier = building_notification_research
+# 			#remove_modifier = building_notification_alloy
+# 			#remove_modifier = building_notification_consumer_goods
+# 			#remove_modifier = building_notification_administrative_cap
+# 			remove_modifier = building_notification_eg_rc_vm
+# 			remove_modifier = building_notification_exotic_gases
+# 			remove_modifier = building_notification_volatile_motes
+# 			remove_modifier = building_notification_rare_crystals
+# 		}
+# 	}
+
+# 	# option = { 
+# 	# 	name = "lazy_pla_spe_events.1.e" #custom_tooltip = "_event.4.custom_tooltip.d"
+# 	# 	allow = {
+# 	# 		hidden_trigger = {
+# 	# 			NOT = {
+# 	# 				has_planet_flag = bureaucrat_planet_flag
+# 	# 			}
+# 	# 		}
+# 	# 	}
+# 	# 	hidden_effect = {
+# 	# 		set_planet_flag = bureaucrat_planet_flag
+# 	# 		remove_planet_flag = researcher_planet_flag
+# 	# 		#remove_planet_flag = metallurgist_planet_flag
+# 	# 		#remove_planet_flag = artisan_planet_flag
+# 	# 		remove_planet_flag = gas_refiner_planet_flag
+# 	# 		remove_planet_flag = chemist_planet_flag
+# 	# 		remove_planet_flag = translucer_planet_flag
+# 	# 		remove_planet_flag = unification_planet_flag
+# 	# 		add_modifier = {
+# 	# 			modifier = building_notification_administrative_cap
+# 	# 		}
+# 	# 		remove_modifier = building_notification_research
+# 	# 		#remove_modifier = building_notification_alloy
+# 	# 		#remove_modifier = building_notification_consumer_goods
+# 	# 		remove_modifier = building_notification_eg_rc_vm
+# 	# 		remove_modifier = building_notification_exotic_gases
+# 	# 		remove_modifier = building_notification_volatile_motes
+# 	# 		remove_modifier = building_notification_rare_crystals
+# 	# 		remove_modifier = building_notification_unity
+# 	# 	}
+# 	# }
+
+# 	option = { 
+# 		name = "lazy_pla_spe_events.1.f" #custom_tooltip = "_event.5.custom_tooltip.e"
+# 		hidden_effect = {
+# 			set_planet_flag = gas_refiner_planet_flag
+# 			set_planet_flag = chemist_planet_flag
+# 			set_planet_flag = translucer_planet_flag
+# 			remove_planet_flag = researcher_planet_flag
+# 			#remove_planet_flag = metallurgist_planet_flag
+# 			#remove_planet_flag = artisan_planet_flag
+# 			#remove_planet_flag = bureaucrat_planet_flag
+# 			remove_planet_flag = unification_planet_flag
+# 			add_modifier = {
+# 				modifier = building_notification_eg_rc_vm
+# 			}
+# 			remove_modifier = building_notification_research
+# 			#remove_modifier = building_notification_alloy
+# 			#remove_modifier = building_notification_consumer_goods
+# 			#remove_modifier = building_notification_administrative_cap
+# 			remove_modifier = building_notification_exotic_gases
+# 			remove_modifier = building_notification_volatile_motes
+# 			remove_modifier = building_notification_rare_crystals
+# 			remove_modifier = building_notification_unity
+# 		}
+# 	}
+
+# 	option = { 
+# 		name = "lazy_pla_spe_events.1.g" #custom_tooltip = "_event.5.custom_tooltip.e"
+# 		allow = {
+# 			hidden_trigger = {
+# 				NOT = {
+# 					has_planet_flag = gas_refiner_planet_flag
+# 				}
+# 			}
+# 		}
+# 		hidden_effect = {
+# 			set_planet_flag = gas_refiner_planet_flag
+# 			remove_planet_flag = researcher_planet_flag
+# 			#remove_planet_flag = metallurgist_planet_flag
+# 			#remove_planet_flag = artisan_planet_flag
+# 			#remove_planet_flag = bureaucrat_planet_flag
+# 			remove_planet_flag = chemist_planet_flag
+# 			remove_planet_flag = translucer_planet_flag
+# 			remove_planet_flag = unification_planet_flag
+# 			add_modifier = {
+# 				modifier = building_notification_exotic_gases
+# 			}
+# 			remove_modifier = building_notification_research
+# 			#remove_modifier = building_notification_alloy
+# 			#remove_modifier = building_notification_consumer_goods
+# 			#remove_modifier = building_notification_administrative_cap
+# 			remove_modifier = building_notification_eg_rc_vm
+# 			remove_modifier = building_notification_volatile_motes
+# 			remove_modifier = building_notification_rare_crystals
+# 			remove_modifier = building_notification_unity
+# 		}
+# 	}
+
+# 	option = { 
+# 		name = "lazy_pla_spe_events.1.h" #custom_tooltip = "_event.5.custom_tooltip.e"
+# 		allow = {
+# 			hidden_trigger = {
+# 				NOT = {
+# 					has_planet_flag = chemist_planet_flag
+# 				}
+# 			}
+# 		}
+# 		hidden_effect = {
+# 			set_planet_flag = chemist_planet_flag
+# 			remove_planet_flag = researcher_planet_flag
+# 			#remove_planet_flag = metallurgist_planet_flag
+# 			#remove_planet_flag = artisan_planet_flag
+# 			#remove_planet_flag = bureaucrat_planet_flag
+# 			remove_planet_flag = gas_refiner_planet_flag
+# 			remove_planet_flag = translucer_planet_flag
+# 			remove_planet_flag = unification_planet_flag
+# 			add_modifier = {
+# 				modifier = building_notification_volatile_motes
+# 			}
+# 			remove_modifier = building_notification_research
+# 			#remove_modifier = building_notification_alloy
+# 			#remove_modifier = building_notification_consumer_goods
+# 			#remove_modifier = building_notification_administrative_cap
+# 			remove_modifier = building_notification_eg_rc_vm
+# 			remove_modifier = building_notification_exotic_gases
+# 			remove_modifier = building_notification_rare_crystals
+# 			remove_modifier = building_notification_unity
+# 		}
+# 	}
+
+# 	option = { 
+# 		name = "lazy_pla_spe_events.1.i" #custom_tooltip = "_event.5.custom_tooltip.e"
+# 		allow = {
+# 			hidden_trigger = {
+# 				NOT = {
+# 					has_planet_flag = translucer_planet_flag
+# 				}
+# 			}
+# 		}
+# 		hidden_effect = {
+# 			set_planet_flag = translucer_planet_flag
+# 			remove_planet_flag = researcher_planet_flag
+# 			#remove_planet_flag = metallurgist_planet_flag
+# 			#remove_planet_flag = artisan_planet_flag
+# 			#remove_planet_flag = bureaucrat_planet_flag
+# 			remove_planet_flag = gas_refiner_planet_flag
+# 			remove_planet_flag = chemist_planet_flag
+# 			remove_planet_flag = unification_planet_flag
+# 			add_modifier = {
+# 				modifier = building_notification_rare_crystals
+# 			}
+# 			remove_modifier = building_notification_research
+# 			#remove_modifier = building_notification_alloy
+# 			#remove_modifier = building_notification_consumer_goods
+# 			#remove_modifier = building_notification_administrative_cap
+# 			remove_modifier = building_notification_eg_rc_vm
+# 			remove_modifier = building_notification_exotic_gases
+# 			remove_modifier = building_notification_volatile_motes
+# 			remove_modifier = building_notification_unity
+# 		}
+# 	}
+
+# 	option = { 
+# 		name = "lazy_pla_spe_events.1.j" #custom_tooltip = "_event.5.custom_tooltip.e"
+# 		allow = {
+# 			hidden_trigger = {
+# 				NOT = {
+# 					has_planet_flag = auto_city_planet_flag
+# 				}
+# 			}
+# 		}
+# 		hidden_effect = {
+# 			set_planet_flag = auto_city_planet_flag
+# 			remove_planet_flag = auto_industrial_planet_flag
+# 			remove_planet_flag = auto_mining_planet_flag
+# 			remove_planet_flag = auto_generator_planet_flag
+# 			remove_planet_flag = auto_farming_planet_flag
+# 			remove_planet_flag = auto_amenities_planet_flag
+# 			remove_planet_flag = auto_research_d_planet_flag
+# 			remove_planet_flag = auto_trade_planet_flag
+# 			add_modifier = {
+# 				modifier = building_notification_housing
+# 			}
+# 			remove_modifier = building_notification_alloy
+# 			remove_modifier = building_notification_minerals
+# 			remove_modifier = building_notification_energy
+# 			remove_modifier = building_notification_food
+# 			remove_modifier = building_notification_research_d
+# 			remove_modifier = building_notification_trade
+# 			remove_modifier = building_notification_amenities
+# 		}
+# 	}
+
+# 	option = { 
+# 		name = "lazy_pla_spe_events.1.r" #custom_tooltip = "_event.5.custom_tooltip.e"
+# 		allow = {
+# 			hidden_trigger = {
+# 				NOT = {
+# 					has_planet_flag = auto_industrial_planet_flag
+# 				}
+# 			}
+# 		}
+# 		hidden_effect = {
+# 			set_planet_flag = auto_industrial_planet_flag
+# 			remove_planet_flag = auto_city_planet_flag
+# 			remove_planet_flag = auto_mining_planet_flag
+# 			remove_planet_flag = auto_generator_planet_flag
+# 			remove_planet_flag = auto_farming_planet_flag
+# 			remove_planet_flag = auto_amenities_planet_flag
+# 			remove_planet_flag = auto_research_d_planet_flag
+# 			remove_planet_flag = auto_trade_planet_flag
+# 			add_modifier = {
+# 				modifier = building_notification_alloy
+# 			}
+# 			remove_modifier = building_notification_housing
+# 			#remove_modifier = building_notification_alloy
+# 			remove_modifier = building_notification_energy
+# 			remove_modifier = building_notification_food
+# 			remove_modifier = building_notification_research_d
+# 			remove_modifier = building_notification_trade
+# 			remove_modifier = building_notification_amenities
+# 		}
+# 	}
+
+# 	option = { 
+# 		name = "lazy_pla_spe_events.1.k" #custom_tooltip = "_event.5.custom_tooltip.e"
+# 		allow = {
+# 			hidden_trigger = {
+# 				NOT = {
+# 					has_planet_flag = auto_mining_planet_flag
+# 				}
+# 			}
+# 		}
+# 		hidden_effect = {
+# 			set_planet_flag = auto_mining_planet_flag
+# 			remove_planet_flag = auto_city_planet_flag
+# 			remove_planet_flag = auto_industrial_planet_flag
+# 			remove_planet_flag = auto_generator_planet_flag
+# 			remove_planet_flag = auto_farming_planet_flag
+# 			remove_planet_flag = auto_amenities_planet_flag
+# 			remove_planet_flag = auto_research_d_planet_flag
+# 			remove_planet_flag = auto_trade_planet_flag
+# 			add_modifier = {
+# 				modifier = building_notification_minerals
+# 			}
+# 			remove_modifier = building_notification_housing
+# 			remove_modifier = building_notification_alloy
+# 			remove_modifier = building_notification_energy
+# 			remove_modifier = building_notification_food
+# 			remove_modifier = building_notification_research_d
+# 			remove_modifier = building_notification_trade
+# 			remove_modifier = building_notification_amenities
+# 		}
+# 	}
+
+# 	option = { 
+# 		name = "lazy_pla_spe_events.1.l" #custom_tooltip = "_event.5.custom_tooltip.e"
+# 		allow = {
+# 			hidden_trigger = {
+# 				NOT = {
+# 					has_planet_flag = auto_generator_planet_flag
+# 				}
+# 			}
+# 		}
+# 		hidden_effect = {
+# 			set_planet_flag = auto_generator_planet_flag
+# 			remove_planet_flag = auto_city_planet_flag
+# 			remove_planet_flag = auto_industrial_planet_flag
+# 			remove_planet_flag = auto_mining_planet_flag
+# 			remove_planet_flag = auto_farming_planet_flag
+# 			remove_planet_flag = auto_amenities_planet_flag
+# 			remove_planet_flag = auto_research_d_planet_flag
+# 			remove_planet_flag = auto_trade_planet_flag
+# 			add_modifier = {
+# 				modifier = building_notification_energy
+# 			}
+# 			remove_modifier = building_notification_housing
+# 			remove_modifier = building_notification_alloy
+# 			remove_modifier = building_notification_minerals
+# 			remove_modifier = building_notification_food
+# 			remove_modifier = building_notification_research_d
+# 			remove_modifier = building_notification_trade
+# 			remove_modifier = building_notification_amenities
+# 		}
+# 	}
+
+# 	option = { 
+# 		name = "lazy_pla_spe_events.1.m" #custom_tooltip = "_event.5.custom_tooltip.e"
+# 		allow = {
+# 			hidden_trigger = {
+# 				NOR = {
+# 					has_planet_flag = auto_farming_planet_flag
+# 					is_planet_class = pc_habitat
+# 				}
+# 			}
+# 		}
+# 		hidden_effect = {
+# 			set_planet_flag = auto_farming_planet_flag
+# 			remove_planet_flag = auto_city_planet_flag
+# 			remove_planet_flag = auto_industrial_planet_flag
+# 			remove_planet_flag = auto_mining_planet_flag
+# 			remove_planet_flag = auto_generator_planet_flag
+# 			remove_planet_flag = auto_amenities_planet_flag
+# 			remove_planet_flag = auto_research_d_planet_flag
+# 			remove_planet_flag = auto_trade_planet_flag
+# 			add_modifier = {
+# 				modifier = building_notification_food
+# 			}
+# 			remove_modifier = building_notification_housing
+# 			remove_modifier = building_notification_alloy
+# 			remove_modifier = building_notification_minerals
+# 			remove_modifier = building_notification_energy
+# 			remove_modifier = building_notification_research_d
+# 			remove_modifier = building_notification_trade
+# 			remove_modifier = building_notification_amenities
+# 		}
+# 	}
+
+# 	option = { 
+# 		name = "lazy_pla_spe_events.1.n" #custom_tooltip = "_event.5.custom_tooltip.e"
+# 		trigger = {
+# 			hidden_trigger = {
+# 				is_planet_class = pc_habitat
+# 			}
+# 		}
+# 		allow = {
+# 			hidden_trigger = {
+# 				NOT = {
+# 					has_planet_flag = auto_trade_planet_flag
+# 				}
+# 			}
+# 		}
+# 		hidden_effect = {
+# 			set_planet_flag = auto_trade_planet_flag
+# 			remove_planet_flag = auto_generator_planet_flag
+# 			remove_planet_flag = auto_city_planet_flag
+# 			remove_planet_flag = auto_industrial_planet_flag
+# 			remove_planet_flag = auto_mining_planet_flag
+# 			remove_planet_flag = auto_farming_planet_flag
+# 			remove_planet_flag = auto_amenities_planet_flag
+# 			remove_planet_flag = auto_research_d_planet_flag
+# 			add_modifier = {
+# 				modifier = building_notification_trade
+# 			}
+# 			remove_modifier = building_notification_housing
+# 			remove_modifier = building_notification_alloy
+# 			remove_modifier = building_notification_minerals
+# 			remove_modifier = building_notification_food
+# 			remove_modifier = building_notification_energy
+# 			remove_modifier = building_notification_research_d
+# 			remove_modifier = building_notification_amenities
+# 		}
+# 	}
+
+# 	option = { 
+# 		name = "lazy_pla_spe_events.1.o" #custom_tooltip = "_event.5.custom_tooltip.e"
+# 		trigger = {
+# 			hidden_trigger = {
+# 				is_planet_class = pc_habitat
+# 			}
+# 		}
+# 		allow = {
+# 			hidden_trigger = {
+# 				NOT = {
+# 					has_planet_flag = auto_research_d_planet_flag
+# 				}
+# 			}
+# 		}
+# 		hidden_effect = {
+# 			set_planet_flag = auto_research_d_planet_flag
+# 			remove_planet_flag = auto_generator_planet_flag
+# 			remove_planet_flag = auto_city_planet_flag
+# 			remove_planet_flag = auto_industrial_planet_flag
+# 			remove_planet_flag = auto_mining_planet_flag
+# 			remove_planet_flag = auto_farming_planet_flag
+# 			remove_planet_flag = auto_trade_planet_flag
+# 			remove_planet_flag = auto_amenities_planet_flag
+# 			add_modifier = {
+# 				modifier = building_notification_research_d
+# 			}
+# 			remove_modifier = building_notification_housing
+# 			remove_modifier = building_notification_alloy
+# 			remove_modifier = building_notification_minerals
+# 			remove_modifier = building_notification_food
+# 			remove_modifier = building_notification_energy
+# 			remove_modifier = building_notification_trade
+# 			remove_modifier = building_notification_amenities
+			
+# 		}
+# 	}
+
+# 	option = { 
+# 		name = "lazy_pla_spe_events.1.p" #custom_tooltip = "_event.5.custom_tooltip.e"
+# 		trigger = {
+# 			hidden_trigger = {
+# 				is_planet_class = pc_habitat
+# 			}
+# 		}
+# 		allow = {
+# 			hidden_trigger = {
+# 				NOT = {
+# 					has_planet_flag = auto_amenities_planet_flag
+# 				}
+# 			}
+# 		}
+# 		hidden_effect = {
+# 			set_planet_flag = auto_amenities_planet_flag
+# 			remove_planet_flag = auto_generator_planet_flag
+# 			remove_planet_flag = auto_city_planet_flag
+# 			remove_planet_flag = auto_industrial_planet_flag
+# 			remove_planet_flag = auto_mining_planet_flag
+# 			remove_planet_flag = auto_farming_planet_flag
+# 			remove_planet_flag = auto_trade_planet_flag
+# 			remove_planet_flag = auto_research_d_planet_flag
+# 			add_modifier = {
+# 				modifier = building_notification_amenities
+# 			}
+# 			remove_modifier = building_notification_housing
+# 			remove_modifier = building_notification_alloy
+# 			remove_modifier = building_notification_minerals
+# 			remove_modifier = building_notification_food
+# 			remove_modifier = building_notification_energy
+# 			remove_modifier = building_notification_trade
+# 			remove_modifier = building_notification_research_d
+# 		}
+# 	}
+
+# 	option = { 
+# 		name = "lazy_pla_spe_events.1.q" #custom_tooltip = "_event.5.custom_tooltip.e"
+# 		hidden_effect = {
+# 			remove_planet_flag = translucer_planet_flag
+# 			remove_planet_flag = researcher_planet_flag
+# 			#remove_planet_flag = metallurgist_planet_flag
+# 			#remove_planet_flag = artisan_planet_flag
+# 			remove_planet_flag = bureaucrat_planet_flag
+# 			remove_planet_flag = gas_refiner_planet_flag
+# 			remove_planet_flag = chemist_planet_flag
+# 			remove_planet_flag = unification_planet_flag
+# 			remove_planet_flag = auto_farming_planet_flag
+# 			remove_planet_flag = auto_city_planet_flag
+# 			remove_planet_flag = auto_industrial_planet_flag
+# 			remove_planet_flag = auto_mining_planet_flag
+# 			remove_planet_flag = auto_generator_planet_flag
+# 			remove_planet_flag = auto_trade_planet_flag
+# 			remove_planet_flag = auto_research_d_planet_flag
+# 			remove_planet_flag = auto_amenities_planet_flag
+# 			remove_modifier = building_notification_research
+# 			remove_modifier = building_notification_alloy
+# 			#remove_modifier = building_notification_consumer_goods
+# 			remove_modifier = building_notification_administrative_cap
+# 			remove_modifier = building_notification_eg_rc_vm
+# 			remove_modifier = building_notification_exotic_gases
+# 			remove_modifier = building_notification_volatile_motes
+# 			remove_modifier = building_notification_rare_crystals
+# 			remove_modifier = building_notification_housing
+# 			remove_modifier = building_notification_minerals
+# 			remove_modifier = building_notification_energy
+# 			remove_modifier = building_notification_food
+# 			remove_modifier = building_notification_research_d
+# 			remove_modifier = building_notification_trade
+# 			remove_modifier = building_notification_amenities
+# 			remove_modifier = building_notification_unity
+# 		}
+# 	}
+
+# 	option = { 
+# 		name = "EXIT"
+# 	}
+# }
+
+# country_event = {
+# 	id = lazy_pla_spe_events.2
+# 	hide_window = yes
+# 	is_triggered_only = yes
+
+# 	trigger = {
+# 		has_country_flag = auto_build_decision_flag
+# 	}
+
+# 	immediate = {
+# 		every_owned_planet = {
+# 			limit = {
+# 				NOT = {
+# 					has_modifier = building_notification
+# 				}
+# 				if = {
+# 					limit = {
+# 						prev = {
+# 							has_country_flag = auto_buld_decision_free_jobs_flag
+# 						}
+# 					}
+# 					free_jobs < 5
+# 				}
+# 			}
+# 			planet_specialisation_check = yes
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = lazy_pla_spe_events.3
+# 	hide_window = yes
+# 	is_triggered_only = yes
+
+# 	trigger = {
+# 		has_country_flag = auto_colony_support_flag
+# 	}
+
+# 	immediate = {
+# 		every_owned_planet = {
+# 			limit = {
+# 				NOT = {
+# 					has_modifier = building_notification
+# 				}
+# 				free_building_slots >= 1
+# 				NOR = {
+# 					has_building = building_clinic
+# 					has_building = building_hospital
+# 					has_building = building_spawning_pool
+# 					has_building = building_machine_assembly_plant
+# 					has_building = building_machine_assembly_complex
+# 				}
+# 				prev = {
+# 					resource_stockpile_compare = {
+# 						resource = minerals
+# 						value >= 400
+# 						mult = value:positive_modifier_mult|MODIFIER|planet_buildings_cost_mult|
+# 					}
+# 					if = {
+# 						limit = {
+# 							NOR = {
+# 								has_authority = auth_machine_intelligence
+# 								has_authority = auth_hive_mind
+# 							}
+# 						}
+# 						has_technology = tech_frontier_health
+# 					}
+# 				}
+# 			}
+# 			if = {
+# 				limit = {
+# 					prev = {
+# 						has_authority = auth_hive_mind
+# 					}
+# 				}
+# 				add_building = building_spawning_pool
+# 			}
+# 			else_if = {
+# 				limit = {
+# 					prev = {
+# 						has_authority = auth_machine_intelligence
+# 					}
+# 				}
+# 				add_building = building_machine_assembly_plant
+# 			}
+# 			else = {
+# 				add_building = building_clinic
+# 			}
+# 			add_modifier = {
+# 				modifier = building_notification days = 360
+# 			}
+# 			prev = {
+# 				add_resource = {
+# 					minerals = 400
+# 					mult = value:negative_modifier_mult|MODIFIER|planet_buildings_cost_mult|
+# 				}
+# 			}
+# 		}
+# 		every_owned_planet = {
+# 			limit = {
+# 				NOR = {
+# 					has_modifier = building_notification
+# 					has_modifier = resort_colony
+# 				}
+# 				if = {
+# 					limit = {
+# 						prev = {
+# 							has_country_flag = auto_colony_support_free_housing_flag
+# 						}
+# 					}
+# 					free_housing < 10
+# 				}
+# 				OR = {
+# 					num_free_districts = {
+# 						type = district_city
+# 						value >= 1
+# 					}
+# 					num_free_districts = {
+# 						type = district_nexus
+# 						value >= 1
+# 					}
+# 					num_free_districts = {
+# 						type = district_hive
+# 						value >= 1
+# 					}
+# 					num_free_districts = {
+# 						type = district_hab_housing
+# 						value >= 1
+# 					}
+# 				}
+# 			}
+# 			if = {
+# 				limit = {
+# 					prev = {
+# 						resource_stockpile_compare = {
+# 							resource = minerals
+# 							value >= 500
+# 							mult = value:positive_modifier_mult|MODIFIER|planet_districts_cost_mult|
+# 						}
+# 					}
+# 				}
+# 				if = {
+# 					limit = {
+# 						prev = {
+# 							has_authority = auth_hive_mind
+# 						}
+# 					}
+# 					add_district = district_hive
+# 				}
+# 				else_if = {
+# 					limit = {
+# 						prev = {
+# 							has_authority = auth_machine_intelligence
+# 						}
+# 					}
+# 					add_district = district_nexus
+# 				}
+# 				else_if = {
+# 					limit = {
+# 						is_planet_class = pc_habitat
+# 						num_free_districts = {
+# 							type = district_hab_housing
+# 							value >= 1
+# 						}
+# 					}
+# 					add_district = district_hab_housing
+# 					prev = {
+# 						add_resource = {
+# 							minerals = 100
+# 							mult = value:positive_modifier_mult|MODIFIER|planet_districts_cost_mult|
+# 						}
+# 					}
+# 				}
+# 				else = {
+# 					add_district = district_city
+# 				}
+# 				add_modifier = {
+# 					modifier = building_notification days = 480
+# 				}
+# 				prev = {
+# 					add_resource = {
+# 						minerals = 500
+# 						mult = value:negative_modifier_mult|MODIFIER|planet_districts_cost_mult|
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}
+# }

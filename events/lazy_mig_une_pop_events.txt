@@ -1,0 +1,138 @@
+namespace = lazy_mig_une_pop_events
+
+country_event = {
+	id = lazy_mig_une_pop_events.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = lazy_resettle_flag
+		has_country_flag = lazy_resettle_unemployed_to_free_jobs
+	}
+
+	immediate = {
+		while = {
+			count = auto_mig_une_pop_speed
+			
+			random_owned_planet = {
+				limit = {
+					colony_age >= 60
+					num_assigned_jobs = {
+						job = unemployed
+						value >= 1
+					}
+					PREV = {
+						resource_stockpile_compare = {
+							resource = energy
+							value >= 100
+							mult = value:positive_modifier_mult|MODIFIER|country_resettlement_cost_mult|
+						}
+						resource_stockpile_compare = {
+							resource = unity
+							value >= 10
+							mult = value:positive_modifier_mult|MODIFIER|country_resettlement_cost_mult|
+						}
+					}
+				}
+				random_owned_pop = {
+					limit = {
+						NOT = {
+							has_pop_flag = recently_resettled_pop_flag
+						}
+						is_unemployed = yes
+						NOT = {
+							has_job = bio_trophy
+						}
+					}
+					set_timed_pop_flag = {
+						flag = recently_resettled_pop_flag
+						years = 1
+					}
+					prevprev = {
+						random_owned_planet = {
+							limit = {
+								is_colony = yes
+								free_jobs >= 1
+							}
+							resettle_pop = {
+								pop = prevprev
+								planet = this
+							}
+							prev = {
+								add_resource = {
+									energy = 100
+									mult = value:negative_modifier_mult|MODIFIER|country_resettlement_cost_mult|
+								}
+								add_resource = {
+									unity = 10
+									mult = value:negative_modifier_mult|MODIFIER|country_resettlement_cost_mult|
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = lazy_mig_une_pop_events.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = lazy_resettle_flag
+		has_country_flag = lazy_resettle_to_synaptic_lathe_flag
+	}
+
+	immediate = {
+		while = {
+			count = auto_mig_une_pop_speed
+			
+			random_owned_planet = {
+				limit = {
+					NOT = {
+						has_planet_flag = has_cosmogenesis_world
+					}
+					num_pops > 3
+					prev = {
+						resource_stockpile_compare = {
+							resource = energy
+							value >= 100
+							mult = value:positive_modifier_mult|MODIFIER|country_resettlement_cost_mult|
+						}
+						resource_stockpile_compare = {
+							resource = unity
+							value >= 10
+							mult = value:positive_modifier_mult|MODIFIER|country_resettlement_cost_mult|
+						}
+					}
+				}
+				random_owned_pop = {
+					prevprev = {
+						random_owned_planet = {
+							limit = {
+								has_planet_flag = has_cosmogenesis_world
+							}
+							resettle_pop = {
+								pop = prevprev
+								planet = this
+							}
+							prev = {
+								add_resource = {
+									energy = 100
+									mult = value:negative_modifier_mult|MODIFIER|country_resettlement_cost_mult|
+								}
+								add_resource = {
+									unity = 10
+									mult = value:negative_modifier_mult|MODIFIER|country_resettlement_cost_mult|
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

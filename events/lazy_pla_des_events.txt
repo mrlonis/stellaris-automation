@@ -1,0 +1,77 @@
+namespace = lazy_pla_des_events
+
+fleet_event = {
+	id = lazy_pla_des_events.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			has_country_flag = auto_planet_destroyer_enable_flag
+		}
+	}
+
+	immediate = {
+		set_fleet_flag = auto_planet_destroyer_flag
+		clear_fleet_actions = this
+		clear_orders = yes
+		set_name = "auto_planet_killer"
+		queue_actions = {
+			repeat = {
+				find_closest_system = {
+					trigger = {
+						id = lazy_pla_des_events.1.trigger.1
+						# root = {
+						# 	NOR = {
+						# 		has_fleet_order = planet_killer_weapon_windup_order
+						# 		has_fleet_order = planet_killer_weapon_fire_order
+						# 		has_fleet_order = destroy_planet_order
+						# 		has_fleet_order = follow_order
+						# 		has_fleet_order = merge_fleet_order
+						# 		has_fleet_order = move_to_system_point_order
+						# 		has_fleet_order = orbit_planet_order
+						# 		has_fleet_order = return_fleet_order
+						# 		has_fleet_order = auto_patrol_order
+						# 		has_fleet_order = upgrade_design_at_starbase_fleet_order
+						# 		has_fleet_order = upgrade_design_at_orbitable_fleet_order
+						# 		has_fleet_order = repair_fleet_order
+						# 		has_fleet_order = use_bypass_order
+						# 		has_fleet_order = jumpdrive_order
+						# 	}
+						# }
+						any_system_planet = {
+							exists = owner
+							owner = {
+								is_hostile = root.owner
+							}
+							NOT = {
+								is_controlled_by = root.owner
+							}
+						}
+					}
+					found_system = {
+						move_to = this
+						find_closest_planet = {
+							trigger = {
+								id = lazy_pla_des_events.1.trigger.2
+								exists = owner
+								owner = {
+									is_hostile = root.owner
+								}
+								NOT = {
+									is_controlled_by = root.owner
+								}
+							}
+							found_planet = {
+								destroy_planet = {
+									skip_rules = no
+									target = this
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,122 @@
+namespace = lazy_fle_mer_events
+
+fleet_event = {
+	id = lazy_fle_mer_events.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_fleet_flag = auto_fleet_merger_flag
+		is_ship_class = shipclass_military
+	}
+
+	immediate = {
+		set_fleet_flag = auto_fleet_merger_flag
+		clear_fleet_actions = this
+		clear_orders = yes
+		set_name = "auto_fleet_merging"
+		queue_actions = {
+			repeat = {
+				find_random_fleet = {
+					trigger = {
+						id = lazy_fle_mer_events.1.trigger.1
+						exists = owner
+						is_owned_by = root.owner
+						is_ship_class = shipclass_military
+						is_disabled = no
+					}
+					found_fleet = {
+						merge_fleet = {
+							target = this
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = this
+			}
+			fleet_event = {
+				id = lazy_fle_mer_events.3
+				days = 360
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = lazy_fle_mer_events.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_fleet_flag = auto_fleet_merger_flag
+		is_ship_class = shipclass_transport
+	}
+
+	immediate = {
+		set_fleet_flag = auto_fleet_merger_flag
+		clear_fleet_actions = this
+		clear_orders = yes
+		set_name = "auto_army_merging"
+		queue_actions = {
+			repeat = {
+				find_random_fleet = {
+					trigger = {
+						id = lazy_fle_mer_events.2.trigger.1
+						exists = owner
+						is_owned_by = root.owner
+						is_ship_class = shipclass_transport
+						is_disabled = no
+					}
+					found_fleet = {
+						merge_fleet = {
+							target = this
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = this
+			}
+			fleet_event = {
+				id = lazy_fle_mer_events.3
+				days = 360
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = lazy_fle_mer_events.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_fleet_flag = auto_fleet_merger_flag
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				exists = this
+				NOT = {
+					has_fleet_order = merge_fleet_order
+				}
+			}
+			remove_fleet_flag = auto_fleet_merger_flag
+			clear_fleet_actions = this
+			clear_orders = yes
+			set_name = random
+		}
+		else = {
+			fleet_event = {
+				id = lazy_fle_mer_events.3
+				days = 360
+			}
+		}
+	}
+}

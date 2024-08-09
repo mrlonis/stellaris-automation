@@ -1,0 +1,67 @@
+namespace = lazy_shared_events
+
+country_event = {
+	id = lazy_shared_events.1
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_variable = {
+			which = auto_meg_upg_speed
+			value = 1
+		}
+		set_variable = {
+			which = auto_mig_une_pop_speed
+			value = 1
+		}
+		set_variable = {
+			which = auto_ter_speed
+			value = 1
+		}
+		set_variable = {
+			which = auto_upg_sta_speed
+			value = 1
+		}
+		set_variable = {
+			which = auto_rec_lea_speed
+			value = 1
+		}
+	}
+}
+
+country_event = {
+	id = lazy_shared_events.2
+	title = "lazy_config_events.4.name"
+	desc = "lazy_config_events.04.desc"
+	picture = GFX_evt_machine_sapience
+	show_sound = event_administrative_work
+	hide_window = no
+
+	is_triggered_only = yes
+
+	option = { 
+		name = OK
+	}
+}
+
+
+# country_event = {
+# 	id = lazy_shared_events.2
+# 	hide_window = yes
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 		every_owned_fleet = {
+# 			limit = {
+# 				is_ship_class = shipclass_constructor
+# 				OR = {
+# 					has_fleet_flag = auto_outpost_ship_flag
+# 					has_fleet_flag = auto_mega_ship_flag
+# 				}
+# 			}
+# 			clear_fleet_actions = this
+# 			clear_orders = yes
+# 		}
+# 	}
+# }

@@ -1,0 +1,32 @@
+# decision_lazy_planet = {
+# 	owned_planets_only = yes
+# 	sound = event_administrative_work
+# 	icon = decision_project_cornucopia
+
+# 	resources = {
+# 		category = decisions
+# 		#cost = {
+# 		#	influence = 25
+# 		#}
+# 	}
+
+# 	potential = {
+# 		owner = {
+# 			has_country_flag = auto_build_decision_flag
+# 		}
+# 	}
+
+# 	allow = {
+
+# 	}
+
+# 	effect = {
+# 		planet_event = {
+# 			id = lazy_pla_spe_events.1
+# 		}
+# 	}
+
+# 	ai_weight = {
+# 		weight = 0
+# 	}
+# }

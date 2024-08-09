@@ -1,0 +1,262 @@
+namespace = lazy_col_events
+
+fleet_event = {
+	id = lazy_col_events.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_fleet_flag = auto_colonizer_flag
+	}
+
+	immediate = {
+		set_timed_fleet_flag = {
+			flag = auto_colonizer_flag
+			years = 1
+		}
+		clear_orders = yes
+		clear_fleet_actions = this
+		queue_actions = {
+			repeat = {
+				find_closest_system = {
+					trigger = {
+						id = lazy_col_events.1.trigger.1
+						is_owned_by = root.owner
+						is_surveyed = {
+							who = root.owner
+							status = yes
+						}
+						any_system_planet = {
+							species_coloniseable_planet = yes
+							NOR = {
+								has_planet_flag = auto_colonizer_target_flag
+								has_modifier = "holy_planet"
+							}
+						}
+					}
+					found_system = {
+						effect = {
+							id = lazy_col_events.1.effect.1
+							random_system_planet = {
+								limit = {
+									species_coloniseable_planet = yes
+									NOT = {
+										has_modifier = "holy_planet"
+									}
+								}
+								set_timed_planet_flag = {
+									flag = auto_colonizer_target_flag
+									years = 1
+								}
+							}
+						}
+						move_to = this
+						find_closest_planet = {
+							trigger = {
+								id = lazy_col_events.1.trigger.2
+								species_coloniseable_planet = yes
+								NOT = {
+									has_modifier = "holy_planet"
+								}
+							}
+							found_planet = {
+								orbit_planet = this
+								effect = {
+									id = lazy_col_events.1.effect.2
+									if = {
+										limit = {
+											species_coloniseable_planet = yes
+										}
+										start_colony = {
+											owner = root.owner
+											species = root.owner.owner_main_species
+											#ethos = root.owner.owner_species
+										}
+										root = {
+											delete_fleet = this
+											create_message = {
+												type = AUTO_COLONY_MESSAGE_TYPE
+												localization = AUTO_COLONY_MESSAGE_TYPE_DESC
+												days = 30
+												target = prev.solar_system
+												variable = {
+													type = name
+													localization = PLANET
+													scope = prev
+												}
+												variable = {
+													type = name
+													localization = SYSTEM
+													scope = prev.solar_system
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = lazy_col_events.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = auto_colonizer_enable_flag
+	}
+
+	immediate = {
+		random_planet_within_border = {
+			limit = {
+				species_coloniseable_planet = yes
+				NOR = {
+					has_planet_flag = auto_colonizer_planet_flag
+					has_modifier = "holy_planet"
+				}
+				PREV = {
+					if = {
+						limit = {
+							has_authority = auth_hive_mind
+						}
+						resource_stockpile_compare = {
+							resource = alloys
+							value >= 200
+						}
+						resource_stockpile_compare = {
+							resource = food
+							value >= 500
+						}
+					}
+					else_if = {
+						limit = {
+							has_authority = auth_machine_intelligence
+						}
+						resource_stockpile_compare = {
+							resource = alloys
+							value >= 400
+						}
+					}
+					else = {
+						resource_stockpile_compare = {
+							resource = consumer_goods
+							value >= 200
+						}
+						resource_stockpile_compare = {
+							resource = alloys
+							value >= 200
+						}
+						resource_stockpile_compare = {
+							resource = food
+							value >= 200
+						}
+					}
+				}
+			}
+			set_timed_planet_flag = {
+				flag = auto_colonizer_planet_flag
+				years = 5
+			}
+			if = {
+				limit = {
+					root = {
+						count_owned_fleet = {
+							limit = {
+								is_ship_size = colonizer
+								NOT = {
+									has_fleet_flag = auto_colonizer_flag
+								}
+							}
+							count > 0
+						}
+					}
+				}
+				root = {
+					random_owned_fleet = {
+						limit = {
+							is_ship_size = colonizer
+							NOT = {
+								has_fleet_flag = auto_colonizer_flag
+							}
+						}
+						fleet_event = {
+							id = lazy_col_events.1
+						}
+					}
+				}
+			}
+			else = {
+				root = {
+					if = {
+						limit = {
+							has_authority = auth_hive_mind
+						}
+						add_resource = {
+							alloys = -200
+						}
+						add_resource = {
+							food = -500
+						}
+					}
+					else_if = {
+						limit = {
+							has_authority = auth_machine_intelligence
+						}
+						add_resource = {
+							alloys = -400
+						}
+					}
+					else = {
+						add_resource = {
+							consumer_goods = -200
+						}
+						add_resource = {
+							alloys = -200
+						}
+						add_resource = {
+							food = -200
+						}
+					}
+					country_event = {
+						id = lazy_col_events.3
+						days = 360
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = lazy_col_events.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		create_fleet = {
+			effect = {
+				set_owner = prev
+
+				create_ship = {
+					name = "auto_colonizer"
+					random_existing_design = colonizer
+				}
+				set_timed_fleet_flag = {
+					flag = auto_colonizer_flag
+					years = 1
+				}
+				fleet_event = {
+					id = lazy_col_events.1
+				}
+
+				set_fleet_stance = evasive
+				set_location = prev.capital_star
+			}
+		}
+	}
+}

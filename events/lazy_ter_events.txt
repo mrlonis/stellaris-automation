@@ -1,0 +1,631 @@
+namespace = lazy_ter_events
+
+country_event = {
+	id = lazy_ter_events.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = auto_terraforming_flag
+	}
+
+	immediate = {
+		while = {
+			count = auto_ter_speed
+
+			switch = {
+				trigger = has_country_flag
+				auto_alpine_terraform_flag = {
+					random_planet_within_border = {
+						limit = {
+							root = {
+								has_technology = tech_terrestrial_sculpting
+							}
+							NOR = {
+								has_planet_flag = auto_planet_alpine_terraform_flag
+								has_planet_flag = auto_terraforming_ready_flag
+							}
+							OR = {
+								#is_planet_class = pc_alpine
+								is_planet_class = pc_arctic
+								is_planet_class = pc_tundra
+								is_planet_class = pc_desert
+								is_planet_class = pc_arid
+								is_planet_class = pc_savannah
+								is_planet_class = pc_tropical
+								is_planet_class = pc_continental
+								is_planet_class = pc_ocean
+								# if = {
+								# 	limit = {
+								# 		root = {
+								# 			has_technology = tech_climate_restoration
+								# 		}	
+								# 		has_modifier = terraforming_candidate
+								# 	}
+								# 	is_planet_class = pc_barren
+								# 	is_planet_class = pc_barren_cold
+								# 	is_planet_class = pc_gray_goo
+								# }
+								# if = {
+								# 	limit = {
+								# 		root = {
+								# 			has_technology = tech_climate_restoration
+								# 		}
+								# 	}
+								# 	is_planet_class = pc_hive
+								# 	is_planet_class = pc_machine
+								# }
+							}
+						}
+						planet_terraforming_flagger = {
+							planet_flag = auto_planet_alpine_terraform_flag
+						}
+					}
+					break = yes
+				}
+				auto_arctic_terraform_flag = {
+					random_planet_within_border = {
+						limit = {
+							root = {
+								has_technology = tech_terrestrial_sculpting
+							}
+							NOR = {
+								has_planet_flag = auto_planet_arctic_terraform_flag
+								has_planet_flag = auto_terraforming_ready_flag
+							}
+							OR = {
+								is_planet_class = pc_alpine
+								#is_planet_class = pc_arctic
+								is_planet_class = pc_tundra
+								is_planet_class = pc_desert
+								is_planet_class = pc_arid
+								is_planet_class = pc_savannah
+								is_planet_class = pc_tropical
+								is_planet_class = pc_continental
+								is_planet_class = pc_ocean
+								# if = {
+								# 	limit = {
+								# 		root = {
+								# 			has_technology = tech_climate_restoration
+								# 		}	
+								# 		has_modifier = terraforming_candidate
+								# 	}
+								# 	is_planet_class = pc_barren
+								# 	is_planet_class = pc_barren_cold
+								# 	is_planet_class = pc_gray_goo
+								# }
+								# if = {
+								# 	limit = {
+								# 		root = {
+								# 			has_technology = tech_climate_restoration
+								# 		}
+								# 	}
+								# 	is_planet_class = pc_hive
+								# 	is_planet_class = pc_machine
+								# }
+							}
+						}
+						planet_terraforming_flagger = {
+							planet_flag = auto_planet_arctic_terraform_flag
+						}
+					}
+					break = yes
+				}
+				auto_tundra_terraform_flag = {
+					random_planet_within_border = {
+						limit = {
+							root = {
+								has_technology = tech_terrestrial_sculpting
+							}
+							NOR = {
+								has_planet_flag = auto_planet_tundra_terraform_flag
+								has_planet_flag = auto_terraforming_ready_flag
+							}
+							OR = {
+								is_planet_class = pc_alpine
+								is_planet_class = pc_arctic
+								#is_planet_class = pc_tundra
+								is_planet_class = pc_desert
+								is_planet_class = pc_arid
+								is_planet_class = pc_savannah
+								is_planet_class = pc_tropical
+								is_planet_class = pc_continental
+								is_planet_class = pc_ocean
+								# if = {
+								# 	limit = {
+								# 		root = {
+								# 			has_technology = tech_climate_restoration
+								# 		}	
+								# 		has_modifier = terraforming_candidate
+								# 	}
+								# 	is_planet_class = pc_barren
+								# 	is_planet_class = pc_barren_cold
+								# 	is_planet_class = pc_gray_goo
+								# }
+								# if = {
+								# 	limit = {
+								# 		root = {
+								# 			has_technology = tech_climate_restoration
+								# 		}
+								# 	}
+								# 	is_planet_class = pc_hive
+								# 	is_planet_class = pc_machine
+								# }
+							}
+						}
+						planet_terraforming_flagger = {
+							planet_flag = auto_planet_tundra_terraform_flag
+						}
+					}
+					break = yes
+				}
+				auto_arid_terraform_flag = {
+					random_planet_within_border = {
+						limit = {
+							root = {
+								has_technology = tech_terrestrial_sculpting
+							}
+							NOR = {
+								has_planet_flag = auto_planet_arid_terraform_flag
+								has_planet_flag = auto_terraforming_ready_flag
+							}
+							OR = {
+								is_planet_class = pc_alpine
+								is_planet_class = pc_arctic
+								is_planet_class = pc_tundra
+								is_planet_class = pc_desert
+								#is_planet_class = pc_arid
+								is_planet_class = pc_savannah
+								is_planet_class = pc_tropical
+								is_planet_class = pc_continental
+								is_planet_class = pc_ocean
+								# if = {
+								# 	limit = {
+								# 		root = {
+								# 			has_technology = tech_climate_restoration
+								# 		}	
+								# 		has_modifier = terraforming_candidate
+								# 	}
+								# 	is_planet_class = pc_barren
+								# 	is_planet_class = pc_barren_cold
+								# 	is_planet_class = pc_gray_goo
+								# }
+								# if = {
+								# 	limit = {
+								# 		root = {
+								# 			has_technology = tech_climate_restoration
+								# 		}
+								# 	}
+								# 	is_planet_class = pc_hive
+								# 	is_planet_class = pc_machine
+								# }
+							}
+						}
+						planet_terraforming_flagger = {
+							planet_flag = auto_planet_arid_terraform_flag
+						}
+					}
+					break = yes
+				}
+				auto_desert_terraform_flag = {
+					random_planet_within_border = {
+						limit = {
+							root = {
+								has_technology = tech_terrestrial_sculpting
+							}
+							NOR = {
+								has_planet_flag = auto_planet_desert_terraform_flag
+								has_planet_flag = auto_terraforming_ready_flag
+							}
+							OR = {
+								is_planet_class = pc_alpine
+								is_planet_class = pc_arctic
+								is_planet_class = pc_tundra
+								#is_planet_class = pc_desert
+								is_planet_class = pc_arid
+								is_planet_class = pc_savannah
+								is_planet_class = pc_tropical
+								is_planet_class = pc_continental
+								is_planet_class = pc_ocean
+								# if = {
+								# 	limit = {
+								# 		root = {
+								# 			has_technology = tech_climate_restoration
+								# 		}	
+								# 		has_modifier = terraforming_candidate
+								# 	}
+								# 	is_planet_class = pc_barren
+								# 	is_planet_class = pc_barren_cold
+								# 	is_planet_class = pc_gray_goo
+								# }
+								# if = {
+								# 	limit = {
+								# 		root = {
+								# 			has_technology = tech_climate_restoration
+								# 		}
+								# 	}
+								# 	is_planet_class = pc_hive
+								# 	is_planet_class = pc_machine
+								# }
+							}
+						}
+						planet_terraforming_flagger = {
+							planet_flag = auto_planet_desert_terraform_flag
+						}
+					}
+					break = yes
+				}
+				auto_savannah_terraform_flag = {
+					random_planet_within_border = {
+						limit = {
+							root = {
+								has_technology = tech_terrestrial_sculpting
+							}
+							NOR = {
+								has_planet_flag = auto_planet_savannah_terraform_flag
+								has_planet_flag = auto_terraforming_ready_flag
+							}
+							OR = {
+								is_planet_class = pc_alpine
+								is_planet_class = pc_arctic
+								is_planet_class = pc_tundra
+								is_planet_class = pc_desert
+								is_planet_class = pc_arid
+								#is_planet_class = pc_savannah
+								is_planet_class = pc_tropical
+								is_planet_class = pc_continental
+								is_planet_class = pc_ocean
+								# if = {
+								# 	limit = {
+								# 		root = {
+								# 			has_technology = tech_climate_restoration
+								# 		}	
+								# 		has_modifier = terraforming_candidate
+								# 	}
+								# 	is_planet_class = pc_barren
+								# 	is_planet_class = pc_barren_cold
+								# 	is_planet_class = pc_gray_goo
+								# }
+								# if = {
+								# 	limit = {
+								# 		root = {
+								# 			has_technology = tech_climate_restoration
+								# 		}
+								# 	}
+								# 	is_planet_class = pc_hive
+								# 	is_planet_class = pc_machine
+								# }
+							}
+						}
+						planet_terraforming_flagger = {
+							planet_flag = auto_planet_savannah_terraform_flag
+						}
+					}
+					break = yes
+				}
+				auto_continental_terraform_flag = {
+					random_planet_within_border = {
+						limit = {
+							root = {
+								has_technology = tech_terrestrial_sculpting
+							}
+							NOR = {
+								has_planet_flag = auto_planet_continental_terraform_flag
+								has_planet_flag = auto_terraforming_ready_flag
+							}
+							OR = {
+								is_planet_class = pc_alpine
+								is_planet_class = pc_arctic
+								is_planet_class = pc_tundra
+								is_planet_class = pc_desert
+								is_planet_class = pc_arid
+								is_planet_class = pc_savannah
+								is_planet_class = pc_tropical
+								#is_planet_class = pc_continental
+								is_planet_class = pc_ocean
+								# if = {
+								# 	limit = {
+								# 		root = {
+								# 			has_technology = tech_climate_restoration
+								# 		}	
+								# 		has_modifier = terraforming_candidate
+								# 	}
+								# 	is_planet_class = pc_barren
+								# 	is_planet_class = pc_barren_cold
+								# 	is_planet_class = pc_gray_goo
+								# }
+								# if = {
+								# 	limit = {
+								# 		root = {
+								# 			has_technology = tech_climate_restoration
+								# 		}
+								# 	}
+								# 	is_planet_class = pc_hive
+								# 	is_planet_class = pc_machine
+								# }
+							}
+						}
+						planet_terraforming_flagger = {
+							planet_flag = auto_planet_continental_terraform_flag
+						}
+					}
+					break = yes
+				}
+				auto_ocean_terraform_flag = {
+					random_planet_within_border = {
+						limit = {
+							root = {
+								has_technology = tech_terrestrial_sculpting
+							}
+							NOR = {
+								has_planet_flag = auto_planet_ocean_terraform_flag
+								has_planet_flag = auto_terraforming_ready_flag
+							}
+							OR = {
+								is_planet_class = pc_alpine
+								is_planet_class = pc_arctic
+								is_planet_class = pc_tundra
+								is_planet_class = pc_desert
+								is_planet_class = pc_arid
+								is_planet_class = pc_savannah
+								is_planet_class = pc_tropical
+								is_planet_class = pc_continental
+								#is_planet_class = pc_ocean
+								# if = {
+								# 	limit = {
+								# 		root = {
+								# 			has_technology = tech_climate_restoration
+								# 		}	
+								# 		has_modifier = terraforming_candidate
+								# 	}
+								# 	is_planet_class = pc_barren
+								# 	is_planet_class = pc_barren_cold
+								# 	is_planet_class = pc_gray_goo
+								# }
+								# if = {
+								# 	limit = {
+								# 		root = {
+								# 			has_technology = tech_climate_restoration
+								# 		}
+								# 	}
+								# 	is_planet_class = pc_hive
+								# 	is_planet_class = pc_machine
+								# }
+							}
+						}
+						planet_terraforming_flagger = {
+							planet_flag = auto_planet_ocean_terraform_flag
+						}
+					}
+					break = yes
+				}
+				auto_tropical_terraform_flag = {
+					random_planet_within_border = {
+						limit = {
+							root = {
+								has_technology = tech_terrestrial_sculpting
+							}
+							NOR = {
+								has_planet_flag = auto_planet_tropical_terraform_flag
+								has_planet_flag = auto_terraforming_ready_flag
+							}
+							OR = {
+								is_planet_class = pc_alpine
+								is_planet_class = pc_arctic
+								is_planet_class = pc_tundra
+								is_planet_class = pc_desert
+								is_planet_class = pc_arid
+								is_planet_class = pc_savannah
+								#is_planet_class = pc_tropical
+								is_planet_class = pc_continental
+								is_planet_class = pc_ocean
+								# if = {
+								# 	limit = {
+								# 		root = {
+								# 			has_technology = tech_climate_restoration
+								# 		}	
+								# 		has_modifier = terraforming_candidate
+								# 	}
+								# 	is_planet_class = pc_barren
+								# 	is_planet_class = pc_barren_cold
+								# 	is_planet_class = pc_gray_goo
+								# }
+								# if = {
+								# 	limit = {
+								# 		root = {
+								# 			has_technology = tech_climate_restoration
+								# 		}
+								# 	}
+								# 	is_planet_class = pc_hive
+								# 	is_planet_class = pc_machine
+								# }
+							}
+						}
+						planet_terraforming_flagger = {
+							planet_flag = auto_planet_tropical_terraform_flag
+						}
+					}
+					break = yes
+				}
+				auto_gaia_terraform_flag = {
+					random_planet_within_border = {
+						limit = {
+							root = {
+								has_ascension_perk = ap_world_shaper
+							}
+							NOR = {
+								has_planet_flag = auto_planet_gaia_terraform_flag
+								has_planet_flag = auto_terraforming_ready_flag
+								is_planet_class = pc_gaia
+								is_planet_class = pc_nuked
+								is_planet_class = pc_hive
+								is_planet_class = pc_machine
+							}
+							habitable_planet = yes
+						}
+						planet_terraforming_flagger = {
+							planet_flag = auto_planet_gaia_terraform_flag
+						}
+					}
+					break = yes
+				}
+				auto_hive_terraform_flag = {
+					random_planet_within_border = {
+						limit = {
+							root = {
+								has_ascension_perk = ap_hive_worlds
+							}
+							NOR = {
+								has_planet_flag = auto_planet_hive_terraform_flag
+								has_planet_flag = auto_terraforming_ready_flag
+								is_planet_class = pc_hive
+							}
+							habitable_planet = yes
+						}
+						planet_terraforming_flagger = {
+							planet_flag = auto_planet_hive_terraform_flag
+						}
+					}
+					break = yes
+				}
+				auto_machine_terraform_flag = {
+					random_planet_within_border = {
+						limit = {
+							root = {
+								has_ascension_perk = ap_machine_worlds
+							}
+							NOR = {
+								has_planet_flag = auto_planet_machine_terraform_flag
+								has_planet_flag = auto_terraforming_ready_flag
+								is_planet_class = pc_machine
+							}
+							habitable_planet = yes
+						}
+						planet_terraforming_flagger = {
+							planet_flag = auto_planet_machine_terraform_flag
+						}
+					}
+					break = yes
+				}
+				auto_nuked_terraform_flag = {
+					random_planet_within_border = {
+						limit = {
+							root = {
+								has_technology = tech_climate_restoration
+							}
+							NOR = {
+								has_planet_flag = auto_planet_nuked_terraform_flag
+								has_planet_flag = auto_terraforming_ready_flag
+								is_planet_class = pc_nuked
+							}
+							OR = {
+								is_planet_class = pc_hive
+								is_planet_class = pc_machine
+							}
+						}
+						planet_terraforming_flagger = {
+							planet_flag = auto_planet_nuked_terraform_flag
+						}
+					}
+					break = yes
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = lazy_ter_events.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = auto_terraforming_flag
+	}
+
+	immediate = {
+		while = {
+			count = auto_ter_speed
+
+			random_planet_within_border = {
+				limit = {
+					NOR = {
+						has_modifier = terraforming_notification
+						has_planet_flag = auto_terraforming_ready_flag
+					}
+					OR = {
+						has_planet_flag = auto_planet_alpine_terraform_flag
+						has_planet_flag = auto_planet_arctic_terraform_flag
+						has_planet_flag = auto_planet_tundra_terraform_flag
+						has_planet_flag = auto_planet_desert_terraform_flag
+						has_planet_flag = auto_planet_arid_terraform_flag
+						has_planet_flag = auto_planet_savannah_terraform_flag
+						has_planet_flag = auto_planet_tropical_terraform_flag
+						has_planet_flag = auto_planet_continental_terraform_flag
+						has_planet_flag = auto_planet_ocean_terraform_flag
+						has_planet_flag = auto_planet_gaia_terraform_flag
+						has_planet_flag = auto_planet_hive_terraform_flag
+						has_planet_flag = auto_planet_machine_terraform_flag
+						has_planet_flag = auto_planet_nuked_terraform_flag
+					}
+				}
+				planet_terraforming_type = yes
+			}
+			random_planet_within_border = {
+				limit = {
+					NOT = {
+						has_modifier = terraforming_notification
+					}
+					has_planet_flag = auto_terraforming_ready_flag
+					OR = {
+						has_planet_flag = auto_planet_alpine_terraform_flag
+						has_planet_flag = auto_planet_arctic_terraform_flag
+						has_planet_flag = auto_planet_tundra_terraform_flag
+						has_planet_flag = auto_planet_desert_terraform_flag
+						has_planet_flag = auto_planet_arid_terraform_flag
+						has_planet_flag = auto_planet_savannah_terraform_flag
+						has_planet_flag = auto_planet_tropical_terraform_flag
+						has_planet_flag = auto_planet_continental_terraform_flag
+						has_planet_flag = auto_planet_ocean_terraform_flag
+						has_planet_flag = auto_planet_gaia_terraform_flag
+						has_planet_flag = auto_planet_hive_terraform_flag
+						has_planet_flag = auto_planet_machine_terraform_flag
+						has_planet_flag = auto_planet_nuked_terraform_flag
+					}
+				}
+				planet_terraforming_type = yes
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = lazy_ter_events.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_planet_flag = auto_terraforming_ready_flag
+		solar_system.owner = {
+			country_event = {
+				id = lazy_ter_events.4
+				days = 60
+			}
+		}
+	}
+}
+
+country_event = {
+	id = lazy_ter_events.4
+	title = "lazy_ter_events.3.name"
+	desc = "lazy_ter_events.3.desc"
+	picture = GFX_evt_alien_nature
+	show_sound = event_alien_nature
+	location = from
+
+	is_triggered_only = yes
+
+	option = {
+		name = EXCELLENT
+	}
+}

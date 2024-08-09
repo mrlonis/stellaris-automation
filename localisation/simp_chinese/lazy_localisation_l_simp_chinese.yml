@@ -1,0 +1,282 @@
+﻿l_simp_chinese:
+
+  #Event titles and desctiptions
+  lazy_config_events.1.name:0 "Ultimate Automation 终极自动化"
+  lazy_config_events.1.desc:0 "单击自动化功能黄色按钮的中间位置可启用该功能（按钮将变为灰色）。单击其左侧的×可禁用该功能，单击其右侧的齿轮可配置该功能（并展示介绍）"
+
+  lazy_config_events.2.name:0 "自动殖民管理"
+  lazy_config_events.2.desc:0 "启用该自动化功能后，在行星视图中的 "行星自动化 "菜单中将提供额外的殖民地自动化功能。"
+
+  lazy_config_events.3.name:0 "自动失业人口迁移"
+  lazy_config_events.3.desc:0 "启用该自动化功能将自动把失业人口重新安置到有空闲工作岗位的星球上，每个人口的迁移成本为100能量币和10凝聚力。新殖民的星球会有5年的缓冲期不受该功能影响，以便发展"
+
+  lazy_config_events.4.name:0 "自动建设巨构"
+  lazy_config_events.4.desc:0 "启用该自动化功能后，当你选择一艘工程船时，屏幕左侧就会出现一个新的按钮。该按钮将使建造船自动建造巨型建筑，但只能建造在设置中选择的那一个巨构，数量不限（有上限）"
+  
+  lazy_config_events.5.name:0 "自动舰队攻击"
+  lazy_config_events.5.desc:0 "启用该项自动化功能后，当你选择舰队时，屏幕左侧会出现一个新的按钮。该按钮将使被选中的舰队自动攻击最近的敌人（和/或）选择性轰炸姿态轰炸行星"
+
+  lazy_config_events.6.name:0 "自动征兵"
+  lazy_config_events.6.desc:0 "启用这个自动化功能将在每个你拥有的行星上自动招募所选的军队（从设置中选择），直到禁用为止。这会考虑到军队成本的降低，但不考虑招募速度。"
+
+  lazy_config_events.7.name:0 "自动合并舰队/军队"
+  lazy_config_events.7.desc:0 "启用这个自动化功能将自动合并在启用时已经存在（建造）的舰队和/或军队。因此，在合并完成后，应该禁用这个功能"
+
+  lazy_config_events.8.name:0 "自动殖民"
+  lazy_config_events.8.desc:0 "启用这个自动化功能将自动建造一艘殖民船，并殖民最近的具有所选适居性或更高的行星（从下面选择，默认值是70%或更高）"
+
+  lazy_config_events.9.name:0 "自动摧毁行星"
+  lazy_config_events.9.desc:0 "启用这个自动化功能将使所有的巨像自动摧毁最近的敌对行星，该行星必须在邻近的星系内\n\n注意：这个自动化功能没有在相应的船只上出现新按钮，因为一个帝国能同时拥有的巨像数量上限较小"
+
+  lazy_config_events.10.name:0 "自动陆军入侵"
+  lazy_config_events.10.desc:0 "启用这个自动化功能将自动将所有陆军设置为进攻姿态，这将使军队自动跟随盟友的军事舰队（当两个舰队在同一个星系时“跟随”）并入侵敌对行星（如果可能会成功/应该是实力大于守军的意思，奇怪的状语从句）"
+
+  lazy_config_events.11.name:0 "自动环境改造"
+  lazy_config_events.11.desc:0 "启用这个自动化功能会自动将行星环境改造为在设置中选择的行星类型。必须选择一个行星类型，并考虑到成本和改造时间"
+
+  lazy_config_events.12.name:0 "自动升级恒星基地"
+  lazy_config_events.12.desc:0 "启用这个自动化功能将每个月自动从设置中指定的等级升级一个星际基地。所有的星际基地也可以同时从下面的红色选项指定的等级降级\n\n注意：在这个功能激活时，不应该手动升级恒星基地 (upgrading progress invisible) and this will stop upgrading once the cap is hit!"
+
+  lazy_config_events.13.name:0 "自动升级巨构"
+  lazy_config_events.13.desc:0 "启用这个自动化功能将自动升级巨构（包括更多巨构和NSC）\n\n注意：这不包括俄罗斯套娃脑的可居住阶段。"
+
+  lazy_config_events.14.name:0 "自动建造哨站"
+  lazy_config_events.14.desc:0 "启用这个自动化功能将在每次选择一个工程船时，在屏幕左侧出现一个新的按钮。这个按钮将使建造船自动建造哨站"
+
+  lazy_config_events.15.name:0 "Auto Colony Manager"
+  lazy_config_events.15.desc:0 "Enabling this automation will make additional colony automation available in the "Planet Automation" menu when in the planet view."
+
+  lazy_config_events.16.name:0 "Auto Recruit Leaders"
+  lazy_config_events.16.desc:0 "Enabling this automation will automatically recruit leaders for the chosen assignments."
+
+  decision_lazy_planet:0 "自动行星专业化"
+  decision_lazy_planet_desc:0 "给行星自动设置专业化，将根据所选的选项自动建造建筑和地区"
+
+  lazy_pla_spe_events.1.name:0 "行星自动建设"
+  lazy_pla_spe_events.1.desc:0 "给 §Y[Root.Planet.GetName]§! 自动专业化，将根据所选的选项自动建造建筑"
+
+  lazy_config_events.04.desc:0 "Please select a megastructure in the "Auto construct megastructures" settings menu before pressing this button again."
+
+  #Event option titles
+  lazy_config_events.x.e:0 "§G开启§!"
+  lazy_config_events.x.d:0 "§R关闭§!"
+  lazy_config_events.x.b:0 "返回"
+
+  lazy_config_events.1.a:0 "全部开启"
+  lazy_config_events.1.b:0 "§Y自动§!殖民管理"
+  lazy_config_events.1.c:0 "§Y自动§!合并舰队/军队"
+  lazy_config_events.1.d:0 "§Y自动§!失业人口迁移"
+  lazy_config_events.1.e:0 "§Y自动§!征兵"
+  lazy_config_events.1.f:0 "§Y自动§!建设巨构"
+  lazy_config_events.1.g:0 "§Y自动§!建设哨站"
+  lazy_config_events.1.h:0 "§Y自动§!舰队攻击"
+  lazy_config_events.1.i:0 "§Y自动§!陆军入侵"
+  lazy_config_events.1.j:0 "§Y自动§!摧毁行星"
+  lazy_config_events.1.k:0 "§Y自动§!殖民"
+  lazy_config_events.1.l:0 "§Y自动§!升级巨构"
+  lazy_config_events.1.m:0 "§Y自动§!环境改造"
+  lazy_config_events.1.n:0 "§Y自动§!升级恒星基地"
+  lazy_config_events.1.o:0 "§YAuto§! recruit leaders"
+  lazy_config_events.1.p:0 "全部关闭"
+  lazy_config_events.1.q:0 "退出"
+
+  lazy_config_events.3.b:0 "Unemployed pops to free jobs"
+  lazy_config_events.3.c:0 "Any pops to Synaptic Lathe"
+
+  # lazy_config_events.4.b:0 "§Y自动§!建设超空间中继器"
+  # lazy_config_events.4.c:0 "§YAutomate§! Gateways"
+  # lazy_config_events.4.d:0 "§YAutomate§! Habitat Central Complexes"
+  # lazy_config_events.4.e:0 "§YAutomate§! (Habitat) Major Orbitals"
+  # lazy_config_events.4.f:0 "§YAutomate§! (Habitat) Minor Orbitals"
+
+  lazy_config_events.5.b:0 "忽略行星（不进行轰炸）"
+  lazy_config_events.5.c:0 "使用§Y选择性轰炸§!"
+  lazy_config_events.5.d:0 "使用§无差别轰炸§!"
+  lazy_config_events.5.e:0 "使用§Y末日轰炸§!"
+  lazy_config_events.5.f:0 "使用§Y病毒轰炸§!"
+  lazy_config_events.5.g:0 "使用§Y劫掠姿态轰炸§!"
+  lazy_config_events.5.h:0 "使用§Y制裁性轰炸§!"
+  lazy_config_events.5.i:0 "使用§Y灭绝轰炸§!"
+
+  lazy_config_events.6.a:0 "招募§Y普通§!军队（默认）"
+  lazy_config_events.6.b:0 "招募§Y奴隶§!军队"
+  lazy_config_events.6.c:0 "招募§Y克隆人§!军队"
+  lazy_config_events.6.d:0 "招募§Y机械人§!军队"
+  lazy_config_events.6.e:0 "招募§Y灵能§!军队"
+  lazy_config_events.6.f:0 "招募§Y异形§!军队"
+  lazy_config_events.6.g:0 "招募§Y基因战士§!军队"
+  lazy_config_events.6.h:0 "招募§Y义体§!军队"
+  lazy_config_events.6.i:0 "招募§Y战争机械§!军队"
+  lazy_config_events.6.j:0 "招募§Y死灵§!军团"
+
+  lazy_config_events.7.a:0 "合并海军和陆军"
+  lazy_config_events.7.b:0 "只合并陆军"
+  lazy_config_events.7.c:0 "只合并海军"
+
+  lazy_config_events.8.b:0 "设置宜居性限制为§R10%§!"
+  lazy_config_events.8.c:0 "设置宜居性限制为§R20%§!"
+  lazy_config_events.8.d:0 "设置宜居性限制为§R30%§!"
+  lazy_config_events.8.e:0 "设置宜居性限制为§Y40%§!"
+  lazy_config_events.8.f:0 "设置宜居性限制为§Y50%§!"
+  lazy_config_events.8.g:0 "设置宜居性限制为§Y60%§!"
+  lazy_config_events.8.h:0 "设置宜居性限制为§G70%§!"
+
+  lazy_config_events.11.b:0 "环境改造为§Y山地行星§!"
+  lazy_config_events.11.c:0 "环境改造为§Y极地行星§!"
+  lazy_config_events.11.d:0 "环境改造为§Y冻原行星§!"
+  lazy_config_events.11.e:0 "环境改造为§Y干旱行星§!"
+  lazy_config_events.11.f:0 "环境改造为§Y沙漠行星§!"
+  lazy_config_events.11.g:0 "环境改造为§Y草原行星§!"
+  lazy_config_events.11.h:0 "环境改造为§Y大陆行星§!"
+  lazy_config_events.11.i:0 "环境改造为§Y海洋行星§!"
+  lazy_config_events.11.j:0 "环境改造为§Y热带行星§!"
+  lazy_config_events.11.k:0 "环境改造为§Y盖亚行星§!"
+  lazy_config_events.11.l:0 "环境改造为§Y蜂巢行星§!"
+  lazy_config_events.11.m:0 "环境改造为§Y机械行星§!"
+  lazy_config_events.11.n:0 "环境改造为§Y死亡行星§!"
+
+  lazy_config_events.12.a:0 "§G自动升级全部恒星基地§!"
+  lazy_config_events.12.b:0 "§G升级§!全部等级大于§Y哨站§!的恒星基地"
+  lazy_config_events.12.c:0 "§G升级§!全部等级大于§Y星港§!的恒星基地"
+  lazy_config_events.12.d:0 "§G升级§!全部等级大于§Y星垒§!的恒星基地"
+  lazy_config_events.12.e:0 "§G升级§!全部等级大于§Y星堡§!的恒星基地"
+  lazy_config_events.12.f:0 "§G升级§!全部等级大于§Y擎天堡§!的恒星基地"
+  lazy_config_events.12.g:0 "§G升级§!全部等级大于§Y要塞（Stronghold？看不懂）§!的恒星基地"
+  lazy_config_events.12.h:0 "§降级§!从§Y星港§!到§Y哨站§!"
+  lazy_config_events.12.i:0 "§降级§!从§Y星垒§!到§Y哨站§!"
+  lazy_config_events.12.j:0 "§降级§!从§Y星堡§!到§Y哨站§!"
+  lazy_config_events.12.k:0 "§降级§!从§Y擎天堡§!到§Y哨站§!"
+  lazy_config_events.12.l:0 "§降级§!从§Y要塞（Stronghold？看不懂）§!到§Y哨站§!"
+  lazy_config_events.12.m:0 "§降级§!从§Y指挥中心（Headquarters）§!到§Y哨站§!"
+
+  lazy_config_events.16.b:0 "Recruit and assign §Yplanet army§! leaders"
+  lazy_config_events.16.c:0 "Recruit and assign §Yassult army§! leaders"
+  lazy_config_events.16.d:0 "Recruit and assign §Yfleet§! leaders"
+
+  lazy_config_events.17.desc:0 "按右箭头可将自动化速度提高十倍（x10），按左箭头可将其还原为正常速度（x1）"
+
+  lazy_pla_spe_events.1.a:0 "星球专精化为§Y科研星球§!"
+  #lazy_pla_spe_events.1.b:0 "Specialise the planet in §Ymetallurgy§! (alloy)"
+  #lazy_pla_spe_events.1.c:0 "Specialise the planet in §Yartistry§! (consumer goods)"
+  lazy_pla_spe_events.1.d:0 "星球专精化为§Y统一中心§!"
+  lazy_pla_spe_events.1.e:0 "星球专精化为§Y官僚机构§!(行政上限)"
+  lazy_pla_spe_events.1.f:0 "星球专精化为§Y战略资源§!"
+  lazy_pla_spe_events.1.g:0 "星球专精化为§Y精炼厂§!(异星天然气)"
+  lazy_pla_spe_events.1.h:0 "星球专精化为§Y化学工厂§!(易爆颗粒)"
+  lazy_pla_spe_events.1.i:0 "星球专精化为§Y稀有晶体转化§!(稀有晶体)"
+  lazy_pla_spe_events.1.j:0 "星球专精化为§Y城市区域§!(住房)"
+  lazy_pla_spe_events.1.r:0 "星球专精化为§Y工业区域§!(合金，消费品)"
+  lazy_pla_spe_events.1.k:0 "星球专精化为§Y采矿区域§!(矿物)"
+  lazy_pla_spe_events.1.l:0 "星球专精化为§Y发电区域§!(能量)"
+  lazy_pla_spe_events.1.m:0 "星球专精化为§Y农业区域§!(食物)"
+  lazy_pla_spe_events.1.n:0 "星球专精化为§Y贸易区域§!(贸易价值)"
+  lazy_pla_spe_events.1.o:0 "星球专精化为§Y研究区域§!(科研点)"
+  lazy_pla_spe_events.1.p:0 "星球专精化为§Y休闲区域§!(舒适度)"
+  lazy_pla_spe_events.1.q:0 "移除星球上的任何自动化的专门化"
+
+  #Event option descriptions
+  # lazy_config_events.1.custom_tooltip.a:0 "Turn on all automations"
+  # lazy_config_events.1.custom_tooltip.b:0 "Automatically build buildings and districts based on your chosen options. There can only be one building plus a district chosen to be built on a chosen planet. Comes with an extra option; Auto colony support building which builds 1 colony support building on every planet (e.g. a clinic for regular empires) and 1 housing district. Does all this when there are less than 5 jobs available. The specialisation can be activated and configured through the decisions tab."
+  # lazy_config_events.1.custom_tooltip.c:0 "Automatically upgrade buildings on every planet (vanilla buildings only)."
+  # lazy_config_events.1.custom_tooltip.d:0 "Automatically resettle unemployed pops to planets that have free jobs at a static cost of 100 energy per pop."
+  # lazy_config_events.1.custom_tooltip.e:0 "Automatically survey systems by unlocking the automatic exploration option for science ships."
+  # lazy_config_events.1.custom_tooltip.f:0 "Automatically research technology by unlocking the research assistance option for each category."
+  # lazy_config_events.1.custom_tooltip.g:0 "Automatically construct outpost, mining and research stations by unlocking the automatic construction feature. All vanilla influence cost reductions on outposts are considered. Note: Newly built construction ships will not be affected by this unless the option is disabled and re-enabled. Orders can be given when this is enabled but once completed, it will go back to its automation."
+  # lazy_config_events.1.custom_tooltip.h:0 "Automatically attack the nearest hostile fleets or starbases with all fleets. Orders can be given when this is enabled but once completed, it will go back to its automation."
+  # lazy_config_events.1.custom_tooltip.i:0 "Automatically set all armies to Aggressive Stance which will make the army/fleet automatically follow friendly militarly fleets (that 'attach' when both fleets are in the same system) and invade hostle planets, if the odds of success are favorable."
+  # lazy_config_events.1.custom_tooltip.j:0 "Automatically destroy the nearest hostile planet that is within a neighboring system. Orders can be given when this is enabled but once completed, it will go back to its automation."
+  # lazy_config_events.1.custom_tooltip.k:0 "Automatically build a colony ship and colonize the nearest planet with a chosen habitability or more habitability (default: 70%)."
+  # lazy_config_events.1.custom_tooltip.l:0 "Automatically upgrade megastructures using vanilla megastructure costs."
+  # lazy_config_events.1.custom_tooltip.m:0 "Automatically terraform planets using vanilla terraforming times, costs and cost reductions."
+  # lazy_config_events.1.custom_tooltip.n:0 "Automatically manage all the starbases and defence platforms (with vanilla starbase cost reductions and static estimated defence platform costs)."
+  # lazy_config_events.1.custom_tooltip.o:0 "Turn off all automations apart from automatic exploration."
+
+  #Event notifications
+  MESSAGE_MEGASTRUCTURE_UPGRADING_TITLE:0 "自动升级巨构"
+  AUTO_MEGA_MESSAGE_TYPE_DESC:0 "自动升级 $MEGASTRUCTURE|H$ 在 $SYSTEM|H$ 星系."
+
+  MESSAGE_STARBASE_UPGRADING_TITLE:0 "自动升级恒星基地"
+  AUTO_STARBASE_MESSAGE_TYPE_DESC:0 "自动升级 $FLEET|H$ 在 $SYSTEM|H$ 星系."
+
+  MESSAGE_AUTO_COLONY_STARTED_TITLE:0 "自动殖民"
+  AUTO_COLONY_MESSAGE_TYPE_DESC:0 "自动开始殖民 $PLANET|H$ 在 $SYSTEM|H$ 星系."
+
+  MESSAGE_AUTO_TERRAFORM_STARTED_TITLE:0 "自动环境改造"
+  AUTO_TERRAFORM_MESSAGE_TYPE_DESC:0 "自动开始环境改造 $PLANET|H$ 在 $SYSTEM|H$ 星系."
+
+  lazy_ter_events.3.name:0 "自动环境改造完成"
+  lazy_ter_events.3.desc:0 "在 [from.Planet.GetName] 上的自动环境改造已完成."
+
+  #Planet modifier notifications
+  # building_notification_research:0 "Auto Research"
+  # building_notification_research_desc:0 "Auto construction of research buildings."
+  # building_notification_alloy:0 "Auto Metallurgy"
+  # building_notification_alloy_desc:0 "Auto construction of alloy buildings."
+  # building_notification_consumer_goods:0 "Auto Artistry"
+  # building_notification_consumer_goods_desc:0 "Auto construction of consumer goods buildings."
+  # building_notification_unity:0 "Auto Unification"
+  # building_notification_unity_desc:0 "Auto construction of unity buildings."
+  # building_notification_administrative_cap:0 "Auto Bureaucracy"
+  # building_notification_administrative_cap_desc:0 "Auto construction of administrative cap buildings."
+  # building_notification_eg_rc_vm:0 "Auto SR Production"
+  # building_notification_eg_rc_vm_desc:0 "Auto construction of exotic gases, rare crystals and volatile motes buildings."
+  # building_notification_exotic_gases:0 "Auto Refinery"
+  # building_notification_exotic_gases_desc:0 "Auto construction of exotic gases buildings."
+  # building_notification_volatile_motes:0 "Auto Chemistry"
+  # building_notification_volatile_motes_desc:0 "Auto construction of volatile motes buildings."
+  # building_notification_rare_crystals:0 "Auto Translucer"
+  # building_notification_rare_crystals_desc:0 "Auto construction of rare crystals buildings."
+  # building_notification_housing:0 "Auto City Districts"
+  # building_notification_housing_desc:0 "Auto construction of housing districts."
+  # building_notification_minerals:0 "Auto Mining Districts"
+  # building_notification_minerals_desc:0 "Auto construction of minerals districts."
+  # building_notification_energy:0 "Auto Generator Districts"
+  # building_notification_energy_desc:0 "Auto construction of energy districts."
+  # building_notification_food:0 "Auto Farming Districts"
+  # building_notification_food_desc:0 "Auto construction of food districts."
+  # building_notification_trade:0 "Auto Trade Districts"
+  # building_notification_trade_desc:0 "Auto construction of trade districts."
+  # building_notification_research_d:0 "Auto Research Districts"
+  # building_notification_research_d_desc:0 "Auto construction of research districts."
+  # building_notification_amenities:0 "Auto Leisure Districts"
+  # building_notification_amenities_desc:0 "Auto construction of amenities districts."
+
+  # building_notification:0 "Building In Progress"
+  # building_notification_desc:0 "Once the timer expires, the construction of a building or district will be completed."
+
+  terraforming_notification:0 "环境改造进行中"
+  terraforming_notification_desc:0 "一段时间后，这个行星的环境改造将完成"
+
+  #Planet Automation
+  planet_automation_pop_growth:0 "£pops£ §Y自动化§!人口增长"
+  planet_automation_pop_growth_desc:0 "自动建造基因诊所"
+
+  #Megastructure Placeholders
+  constructing_og_megastructure:0 "Constructing Megastructure..."
+  constructing_og_megastructure_DESC:0 "Auto construct megastructures is in progress of building a megastructure!"
+  constructing_og_megastructure_MEGASTRUCTURE_DETAILS:0 "Auto construct megastructures is in progress of building a megastructure!"
+  constructing_megastructure:0 "Constructing Megastructure..."
+  constructing_megastructure_DESC:0 "Auto construct megastructures is in progress of building a megastructure!"
+  constructing_megastructure_MEGASTRUCTURE_DETAILS:0 "Auto construct megastructures is in progress of building a megastructure!"
+
+  #Auto fleet names
+  auto_colonizer:0 "Auto Coloniser Ship"
+  auto_outpost_ship:0 "Auto Outpost Ship"
+  auto_fleet_attack:0 "Auto Attack Fleet"
+  auto_fleet_merging:0 "Auto Merging Fleet"
+  auto_army_merging:0 "Auto Merging Army"
+  auto_planet_killer:0 "Auto Planet Killer"
+
+  #Auto fleet events
+  lazy_con_meg_events.1.name:0 "Auto Construct Megastructures"
+  lazy_con_meg_events.1.desc:0 "Enabling this automation will make a new button appear on the left side of the screen whenever a construction ship is selected. The button will make the construction ship automatically construct megastructures but only the one that was selected in the settings below, as many as it's allowed (capped)."
+
+  lazy_con_meg_events.1.b:0 "§YAutomate§! Hyper Relays"
+  lazy_con_meg_events.1.c:0 "§YAutomate§! Gateways"
+  lazy_con_meg_events.1.d:0 "§YAutomate§! Habitat Central Complexes"
+  lazy_con_meg_events.1.e:0 "§YAutomate§! (Habitat) Major Orbitals"
+  lazy_con_meg_events.1.f:0 "§YAutomate§! (Habitat) Minor Orbitals"
+  lazy_con_meg_events.1.g:0 "§YAutomate§! Frameworld Outposts"
+  lazy_con_meg_events.1.h:0 "§YAutomate§! Frameworld Asteroid Harvesters"
+  lazy_con_meg_events.1.i:0 "§YAutomate§! Frameworld Habitat Salvaging"
+  lazy_con_meg_events.1.j:0 "§YAutomate§! Orbital Rings"

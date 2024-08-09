@@ -1,0 +1,724 @@
+auto_assign_planet_army_leader = {
+	set_variable = {
+		which = auto_recruit_leader_commander_cap
+		value = value:leader_commander_cap_trigger
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = auto_recruit_leader_commander_cap
+				value > 0
+			}
+		}
+		random_pool_leader = {
+			limit = {
+				exists = leader
+				leader_class = commander
+				prev = {
+					any_owned_planet = {
+						NOT = {
+							exists = army_leader
+						}
+						has_army = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					switch = {
+						trigger = has_skill
+	
+						1 = {
+							root = {
+								resource_stockpile_compare = {
+									resource = unity
+									value > 99
+									mult = value:positive_modifier_mult|MODIFIER|leaders_cost_mult|
+								}
+							}
+						}
+						2 = {
+							root = {
+								resource_stockpile_compare = {
+									resource = unity
+									value > 169
+									mult = value:positive_modifier_mult|MODIFIER|leaders_cost_mult|
+								}
+							}
+						}
+						3 = {
+							root = {
+								resource_stockpile_compare = {
+									resource = unity
+									value > 349
+									mult = value:positive_modifier_mult|MODIFIER|leaders_cost_mult|
+								}
+							}
+						}
+						4 = {
+							root = {
+								resource_stockpile_compare = {
+									resource = unity
+									value > 624
+									mult = value:positive_modifier_mult|MODIFIER|leaders_cost_mult|
+								}
+							}
+						}
+						5 = {
+							root = {
+								resource_stockpile_compare = {
+									resource = unity
+									value > 999
+									mult = value:positive_modifier_mult|MODIFIER|leaders_cost_mult|
+								}
+							}
+						}
+						6 = {
+							root = {
+								resource_stockpile_compare = {
+									resource = unity
+									value > 1474
+									mult = value:positive_modifier_mult|MODIFIER|leaders_cost_mult|
+								}
+							}
+						}
+						7 = {
+							root = {
+								resource_stockpile_compare = {
+									resource = unity
+									value > 2049
+									mult = value:positive_modifier_mult|MODIFIER|leaders_cost_mult|
+								}
+							}
+						}
+						8 = {
+							root = {
+								resource_stockpile_compare = {
+									resource = unity
+									value > 2724
+									mult = value:positive_modifier_mult|MODIFIER|leaders_cost_mult|
+								}
+							}
+						}
+						9 = {
+							root = {
+								resource_stockpile_compare = {
+									resource = unity
+									value > 3499
+									mult = value:positive_modifier_mult|MODIFIER|leaders_cost_mult|
+								}
+							}
+						}
+						10 = {
+							root = {
+								resource_stockpile_compare = {
+									resource = unity
+									value > 4499
+									mult = value:positive_modifier_mult|MODIFIER|leaders_cost_mult|
+								}
+							}
+						}
+					}
+				}
+				exile_leader_as = auto_recruited_leader
+				prev = {
+					random_owned_planet = {
+						limit = {
+							NOT = {
+								exists = army_leader
+							}
+							has_army = yes
+						}
+						ordered_planet_army = {
+							position = 0
+							order_by = 0
+							set_leader = auto_recruited_leader
+						}
+						create_message = {
+							type = MESSAGE_RECRUITED_LEADER
+							localization = MESSAGE_RECRUITED_LEADER_DESC
+							days = 30
+							target = prevprev
+							variable = {
+								type = name
+								localization = LEADER
+								scope = prevprev
+							}
+							variable = {
+								type = name
+								localization = PLANET
+								scope = this
+							}
+						}
+					}
+				}
+				switch = {
+					trigger = has_skill
+	
+					1 = {
+						root = {
+							add_resource = {
+								unity = 99
+								mult = value:negative_modifier_mult|MODIFIER|leaders_cost_mult|
+							}
+						}
+					}
+					2 = {
+						root = {
+							add_resource = {
+								unity = 169
+								mult = value:negative_modifier_mult|MODIFIER|leaders_cost_mult|
+							}
+						}
+					}
+					3 = {
+						root = {
+							add_resource = {
+								unity = 349
+								mult = value:negative_modifier_mult|MODIFIER|leaders_cost_mult|
+							}
+						}
+					}
+					4 = {
+						root = {
+							add_resource = {
+								unity = 624
+								mult = value:negative_modifier_mult|MODIFIER|leaders_cost_mult|
+							}
+						}
+					}
+					5 = {
+						root = {
+							add_resource = {
+								unity = 999
+								mult = value:negative_modifier_mult|MODIFIER|leaders_cost_mult|
+							}
+						}
+					}
+					6 = {
+						root = {
+							add_resource = {
+								unity = 1474
+								mult = value:negative_modifier_mult|MODIFIER|leaders_cost_mult|
+							}
+						}
+					}
+					7 = {
+						root = {
+							add_resource = {
+								unity = 2049
+								mult = value:negative_modifier_mult|MODIFIER|leaders_cost_mult|
+							}
+						}
+					}
+					8 = {
+						root = {
+							add_resource = {
+								unity = 2724
+								mult = value:negative_modifier_mult|MODIFIER|leaders_cost_mult|
+							}
+						}
+					}
+					9 = {
+						root = {
+							add_resource = {
+								unity = 3499
+								mult = value:negative_modifier_mult|MODIFIER|leaders_cost_mult|
+							}
+						}
+					}
+					10 = {
+						root = {
+							add_resource = {
+								unity = 4499
+								mult = value:negative_modifier_mult|MODIFIER|leaders_cost_mult|
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+auto_assign_army_leader = {
+	set_variable = {
+		which = auto_recruit_leader_commander_cap
+		value = value:leader_commander_cap_trigger
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = auto_recruit_leader_commander_cap
+				value > 0
+			}
+		}
+		random_pool_leader = {
+			limit = {
+				exists = leader
+				leader_class = commander
+				prev = {
+					any_owned_army = {
+						is_defensive_army = no
+						NOT = {
+							exists = leader
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					switch = {
+						trigger = has_skill
+
+						1 = {
+							root = {
+								resource_stockpile_compare = {
+									resource = unity
+									value > 99
+									mult = value:positive_modifier_mult|MODIFIER|leaders_cost_mult|
+								}
+							}
+						}
+						2 = {
+							root = {
+								resource_stockpile_compare = {
+									resource = unity
+									value > 169
+									mult = value:positive_modifier_mult|MODIFIER|leaders_cost_mult|
+								}
+							}
+						}
+						3 = {
+							root = {
+								resource_stockpile_compare = {
+									resource = unity
+									value > 349
+									mult = value:positive_modifier_mult|MODIFIER|leaders_cost_mult|
+								}
+							}
+						}
+						4 = {
+							root = {
+								resource_stockpile_compare = {
+									resource = unity
+									value > 624
+									mult = value:positive_modifier_mult|MODIFIER|leaders_cost_mult|
+								}
+							}
+						}
+						5 = {
+							root = {
+								resource_stockpile_compare = {
+									resource = unity
+									value > 999
+									mult = value:positive_modifier_mult|MODIFIER|leaders_cost_mult|
+								}
+							}
+						}
+						6 = {
+							root = {
+								resource_stockpile_compare = {
+									resource = unity
+									value > 1474
+									mult = value:positive_modifier_mult|MODIFIER|leaders_cost_mult|
+								}
+							}
+						}
+						7 = {
+							root = {
+								resource_stockpile_compare = {
+									resource = unity
+									value > 2049
+									mult = value:positive_modifier_mult|MODIFIER|leaders_cost_mult|
+								}
+							}
+						}
+						8 = {
+							root = {
+								resource_stockpile_compare = {
+									resource = unity
+									value > 2724
+									mult = value:positive_modifier_mult|MODIFIER|leaders_cost_mult|
+								}
+							}
+						}
+						9 = {
+							root = {
+								resource_stockpile_compare = {
+									resource = unity
+									value > 3499
+									mult = value:positive_modifier_mult|MODIFIER|leaders_cost_mult|
+								}
+							}
+						}
+						10 = {
+							root = {
+								resource_stockpile_compare = {
+									resource = unity
+									value > 4499
+									mult = value:positive_modifier_mult|MODIFIER|leaders_cost_mult|
+								}
+							}
+						}
+					}
+				}
+				exile_leader_as = auto_recruited_leader
+				prev = {
+					random_owned_army = {
+						limit = {
+							is_defensive_army = no
+							NOT = {
+								exists = leader
+							}
+						}
+						set_leader = auto_recruited_leader
+						create_message = {
+							type = MESSAGE_RECRUITED_LEADER
+							localization = MESSAGE_RECRUITED_LEADER_DESC
+							days = 30
+							target = prevprev
+							variable = {
+								type = name
+								localization = LEADER
+								scope = prevprev
+							}
+							variable = {
+								type = name
+								localization = ARMY
+								scope = this
+							}
+						}
+					}
+				}
+				switch = {
+					trigger = has_skill
+
+					1 = {
+						root = {
+							add_resource = {
+								unity = 99
+								mult = value:negative_modifier_mult|MODIFIER|leaders_cost_mult|
+							}
+						}
+					}
+					2 = {
+						root = {
+							add_resource = {
+								unity = 169
+								mult = value:negative_modifier_mult|MODIFIER|leaders_cost_mult|
+							}
+						}
+					}
+					3 = {
+						root = {
+							add_resource = {
+								unity = 349
+								mult = value:negative_modifier_mult|MODIFIER|leaders_cost_mult|
+							}
+						}
+					}
+					4 = {
+						root = {
+							add_resource = {
+								unity = 624
+								mult = value:negative_modifier_mult|MODIFIER|leaders_cost_mult|
+							}
+						}
+					}
+					5 = {
+						root = {
+							add_resource = {
+								unity = 999
+								mult = value:negative_modifier_mult|MODIFIER|leaders_cost_mult|
+							}
+						}
+					}
+					6 = {
+						root = {
+							add_resource = {
+								unity = 1474
+								mult = value:negative_modifier_mult|MODIFIER|leaders_cost_mult|
+							}
+						}
+					}
+					7 = {
+						root = {
+							add_resource = {
+								unity = 2049
+								mult = value:negative_modifier_mult|MODIFIER|leaders_cost_mult|
+							}
+						}
+					}
+					8 = {
+						root = {
+							add_resource = {
+								unity = 2724
+								mult = value:negative_modifier_mult|MODIFIER|leaders_cost_mult|
+							}
+						}
+					}
+					9 = {
+						root = {
+							add_resource = {
+								unity = 3499
+								mult = value:negative_modifier_mult|MODIFIER|leaders_cost_mult|
+							}
+						}
+					}
+					10 = {
+						root = {
+							add_resource = {
+								unity = 4499
+								mult = value:negative_modifier_mult|MODIFIER|leaders_cost_mult|
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+auto_assign_fleet_leader = {
+	set_variable = {
+		which = auto_recruit_leader_commander_cap
+		value = value:leader_commander_cap_trigger
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = auto_recruit_leader_commander_cap
+				value > 0
+			}
+		}
+		random_pool_leader = {
+			limit = {
+				exists = leader
+				leader_class = commander
+				prev = {
+					any_owned_fleet = {
+						is_ship_class = shipclass_military
+						NOR = {
+							is_ship_class = shipclass_military_station
+							exists = leader
+						}
+						is_disabled = no
+					}
+				}
+			}
+			if = {
+				limit = {
+					switch = {
+						trigger = has_skill
+
+						1 = {
+							root = {
+								resource_stockpile_compare = {
+									resource = unity
+									value > 99
+									mult = value:positive_modifier_mult|MODIFIER|leaders_cost_mult|
+								}
+							}
+						}
+						2 = {
+							root = {
+								resource_stockpile_compare = {
+									resource = unity
+									value > 169
+									mult = value:positive_modifier_mult|MODIFIER|leaders_cost_mult|
+								}
+							}
+						}
+						3 = {
+							root = {
+								resource_stockpile_compare = {
+									resource = unity
+									value > 349
+									mult = value:positive_modifier_mult|MODIFIER|leaders_cost_mult|
+								}
+							}
+						}
+						4 = {
+							root = {
+								resource_stockpile_compare = {
+									resource = unity
+									value > 624
+									mult = value:positive_modifier_mult|MODIFIER|leaders_cost_mult|
+								}
+							}
+						}
+						5 = {
+							root = {
+								resource_stockpile_compare = {
+									resource = unity
+									value > 999
+									mult = value:positive_modifier_mult|MODIFIER|leaders_cost_mult|
+								}
+							}
+						}
+						6 = {
+							root = {
+								resource_stockpile_compare = {
+									resource = unity
+									value > 1474
+									mult = value:positive_modifier_mult|MODIFIER|leaders_cost_mult|
+								}
+							}
+						}
+						7 = {
+							root = {
+								resource_stockpile_compare = {
+									resource = unity
+									value > 2049
+									mult = value:positive_modifier_mult|MODIFIER|leaders_cost_mult|
+								}
+							}
+						}
+						8 = {
+							root = {
+								resource_stockpile_compare = {
+									resource = unity
+									value > 2724
+									mult = value:positive_modifier_mult|MODIFIER|leaders_cost_mult|
+								}
+							}
+						}
+						9 = {
+							root = {
+								resource_stockpile_compare = {
+									resource = unity
+									value > 3499
+									mult = value:positive_modifier_mult|MODIFIER|leaders_cost_mult|
+								}
+							}
+						}
+						10 = {
+							root = {
+								resource_stockpile_compare = {
+									resource = unity
+									value > 4499
+									mult = value:positive_modifier_mult|MODIFIER|leaders_cost_mult|
+								}
+							}
+						}
+					}
+				}
+				exile_leader_as = auto_recruited_leader
+				prev = {
+					random_owned_fleet = {
+						limit = {
+							is_ship_class = shipclass_military
+							NOR = {
+								is_ship_class = shipclass_military_station
+								exists = leader
+							}
+							is_disabled = no
+						}
+						set_leader = auto_recruited_leader
+						create_message = {
+							type = MESSAGE_RECRUITED_LEADER
+							localization = MESSAGE_RECRUITED_LEADER_DESC
+							days = 30
+							target = prevprev
+							variable = {
+								type = name
+								localization = LEADER
+								scope = prevprev
+							}
+							variable = {
+								type = name
+								localization = FLEET
+								scope = this
+							}
+						}
+					}
+				}
+				switch = {
+					trigger = has_skill
+
+					1 = {
+						root = {
+							add_resource = {
+								unity = 99
+								mult = value:negative_modifier_mult|MODIFIER|leaders_cost_mult|
+							}
+						}
+					}
+					2 = {
+						root = {
+							add_resource = {
+								unity = 169
+								mult = value:negative_modifier_mult|MODIFIER|leaders_cost_mult|
+							}
+						}
+					}
+					3 = {
+						root = {
+							add_resource = {
+								unity = 349
+								mult = value:negative_modifier_mult|MODIFIER|leaders_cost_mult|
+							}
+						}
+					}
+					4 = {
+						root = {
+							add_resource = {
+								unity = 624
+								mult = value:negative_modifier_mult|MODIFIER|leaders_cost_mult|
+							}
+						}
+					}
+					5 = {
+						root = {
+							add_resource = {
+								unity = 999
+								mult = value:negative_modifier_mult|MODIFIER|leaders_cost_mult|
+							}
+						}
+					}
+					6 = {
+						root = {
+							add_resource = {
+								unity = 1474
+								mult = value:negative_modifier_mult|MODIFIER|leaders_cost_mult|
+							}
+						}
+					}
+					7 = {
+						root = {
+							add_resource = {
+								unity = 2049
+								mult = value:negative_modifier_mult|MODIFIER|leaders_cost_mult|
+							}
+						}
+					}
+					8 = {
+						root = {
+							add_resource = {
+								unity = 2724
+								mult = value:negative_modifier_mult|MODIFIER|leaders_cost_mult|
+							}
+						}
+					}
+					9 = {
+						root = {
+							add_resource = {
+								unity = 3499
+								mult = value:negative_modifier_mult|MODIFIER|leaders_cost_mult|
+							}
+						}
+					}
+					10 = {
+						root = {
+							add_resource = {
+								unity = 4499
+								mult = value:negative_modifier_mult|MODIFIER|leaders_cost_mult|
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

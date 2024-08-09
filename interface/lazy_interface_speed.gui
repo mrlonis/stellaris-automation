@@ -1,0 +1,281 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "lazy_automation_speed_window"
+		moveable = no
+		size = { width = 350 height = 95 }
+		position = { x = 0 y = 0 }
+		origo = center
+		orientation = center
+		clipping = no
+		
+		background = {
+			name = "lazy_automation_speed_background"
+			size = { x = 350 y = 95 }
+			position = { x = -11 y = 0 }
+			spriteType = "GFX_lazy_automation_speed_text_background"
+			#alwaysTransparent = yes
+		}
+
+		### Speed up/down buttons ###
+
+		effectbuttonType = {
+			name = "lazy_automation_auto_pop_migration_speed_right"
+			quadTextureSprite = "GFX_lazy_automation_speed_right"
+			position = { x = 63 y = 187 }
+			effect = lazy_automation_auto_pop_migration_speed_up
+			clicksound = interface
+			oversound = mouse_over
+		}
+
+		effectbuttonType = {
+			name = "lazy_automation_auto_pop_migration_speed_left"
+			quadTextureSprite = "GFX_lazy_automation_speed_left"
+			position = { x = -227 y = 187 }
+			effect = lazy_automation_auto_pop_migration_speed_down
+			clicksound = decrement_click
+			oversound = mouse_over
+		}
+
+		effectbuttonType = {
+			name = "lazy_automation_auto_terraform_speed_right"
+			quadTextureSprite = "GFX_lazy_automation_speed_right"
+			position = { x = 535 y = 87 }
+			effect = lazy_automation_auto_terraform_speed_up
+			clicksound = interface
+			oversound = mouse_over
+		}
+
+		effectbuttonType = {
+			name = "lazy_automation_auto_terraform_speed_left"
+			quadTextureSprite = "GFX_lazy_automation_speed_left"
+			position = { x = 244 y = 87 }
+			effect = lazy_automation_auto_terraform_speed_down
+			clicksound = decrement_click
+			oversound = mouse_over
+		}
+
+		effectbuttonType = {
+			name = "lazy_automation_auto_upgrade_megastructures_speed_right"
+			quadTextureSprite = "GFX_lazy_automation_speed_right"
+			position = { x = 63 y = 287 }
+			effect = lazy_automation_auto_upgrade_megastructures_speed_up
+			clicksound = interface
+			oversound = mouse_over
+		}
+
+		effectbuttonType = {
+			name = "lazy_automation_auto_upgrade_megastructures_speed_left"
+			quadTextureSprite = "GFX_lazy_automation_speed_left"
+			position = { x = -227 y = 287 }
+			effect = lazy_automation_auto_upgrade_megastructures_speed_down
+			clicksound = decrement_click
+			oversound = mouse_over
+		}
+
+		effectbuttonType = {
+			name = "lazy_automation_auto_upgrade_starbases_speed_right"
+			quadTextureSprite = "GFX_lazy_automation_speed_right"
+			position = { x = 535 y = 287 }
+			effect = lazy_automation_auto_upgrade_starbases_speed_up
+			clicksound = interface
+			oversound = mouse_over
+		}
+
+		effectbuttonType = {
+			name = "lazy_automation_auto_upgrade_starbases_speed_left"
+			quadTextureSprite = "GFX_lazy_automation_speed_left"
+			position = { x = 244 y = 287 }
+			effect = lazy_automation_auto_upgrade_starbases_speed_down
+			clicksound = decrement_click
+			oversound = mouse_over
+		}
+
+		# effectbuttonType = {
+		# 	name = "lazy_automation_shortcut_toggle"
+		# 	quadTextureSprite = "GFX_button_95_24"
+		# 	position = { x = 115 y = 318 }
+		# 	buttonText = "Edict/Button"
+		# 	buttonFont = cg_16b
+		# 	effect = lazy_automation_shortcut_toggle
+		# 	clicksound = decrement_click
+		# 	oversound = mouse_over
+		# }
+
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_lazy_automation_speed_menu"
+			position = { x = 601 y = 317 }
+			shortcut = "ESCAPE"
+			clicksound = "back_click"
+		}
+
+		### DESCRIPTION ###
+
+		instantTextBoxType = {
+			name = "alien_message"
+			font = "cg_16b"
+			position = { x = 7 y = 5 }
+			maxWidth = 325
+			maxHeight = 50
+			format = centre
+			scrollbartype = "standardtext_slider"
+		}
+
+		instantTextBoxType = {
+			name = "heading"
+			font = "malgun_goth_24"
+			position = { x = -1000 y = 0 }
+		}
+
+		buttonType = {
+			name = "confirm_button"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+		}
+
+		### PORTRAIT ###
+
+		containerWindowType = {
+			name = "portrait_background"
+			position = { x = 0 y = 0 }
+			size = { width = 0 height = 0 }
+			clipping = yes
+		}
+		
+		containerWindowType = {
+			name = "portrait"
+			position = { x = 0 y = 0 }
+			size = { width = 0 height = 0 }
+			clipping = yes
+			
+			iconType = {
+				name = "portrait"
+				spriteType = "GFX_portrait_gamesetup_mask"
+				alwaysTransparent = yes
+			}
+					
+			iconType = {
+				name = "black_frame"
+				spriteType = "GFX_diplomacy_portrait_shadow_frame"
+				position = { x = 0 y = 0 }
+				alwaysTransparent = yes
+			}
+			
+			iconType = {
+				name = "stripes_1"
+				spriteType = "GFX_diplomacy_stripes_2"
+				alwaysTransparent = yes
+			}
+				
+			iconType = {
+				name = "city_frame"
+				spriteType = "GFX_diplomacy_portrait_frame_trader"
+				position = { x = 0 y = 0 }
+				alwaysTransparent = yes
+			}
+		}
+
+		### OPINION ###
+
+		containerWindowType = {
+			name = "opinion_window"
+			position = { x = 0 y = 0 }
+			size = { width = 0 height = 0 }
+			
+			iconType = {
+				name = "their_opinion_icon"
+				spriteType = "GFX_diplomacy_opinion"
+			}
+
+			instantTextBoxType = {
+				name = "their_opinion"
+				font = "cg_16b"
+			}
+		}
+		
+		### EMPIRE INFO ###
+
+		iconType = {
+			name = "empire_info_bg"
+			spriteType = "GFX_diplomacy_dark_fade_bg"
+		}
+
+		instantTextBoxType = {
+			name = "empire_name"
+			font = "malgun_goth_24"
+		}
+
+		instantTextBoxType = {
+			name = "empire_government_type"
+			font = "cg_16b"
+		}
+
+		instantTextBoxType={
+			name = "empire_personality_type"
+			font = "cg_16b"
+		}
+
+		buttonType = {
+			name = "empire_flag"
+			quadTextureSprite = "GFX_empire_flag_128_trader"
+			position = { x = 0 y = 0 }
+		}
+
+		containerWindowType = {
+			name = "leader_details"
+			position = { x = 0 y = 0 }
+			
+			containerWindowType = {
+				name = "empire_traits_box"
+			}
+			
+			instantTextBoxType = {
+				name = "empire_traits_label"
+				font = "cg_16b"
+			}
+		
+			overlappingElementsBoxType = {
+				name = "leader_traits"
+			}
+	
+			instantTextBoxType = {
+				name = "leader_name"
+				font = "cg_16b"
+			}
+	
+			instantTextBoxType = {
+				name = "leader_species"
+				font = "cg_16b"
+			}
+		}
+		
+		### EVENT DIPLO ###
+		
+		containerWindowType = {
+			name = "EVENT_DIPLO"
+			position = { x = 0 y = 0 }
+			size = { width = 0 height = 0 }
+			
+			### TITLE ###
+
+			instantTextBoxType = {
+				name = "action_title"
+				font = large_title_font
+				position = { x = 13 y = -318 }
+				maxWidth = 520
+				format = left
+				alwaysTransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "action_desc"
+				font = "malgun_goth_24"
+			}
+
+			listboxType = {
+				name = "option_list"
+				position = { x = 0 y = 0 }
+			}
+		}
+	}
+}

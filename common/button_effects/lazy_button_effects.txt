@@ -1,0 +1,1876 @@
+lazy_automation_shortcut = {
+	potential = {
+
+	}
+	allow = {
+		hidden_trigger = {
+			is_scope_type = country
+			is_ai = no
+		}
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				country_event = {
+					id = lazy_config_events.1
+				}
+			}
+		}	
+	}
+}
+
+lazy_automation_dynamic_background = {
+	potential = {
+		is_scope_type = fleet
+		from = {
+			exists = owner
+			OR = {
+				AND = {
+					AND = {
+						NAND = {
+							has_country_flag = auto_construct_outposts_flag
+							has_country_flag = auto_construct_mega_flag
+						}
+						OR = {
+							has_country_flag = auto_construct_outposts_flag
+							has_country_flag = auto_construct_mega_flag
+						}
+					}
+					prev = {
+						is_ship_class = shipclass_constructor
+					}
+				}
+				AND = {
+					has_country_flag = auto_fleet_attack_enable_flag
+					prev = {
+						is_ship_class = shipclass_military
+					}
+				}
+			}
+		}
+	}
+	allow = {
+
+	}
+	
+	effect = {
+
+	}
+}
+
+lazy_automation_dynamic_background_2 = {
+	potential = {
+		is_scope_type = fleet
+		from = {
+			exists = owner
+			has_country_flag = auto_construct_outposts_flag
+			has_country_flag = auto_construct_mega_flag
+			prev = {
+				is_ship_class = shipclass_constructor
+			}
+		}
+	}
+	allow = {
+
+	}
+	
+	effect = {
+
+	}
+}
+
+lazy_automation_auto_construct_outpost = {
+	potential = {
+		is_scope_type = fleet
+		from = {
+			exists = owner
+			has_country_flag = auto_construct_outposts_flag
+		}
+		NOT = {
+			has_fleet_flag = auto_outpost_ship_flag
+		}
+		is_ship_class = shipclass_constructor
+	}
+	allow = {
+		hidden_trigger = {
+			NOT = {
+				has_fleet_flag = auto_mega_ship_flag
+			}
+			from = {
+				exists = owner
+				is_ai = no
+			}
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			set_fleet_flag = auto_outpost_ship_flag
+			fleet_event = {
+				id = lazy_con_events.1
+			}
+		}
+	}
+}
+
+lazy_automation_auto_construct_outpost_active = {
+	potential = {
+		is_scope_type = fleet
+		from = {
+			exists = owner
+			has_country_flag = auto_construct_outposts_flag
+		}
+		has_fleet_flag = auto_outpost_ship_flag
+		is_ship_class = shipclass_constructor
+	}
+	allow = {
+		hidden_trigger = {
+			NOT = {
+				has_fleet_flag = auto_mega_ship_flag
+			}
+			from = {
+				exists = owner
+				is_ai = no
+			}
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			remove_fleet_flag = auto_outpost_ship_flag
+			clear_fleet_actions = this
+			clear_orders = yes
+			set_event_locked = no
+			set_name = random
+		}
+	}
+}
+
+lazy_automation_auto_construct_megastructures = {
+	potential = {
+		is_scope_type = fleet
+		from = {
+			exists = owner
+			has_country_flag = auto_construct_mega_flag
+			has_country_flag = auto_construct_outposts_flag
+		}
+		NOT = {
+			has_fleet_flag = auto_mega_ship_flag
+		}
+		is_ship_class = shipclass_constructor
+	}
+	allow = {
+		hidden_trigger = {
+			NOT = {
+				has_fleet_flag = auto_outpost_ship_flag
+			}
+			from = {
+				exists = owner
+				is_ai = no
+			}
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			fleet_event = {
+				id = lazy_con_meg_events.1
+			}
+		}
+	}
+}
+
+lazy_automation_auto_construct_megastructures_active = {
+	potential = {
+		is_scope_type = fleet
+		from = {
+			exists = owner
+			has_country_flag = auto_construct_mega_flag
+			has_country_flag = auto_construct_outposts_flag
+		}
+		has_fleet_flag = auto_mega_ship_flag
+		is_ship_class = shipclass_constructor
+	}
+	allow = {
+		hidden_trigger = {
+			NOT = {
+				has_fleet_flag = auto_outpost_ship_flag
+			}
+			from = {
+				exists = owner
+				is_ai = no
+			}
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			remove_fleet_flag = auto_mega_ship_flag
+			remove_fleet_flag = auto_construct_hyper_relays_flag
+			remove_fleet_flag = auto_construct_gateway_flag
+			remove_fleet_flag = auto_construct_habitat_central_flag
+			remove_fleet_flag = auto_construct_major_orbital_flag
+			remove_fleet_flag = auto_construct_minor_orbital_flag
+			remove_fleet_flag = auto_construct_frameworld_outpost_flag
+			remove_fleet_flag = auto_construct_frameworld_harvest_flag
+			remove_fleet_flag = auto_construct_frameworld_salvage_habitat_flag
+			clear_fleet_actions = this
+			clear_orders = yes
+			set_event_locked = no
+			set_name = random
+		}
+	}
+}
+
+lazy_automation_auto_construct_megastructures_alt = {
+	potential = {
+		is_scope_type = fleet
+		from = {
+			exists = owner
+			has_country_flag = auto_construct_mega_flag
+			NOT = {
+				has_country_flag = auto_construct_outposts_flag
+			}
+		}
+		NOT = {
+			has_fleet_flag = auto_mega_ship_flag
+		}
+		is_ship_class = shipclass_constructor
+	}
+	allow = {
+		from = {
+			exists = owner
+			is_ai = no
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			fleet_event = {
+				id = lazy_con_meg_events.1
+			}
+		}
+	}
+}
+
+lazy_automation_auto_construct_megastructures_active_alt = {
+	potential = {
+		is_scope_type = fleet
+		from = {
+			exists = owner
+			has_country_flag = auto_construct_mega_flag
+			NOT = {
+				has_country_flag = auto_construct_outposts_flag
+			}
+		}
+		has_fleet_flag = auto_mega_ship_flag
+		is_ship_class = shipclass_constructor
+	}
+	allow = {
+		from = {
+			exists = owner
+			is_ai = no
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			remove_fleet_flag = auto_mega_ship_flag
+			remove_fleet_flag = auto_construct_hyper_relays_flag
+			remove_fleet_flag = auto_construct_gateway_flag
+			remove_fleet_flag = auto_construct_habitat_central_flag
+			remove_fleet_flag = auto_construct_major_orbital_flag
+			remove_fleet_flag = auto_construct_minor_orbital_flag
+			remove_fleet_flag = auto_construct_frameworld_outpost_flag
+			remove_fleet_flag = auto_construct_frameworld_harvest_flag
+			remove_fleet_flag = auto_construct_frameworld_salvage_habitat_flag
+			clear_fleet_actions = this
+			clear_orders = yes
+			set_event_locked = no
+			set_name = random
+		}
+	}
+}
+
+lazy_automation_auto_fleet_attack = {
+	potential = {
+		is_scope_type = fleet
+		from = {
+			exists = owner
+			has_country_flag = auto_fleet_attack_enable_flag
+		}
+		NOT = {
+			has_fleet_flag = auto_fleet_attack_flag
+		}
+		is_ship_class = shipclass_military
+	}
+	allow = {
+		from = {
+			exists = owner
+			is_ai = no
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			set_fleet_flag = auto_fleet_attack_flag
+			fleet_event = {
+				id = lazy_fle_att_events.1
+			}
+		}
+	}
+}
+
+lazy_automation_auto_fleet_attack_active = {
+	potential = {
+		is_scope_type = fleet
+		from = {
+			exists = owner
+			has_country_flag = auto_fleet_attack_enable_flag
+		}
+		has_fleet_flag = auto_fleet_attack_flag
+		is_ship_class = shipclass_military
+	}
+	allow = {
+		from = {
+			exists = owner
+			is_ai = no
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			remove_fleet_flag = auto_fleet_attack_flag
+			clear_fleet_actions = this
+			clear_orders = yes
+			set_event_locked = no
+			set_name = random
+		}
+	}
+}
+
+lazy_automation_speed = {
+	potential = {
+		is_scope_type = country
+	}
+	allow = {
+
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				country_event = {
+					id = lazy_config_events.2
+				}
+			}
+		}	
+	}
+}
+
+lazy_automation_auto_button_centre_left_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				NOT = {
+					AND = {
+						has_country_flag = auto_colony_manager_flag
+						has_country_flag = auto_colony_support_flag
+						has_country_flag = lazy_resettle_flag
+						has_country_flag = auto_bulding_upgrader_flag
+						has_country_flag = auto_construct_outposts_flag
+						has_country_flag = auto_construct_mega_flag
+						has_country_flag = auto_fleet_attack_enable_flag
+						has_country_flag = auto_fleet_merger_enable_flag
+						has_country_flag = auto_army_invade_enable_flag
+						has_country_flag = auto_army_recruit_enable_flag
+						has_country_flag = auto_planet_destroyer_enable_flag
+						has_country_flag = auto_colonizer_enable_flag
+						has_country_flag = auto_upgrade_megastructure_flag
+						has_country_flag = auto_terraforming_flag
+						has_country_flag = auto_upgrade_starbases_flag
+						has_country_flag = auto_recruit_leaders_enable_flag
+					}
+				}
+			}
+		}
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				set_country_flag = auto_colony_manager_flag
+				set_country_flag = auto_colony_support_flag
+				set_country_flag = lazy_resettle_flag
+				set_country_flag = auto_construct_outposts_flag
+				set_country_flag = auto_construct_mega_flag
+				set_country_flag = auto_bulding_upgrader_flag
+				set_country_flag = auto_fleet_attack_enable_flag
+				set_country_flag = auto_fleet_merger_enable_flag
+				set_country_flag = auto_army_invade_enable_flag
+				set_country_flag = auto_army_recruit_enable_flag
+				set_country_flag = auto_planet_destroyer_enable_flag
+				set_country_flag = auto_colonizer_enable_flag
+				set_country_flag = auto_upgrade_megastructure_flag
+				set_country_flag = auto_terraforming_flag
+				set_country_flag = auto_upgrade_starbases_flag
+				set_country_flag = auto_recruit_leaders_enable_flag
+				every_owned_fleet = {
+					limit = {
+						is_ship_class = shipclass_transport
+					}
+					set_fleet_flag = auto_army_invade_flag
+					set_fleet_stance = aggressive
+				}
+				every_owned_fleet = {
+					limit = {
+						is_ship_class = shipclass_colonizer
+					}
+					set_fleet_flag = auto_colonizer_flag
+					fleet_event = {
+						id = lazy_col_events.1
+					}
+				}
+				every_owned_fleet = {
+					limit = {
+						is_ship_size = colossus
+					}
+					set_fleet_flag = auto_planet_destroyer_flag
+					fleet_event = {
+						id = lazy_pla_des_events.1
+					}
+				}
+			}
+		}	
+	}
+}
+
+lazy_automation_auto_button_centre_right_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				OR = {
+					has_country_flag = auto_colony_manager_flag
+					has_country_flag = lazy_resettle_flag
+					has_country_flag = auto_construct_outposts_flag
+					has_country_flag = auto_construct_mega_flag
+					has_country_flag = auto_fleet_attack_enable_flag
+					has_country_flag = auto_fleet_merger_enable_flag
+					has_country_flag = auto_army_invade_enable_flag
+					has_country_flag = auto_army_recruit_enable_flag
+					has_country_flag = auto_planet_destroyer_enable_flag
+					has_country_flag = auto_colonizer_enable_flag
+					has_country_flag = auto_upgrade_megastructure_flag
+					has_country_flag = auto_terraforming_flag
+					has_country_flag = auto_upgrade_starbases_flag
+					has_country_flag = auto_recruit_leaders_enable_flag
+				}
+			}
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			from = {
+				remove_country_flag = auto_colony_manager_flag
+				remove_country_flag = lazy_resettle_flag
+				remove_country_flag = auto_construct_outposts_flag
+				remove_country_flag = auto_construct_mega_flag
+				remove_country_flag = auto_fleet_attack_enable_flag
+				remove_country_flag = auto_fleet_merger_enable_flag
+				remove_country_flag = auto_army_invade_enable_flag
+				remove_country_flag = auto_army_recruit_enable_flag
+				remove_country_flag = auto_planet_destroyer_enable_flag
+				remove_country_flag = auto_colonizer_enable_flag
+				remove_country_flag = auto_upgrade_megastructure_flag
+				remove_country_flag = auto_terraforming_flag
+				remove_country_flag = auto_upgrade_starbases_flag
+				remove_country_flag = auto_recruit_leaders_enable_flag
+
+				remove_country_flag = auto_alpine_terraform_flag
+				remove_country_flag = auto_arctic_terraform_flag
+				remove_country_flag = auto_tundra_terraform_flag
+				remove_country_flag = auto_desert_terraform_flag
+				remove_country_flag = auto_arid_terraform_flag
+				remove_country_flag = auto_savannah_terraform_flag
+				remove_country_flag = auto_tropical_terraform_flag
+				remove_country_flag = auto_continental_terraform_flag
+				remove_country_flag = auto_ocean_terraform_flag
+				remove_country_flag = auto_gaia_terraform_flag
+				remove_country_flag = auto_hive_terraform_flag
+				remove_country_flag = auto_machine_terraform_flag
+				remove_country_flag = auto_nuked_terraform_flag
+				every_owned_fleet = {
+					limit = {
+						OR = {
+							has_fleet_flag = auto_outpost_ship_flag
+							has_fleet_flag = auto_fleet_attack_flag
+							has_fleet_flag = auto_army_invade_flag
+							has_fleet_flag = auto_planet_destroyer_flag
+							has_fleet_flag = auto_colonizer_flag
+							has_fleet_flag = auto_mega_ship_flag
+						}
+					}
+					clear_fleet_actions = this
+					clear_orders = yes
+					set_event_locked = no
+					remove_fleet_flag = auto_outpost_ship_flag
+					remove_fleet_flag = auto_fleet_attack_flag
+					remove_fleet_flag = auto_army_invade_flag
+					remove_fleet_flag = auto_planet_destroyer_flag
+					remove_fleet_flag = auto_colonizer_flag
+					remove_fleet_flag = auto_mega_ship_flag
+					remove_fleet_flag = auto_construct_hyper_relays_flag
+					remove_fleet_flag = auto_construct_gateway_flag
+					remove_fleet_flag = auto_construct_habitat_central_flag
+					remove_fleet_flag = auto_construct_major_orbital_flag
+					remove_fleet_flag = auto_construct_minor_orbital_flag
+					remove_fleet_flag = auto_construct_frameworld_outpost_flag
+					remove_fleet_flag = auto_construct_frameworld_harvest_flag
+					remove_fleet_flag = auto_construct_frameworld_salvage_habitat_flag
+					set_name = random
+				}
+				# every_owned_planet = {
+				# 	remove_planet_flag = translucer_planet_flag
+				# 	remove_planet_flag = researcher_planet_flag
+				# 	remove_planet_flag = gas_refiner_planet_flag
+				# 	remove_planet_flag = chemist_planet_flag
+				# 	remove_planet_flag = auto_farming_planet_flag
+				# 	remove_planet_flag = auto_city_planet_flag
+				# 	remove_planet_flag = auto_industrial_planet_flag
+				# 	remove_planet_flag = auto_mining_planet_flag
+				# 	remove_planet_flag = auto_generator_planet_flag
+				# 	remove_planet_flag = auto_trade_planet_flag
+				# 	remove_planet_flag = auto_research_d_planet_flag
+				# 	remove_planet_flag = auto_amenities_planet_flag
+				# 	remove_modifier = building_notification_research
+				# 	remove_modifier = building_notification_alloy
+				# 	remove_modifier = building_notification_administrative_cap
+				# 	remove_modifier = building_notification_eg_rc_vm
+				# 	remove_modifier = building_notification_exotic_gases
+				# 	remove_modifier = building_notification_volatile_motes
+				# 	remove_modifier = building_notification_rare_crystals
+				# 	remove_modifier = building_notification_housing
+				# 	remove_modifier = building_notification_minerals
+				# 	remove_modifier = building_notification_energy
+				# 	remove_modifier = building_notification_food
+				# 	remove_modifier = building_notification_research_d
+				# 	remove_modifier = building_notification_trade
+				# 	remove_modifier = building_notification_amenities
+				# }
+			}
+		}
+	}
+}
+
+lazy_automation_auto_button_upper_middle_left_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				NOT = {
+					has_country_flag = auto_construct_outposts_flag
+				}
+			}
+		}
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				set_country_flag = auto_construct_outposts_flag
+			}
+		}	
+	}
+}
+
+lazy_automation_auto_button_upper_middle_right_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				NOT = {
+					has_country_flag = auto_recruit_leaders_enable_flag
+				}
+			}
+		}
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				set_country_flag = auto_recruit_leaders_enable_flag
+			}
+		}	
+	}
+}
+
+lazy_automation_auto_button_upper_top_left_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				NOT = {
+					has_country_flag = auto_colonizer_enable_flag
+				}
+			}
+		}
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				set_country_flag = auto_colonizer_enable_flag
+				every_owned_fleet = {
+					limit = {
+						is_ship_class = shipclass_colonizer
+					}
+					set_timed_fleet_flag = {
+						flag = auto_colonizer_flag
+						years = 1
+					}
+					fleet_event = {
+						id = lazy_col_events.1
+					}
+				}
+			}
+		}	
+	}
+}
+
+lazy_automation_auto_button_upper_top_right_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				NOT = {
+					has_country_flag = auto_fleet_attack_enable_flag
+				}
+			}
+		}
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				set_country_flag = auto_fleet_attack_enable_flag
+			}
+		}	
+	}
+}
+
+lazy_automation_auto_button_upper_bottom_left_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				NOT = {
+					has_country_flag = auto_army_recruit_enable_flag
+				}
+			}
+		}
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				set_country_flag = auto_army_recruit_enable_flag
+			}
+		}	
+	}
+}
+
+lazy_automation_auto_button_upper_bottom_right_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				NOT = {
+					has_country_flag = auto_construct_mega_flag
+				}
+			}
+		}
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				set_country_flag = auto_construct_mega_flag
+			}
+		}
+	}
+}
+
+lazy_automation_auto_button_lower_top_middle_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				NOT = {
+					has_country_flag = auto_colony_manager_flag
+				}
+			}
+		}
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				set_country_flag = auto_colony_manager_flag
+			}
+		}	
+	}
+}
+
+lazy_automation_auto_button_lower_middle_left_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				NOT = {
+					has_country_flag = lazy_resettle_flag
+				}
+			}
+		}
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				set_country_flag = lazy_resettle_flag
+			}
+		}	
+	}
+}
+
+lazy_automation_auto_button_lower_bottom_middle_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				NOT = {
+					has_country_flag = auto_planet_destroyer_enable_flag
+				}
+			}
+		}
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				set_country_flag = auto_planet_destroyer_enable_flag
+				every_owned_fleet = {
+					limit = {
+						is_ship_size = colossus
+					}
+					set_fleet_flag = auto_planet_destroyer_flag
+					fleet_event = {
+						id = lazy_pla_des_events.1
+					}
+				}
+			}
+		}	
+	}
+}
+
+lazy_automation_auto_button_lower_middle_right_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				NOT = {
+					has_country_flag = auto_army_invade_enable_flag
+				}
+			}
+		}
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				set_country_flag = auto_army_invade_enable_flag
+				every_owned_fleet = {
+					limit = {
+						is_ship_class = shipclass_transport
+					}
+					set_fleet_flag = auto_army_invade_flag
+					set_fleet_stance = aggressive
+				}
+			}
+		}	
+	}
+}
+
+lazy_automation_auto_button_lower_top_left_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				NOT = {
+					has_country_flag = auto_fleet_merger_enable_flag
+				}
+			}
+		}
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				set_country_flag = auto_fleet_merger_enable_flag
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = auto_fleet_merger_fleet_flag
+						}
+					}
+					every_owned_fleet = {
+						limit = {
+							is_ship_class = shipclass_military
+						}
+						set_fleet_flag = auto_fleet_merger_flag
+						fleet_event = {
+							id = lazy_fle_mer_events.1
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = auto_fleet_merger_army_flag
+						}
+					}
+					every_owned_fleet = {
+						limit = {
+							is_ship_class = shipclass_transport
+						}
+						set_fleet_flag = auto_fleet_merger_flag
+						fleet_event = {
+							id = lazy_fle_mer_events.2
+						}
+					}
+				}
+			}
+		}	
+	}
+}
+
+lazy_automation_auto_button_lower_bottom_left_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				NOT = {
+					has_country_flag = auto_upgrade_megastructure_flag
+				}
+			}
+		}
+		from = {
+			has_technology = tech_mega_engineering
+		}
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				set_country_flag = auto_upgrade_megastructure_flag
+			}
+		}	
+	}
+}
+
+lazy_automation_auto_button_lower_top_right_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				NOT = {
+					has_country_flag = auto_terraforming_flag
+				}
+			}
+		}
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				set_country_flag = auto_terraforming_flag
+			}
+		}	
+	}
+}
+
+lazy_automation_auto_button_lower_bottom_right_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				NOT = {
+					has_country_flag = auto_upgrade_starbases_flag
+				}
+			}
+		}
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				set_country_flag = auto_upgrade_starbases_flag
+			}
+		}	
+	}
+}
+
+lazy_automation_auto_menu_upper_middle_left_effect = {
+	potential = {
+		
+	}
+	allow = {
+
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				country_event = {
+					id = lazy_config_events.14
+				}
+			}
+		}
+	}
+}
+
+lazy_automation_auto_menu_upper_middle_right_effect = {
+	potential = {
+		
+	}
+	allow = {
+
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				country_event = {
+					id = lazy_config_events.16
+				}
+			}
+		}
+	}
+}
+
+lazy_automation_auto_menu_upper_top_left_effect = {
+	potential = {
+		
+	}
+	allow = {
+
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				country_event = {
+					id = lazy_config_events.8
+				}
+			}
+		}	
+	}
+}
+
+lazy_automation_auto_menu_upper_top_right_effect = {
+	potential = {
+		
+	}
+	allow = {
+		
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				country_event = {
+					id = lazy_config_events.5
+				}
+			}
+		}
+	}
+}
+
+lazy_automation_auto_menu_upper_bottom_left_effect = {
+	potential = {
+		
+	}
+	allow = {
+
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				country_event = {
+					id = lazy_config_events.6
+				}
+			}
+		}
+	}
+}
+
+lazy_automation_auto_menu_upper_bottom_right_effect = {
+	potential = {
+		
+	}
+	allow = {
+
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				country_event = {
+					id = lazy_config_events.4
+				}
+			}
+		}
+	}
+}
+
+lazy_automation_auto_menu_lower_top_middle_effect = {
+	potential = {
+		
+	}
+	allow = {
+		
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				country_event = {
+					id = lazy_config_events.15
+				}
+			}
+		}	
+	}
+}
+
+lazy_automation_auto_menu_lower_bottom_middle_effect = {
+	potential = {
+		
+	}
+	allow = {
+
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				country_event = {
+					id = lazy_config_events.9
+				}
+			}
+		}
+	}
+}
+
+lazy_automation_auto_menu_lower_top_left_effect = {
+	potential = {
+		
+	}
+	allow = {
+
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				country_event = {
+					id = lazy_config_events.7
+				}
+			}
+		}	
+	}
+}
+
+lazy_automation_auto_menu_lower_top_right_effect = {
+	potential = {
+		
+	}
+	allow = {
+
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				country_event = {
+					id = lazy_config_events.11
+				}
+			}
+		}	
+	}
+}
+
+lazy_automation_auto_menu_lower_middle_left_effect = {
+	potential = {
+		
+	}
+	allow = {
+
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				country_event = {
+					id = lazy_config_events.3
+				}
+			}
+		}	
+	}
+}
+
+lazy_automation_auto_menu_lower_middle_right_effect = {
+	potential = {
+		
+	}
+	allow = {
+
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				country_event = {
+					id = lazy_config_events.10
+				}
+			}
+		}
+	}
+}
+
+lazy_automation_auto_menu_lower_bottom_left_effect = {
+	potential = {
+		
+	}
+	allow = {
+
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				country_event = {
+					id = lazy_config_events.13
+				}
+			}
+		}
+	}
+}
+
+lazy_automation_auto_menu_lower_bottom_right_effect = {
+	potential = {
+
+	}
+	allow = {
+
+	}
+	
+	effect = {
+		hidden_effect = {
+			from = {
+				country_event = {
+					id = lazy_config_events.12
+				}
+			}
+		}
+	}
+}
+
+lazy_automation_auto_disable_upper_middle_left_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				has_country_flag = auto_construct_outposts_flag
+			}
+		}
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				remove_country_flag = auto_construct_outposts_flag
+				every_owned_fleet = {
+					limit = {
+						has_fleet_flag = auto_outpost_ship_flag
+					}
+					remove_fleet_flag = auto_outpost_ship_flag
+					clear_fleet_actions = this
+					clear_orders = yes
+					set_event_locked = no
+					set_name = random
+				}
+			}
+		}	
+	}
+}
+
+lazy_automation_auto_disable_upper_middle_right_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				has_country_flag = auto_recruit_leaders_enable_flag
+			}
+		}
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				remove_country_flag = auto_recruit_leaders_enable_flag
+			}
+		}	
+	}
+}
+
+lazy_automation_auto_disable_upper_top_left_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				has_country_flag = auto_colonizer_enable_flag
+			}
+		}
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				remove_country_flag = auto_colonizer_enable_flag
+				every_owned_planet = {
+					limit = {
+						has_planet_flag = auto_colonizer_planet_flag
+					}
+					remove_planet_flag = auto_colonizer_planet_flag
+				}
+				every_owned_fleet = {
+					limit = {
+						has_fleet_flag = auto_colonizer_flag
+					}
+					clear_fleet_actions = this
+					clear_orders = yes
+					set_event_locked = no
+					remove_fleet_flag = auto_colonizer_flag
+					set_name = random
+				}
+			}
+		}	
+	}
+}
+
+lazy_automation_auto_disable_upper_top_right_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				has_country_flag = auto_fleet_attack_enable_flag
+			}
+		}
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				remove_country_flag = auto_fleet_attack_enable_flag
+				every_owned_fleet = {
+					limit = {
+						has_fleet_flag = auto_fleet_attack_flag
+					}
+					remove_fleet_flag = auto_fleet_attack_flag
+					clear_fleet_actions = this
+					clear_orders = yes
+					set_event_locked = no
+					set_name = random
+				}
+			}
+		}	
+	}
+}
+
+lazy_automation_auto_disable_upper_bottom_left_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				has_country_flag = auto_army_recruit_enable_flag
+			}
+		}
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				remove_country_flag = auto_army_recruit_enable_flag
+				remove_country_flag = auto_recruit_clone_army_flag
+				remove_country_flag = auto_recruit_slave_army_flag
+				remove_country_flag = auto_recruit_robotic_army_flag
+				remove_country_flag = auto_recruit_psionic_army_flag
+				remove_country_flag = auto_recruit_xenomorph_army_flag
+				remove_country_flag = auto_recruit_gene_warrior_army_flag
+				remove_country_flag = auto_recruit_machine_assault_2_army_flag
+				remove_country_flag = auto_recruit_machine_assault_3_army_flag
+				remove_country_flag = auto_recruit_undead_army_flag
+			}
+		}
+	}
+}
+
+lazy_automation_auto_disable_upper_bottom_right_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				has_country_flag = auto_construct_mega_flag
+			}
+		}
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				remove_country_flag = auto_construct_mega_flag
+				every_owned_fleet = {
+					limit = {
+						has_fleet_flag = auto_mega_ship_flag
+					}
+					remove_fleet_flag = auto_mega_ship_flag
+					clear_fleet_actions = this
+					clear_orders = yes
+					set_event_locked = no
+					set_name = random
+				}
+			}
+		}
+	}
+}
+
+lazy_automation_auto_disable_lower_top_middle_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				has_country_flag = auto_colony_manager_flag
+			}
+		}
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				remove_country_flag = auto_colony_manager_flag
+				# remove_country_flag = auto_colony_support_flag
+				# every_owned_planet = {
+				# 	remove_planet_flag = translucer_planet_flag
+				# 	remove_planet_flag = researcher_planet_flag
+				# 	remove_planet_flag = gas_refiner_planet_flag
+				# 	remove_planet_flag = chemist_planet_flag
+				# 	remove_planet_flag = auto_farming_planet_flag
+				# 	remove_planet_flag = auto_city_planet_flag
+				# 	remove_planet_flag = auto_mining_planet_flag
+				# 	remove_planet_flag = auto_generator_planet_flag
+				# 	remove_planet_flag = auto_trade_planet_flag
+				# 	remove_planet_flag = auto_research_d_planet_flag
+				# 	remove_planet_flag = auto_amenities_planet_flag
+				# 	remove_modifier = building_notification_research
+				# 	remove_modifier = building_notification_alloy
+				# 	remove_modifier = building_notification_consumer_goods
+				# 	remove_modifier = building_notification_administrative_cap
+				# 	remove_modifier = building_notification_eg_rc_vm
+				# 	remove_modifier = building_notification_exotic_gases
+				# 	remove_modifier = building_notification_volatile_motes
+				# 	remove_modifier = building_notification_rare_crystals
+				# 	remove_modifier = building_notification_housing
+				# 	remove_modifier = building_notification_minerals
+				# 	remove_modifier = building_notification_energy
+				# 	remove_modifier = building_notification_food
+				# 	remove_modifier = building_notification_research_d
+				# 	remove_modifier = building_notification_trade
+				# 	remove_modifier = building_notification_amenities
+				# }
+			}
+		}	
+	}
+}
+
+lazy_automation_auto_disable_lower_bottom_middle_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				has_country_flag = auto_planet_destroyer_enable_flag
+			}
+		}
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				remove_country_flag = auto_planet_destroyer_enable_flag
+				every_owned_fleet = {
+					limit = {
+						has_fleet_flag = auto_planet_destroyer_flag
+					}
+					clear_fleet_actions = this
+					clear_orders = yes
+					set_event_locked = no
+					remove_fleet_flag = auto_planet_destroyer_flag
+					set_name = random
+				}
+			}
+		}	
+	}
+}
+
+lazy_automation_auto_disable_lower_top_left_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				has_country_flag = auto_fleet_merger_enable_flag
+			}
+		}
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				remove_country_flag = auto_fleet_merger_enable_flag
+				# remove_country_flag = auto_fleet_merger_fleet_flag
+				# remove_country_flag = auto_fleet_merger_army_flag
+				every_owned_fleet = {
+					limit = {
+						has_fleet_flag = auto_fleet_merger_flag
+					}
+					remove_fleet_flag = auto_fleet_merger_flag
+					clear_fleet_actions = this
+					clear_orders = yes
+					set_event_locked = no
+					set_name = random
+				}
+			}
+		}	
+	}
+}
+
+lazy_automation_auto_disable_lower_top_right_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				has_country_flag = auto_terraforming_flag
+			}
+		}
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				remove_country_flag = auto_terraforming_flag
+				remove_country_flag = auto_alpine_terraform_flag
+				remove_country_flag = auto_arctic_terraform_flag
+				remove_country_flag = auto_tundra_terraform_flag
+				remove_country_flag = auto_desert_terraform_flag
+				remove_country_flag = auto_arid_terraform_flag
+				remove_country_flag = auto_savannah_terraform_flag
+				remove_country_flag = auto_tropical_terraform_flag
+				remove_country_flag = auto_continental_terraform_flag
+				remove_country_flag = auto_ocean_terraform_flag
+				remove_country_flag = auto_gaia_terraform_flag
+				remove_country_flag = auto_hive_terraform_flag
+				remove_country_flag = auto_machine_terraform_flag
+				remove_country_flag = auto_nuked_terraform_flag
+				every_planet_within_border = {
+					remove_planet_flag = auto_planet_alpine_terraform_flag
+					remove_planet_flag = auto_planet_arctic_terraform_flag
+					remove_planet_flag = auto_planet_tundra_terraform_flag
+					remove_planet_flag = auto_planet_desert_terraform_flag
+					remove_planet_flag = auto_planet_arid_terraform_flag
+					remove_planet_flag = auto_planet_savannah_terraform_flag
+					remove_planet_flag = auto_planet_tropical_terraform_flag
+					remove_planet_flag = auto_planet_continental_terraform_flag
+					remove_planet_flag = auto_planet_ocean_terraform_flag
+					remove_planet_flag = auto_planet_gaia_terraform_flag
+					remove_planet_flag = auto_planet_hive_terraform_flag
+					remove_planet_flag = auto_planet_machine_terraform_flag
+					remove_planet_flag = auto_planet_nuked_terraform_flag
+				}
+			}
+		}	
+	}
+}
+
+lazy_automation_auto_disable_lower_middle_left_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				has_country_flag = lazy_resettle_flag
+			}
+		}
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				remove_country_flag = lazy_resettle_flag
+				remove_country_flag = lazy_resettle_no_cost_flag
+			}
+		}	
+	}
+}
+
+lazy_automation_auto_disable_lower_middle_right_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				has_country_flag = auto_army_invade_enable_flag
+			}
+		}
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				remove_country_flag = auto_army_invade_enable_flag
+				every_owned_fleet = {
+					limit = {
+						has_fleet_flag = auto_army_invade_flag
+					}
+					clear_fleet_actions = this
+					clear_orders = yes
+					set_event_locked = no
+					remove_fleet_flag = auto_army_invade_flag
+				}
+			}
+		}	
+	}
+}
+
+lazy_automation_auto_disable_lower_bottom_left_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				has_country_flag = auto_upgrade_megastructure_flag
+			}
+		}
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				remove_country_flag = auto_upgrade_megastructure_flag
+			}
+		}	
+	}
+}
+
+lazy_automation_auto_disable_lower_bottom_right_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				has_country_flag = auto_upgrade_starbases_flag
+			}
+		}
+	}
+	
+	effect = {
+		from = {
+			hidden_effect = {
+				remove_country_flag = auto_upgrade_starbases_flag
+			}
+		}
+	}
+}
+
+lazy_automation_auto_upgrade_megastructures_speed_up = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				check_variable = {
+					which = auto_meg_upg_speed
+					value = 1
+				}
+			}
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			from = {
+				change_variable = {
+					which = auto_meg_upg_speed
+					value = 9
+				}
+			}
+		}
+	}
+}
+
+lazy_automation_auto_upgrade_megastructures_speed_down = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				check_variable = {
+					which = auto_meg_upg_speed
+					value = 10
+				}
+			}
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			from = {
+				subtract_variable = {
+					which = auto_meg_upg_speed
+					value = 9
+				}
+			}
+		}
+	}
+}
+
+lazy_automation_auto_pop_migration_speed_up = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				check_variable = {
+					which = auto_mig_une_pop_speed
+					value = 1
+				}
+			}
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			from = {
+				change_variable = {
+					which = auto_mig_une_pop_speed
+					value = 9
+				}
+			}
+		}
+	}
+}
+
+lazy_automation_auto_pop_migration_speed_down = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				check_variable = {
+					which = auto_mig_une_pop_speed
+					value = 10
+				}
+			}
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			from = {
+				subtract_variable = {
+					which = auto_mig_une_pop_speed
+					value = 9
+				}
+			}
+		}
+	}
+}
+
+lazy_automation_auto_terraform_speed_up = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				check_variable = {
+					which = auto_ter_speed
+					value = 1
+				}
+			}
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			from = {
+				change_variable = {
+					which = auto_ter_speed
+					value = 9
+				}
+			}
+		}
+	}
+}
+
+lazy_automation_auto_terraform_speed_down = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				check_variable = {
+					which = auto_ter_speed
+					value = 10
+				}
+			}
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			from = {
+				subtract_variable = {
+					which = auto_ter_speed
+					value = 9
+				}
+			}
+		}
+	}
+}
+
+lazy_automation_auto_upgrade_starbases_speed_up = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				check_variable = {
+					which = auto_upg_sta_speed
+					value = 1
+				}
+			}
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			from = {
+				change_variable = {
+					which = auto_upg_sta_speed
+					value = 9
+				}
+			}
+		}
+	}
+}
+
+lazy_automation_auto_upgrade_starbases_speed_down = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				check_variable = {
+					which = auto_upg_sta_speed
+					value = 10
+				}
+			}
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			from = {
+				subtract_variable = {
+					which = auto_upg_sta_speed
+					value = 9
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,447 @@
+namespace = lazy_fle_att_events
+
+fleet_event = {
+	id = lazy_fle_att_events.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_fleet_flag = auto_fleet_attack_flag
+	}
+
+	immediate = {
+		set_fleet_flag = auto_fleet_attack_flag
+		clear_fleet_actions = this
+		clear_orders = yes
+		set_name = "auto_fleet_attack"
+		queue_actions = {
+			repeat = {
+				find_closest_system = {
+					trigger = {
+						id = lazy_fle_att_events.1.trigger.1
+						# root = {
+						# 	NOR = {
+						# 		has_fleet_order = follow_order
+						# 		has_fleet_order = merge_fleet_order
+						# 		has_fleet_order = move_to_system_point_order
+						# 		has_fleet_order = orbit_planet_order
+						# 		has_fleet_order = return_fleet_order
+						# 		has_fleet_order = auto_patrol_order
+						# 		has_fleet_order = upgrade_design_at_starbase_fleet_order
+						# 		has_fleet_order = upgrade_design_at_orbitable_fleet_order
+						# 		has_fleet_order = repair_fleet_order
+						# 		has_fleet_order = use_bypass_order
+						# 		has_fleet_order = jumpdrive_order
+						# 	}
+						# }
+						root.owner = {
+							intel_level = {
+								level >= medium
+								system = prev
+							}
+						}
+						# NOT = {
+						# 	has_star_flag = target_fleet_system_@root
+						# }
+						any_fleet_in_system = {
+							exists = owner
+							owner = {
+								is_hostile = root.owner
+							}
+							NOR = {
+								is_controlled_by = root.owner
+								is_ship_size = mining_station
+								is_ship_size = research_station
+							}
+							is_disabled = no
+							fleet_power < root.trigger:fleet_power
+						}
+						NOT = {
+							any_fleet_in_system = {
+								fleet_power > root.trigger:fleet_power
+							}
+						}
+						NOT = {
+							root = {
+								has_fleet_flag = planet_bombardment_in_progress_flag
+							}
+						}
+					}
+					found_system = {
+						move_to = this
+						effect = {
+							id = lazy_fle_att_events.1.effect.1
+							# set_timed_star_flag = {
+							# 	flag = target_fleet_system_@root
+							# 	days = 3
+							# }
+
+							random_fleet_in_system = {
+								limit = {
+									exists = owner
+									owner = {
+										is_hostile = root.owner
+									}
+									NOR = {
+										is_controlled_by = root.owner
+										is_ship_size = mining_station
+										is_ship_size = research_station
+									}
+									is_disabled = no
+									fleet_power < root.trigger:fleet_power
+								}
+								root = {
+									auto_follow_fleet = {
+										target = prev
+										attack_fleet = yes
+									}
+								}
+								#set_fleet_flag = target_fleet@root
+							}
+						}
+						find_closest_planet = {
+							trigger = {
+								id = lazy_fle_att_events.1.trigger.2
+								exists = owner
+								owner = {
+									is_hostile = root.owner
+								}
+								is_occupied_flag = no
+								root.owner = {
+									OR = {
+										has_country_flag = auto_fleet_bombardment_selective_flag
+										has_country_flag = auto_fleet_bombardment_indiscriminate_flag
+										has_country_flag = auto_fleet_bombardment_armageddon_flag
+										has_country_flag = auto_fleet_bombardment_javorian_pox_flag
+										has_country_flag = auto_fleet_bombardment_raiding_flag
+										has_country_flag = auto_fleet_bombardment_punishment_flag
+										has_country_flag = auto_fleet_bombardment_exterminatus_flag
+									}
+								}
+							}
+							found_planet = {
+								orbit_planet = this
+								effect = {
+									id = lazy_fle_att_events.1.effect.2
+									if = {
+										limit = {
+											root.owner = {
+												has_country_flag = auto_fleet_bombardment_selective_flag
+											}
+										}
+										root = {
+											set_fleet_bombardment_stance = selective
+										}
+									}
+									if = {
+										limit = {
+											root.owner = {
+												has_country_flag = auto_fleet_bombardment_indiscriminate_flag
+											}
+										}
+										root = {
+											set_fleet_bombardment_stance = indiscriminate
+										}
+									}
+									if = {
+										limit = {
+											root.owner = {
+												has_country_flag = auto_fleet_bombardment_armageddon_flag
+											}
+										}
+										root = {
+											set_fleet_bombardment_stance = armageddon
+										}
+									}
+									if = {
+										limit = {
+											root.owner = {
+												has_country_flag = auto_fleet_bombardment_javorian_pox_flag
+											}
+										}
+										root = {
+											set_fleet_bombardment_stance = pox
+										}
+									}
+									if = {
+										limit = {
+											root.owner = {
+												has_country_flag = auto_fleet_bombardment_raiding_flag
+											}
+										}
+										root = {
+											set_fleet_bombardment_stance = raiding
+										}
+									}
+									if = {
+										limit = {
+											root.owner = {
+												has_country_flag = auto_fleet_bombardment_punishment_flag
+											}
+										}
+										root = {
+											set_fleet_bombardment_stance = punishment
+										}
+									}
+									if = {
+										limit = {
+											root.owner = {
+												has_country_flag = auto_fleet_bombardment_exterminatus_flag
+											}
+										}
+										root = {
+											set_fleet_bombardment_stance = exterminatus
+										}
+									}
+								}
+							}
+						}
+					}
+					# failed = {
+					# 	effect = {
+					# 		id = lazy_fle_att_events.1.effect.3
+					# 		root = {
+					# 			fleet_event = {
+					# 				id = lazy_fle_att_events.1
+					# 				days = 1
+					# 			}
+					# 		}
+					# 	}
+					# }
+				}
+				# find_closest_system = {
+				# 	trigger = {
+				# 		id = lazy_fle_att_events.1.trigger.3
+				# 		# root = {
+				# 		# 	NOR = {
+				# 		# 		has_fleet_order = follow_order
+				# 		# 		has_fleet_order = merge_fleet_order
+				# 		# 		has_fleet_order = move_to_system_point_order
+				# 		# 		has_fleet_order = orbit_planet_order
+				# 		# 		has_fleet_order = return_fleet_order
+				# 		# 		has_fleet_order = auto_patrol_order
+				# 		# 		has_fleet_order = upgrade_design_at_starbase_fleet_order
+				# 		# 		has_fleet_order = upgrade_design_at_orbitable_fleet_order
+				# 		# 		has_fleet_order = repair_fleet_order
+				# 		# 		has_fleet_order = use_bypass_order
+				# 		# 		has_fleet_order = jumpdrive_order
+				# 		# 	}
+				# 		# }
+				# 		any_neighbor_system = {
+				# 			any_fleet_in_system = {
+				# 				exists = owner
+				# 				is_controlled_by = root.owner
+				# 			}
+				# 		}
+				# 		root.owner = {
+				# 			intel_level = {
+				# 				level >= medium
+				# 				system = prev
+				# 			}
+				# 		}
+				# 		any_fleet_in_system = {
+				# 			exists = owner
+				# 			owner = {
+				# 				is_hostile = root.owner
+				# 			}
+				# 			NOR = {
+				# 				is_controlled_by = root.owner
+				# 				is_ship_size = mining_station
+				# 				is_ship_size = research_station
+				# 			}
+				# 			is_disabled = no
+				# 			fleet_power < root.trigger:fleet_power
+				# 		}
+				# 		NOT = {
+				# 			any_fleet_in_system = {
+				# 				fleet_power > root.trigger:fleet_power
+				# 			}
+				# 		}
+				# 		NOT = {
+				# 			root = {
+				# 				has_fleet_flag = planet_bombardment_in_progress_flag
+				# 			}
+				# 		}
+				# 	}
+				# 	found_system = {
+				# 		effect = {
+				# 			id = lazy_fle_att_events.1.effect.3
+				# 			random_fleet_in_system = {
+				# 				limit = {
+				# 					exists = owner
+				# 					owner = {
+				# 						is_hostile = root.owner
+				# 					}
+				# 					NOR = {
+				# 						is_controlled_by = root.owner
+				# 						is_ship_size = mining_station
+				# 						is_ship_size = research_station
+				# 					}
+				# 					is_disabled = no
+				# 					fleet_power < root.trigger:fleet_power
+				# 				}
+				# 				root = {
+				# 					auto_follow_fleet = {
+				# 						target = prev
+				# 						attack_fleet = yes
+				# 					}
+				# 				}
+				# 				#set_fleet_flag = target_fleet@root
+				# 			}
+				#  		}
+				# 		# find_random_fleet = {
+				# 		# 	trigger = {
+				# 		# 		id = lazy_fle_att_events.1.trigger.2
+				# 		# 		#has_fleet_flag = target_fleet@root
+				# 		# 		exists = owner
+				# 		# 		owner = {
+				# 		# 			is_hostile = root.owner
+				# 		# 		}
+				# 		# 		NOT = {
+				# 		# 			is_controlled_by = root.owner
+				# 		# 		}
+				# 		# 		is_disabled = no
+				# 		# 		#fleet_power < root.trigger:fleet_power
+				# 		# 	}
+				# 		# 	found_fleet = {
+				# 		# 		move_to = this
+				# 		# 		attack_fleet = {
+				# 		# 			target = this
+				# 		# 		}
+				# 		# 	}
+				# 		# }
+				# 		find_closest_planet = {
+				# 			trigger = {
+				# 				id = lazy_fle_att_events.1.trigger.4
+				# 				exists = owner
+				# 				owner = {
+				# 					is_hostile = root.owner
+				# 				}
+				# 				is_occupied_flag = no
+				# 				root.owner = {
+				# 					OR = {
+				# 						has_country_flag = auto_fleet_bombardment_selective_flag
+				# 						has_country_flag = auto_fleet_bombardment_indiscriminate_flag
+				# 						has_country_flag = auto_fleet_bombardment_armageddon_flag
+				# 						has_country_flag = auto_fleet_bombardment_javorian_pox_flag
+				# 						has_country_flag = auto_fleet_bombardment_raiding_flag
+				# 						has_country_flag = auto_fleet_bombardment_punishment_flag
+				# 						has_country_flag = auto_fleet_bombardment_exterminatus_flag
+				# 					}
+				# 				}
+				# 			}
+				# 			found_planet = {
+				# 				orbit_planet = this
+				# 				effect = {
+				# 					id = lazy_fle_att_events.1.effect.4
+				# 					if = {
+				# 						limit = {
+				# 							root.owner = {
+				# 								has_country_flag = auto_fleet_bombardment_selective_flag
+				# 							}
+				# 						}
+				# 						root = {
+				# 							set_fleet_bombardment_stance = selective
+				# 						}
+				# 					}
+				# 					if = {
+				# 						limit = {
+				# 							root.owner = {
+				# 								has_country_flag = auto_fleet_bombardment_indiscriminate_flag
+				# 							}
+				# 						}
+				# 						root = {
+				# 							set_fleet_bombardment_stance = indiscriminate
+				# 						}
+				# 					}
+				# 					if = {
+				# 						limit = {
+				# 							root.owner = {
+				# 								has_country_flag = auto_fleet_bombardment_armageddon_flag
+				# 							}
+				# 						}
+				# 						root = {
+				# 							set_fleet_bombardment_stance = armageddon
+				# 						}
+				# 					}
+				# 					if = {
+				# 						limit = {
+				# 							root.owner = {
+				# 								has_country_flag = auto_fleet_bombardment_javorian_pox_flag
+				# 							}
+				# 						}
+				# 						root = {
+				# 							set_fleet_bombardment_stance = pox
+				# 						}
+				# 					}
+				# 					if = {
+				# 						limit = {
+				# 							root.owner = {
+				# 								has_country_flag = auto_fleet_bombardment_raiding_flag
+				# 							}
+				# 						}
+				# 						root = {
+				# 							set_fleet_bombardment_stance = raiding
+				# 						}
+				# 					}
+				# 					if = {
+				# 						limit = {
+				# 							root.owner = {
+				# 								has_country_flag = auto_fleet_bombardment_punishment_flag
+				# 							}
+				# 						}
+				# 						root = {
+				# 							set_fleet_bombardment_stance = punishment
+				# 						}
+				# 					}
+				# 					if = {
+				# 						limit = {
+				# 							root.owner = {
+				# 								has_country_flag = auto_fleet_bombardment_exterminatus_flag
+				# 							}
+				# 						}
+				# 						root = {
+				# 							set_fleet_bombardment_stance = exterminatus
+				# 						}
+				# 					}
+				# 				}
+				# 			}
+				# 		}
+				# 	}
+				# 	# failed = {
+				# 	# 	effect = {
+				# 	# 		id = lazy_fle_att_events.1.effect.3
+				# 	# 		root = {
+				# 	# 			fleet_event = {
+				# 	# 				id = lazy_fle_att_events.1
+				# 	# 				days = 1
+				# 	# 			}
+				# 	# 		}
+				# 	# 	}
+				# 	# }
+				# }
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = lazy_fle_att_events.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		from = {
+			has_fleet_flag = auto_fleet_attack_flag
+		}
+	}
+
+	immediate = {
+		from = {
+			set_timed_fleet_flag = {
+				flag = planet_bombardment_in_progress_flag
+				days = 10
+			}
+		}
+	}
+}

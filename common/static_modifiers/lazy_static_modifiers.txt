@@ -1,0 +1,55 @@
+terraforming_notification = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_consecrated_worlds.dds"
+	pop_happiness = -0.2
+}
+# building_notification = {
+# 	icon = "gfx/interface/icons/planet_modifiers/pm_archaeology.dds"
+# }
+# building_notification_research = {
+# 	icon = "gfx/interface/icons/planet_modifiers/planet_modifier_notification_research.dds"
+# }
+# building_notification_alloy = {
+# 	icon = "gfx/interface/icons/planet_modifiers/planet_modifier_notification_alloy.dds"
+# }
+# building_notification_consumer_goods = {
+# 	icon = "gfx/interface/icons/planet_modifiers/planet_modifier_notification_consumer_goods.dds"
+# }
+# building_notification_administrative_cap = {
+# 	icon = "gfx/interface/icons/planet_modifiers/planet_modifier_notification_administrative_cap.dds"
+# }
+# building_notification_exotic_gases = {
+# 	icon = "gfx/interface/icons/planet_modifiers/planet_modifier_notification_exotic_gases.dds"
+# }
+# building_notification_volatile_motes = {
+# 	icon = "gfx/interface/icons/planet_modifiers/planet_modifier_notification_volatile_motes.dds"
+# }
+# building_notification_rare_crystals = {
+# 	icon = "gfx/interface/icons/planet_modifiers/planet_modifier_notification_rare_crystals.dds"
+# }
+# building_notification_housing = {
+# 	icon = "gfx/interface/icons/planet_modifiers/planet_modifier_notification_housing.dds"
+# }
+# building_notification_minerals = {
+# 	icon = "gfx/interface/icons/planet_modifiers/planet_modifier_notification_minerals.dds"
+# }
+# building_notification_energy = {
+# 	icon = "gfx/interface/icons/planet_modifiers/planet_modifier_notification_energy.dds"
+# }
+# building_notification_food = {
+# 	icon = "gfx/interface/icons/planet_modifiers/planet_modifier_notification_food.dds"
+# }
+# building_notification_trade = {
+# 	icon = "gfx/interface/icons/planet_modifiers/planet_modifier_notification_trade.dds"
+# }
+# building_notification_research_d = {
+# 	icon = "gfx/interface/icons/planet_modifiers/planet_modifier_notification_research_d.dds"
+# }
+# building_notification_amenities = {
+# 	icon = "gfx/interface/icons/planet_modifiers/planet_modifier_notification_amenities.dds"
+# }
+# building_notification_eg_rc_vm = {
+# 	icon = "gfx/interface/icons/planet_modifiers/planet_modifier_notification_eg_rc_vm.dds"
+# }
+# building_notification_unity = {
+# 	icon = "gfx/interface/icons/planet_modifiers/planet_modifier_notification_unity.dds"
+# }

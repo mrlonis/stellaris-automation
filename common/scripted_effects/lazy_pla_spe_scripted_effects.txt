@@ -1,0 +1,525 @@
+# planet_specialisation_check = {
+# 	switch = {
+# 		trigger = has_planet_flag
+
+# 		auto_city_planet_flag = {
+# 			if = {
+# 				limit = {
+# 					NOT = {
+# 						has_modifier = building_notification
+# 					}
+# 					free_housing < 10
+# 					OR = {
+# 						num_free_districts = {
+# 							type = district_city
+# 							value >= 1
+# 						}
+# 						num_free_districts = {
+# 							type = district_nexus
+# 							value >= 1
+# 						}
+# 						num_free_districts = {
+# 							type = district_hive
+# 							value >= 1
+# 						}
+# 						num_free_districts = {
+# 							type = district_hab_housing
+# 							value >= 1
+# 						}
+# 					}
+# 				}
+# 				if = {
+# 					limit = {
+# 						root = {
+# 							resource_stockpile_compare = {
+# 								resource = minerals
+# 								value >= 500
+# 								mult = value:positive_modifier_mult|MODIFIER|planet_districts_cost_mult|
+# 							}
+# 						}
+# 					}
+# 					if = {
+# 						limit = {
+# 							owner = {
+# 								has_authority = auth_hive_mind
+# 							}
+# 						}
+# 						add_district = district_hive
+# 					}
+# 					else_if = {
+# 						limit = {
+# 							owner = {
+# 								has_authority = auth_machine_intelligence
+# 							}
+# 						}
+# 						add_district = district_nexus
+# 					}
+# 					else_if = {
+# 						limit = {
+# 							is_planet_class = pc_habitat
+# 							num_free_districts = {
+# 								type = district_hab_housing
+# 								value >= 1
+# 							}
+# 						}
+# 						add_district = district_hab_housing
+# 						root = {
+# 							add_resource = {
+# 								minerals = 100
+# 								mult = value:positive_modifier_mult|MODIFIER|planet_districts_cost_mult|
+# 							}
+# 						}
+# 					}
+# 					else = {
+# 						add_district = district_city
+# 					}
+# 					add_modifier = {
+# 						modifier = building_notification days = 480
+# 					}
+# 					root = {
+# 						add_resource = {
+# 							minerals = 500
+# 							mult = value:negative_modifier_mult|MODIFIER|planet_districts_cost_mult|
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 		auto_generator_planet_flag = {
+# 			planet_d_specialisation = {
+# 				DISTRICT = district_generator
+# 				DISTRICT_HAB = district_hab_energy
+# 				MINERALS = 300
+# 				DAYS = 240
+# 			}
+# 		}
+# 		auto_mining_planet_flag = {
+# 			planet_d_specialisation = {
+# 				DISTRICT = district_mining
+# 				DISTRICT_HAB = district_hab_mining
+# 				MINERALS = 300
+# 				DAYS = 240
+# 			}
+# 		}
+# 		auto_farming_planet_flag = {
+# 			planet_d_specialisation = {
+# 				DISTRICT = district_farming
+# 				MINERALS = 300
+# 				DAYS = 240
+# 			}
+# 		}
+# 		auto_industrial_planet_flag = {
+# 			planet_d_specialisation = {
+# 				DISTRICT = district_industrial
+# 				DISTRICT_HAB = district_hab_industrial
+# 				MINERALS = 300
+# 				DAYS = 240
+# 			}
+# 		}
+# 		auto_trade_planet_flag = {
+# 			planet_d_specialisation = {
+# 				DISTRICT_HAB = district_hab_commercial
+# 				MINERALS = 400
+# 				DAYS = 240
+# 			}
+# 		}
+# 		auto_research_d_planet_flag = {
+# 			planet_d_specialisation = {
+# 				DISTRICT_HAB = district_hab_science
+# 				MINERALS = 400
+# 				DAYS = 240
+# 			}
+# 		}
+# 		auto_amenities_planet_flag = {
+# 			planet_d_specialisation = {
+# 				DISTRICT_HAB = district_hab_cultural
+# 				MINERALS = 400
+# 				DAYS = 240
+# 			}
+# 		}
+# 		researcher_planet_flag = {
+# 			planet_specialisation = {
+# 				TECH_1 = tech_basic_science_lab_1
+# 				UPGRADED_CAPITAL = yes
+# 				BUILD = building_research_lab_1
+# 				MINERALS = 400
+# 				DAYS = 360
+# 			}
+# 		}
+# 		unification_planet_flag = {
+# 			if = {
+# 				limit = {
+# 					owner = {
+# 						has_authority = auth_hive_mind
+# 					}
+# 				}
+# 				planet_specialisation = {
+# 					TECH_1 = tech_hive_node
+# 					BUILD = building_hive_node
+# 					MINERALS = 400
+# 					DAYS = 360
+# 				}
+# 			}
+# 			else_if = {
+# 				limit = {
+# 					owner = {
+# 						has_authority = auth_machine_intelligence
+# 					}
+# 				}
+# 				planet_specialisation = {
+# 					TECH_1 = tech_cultural_heritage
+# 					BUILD = building_simulation_1
+# 					MINERALS = 400
+# 					DAYS = 360
+# 				}
+# 			}
+# 			else_if = {
+# 				limit = {
+# 					owner = {
+# 						has_authority = auth_corporate
+# 					}
+# 				}
+# 				planet_specialisation = {
+# 					TECH_1 = tech_cultural_heritage
+# 					BUILD = building_corporate_monument
+# 					MINERALS = 400
+# 					DAYS = 360
+# 				}
+# 			}
+# 			else_if = {
+# 				limit = {
+# 					owner = {
+# 						is_regular_empire = yes
+# 						OR = {
+# 							has_ethic = ethic_spiritualist
+# 							has_ethic = ethic_fanatic_spiritualist
+# 						}
+# 					}
+# 				}
+# 				planet_specialisation = {
+# 					TECH_1 = tech_cultural_heritage
+# 					BUILD = building_temple
+# 					MINERALS = 400
+# 					DAYS = 360
+# 				}
+# 			}
+# 			else = {
+# 				planet_specialisation = {
+# 					TECH_1 = tech_cultural_heritage
+# 					BUILD = building_autochthon_monument
+# 					MINERALS = 400
+# 					DAYS = 360
+# 				}
+# 			}
+# 		}
+# 		translucer_planet_flag = {#Duplicate flag of the last one just for the eg_rc_vm option to cycle
+# 			if = {
+# 				limit = {
+# 					has_modifier = building_notification_eg_rc_vm
+# 					has_planet_flag = translucer_planet_flag
+# 				}
+# 				if = {
+# 					limit = {
+# 						has_planet_flag = gas_refiner_planet_flag
+# 						has_planet_flag = chemist_planet_flag
+# 						has_planet_flag = translucer_planet_flag
+# 					}
+# 					remove_planet_flag = gas_refiner_planet_flag
+# 					planet_specialisation = {
+# 						TECH_1 = tech_exotic_gases
+# 						UPGRADED_CAPITAL = yes
+# 						BUILD = building_refinery
+# 						MINERALS = 400
+# 						DAYS = 360
+# 					}
+# 				}
+# 				else_if = {
+# 					limit = {
+# 						has_planet_flag = chemist_planet_flag
+# 						has_planet_flag = translucer_planet_flag
+# 					}
+# 					remove_planet_flag = chemist_planet_flag
+# 					planet_specialisation = {
+# 						TECH_1 = tech_volatile_motes
+# 						UPGRADED_CAPITAL = yes
+# 						BUILD = building_chemical_plant
+# 						MINERALS = 400
+# 						DAYS = 360
+# 					}
+# 				}
+# 				else = {
+# 					set_planet_flag = gas_refiner_planet_flag
+# 					set_planet_flag = chemist_planet_flag
+# 					planet_specialisation = {
+# 						TECH_1 = tech_rare_crystals
+# 						UPGRADED_CAPITAL = yes
+# 						BUILD = building_crystal_plant
+# 						MINERALS = 400
+# 						DAYS = 360
+# 					}
+# 				}
+# 			}
+# 		}
+# 		gas_refiner_planet_flag = {
+# 			planet_specialisation = {
+# 				TECH_1 = tech_exotic_gases
+# 				UPGRADED_CAPITAL = yes
+# 				BUILD = building_refinery
+# 				MINERALS = 400
+# 				DAYS = 360
+# 			}
+# 		}
+# 		chemist_planet_flag = {
+# 			planet_specialisation = {
+# 				TECH_1 = tech_volatile_motes
+# 				UPGRADED_CAPITAL = yes
+# 				BUILD = building_chemical_plant
+# 				MINERALS = 400
+# 				DAYS = 360
+# 			}
+# 		}
+# 		translucer_planet_flag = {
+# 			planet_specialisation = {
+# 				TECH_1 = tech_rare_crystals
+# 				UPGRADED_CAPITAL = yes
+# 				BUILD = building_crystal_plant
+# 				MINERALS = 400
+# 				DAYS = 360
+# 			}
+# 		}
+# 	}
+# 	# if = {### artisan ###
+# 	# 	limit = {
+# 	# 		NOT = {
+# 	# 			has_modifier = building_notification
+# 	# 		}
+# 	# 		has_planet_flag = artisan_planet_flag
+# 	# 		free_building_slots >= 1
+# 	# 	}
+# 	# 	planet_specialisation = {
+# 	# 		level_check = 1
+# 	# 		technology = tech_basic_industry
+# 	# 		building = building_factory_1
+# 	# 		resource = minerals
+# 	# 		cost = 400
+# 	# 		days = 360
+# 	# 	}
+# 	# }
+# 	# if = {### metallurgist ###
+# 	# 	limit = {
+# 	# 		NOT = {
+# 	# 			has_modifier = building_notification
+# 	# 		}
+# 	# 		has_planet_flag = metallurgist_planet_flag
+# 	# 		free_building_slots >= 1
+# 	# 	}
+# 	# 	planet_specialisation = {
+# 	# 		level_check = 1
+# 	# 		technology = tech_basic_industry
+# 	# 		building = building_foundry_1
+# 	# 		resource = minerals
+# 	# 		cost = 400
+# 	# 		days = 360
+# 	# 	}
+# 	# }
+# }
+
+# planet_specialisation = {
+# 	if = {
+# 		limit = {
+# 			NOT = {
+# 				has_modifier = building_notification
+# 			}
+# 			free_building_slots >= 1
+# 			[[UPGRADED_CAPITAL]
+# 				has_upgraded_capital = $UPGRADED_CAPITAL$
+# 			]
+# 			[[UPGRADED_MAJOR_CAPITAL]
+# 				has_major_upgraded_capital = $UPGRADED_MAJOR_CAPITAL$
+# 			]
+# 			root = {
+# 				[[TECH_1]
+# 					has_technology = $TECH_1$
+# 				]
+# 				[[MINERALS]
+# 					resource_stockpile_compare = {
+# 						resource = minerals
+# 						value >= $MINERALS$
+# 						mult = value:positive_modifier_mult|MODIFIER|planet_buildings_cost_mult|
+# 					}
+# 				]
+# 				[[ENERGY]
+# 					resource_stockpile_compare = {
+# 						resource = energy
+# 						value >= $ENERGY$
+# 						mult = value:positive_modifier_mult|MODIFIER|planet_buildings_cost_mult|
+# 					}
+# 				]
+# 				[[EXOTIC_GASES]
+# 					resource_stockpile_compare = {
+# 						resource = exotic_gases
+# 						value >= $EXOTIC_GASES$
+# 						mult = value:positive_modifier_mult|MODIFIER|planet_buildings_cost_mult|
+# 					}
+# 				]
+# 				[[RARE_CRYSTALS]
+# 					resource_stockpile_compare = {
+# 						resource = rare_crystals
+# 						value >= $RARE_CRYSTALS$
+# 						mult = value:positive_modifier_mult|MODIFIER|planet_buildings_cost_mult|
+# 					}
+# 				]
+# 				[[VOLATILE_MOTES]
+# 					resource_stockpile_compare = {
+# 						resource = volatile_motes
+# 						value >= $VOLATILE_MOTES$
+# 						mult = value:positive_modifier_mult|MODIFIER|planet_buildings_cost_mult|
+# 					}
+# 				]
+# 			}
+# 		}
+# 		add_modifier = {
+# 			modifier = building_notification days = $DAYS$
+# 		}
+# 		add_building = $BUILD$
+# 		root = {
+# 			[[MINERALS]
+# 				add_resource = {
+# 					minerals = $MINERALS$
+# 					mult = value:negative_modifier_mult|MODIFIER|planet_buildings_cost_mult|
+# 				}
+# 			]
+# 			[[ENERGY]
+# 				add_resource = {
+# 					energy = $ENERGY$
+# 					mult = value:negative_modifier_mult|MODIFIER|planet_buildings_cost_mult|
+# 				}
+# 			]
+# 			[[EXOTIC_GASES]
+# 				add_resource = {
+# 					exotic_gases = $EXOTIC_GASES$
+# 					mult = value:negative_modifier_mult|MODIFIER|planet_buildings_cost_mult|
+# 				}
+# 			]
+# 			[[RARE_CRYSTALS]
+# 				add_resource = {
+# 					rare_crystals = $RARE_CRYSTALS$
+# 					mult = value:negative_modifier_mult|MODIFIER|planet_buildings_cost_mult|
+# 				}
+# 			]
+# 			[[VOLATILE_MOTES]
+# 				add_resource = {
+# 					volatile_motes = $VOLATILE_MOTES$
+# 					mult = value:negative_modifier_mult|MODIFIER|planet_buildings_cost_mult|
+# 				}
+# 			]
+# 		}
+# 		break = yes
+# 	}
+# }
+
+# planet_d_specialisation = {
+# 	if = {
+# 		limit = {
+# 			NOT = {
+# 				has_modifier = building_notification
+# 			}
+# 			OR = {
+# 				[[DISTRICT]
+# 					num_free_districts = {
+# 						type = $DISTRICT$
+# 						value >= 1
+# 					}
+# 				]
+# 				[[DISTRICT_HAB]
+# 					num_free_districts = {
+# 						type = $DISTRICT_HAB$
+# 						value >= 1
+# 					}
+# 				]
+# 			}
+# 			root = {
+# 				[[MINERALS]
+# 					resource_stockpile_compare = {
+# 						resource = minerals
+# 						value >= $MINERALS$
+# 						mult = value:positive_modifier_mult|MODIFIER|planet_districts_cost_mult|
+# 					}
+# 				]
+# 				[[ENERGY]
+# 					resource_stockpile_compare = {
+# 						resource = energy
+# 						value >= $ENERGY$
+# 						mult = value:positive_modifier_mult|MODIFIER|planet_districts_cost_mult|
+# 					}
+# 				]
+# 				[[EXOTIC_GASES]
+# 					resource_stockpile_compare = {
+# 						resource = exotic_gases
+# 						value >= $EXOTIC_GASES$
+# 						mult = value:positive_modifier_mult|MODIFIER|planet_districts_cost_mult|
+# 					}
+# 				]
+# 				[[RARE_CRYSTALS]
+# 					resource_stockpile_compare = {
+# 						resource = rare_crystals
+# 						value >= $RARE_CRYSTALS$
+# 						mult = value:positive_modifier_mult|MODIFIER|planet_districts_cost_mult|
+# 					}
+# 				]
+# 				[[VOLATILE_MOTES]
+# 					resource_stockpile_compare = {
+# 						resource = volatile_motes
+# 						value >= $VOLATILE_MOTES$
+# 						mult = value:positive_modifier_mult|MODIFIER|planet_districts_cost_mult|
+# 					}
+# 				]
+# 			}
+# 		}
+# 		add_modifier = {
+# 			modifier = building_notification days = $DAYS$
+# 		}
+# 		if = {
+# 			limit = {
+# 				is_planet_class = pc_habitat
+# 			}
+# 			add_district = $DISTRICT_HAB$
+# 		}
+# 		else = {
+# 			add_district = $DISTRICT$
+# 		}
+# 		root = {
+# 			[[MINERALS]
+# 				add_resource = {
+# 					minerals = $MINERALS$
+# 					mult = value:negative_modifier_mult|MODIFIER|planet_districts_cost_mult|
+# 				}
+# 			]
+# 			[[ENERGY]
+# 				add_resource = {
+# 					energy = $ENERGY$
+# 					mult = value:negative_modifier_mult|MODIFIER|planet_districts_cost_mult|
+# 				}
+# 			]
+# 			[[EXOTIC_GASES]
+# 				add_resource = {
+# 					exotic_gases = $EXOTIC_GASES$
+# 					mult = value:negative_modifier_mult|MODIFIER|planet_districts_cost_mult|
+# 				}
+# 			]
+# 			[[RARE_CRYSTALS]
+# 				add_resource = {
+# 					rare_crystals = $RARE_CRYSTALS$
+# 					mult = value:negative_modifier_mult|MODIFIER|planet_districts_cost_mult|
+# 				}
+# 			]
+# 			[[VOLATILE_MOTES]
+# 				add_resource = {
+# 					volatile_motes = $VOLATILE_MOTES$
+# 					mult = value:negative_modifier_mult|MODIFIER|planet_districts_cost_mult|
+# 				}
+# 			]
+# 		}
+# 		break = yes
+# 	}
+# }

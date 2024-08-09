@@ -1,0 +1,1694 @@
+planet_terraforming_flagger = {
+	if = {
+		limit = {
+			root = {
+				has_technology = tech_ecological_adaptation
+			}
+		}
+		set_planet_flag = $planet_flag$
+	}
+	else_if = {
+		limit = {
+			is_colony = no
+		}
+		set_planet_flag = $planet_flag$
+	}
+}
+
+planet_terraforming_type = {
+	switch = {
+		trigger = has_planet_flag
+		auto_planet_alpine_terraform_flag = {
+			switch = {
+				trigger = is_planet_class
+				pc_arctic = {
+					planet_terraforming = {
+						cost = 2000
+						planet_class = pc_alpine
+					}
+					break = yes
+				}
+				pc_tundra = {
+					planet_terraforming = {
+						cost = 2000
+						planet_class = pc_alpine
+					}
+					break = yes
+				}
+				pc_arid = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_alpine
+					}
+					break = yes
+				}
+				pc_desert = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_alpine
+					}
+					break = yes
+				}
+				pc_savannah = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_alpine
+					}
+					break = yes
+				}
+				pc_continental = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_alpine
+					}
+					break = yes
+				}
+				pc_ocean = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_alpine
+					}
+					break = yes
+				}
+				pc_tropical = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_alpine
+					}
+					break = yes
+				}
+				pc_hive = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_alpine
+					}
+					break = yes
+				}
+				pc_machine = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_alpine
+					}
+					break = yes
+				}
+				pc_barren = {
+					planet_terraforming = {
+						cost = 15000
+						planet_class = pc_alpine
+					}
+					break = yes
+				}
+				pc_barren_cold = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_alpine
+					}
+					break = yes
+				}
+				pc_gray_goo = {
+					planet_terraforming = {
+						cost = 1000
+						planet_class = pc_alpine
+					}
+					break = yes
+				}
+				pc_nuked = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_alpine
+					}
+					break = yes
+				}
+			}
+			break = yes
+		}
+		auto_planet_arctic_terraform_flag = {
+			switch = {
+				trigger = is_planet_class
+				pc_alpine = {
+					planet_terraforming = {
+						cost = 2000
+						planet_class = pc_arctic
+					}
+                    break = yes
+				}
+				pc_tundra = {
+					planet_terraforming = {
+						cost = 2000
+						planet_class = pc_arctic
+					}
+                    break = yes
+				}
+				pc_arid = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_arctic
+					}
+                    break = yes
+				}
+				pc_desert = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_arctic
+					}
+                    break = yes
+				}
+				pc_savannah = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_arctic
+					}
+                    break = yes
+				}
+				pc_continental = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_arctic
+					}
+                    break = yes
+				}
+				pc_ocean = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_arctic
+					}
+                    break = yes
+				}
+				pc_tropical = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_arctic
+					}
+                    break = yes
+				}
+				pc_hive = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_arctic
+					}
+                    break = yes
+				}
+				pc_machine = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_arctic
+					}
+                    break = yes
+				}
+				pc_barren = {
+					planet_terraforming = {
+						cost = 15000
+						planet_class = pc_arctic
+					}
+                    break = yes
+				}
+				pc_barren_cold = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_arctic
+					}
+                    break = yes
+				}
+				pc_gray_goo = {
+					planet_terraforming = {
+						cost = 1000
+						planet_class = pc_arctic
+					}
+                    break = yes
+				}
+				pc_nuked = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_arctic
+					}
+                    break = yes
+				}
+			}
+			break = yes
+		}
+		auto_planet_tundra_terraform_flag = {
+			switch = {
+				trigger = is_planet_class
+				pc_alpine = {
+					planet_terraforming = {
+						cost = 2000
+						planet_class = pc_tundra
+					}
+                    break = yes
+				}
+				pc_arctic = {
+					planet_terraforming = {
+						cost = 2000
+						planet_class = pc_tundra
+					}
+                    break = yes
+				}
+				pc_arid = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_tundra
+					}
+                    break = yes
+				}
+				pc_desert = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_tundra
+					}
+                    break = yes
+				}
+				pc_savannah = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_tundra
+					}
+                    break = yes
+				}
+				pc_continental = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_tundra
+					}
+                    break = yes
+				}
+				pc_ocean = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_tundra
+					}
+                    break = yes
+				}
+				pc_tropical = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_tundra
+					}
+                    break = yes
+				}
+				pc_hive = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_tundra
+					}
+                    break = yes
+				}
+				pc_machine = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_tundra
+					}
+                    break = yes
+				}
+				pc_barren = {
+					planet_terraforming = {
+						cost = 15000
+						planet_class = pc_tundra
+					}
+                    break = yes
+				}
+				pc_barren_cold = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_tundra
+					}
+                    break = yes
+				}
+				pc_gray_goo = {
+					planet_terraforming = {
+						cost = 1000
+						planet_class = pc_tundra
+					}
+                    break = yes
+				}
+				pc_nuked = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_tundra
+					}
+                    break = yes
+				}
+			}
+			break = yes
+		}
+		auto_planet_arid_terraform_flag = {
+			switch = {
+				trigger = is_planet_class
+				pc_alpine = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_arid
+					}
+                    break = yes
+				}
+				pc_arctic = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_arid
+					}
+                    break = yes
+				}
+				pc_tundra = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_arid
+					}
+                    break = yes
+				}
+				pc_desert = {
+					planet_terraforming = {
+						cost = 2000
+						planet_class = pc_arid
+					}
+                    break = yes
+				}
+				pc_savannah = {
+					planet_terraforming = {
+						cost = 2000
+						planet_class = pc_arid
+					}
+                    break = yes
+				}
+				pc_continental = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_arid
+					}
+                    break = yes
+				}
+				pc_ocean = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_arid
+					}
+                    break = yes
+				}
+				pc_tropical = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_arid
+					}
+                    break = yes
+				}
+				pc_hive = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_arid
+					}
+                    break = yes
+				}
+				pc_machine = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_arid
+					}
+                    break = yes
+				}
+				pc_barren = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_arid
+					}
+                    break = yes
+				}
+				pc_barren_cold = {
+					planet_terraforming = {
+						cost = 15000
+						planet_class = pc_arid
+					}
+                    break = yes
+				}
+				pc_gray_goo = {
+					planet_terraforming = {
+						cost = 1000
+						planet_class = pc_arid
+					}
+                    break = yes
+				}
+				pc_nuked = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_arid
+					}
+                    break = yes
+				}
+			}
+			break = yes
+		}
+		auto_planet_desert_terraform_flag = {
+			switch = {
+				trigger = is_planet_class
+				pc_alpine = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_desert
+					}
+                    break = yes
+				}
+				pc_arctic = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_desert
+					}
+                    break = yes
+				}
+				pc_tundra = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_desert
+					}
+                    break = yes
+				}
+				pc_arid = {
+					planet_terraforming = {
+						cost = 2000
+						planet_class = pc_desert
+					}
+                    break = yes
+				}
+				pc_savannah = {
+					planet_terraforming = {
+						cost = 2000
+						planet_class = pc_desert
+					}
+                    break = yes
+				}
+				pc_continental = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_desert
+					}
+                    break = yes
+				}
+				pc_ocean = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_desert
+					}
+                    break = yes
+				}
+				pc_tropical = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_desert
+					}
+                    break = yes
+				}
+				pc_hive = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_desert
+					}
+                    break = yes
+				}
+				pc_machine = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_desert
+					}
+                    break = yes
+				}
+				pc_barren = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_desert
+					}
+                    break = yes
+				}
+				pc_barren_cold = {
+					planet_terraforming = {
+						cost = 15000
+						planet_class = pc_desert
+					}
+                    break = yes
+				}
+				pc_gray_goo = {
+					planet_terraforming = {
+						cost = 1000
+						planet_class = pc_desert
+					}
+                    break = yes
+				}
+				pc_nuked = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_desert
+					}
+                    break = yes
+				}
+			}
+			break = yes
+		}
+		auto_planet_savannah_terraform_flag = {
+			switch = {
+				trigger = is_planet_class
+				pc_alpine = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_savannah
+					}
+                    break = yes
+				}
+				pc_arctic = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_savannah
+					}
+                    break = yes
+				}
+				pc_tundra = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_savannah
+					}
+                    break = yes
+				}
+				pc_arid = {
+					planet_terraforming = {
+						cost = 2000
+						planet_class = pc_savannah
+					}
+                    break = yes
+				}
+				pc_desert = {
+					planet_terraforming = {
+						cost = 2000
+						planet_class = pc_savannah
+					}
+                    break = yes
+				}
+				pc_continental = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_savannah
+					}
+                    break = yes
+				}
+				pc_ocean = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_savannah
+					}
+                    break = yes
+				}
+				pc_tropical = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_savannah
+					}
+                    break = yes
+				}
+				pc_hive = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_savannah
+					}
+                    break = yes
+				}
+				pc_machine = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_savannah
+					}
+                    break = yes
+				}
+				pc_barren = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_savannah
+					}
+                    break = yes
+				}
+				pc_barren_cold = {
+					planet_terraforming = {
+						cost = 15000
+						planet_class = pc_savannah
+					}
+                    break = yes
+				}
+				pc_gray_goo = {
+					planet_terraforming = {
+						cost = 1000
+						planet_class = pc_savannah
+					}
+                    break = yes
+				}
+				pc_nuked = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_savannah
+					}
+                    break = yes
+				}
+			}
+			break = yes
+		}
+		auto_planet_continental_terraform_flag = {
+			switch = {
+				trigger = is_planet_class
+				pc_alpine = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_continental
+					}
+                    break = yes
+				}
+				pc_arctic = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_continental
+					}
+                    break = yes
+				}
+				pc_tundra = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_continental
+					}
+                    break = yes
+				}
+				pc_arid = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_continental
+					}
+                    break = yes
+				}
+				pc_desert = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_continental
+					}
+                    break = yes
+				}
+				pc_savannah = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_continental
+					}
+                    break = yes
+				}
+				pc_ocean = {
+					planet_terraforming = {
+						cost = 2000
+						planet_class = pc_continental
+					}
+                    break = yes
+				}
+				pc_tropical = {
+					planet_terraforming = {
+						cost = 2000
+						planet_class = pc_continental
+					}
+                    break = yes
+				}
+				pc_hive = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_continental
+					}
+                    break = yes
+				}
+				pc_machine = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_continental
+					}
+                    break = yes
+				}
+				pc_barren = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_continental
+					}
+                    break = yes
+				}
+				pc_barren_cold = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_continental
+					}
+                    break = yes
+				}
+				pc_gray_goo = {
+					planet_terraforming = {
+						cost = 1000
+						planet_class = pc_continental
+					}
+                    break = yes
+				}
+				pc_nuked = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_continental
+					}
+                    break = yes
+				}
+			}
+			break = yes
+		}
+		auto_planet_ocean_terraform_flag = {
+			switch = {
+				trigger = is_planet_class
+				pc_alpine = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_ocean
+					}
+                    break = yes
+				}
+				pc_arctic = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_ocean
+					}
+                    break = yes
+				}
+				pc_tundra = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_ocean
+					}
+                    break = yes
+				}
+				pc_arid = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_ocean
+					}
+                    break = yes
+				}
+				pc_desert = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_ocean
+					}
+                    break = yes
+				}
+				pc_savannah = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_ocean
+					}
+                    break = yes
+				}
+				pc_continental = {
+					planet_terraforming = {
+						cost = 2000
+						planet_class = pc_ocean
+					}
+                    break = yes
+				}
+				pc_tropical = {
+					planet_terraforming = {
+						cost = 2000
+						planet_class = pc_ocean
+					}
+                    break = yes
+				}
+				pc_hive = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_ocean
+					}
+                    break = yes
+				}
+				pc_machine = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_ocean
+					}
+                    break = yes
+				}
+				pc_barren = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_ocean
+					}
+                    break = yes
+				}
+				pc_barren_cold = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_ocean
+					}
+                    break = yes
+				}
+				pc_gray_goo = {
+					planet_terraforming = {
+						cost = 1000
+						planet_class = pc_ocean
+					}
+                    break = yes
+				}
+				pc_nuked = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_ocean
+					}
+                    break = yes
+				}
+			}
+			break = yes
+		}
+		auto_planet_tropical_terraform_flag = {
+			switch = {
+				trigger = is_planet_class
+				pc_alpine = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_tropical
+					}
+                    break = yes
+				}
+				pc_arctic = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_tropical
+					}
+                    break = yes
+				}
+				pc_tundra = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_tropical
+					}
+                    break = yes
+				}
+				pc_arid = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_tropical
+					}
+                    break = yes
+				}
+				pc_desert = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_tropical
+					}
+                    break = yes
+				}
+				pc_savannah = {
+					planet_terraforming = {
+						cost = 5000
+						planet_class = pc_tropical
+					}
+                    break = yes
+				}
+				pc_continental = {
+					planet_terraforming = {
+						cost = 2000
+						planet_class = pc_tropical
+					}
+                    break = yes
+				}
+				pc_ocean = {
+					planet_terraforming = {
+						cost = 2000
+						planet_class = pc_tropical
+					}
+                    break = yes
+				}
+				pc_hive = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_tropical
+					}
+                    break = yes
+				}
+				pc_machine = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_tropical
+					}
+                    break = yes
+				}
+				pc_barren = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_tropical
+					}
+                    break = yes
+				}
+				pc_barren_cold = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_tropical
+					}
+                    break = yes
+				}
+				pc_gray_goo = {
+					planet_terraforming = {
+						cost = 1000
+						planet_class = pc_tropical
+					}
+                    break = yes
+				}
+				pc_nuked = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_tropical
+					}
+                    break = yes
+				}
+			}
+			break = yes
+		}
+		auto_planet_gaia_terraform_flag = {
+			switch = {
+				trigger = is_planet_class
+				pc_alpine = {
+					planet_terraforming = {
+						cost = 7500
+						planet_class = pc_gaia
+					}
+                    break = yes
+				}
+				pc_arctic = {
+					planet_terraforming = {
+						cost = 7500
+						planet_class = pc_gaia
+					}
+                    break = yes
+				}
+				pc_tundra = {
+					planet_terraforming = {
+						cost = 7500
+						planet_class = pc_gaia
+					}
+                    break = yes
+				}
+				pc_arid = {
+					planet_terraforming = {
+						cost = 7500
+						planet_class = pc_gaia
+					}
+                    break = yes
+				}
+				pc_desert = {
+					planet_terraforming = {
+						cost = 7500
+						planet_class = pc_gaia
+					}
+                    break = yes
+				}
+				pc_savannah = {
+					planet_terraforming = {
+						cost = 7500
+						planet_class = pc_gaia
+					}
+                    break = yes
+				}
+				pc_continental = {
+					planet_terraforming = {
+						cost = 7500
+						planet_class = pc_gaia
+					}
+                    break = yes
+				}
+				pc_ocean = {
+					planet_terraforming = {
+						cost = 7500
+						planet_class = pc_gaia
+					}
+                    break = yes
+				}
+				pc_tropical = {
+					planet_terraforming = {
+						cost = 7500
+						planet_class = pc_gaia
+					}
+                    break = yes
+				}
+				pc_barren = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_gaia
+					}
+                    break = yes
+				}
+				pc_barren_cold = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_gaia
+					}
+                    break = yes
+				}
+				pc_gray_goo = {
+					planet_terraforming = {
+						cost = 1000
+						planet_class = pc_gaia
+					}
+                    break = yes
+				}
+			}
+			break = yes
+		}
+		auto_planet_hive_terraform_flag = {
+			switch = {
+				trigger = is_planet_class
+				pc_alpine = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_hive
+					}
+                    break = yes
+				}
+				pc_arctic = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_hive
+					}
+                    break = yes
+				}
+				pc_tundra = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_hive
+					}
+                    break = yes
+				}
+				pc_arid = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_hive
+					}
+                    break = yes
+				}
+				pc_desert = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_hive
+					}
+                    break = yes
+				}
+				pc_savannah = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_hive
+					}
+                    break = yes
+				}
+				pc_continental = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_hive
+					}
+                    break = yes
+				}
+				pc_ocean = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_hive
+					}
+                    break = yes
+				}
+				pc_tropical = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_hive
+					}
+                    break = yes
+				}
+				pc_gaia = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_hive
+					}
+                    break = yes
+				}
+				pc_machine = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_hive
+					}
+                    break = yes
+				}
+				pc_barren = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_hive
+					}
+                    break = yes
+				}
+				pc_barren_cold = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_hive
+					}
+                    break = yes
+				}
+				pc_gray_goo = {
+					planet_terraforming = {
+						cost = 1000
+						planet_class = pc_hive
+					}
+                    break = yes
+				}
+				pc_nuked = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_hive
+					}
+                    break = yes
+				}
+			}
+			break = yes
+		}
+		auto_planet_machine_terraform_flag = {
+			switch = {
+				trigger = is_planet_class
+				pc_alpine = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_machine
+					}
+                    break = yes
+				}
+				pc_arctic = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_machine
+					}
+                    break = yes
+				}
+				pc_tundra = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_machine
+					}
+                    break = yes
+				}
+				pc_arid = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_machine
+					}
+                    break = yes
+				}
+				pc_desert = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_machine
+					}
+                    break = yes
+				}
+				pc_savannah = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_machine
+					}
+                    break = yes
+				}
+				pc_continental = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_machine
+					}
+                    break = yes
+				}
+				pc_ocean = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_machine
+					}
+                    break = yes
+				}
+				pc_tropical = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_machine
+					}
+                    break = yes
+				}
+				pc_gaia = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_machine
+					}
+                    break = yes
+				}
+				pc_hive = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_machine
+					}
+                    break = yes
+				}
+				pc_barren = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_machine
+					}
+                    break = yes
+				}
+				pc_barren_cold = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_machine
+					}
+                    break = yes
+				}
+				pc_gray_goo = {
+					planet_terraforming = {
+						cost = 1000
+						planet_class = pc_machine
+					}
+                    break = yes
+				}
+				pc_nuked = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_machine
+					}
+                    break = yes
+				}
+			}
+			break = yes
+		}
+		auto_planet_nuked_terraform_flag = {
+			switch = {
+				trigger = is_planet_class
+				pc_hive = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_nuked
+					}
+                    break = yes
+				}
+				pc_machine = {
+					planet_terraforming = {
+						cost = 10000
+						planet_class = pc_nuked
+					}
+                    break = yes
+				}
+			}
+			break = yes
+		}
+	}
+}
+
+planet_terraforming = {
+	if = {
+		limit = {
+			root = {
+				resource_stockpile_compare = {
+					resource = energy
+					value >= $cost$
+					mult = value:positive_modifier_mult|MODIFIER|terraforming_cost_mult|
+				}
+			}
+			NOR = {
+				has_modifier = terraforming_notification
+				has_planet_flag = auto_terraforming_ready_flag
+			}
+		}
+		root = {
+			set_variable = {
+				which = terraforming_time
+				value = $cost$
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_planet_flag = auto_planet_nuked_terraform_flag
+					has_planet_flag = auto_planet_hive_terraform_flag
+					has_planet_flag = auto_planet_machine_terraform_flag
+				}
+			}
+			if = {
+				limit = {
+					root = {
+						has_edict = terraforming_gas
+					}
+				}
+				add_modifier = {
+					modifier = terraforming_notification years = 10
+				}
+				planet_event = {
+					id = lazy_ter_events.3
+					days = 3539
+				}
+			}
+			# else_if = {
+			# 	limit = {
+			# 		root = {
+			# 			ruler = {
+			# 				has_ruler_trait = trait_ruler_world_shaper
+			# 			}
+			# 		}
+			# 	}
+			# 	add_modifier = {
+			# 		modifier = terraforming_notification years = 15
+			# 	}
+			# 	planet_event = {
+			# 		id = lazy_ter_events.3
+			# 		days = 5459
+			# 	}
+			# }
+			else_if = {
+				limit = {
+					root = {
+						has_modifier = shallarian_terraforming_knowledge
+					}
+				}
+				add_modifier = {
+					modifier = terraforming_notification years = 16
+				}
+				planet_event = {
+					id = lazy_ter_events.3
+					days = 5699
+				}
+			}
+			else = {
+				add_modifier = {
+					modifier = terraforming_notification years = 20
+				}
+				planet_event = {
+					id = lazy_ter_events.3
+					days = 7139
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				root = {
+					check_variable = {
+						which = terraforming_time
+						value = 15000
+					}
+				}
+			}
+			if = {
+				limit = {
+					root = {
+						has_edict = terraforming_gas
+					}
+				}
+				add_modifier = {
+					modifier = terraforming_notification years = 10
+				}
+				planet_event = {
+					id = lazy_ter_events.3
+					days = 3539
+				}
+			}
+			# else_if = {
+			# 	limit = {
+			# 		root = {
+			# 			ruler = {
+			# 				has_ruler_trait = trait_ruler_world_shaper
+			# 			}
+			# 		}
+			# 	}
+			# 	add_modifier = {
+			# 		modifier = terraforming_notification years = 15
+			# 	}
+			# 	planet_event = {
+			# 		id = lazy_ter_events.3
+			# 		days = 5461
+			# 	}
+			# }
+			else_if = {
+				limit = {
+					root = {
+						has_modifier = shallarian_terraforming_knowledge
+					}
+				}
+				add_modifier = {
+					modifier = terraforming_notification years = 16
+				}
+				planet_event = {
+					id = lazy_ter_events.3
+					days = 5699
+				}
+			}
+			else = {
+				add_modifier = {
+					modifier = terraforming_notification years = 20
+				}
+				planet_event = {
+					id = lazy_ter_events.3
+					days = 7139
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				root = {
+					check_variable = {
+						which = terraforming_time
+						value = 10000
+					}
+				}
+			}
+			if = {
+				limit = {
+					root = {
+						has_edict = terraforming_gas
+					}
+				}
+				add_modifier = {
+					modifier = terraforming_notification days = 2700
+				}
+				planet_event = {
+					id = lazy_ter_events.3
+					days = 2639
+				}
+			}
+			# else_if = {
+			# 	limit = {
+			# 		root = {
+			# 			ruler = {
+			# 				has_ruler_trait = trait_ruler_world_shaper
+			# 			}
+			# 		}
+			# 	}
+			# 	add_modifier = {
+			# 		modifier = terraforming_notification days = 4050
+			# 	}
+			# 	planet_event = {
+			# 		id = lazy_ter_events.3
+			# 		days = 3989
+			# 	}
+			# }
+			else_if = {
+				limit = {
+					root = {
+						has_modifier = shallarian_terraforming_knowledge
+					}
+				}
+				add_modifier = {
+					modifier = terraforming_notification days = 4320
+				}
+				planet_event = {
+					id = lazy_ter_events.3
+					days = 4259
+				}
+			}
+			else = {
+				add_modifier = {
+					modifier = terraforming_notification days = 5400
+				}
+				planet_event = {
+					id = lazy_ter_events.3
+					days = 5339
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				root = {
+					OR = {
+						check_variable = {
+							which = terraforming_time
+							value = 7500
+						}
+						check_variable = {
+							which = terraforming_time
+							value = 5000
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					root = {
+						has_edict = terraforming_gas
+					}
+				}
+				add_modifier = {
+					modifier = terraforming_notification years = 5
+				}
+				planet_event = {
+					id = lazy_ter_events.3
+					days = 1739
+				}
+			}
+			# else_if = {
+			# 	limit = {
+			# 		root = {
+			# 			ruler = {
+			# 				has_ruler_trait = trait_ruler_world_shaper
+			# 			}
+			# 		}
+			# 	}
+			# 	add_modifier = {
+			# 		modifier = terraforming_notification days = 2700
+			# 	}
+			# 	planet_event = {
+			# 		id = lazy_ter_events.3
+			# 		days = 2639
+			# 	}
+			# }
+			else_if = {
+				limit = {
+					root = {
+						has_modifier = shallarian_terraforming_knowledge
+					}
+				}
+				add_modifier = {
+					modifier = terraforming_notification days = 2880
+				}
+				planet_event = {
+					id = lazy_ter_events.3
+					days = 2819
+				}
+			}
+			else = {
+				add_modifier = {
+					modifier = terraforming_notification days = 3600
+				}
+				planet_event = {
+					id = lazy_ter_events.3
+					days = 3539
+				}
+			}
+		}
+		else = {
+			if = {
+				limit = {
+					root = {
+						has_edict = terraforming_gas
+					}
+				}
+				add_modifier = {
+					modifier = terraforming_notification days = 900
+				}
+				planet_event = {
+					id = lazy_ter_events.3
+					days = 839
+				}
+			}
+			# else_if = {
+			# 	limit = {
+			# 		root = {
+			# 			ruler = {
+			# 				has_ruler_trait = trait_ruler_world_shaper
+			# 			}
+			# 		}
+			# 	}
+			# 	add_modifier = {
+			# 		modifier = terraforming_notification days = 1350
+			# 	}
+			# 	planet_event = {
+			# 		id = lazy_ter_events.3
+			# 		days = 1289
+			# 	}
+			# }
+			else_if = {
+				limit = {
+					root = {
+						has_modifier = shallarian_terraforming_knowledge
+					}
+				}
+				add_modifier = {
+					modifier = terraforming_notification days = 1440
+				}
+				planet_event = {
+					id = lazy_ter_events.3
+					days = 1379
+				}
+			}
+			else = {
+				add_modifier = {
+					modifier = terraforming_notification days = 1800
+				}
+				planet_event = {
+					id = lazy_ter_events.3
+					days = 1739
+				}
+			}
+		}
+		root = {
+			create_message = {
+				type = AUTO_TERRAFORM_MESSAGE_TYPE
+				localization = AUTO_TERRAFORM_MESSAGE_TYPE_DESC
+				days = 30
+				target = prev.solar_system
+				variable = {
+					type = name
+					localization = PLANET
+					scope = prev
+				}
+				variable = {
+					type = name
+					localization = SYSTEM
+					scope = prev.solar_system
+				}
+			}
+			add_resource = {
+				energy = $cost$
+				mult = value:negative_modifier_mult|MODIFIER|terraforming_cost_mult|
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_planet_flag = auto_terraforming_ready_flag
+		}
+		remove_planet_flag = auto_terraforming_ready_flag
+		remove_planet_flag = auto_planet_alpine_terraform_flag
+		remove_planet_flag = auto_planet_arctic_terraform_flag
+		remove_planet_flag = auto_planet_tundra_terraform_flag
+		remove_planet_flag = auto_planet_desert_terraform_flag
+		remove_planet_flag = auto_planet_arid_terraform_flag
+		remove_planet_flag = auto_planet_savannah_terraform_flag
+		remove_planet_flag = auto_planet_tropical_terraform_flag
+		remove_planet_flag = auto_planet_continental_terraform_flag
+		remove_planet_flag = auto_planet_ocean_terraform_flag
+		remove_planet_flag = auto_planet_gaia_terraform_flag
+		remove_planet_flag = auto_planet_hive_terraform_flag
+		remove_planet_flag = auto_planet_machine_terraform_flag
+		remove_planet_flag = auto_planet_nuked_terraform_flag
+		change_pc = $planet_class$
+		if = {
+			limit = {
+				OR = {
+					is_planet_class = pc_hive
+					is_planet_class = pc_machine
+				}
+			}
+			remove_modifier = bleak_planet
+			remove_modifier = irradiated_planet
+			remove_modifier = hazardous_weather
+			remove_modifier = dangerous_wildlife
+			remove_modifier = wild_storms
+			remove_modifier = atmospheric_hallucinogen
+			remove_modifier = atmospheric_aphrodisiac
+			remove_modifier = lush_planet
+			remove_modifier = natural_beauty
+			remove_modifier = terraforming_notification
+		}
+		else = {
+			remove_modifier = bleak_planet
+			remove_modifier = irradiated_planet
+			remove_modifier = hazardous_weather
+			remove_modifier = dangerous_wildlife
+			remove_modifier = wild_storms
+			remove_modifier = terraforming_notification
+		}
+	}
+}

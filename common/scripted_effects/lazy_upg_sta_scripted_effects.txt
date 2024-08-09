@@ -1,0 +1,116 @@
+auto_upgrade_starbases_check = {
+	if = {
+		limit = {
+			has_starbase_size = starbase_outpost
+		}
+		auto_upgrade_starbase = {
+			TECH_1 = tech_starbase_2
+			EVENT = lazy_upg_sta_events.2
+			ALLOYS = 200
+			DAYS = 360
+		}
+	}
+	else_if = {
+		limit = {
+			has_starbase_size = starbase_starport
+		}
+		auto_upgrade_starbase = {
+			TECH_1 = tech_starbase_3
+			EVENT = lazy_upg_sta_events.3
+			ALLOYS = 500
+			DAYS = 720
+		}
+	}
+	else_if = {
+		limit = {
+			has_starbase_size = starbase_starhold
+		}
+		auto_upgrade_starbase = {
+			TECH_1 = tech_starbase_4
+			EVENT = lazy_upg_sta_events.4
+			ALLOYS = 1250
+			DAYS = 1080
+		}
+	}
+	else_if = {
+		limit = {
+			has_starbase_size = starbase_starfortress
+		}
+		auto_upgrade_starbase = {
+			TECH_1 = tech_starbase_5
+			EVENT = lazy_upg_sta_events.5
+			ALLOYS = 3500
+			DAYS = 1440
+		}
+	}
+	else_if = {
+		limit = {
+			has_starbase_size = starbase_starfortress
+		}
+		auto_upgrade_starbase = {
+			TECH_1 = tech_starbase_6
+			EVENT = lazy_upg_sta_events.6
+			ALLOYS = 4500
+			DAYS = 2000
+		}
+	}
+	else_if = {
+		limit = {
+			has_starbase_size = starbase_stronghold
+		}
+		auto_upgrade_starbase = {
+			TECH_1 = tech_starbase_7
+			EVENT = lazy_upg_sta_events.7
+			ALLOYS = 6500
+			DAYS = 2500
+		}
+	}
+}
+
+auto_upgrade_starbase = {
+	if = {
+		limit = {
+			prev = {
+				[[TECH_1]
+					has_technology = $TECH_1$
+				]
+				[[ALLOYS]
+					resource_stockpile_compare = {
+						resource = alloys
+						value >= $ALLOYS$
+						mult = value:positive_modifier_mult|MODIFIER|starbase_upgrade_cost_mult|
+					}
+				]
+			}
+		}
+		starbase_event = {
+			id = $EVENT$
+			days = $DAYS$
+		}
+		set_starbase_flag = auto_upgrading_starbase_flag
+		prev = {
+			create_message = {
+				type = AUTO_STARBASE_MESSAGE_TYPE
+				localization = AUTO_STARBASE_MESSAGE_TYPE_DESC
+				days = 30
+				target = prev.solar_system
+				variable = {
+					type = name
+					localization = FLEET
+					scope = prev
+				}
+				variable = {
+					type = name
+					localization = SYSTEM
+					scope = prev.solar_system
+				}
+			}
+			[[ALLOYS]
+				add_resource = {
+					alloys = $ALLOYS$
+					mult = value:negative_modifier_mult|MODIFIER|starbase_upgrade_cost_mult|
+				}
+			]
+		}
+	}
+}

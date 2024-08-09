@@ -1,0 +1,3400 @@
+namespace = lazy_con_meg_events
+
+fleet_event = {
+	id = lazy_con_meg_events.1
+	title = "lazy_con_meg_events.1.name"
+	desc = "lazy_con_meg_events.1.desc"
+	picture = GFX_evt_machine_sapience
+	hide_window = no
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = "lazy_con_meg_events.1.b"
+		allow = {
+			root.owner = {
+				has_technology = tech_hyper_relays
+			}
+			hidden_trigger = {
+				NOT = {
+					has_fleet_flag = auto_construct_hyper_relays_flag
+				}
+			}
+		}
+		hidden_effect = {
+			set_fleet_flag = auto_mega_ship_flag
+			set_fleet_flag = auto_construct_hyper_relays_flag
+			remove_fleet_flag = auto_construct_gateway_flag
+			remove_fleet_flag = auto_construct_habitat_central_flag
+			remove_fleet_flag = auto_construct_major_orbital_flag
+			remove_fleet_flag = auto_construct_minor_orbital_flag
+			remove_fleet_flag = auto_construct_frameworld_outpost_flag
+			remove_fleet_flag = auto_construct_frameworld_harvest_flag
+			remove_fleet_flag = auto_construct_frameworld_salvage_habitat_flag
+			remove_fleet_flag = auto_construct_orbital_ring_flag
+
+			fleet_event = {
+				id = lazy_con_meg_events.2
+			}
+			fleet_event = {
+				id = lazy_con_meg_events.1
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_con_meg_events.1.c"
+		allow = {
+			root.owner = {
+				has_technology = tech_gateway_construction
+			}
+			hidden_trigger = {
+				NOT = {
+					has_fleet_flag = auto_construct_gateway_flag
+				}
+			}
+		}
+		hidden_effect = {
+			set_fleet_flag = auto_mega_ship_flag
+			set_fleet_flag = auto_construct_gateway_flag
+			remove_fleet_flag = auto_construct_hyper_relays_flag
+			remove_fleet_flag = auto_construct_habitat_central_flag
+			remove_fleet_flag = auto_construct_major_orbital_flag
+			remove_fleet_flag = auto_construct_minor_orbital_flag
+			remove_fleet_flag = auto_construct_frameworld_outpost_flag
+			remove_fleet_flag = auto_construct_frameworld_harvest_flag
+			remove_fleet_flag = auto_construct_frameworld_salvage_habitat_flag
+			remove_fleet_flag = auto_construct_orbital_ring_flag
+
+			fleet_event = {
+				id = lazy_con_meg_events.3
+			}
+			fleet_event = {
+				id = lazy_con_meg_events.1
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_con_meg_events.1.d"
+		allow = {
+			hidden_trigger = {
+				root.owner = {
+					OR = {
+						has_technology = tech_habitat_1
+						has_civic = civic_diadochi
+						has_civic = civic_great_khans_legacy
+						has_country_flag = democratic_khanate_flag
+					}
+				}
+				NOT = {
+					has_fleet_flag = auto_construct_habitat_central_flag
+				}
+			}
+		}
+		hidden_effect = {
+			set_fleet_flag = auto_mega_ship_flag
+			set_fleet_flag = auto_construct_habitat_central_flag
+			remove_fleet_flag = auto_construct_hyper_relays_flag
+			remove_fleet_flag = auto_construct_gateway_flag
+			remove_fleet_flag = auto_construct_major_orbital_flag
+			remove_fleet_flag = auto_construct_minor_orbital_flag
+			remove_fleet_flag = auto_construct_frameworld_outpost_flag
+			remove_fleet_flag = auto_construct_frameworld_harvest_flag
+			remove_fleet_flag = auto_construct_frameworld_salvage_habitat_flag
+			remove_fleet_flag = auto_construct_orbital_ring_flag
+
+			fleet_event = {
+				id = lazy_con_meg_events.4
+			}
+			fleet_event = {
+				id = lazy_con_meg_events.1
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_con_meg_events.1.e"
+		allow = {
+			hidden_trigger = {
+				root.owner = {
+					OR = {
+						has_technology = tech_habitat_1
+						has_civic = civic_diadochi
+						has_civic = civic_great_khans_legacy
+						has_country_flag = democratic_khanate_flag
+					}
+				}
+				NOT = {
+					has_fleet_flag = auto_construct_major_orbital_flag
+				}
+			}
+		}
+		hidden_effect = {
+			set_fleet_flag = auto_mega_ship_flag
+			set_fleet_flag = auto_construct_major_orbital_flag
+			remove_fleet_flag = auto_construct_habitat_central_flag
+			remove_fleet_flag = auto_construct_minor_orbital_flag
+			remove_fleet_flag = auto_construct_hyper_relays_flag
+			remove_fleet_flag = auto_construct_gateway_flag
+			remove_fleet_flag = auto_construct_frameworld_outpost_flag
+			remove_fleet_flag = auto_construct_frameworld_harvest_flag
+			remove_fleet_flag = auto_construct_frameworld_salvage_habitat_flag
+			remove_fleet_flag = auto_construct_orbital_ring_flag
+
+			fleet_event = {
+				id = lazy_con_meg_events.5
+			}
+			fleet_event = {
+				id = lazy_con_meg_events.1
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_con_meg_events.1.f"
+		allow = {
+			hidden_trigger = {
+				root.owner = {
+					OR = {
+						has_technology = tech_habitat_1
+						has_civic = civic_diadochi
+						has_civic = civic_great_khans_legacy
+						has_country_flag = democratic_khanate_flag
+					}
+				}
+				NOT = {
+					has_fleet_flag = auto_construct_minor_orbital_flag
+				}
+			}
+		}
+		hidden_effect = {
+			set_fleet_flag = auto_mega_ship_flag
+			set_fleet_flag = auto_construct_minor_orbital_flag
+			remove_fleet_flag = auto_construct_habitat_central_flag
+			remove_fleet_flag = auto_construct_major_orbital_flag
+			remove_fleet_flag = auto_construct_hyper_relays_flag
+			remove_fleet_flag = auto_construct_gateway_flag
+			remove_fleet_flag = auto_construct_frameworld_outpost_flag
+			remove_fleet_flag = auto_construct_frameworld_harvest_flag
+			remove_fleet_flag = auto_construct_frameworld_salvage_habitat_flag
+			remove_fleet_flag = auto_construct_orbital_ring_flag
+
+			fleet_event = {
+				id = lazy_con_meg_events.6
+			}
+			fleet_event = {
+				id = lazy_con_meg_events.1
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_con_meg_events.1.g"
+		trigger = {
+			hidden_trigger = {
+				has_global_flag = giga_game_started
+			}
+		}
+		allow = {
+			hidden_trigger = {
+				root.owner = {
+					giga_has_frameworld_origin = yes
+				}
+				NOT = {
+					has_fleet_flag = auto_construct_frameworld_outpost_flag
+				}
+			}
+		}
+		hidden_effect = {
+			set_fleet_flag = auto_mega_ship_flag
+			set_fleet_flag = auto_construct_frameworld_outpost_flag
+			remove_fleet_flag = auto_construct_habitat_central_flag
+			remove_fleet_flag = auto_construct_major_orbital_flag
+			remove_fleet_flag = auto_construct_hyper_relays_flag
+			remove_fleet_flag = auto_construct_gateway_flag
+			remove_fleet_flag = auto_construct_frameworld_harvest_flag
+			remove_fleet_flag = auto_construct_frameworld_salvage_habitat_flag
+			remove_fleet_flag = auto_construct_orbital_ring_flag
+
+			fleet_event = {
+				id = lazy_con_meg_events.7
+			}
+			fleet_event = {
+				id = lazy_con_meg_events.1
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_con_meg_events.1.h"
+		trigger = {
+			hidden_trigger = {
+				has_global_flag = giga_game_started
+			}
+		}
+		allow = {
+			hidden_trigger = {
+				root.owner = {
+					giga_has_frameworld_origin = yes
+				}
+				NOT = {
+					has_fleet_flag = auto_construct_frameworld_harvest_flag
+				}
+			}
+		}
+		hidden_effect = {
+			set_fleet_flag = auto_mega_ship_flag
+			set_fleet_flag = auto_construct_frameworld_harvest_flag
+			remove_fleet_flag = auto_construct_habitat_central_flag
+			remove_fleet_flag = auto_construct_major_orbital_flag
+			remove_fleet_flag = auto_construct_hyper_relays_flag
+			remove_fleet_flag = auto_construct_gateway_flag
+			remove_fleet_flag = auto_construct_frameworld_outpost_flag
+			remove_fleet_flag = auto_construct_frameworld_salvage_habitat_flag
+			remove_fleet_flag = auto_construct_orbital_ring_flag
+
+			fleet_event = {
+				id = lazy_con_meg_events.8
+			}
+			fleet_event = {
+				id = lazy_con_meg_events.1
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_con_meg_events.1.i"
+		trigger = {
+			hidden_trigger = {
+				has_global_flag = giga_game_started
+			}
+		}
+		allow = {
+			hidden_trigger = {
+				root.owner = {
+					has_technology = tech_habitat_1
+					giga_has_frameworld_origin = yes
+				}
+				NOT = {
+					has_fleet_flag = auto_construct_frameworld_salvage_habitat_flag
+				}
+			}
+		}
+		hidden_effect = {
+			set_fleet_flag = auto_mega_ship_flag
+			set_fleet_flag = auto_construct_frameworld_salvage_habitat_flag
+			remove_fleet_flag = auto_construct_habitat_central_flag
+			remove_fleet_flag = auto_construct_major_orbital_flag
+			remove_fleet_flag = auto_construct_hyper_relays_flag
+			remove_fleet_flag = auto_construct_gateway_flag
+			remove_fleet_flag = auto_construct_frameworld_outpost_flag
+			remove_fleet_flag = auto_construct_frameworld_harvest_flag
+			remove_fleet_flag = auto_construct_orbital_ring_flag
+
+			fleet_event = {
+				id = lazy_con_meg_events.9
+			}
+			fleet_event = {
+				id = lazy_con_meg_events.1
+			}
+		}
+	}
+
+	option = { 
+		name = "lazy_con_meg_events.1.j"
+		allow = {
+			hidden_trigger = {
+				root.owner = {
+					has_technology = tech_orbital_ring_tier_1
+				}
+				NOT = {
+					has_fleet_flag = auto_construct_orbital_ring_flag
+				}
+			}
+		}
+		hidden_effect = {
+			set_fleet_flag = auto_mega_ship_flag
+			set_fleet_flag = auto_construct_orbital_ring_flag
+			remove_fleet_flag = auto_construct_habitat_central_flag
+			remove_fleet_flag = auto_construct_major_orbital_flag
+			remove_fleet_flag = auto_construct_hyper_relays_flag
+			remove_fleet_flag = auto_construct_gateway_flag
+			remove_fleet_flag = auto_construct_frameworld_outpost_flag
+			remove_fleet_flag = auto_construct_frameworld_harvest_flag
+			remove_fleet_flag = auto_construct_frameworld_salvage_habitat_flag
+
+			fleet_event = {
+				id = lazy_con_meg_events.10
+			}
+			fleet_event = {
+				id = lazy_con_meg_events.1
+			}
+		}
+	}
+
+	option = { 
+		name = "EXIT"
+	}
+}
+
+fleet_event = {
+	id = lazy_con_meg_events.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_fleet_flag = auto_mega_ship_flag
+		has_fleet_flag = auto_construct_hyper_relays_flag
+	}
+
+	immediate = {
+		set_fleet_flag = auto_mega_ship_flag
+		clear_fleet_actions = this
+		clear_orders = yes
+		set_name = "Auto Hyper Relay Ship"
+		queue_actions = {
+			repeat = {
+				find_closest_system = {
+					trigger = {
+						id = lazy_con_meg_events.2.trigger.1
+						# root = {
+						# 	NOR = {
+						# 		has_fleet_order = build_orbital_station_order
+						# 		has_fleet_order = evade_hostiles_order
+						# 		has_fleet_order = build_megastructure_fleet_order
+						# 		has_fleet_order = collect_data_fleet_order
+						# 		has_fleet_order = orbit_planet_order
+						# 		has_fleet_order = return_fleet_order
+						# 		has_fleet_order = auto_patrol_order
+						# 		has_fleet_order = repair_fleet_order
+						# 		has_fleet_order = use_bypass_order
+						# 		has_fleet_order = jumpdrive_order
+						# 		has_fleet_order = jumpdrive_windup
+						# 		has_fleet_order = follow_order
+						# 		has_fleet_order = move_to_system_point_order	
+						# 	}
+						# }
+						exists = starbase
+						OR = {
+							is_inside_border = root.owner
+							AND = {
+								exists = owner
+								owner = {
+									is_subject = yes
+									overlord = { is_same_value = root.owner }
+								}
+							}
+						}
+						OR = {
+							NOT = {
+								any_system_planet = {
+									is_surveyed = {
+										who = root.owner
+										status = no
+									}
+								}
+							}
+							AND = {
+								exists = owner
+								owner = {
+									is_subject = yes
+									overlord = { is_same_value = root.owner }
+								}
+							}
+						}
+						NOR = {
+							has_megastructure = hyper_relay
+							has_megastructure = hyper_relay_ruined
+							has_megastructure = hyper_relay_restored
+						}
+						# root.owner = { has_technology = tech_hyper_relays }
+						count_neighbor_system = {
+							count > 0
+						}
+						NOR = {
+							system_star = {
+								has_planet_flag = auto_construct_planet_flag
+							}
+							has_star_flag = auto_construct_system_flag
+						}
+						NOT = {
+							any_ship_in_system = {
+								exists = owner
+								OR = {
+									is_constructing = hyper_relay
+									owner = {
+										is_hostile = root.owner
+									}
+								}
+							}
+						}
+					}
+					found_system = {
+						effect = {
+							id = lazy_con_meg_events.2.effect.1
+							set_timed_star_flag = {
+								flag = auto_construct_system_flag
+								days = 360
+							}
+						}
+						move_to = this
+						find_closest_planet = {
+							trigger = {
+								id = lazy_con_meg_events.2.trigger.2
+								is_primary_star = yes
+								NOR = {
+									solar_system = {
+										any_ship_in_system = {
+											exists = owner
+											OR = {
+												is_constructing = hyper_relay
+												owner = {
+													is_hostile = root.owner
+												}
+											}
+										}
+									}
+									has_planet_flag = auto_construct_planet_flag
+								}
+							}
+							found_planet = {
+								effect = {
+									id = lazy_con_meg_events.2.effect.2
+									set_timed_planet_flag = {
+										flag = auto_construct_planet_flag
+										days = 360
+									}
+									prev = {
+										spawn_megastructure = {
+											type = constructing_og_megastructure
+											owner = root.owner
+											random_pos = yes
+											orbit_angle = 360
+											graphical_culture = root.owner
+
+											init_effect = {
+												prev = {
+													spawn_planet = {
+														class = pc_asteroid
+														
+														size = 1
+														location = prev
+														init_effect = {
+															set_name = "The Magic Rock (made of stardust and my tears)"
+															set_planet_flag = auto_construct_planet_pos_flag
+															clear_deposits = yes
+														}
+													}
+												}
+												delete_megastructure = this
+											}
+										}
+									}
+								}
+								find_closest_planet = {
+									trigger = {
+										id = lazy_con_meg_events.2.trigger.3
+										has_planet_flag = auto_construct_planet_pos_flag
+									}
+									found_planet = {
+										move_to = this
+										effect = {
+											id = lazy_con_meg_events.2.effect.3
+											root = {
+												set_event_locked = yes
+											}
+											prevprev = {
+												spawn_megastructure = {
+													type = constructing_og_megastructure
+													owner = root.owner
+													coords_from = prev
+													orbit_angle = 360
+													graphical_culture = root.owner
+		
+													init_effect = {
+														set_megastructure_flag = constructing_mega_with_@root
+														prev = {
+															system_event = {
+																id = lazy_con_meg_events.11
+																days = 360
+															}
+														}
+													}
+												}
+											}
+										}
+										wait = 360
+										effect = {
+											id = lazy_con_meg_events.2.effect.4
+											root = {
+												set_event_locked = no
+											}
+											if = {
+												limit = {
+													prevprev = {
+														exists = starbase
+														OR = {
+															is_inside_border = root.owner
+															AND = {
+																exists = owner
+																owner = {
+																	is_subject = yes
+																	overlord = { is_same_value = root.owner }
+																}
+															}
+														}
+														OR = {
+															NOT = {
+																any_system_planet = {
+																	is_surveyed = {
+																		who = root.owner
+																		status = no
+																	}
+																}
+															}
+															AND = {
+																exists = owner
+																owner = {
+																	is_subject = yes
+																	overlord = { is_same_value = root.owner }
+																}
+															}
+														}
+														NOR = {
+															has_megastructure = hyper_relay
+															has_megastructure = hyper_relay_ruined
+															has_megastructure = hyper_relay_restored
+														}
+														count_neighbor_system = {
+															count > 0
+														}
+														NOT = {
+															any_ship_in_system = {
+																exists = owner
+																OR = {
+																	is_constructing = hyper_relay
+																	owner = {
+																		is_hostile = root.owner
+																	}
+																}
+															}
+														}
+													}
+													root.owner = {
+														resource_stockpile_compare = {
+															resource = influence
+															value >= 25
+															mult = value:positive_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+														}
+														resource_stockpile_compare = {
+															resource = rare_crystals
+															value >= 100
+															mult = value:positive_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+														}
+														resource_stockpile_compare = {
+															resource = alloys
+															value >= 500
+															mult = value:positive_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+														}
+													}
+												}
+												prevprev = {
+													spawn_megastructure = {
+														type = hyper_relay
+														owner = root.owner
+														coords_from = prev
+														graphical_culture = root.owner
+													}
+												}
+												if = {
+													limit = {
+														has_planet_flag = auto_construct_planet_pos_flag
+													}
+													remove_planet = yes
+												}
+												root.owner = {
+													add_resource = {
+														influence = 25
+														mult = value:negative_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+													}
+													add_resource = {
+														rare_crystals = 100
+														mult = value:negative_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+													}
+													add_resource = {
+														alloys = 500
+														mult = value:negative_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+													}
+												}
+												if = {
+													limit = {
+														has_planet_flag = auto_construct_planet_pos_flag
+													}
+													remove_planet = yes
+												}
+												prevprev = {
+													random_system_megastructure = {
+														limit = {
+															has_megastructure_flag = constructing_mega_with_@root
+														}
+														remove_megastructure = this
+													}
+												}
+											}
+											else = {
+												if = {
+													limit = {
+														has_planet_flag = auto_construct_planet_pos_flag
+													}
+													remove_planet = yes
+												}
+												prevprev = {
+													random_system_megastructure = {
+														limit = {
+															has_megastructure_flag = constructing_mega_with_@root
+														}
+														remove_megastructure = this
+													}
+												}
+											}
+										}
+									}
+									failed = {
+										effect = {
+											id = lazy_con_meg_events.2.effect.5
+											if = {
+												limit = {
+													has_planet_flag = auto_construct_planet_pos_flag
+												}
+												remove_planet = yes
+											}
+											prev = {
+												random_system_megastructure = {
+													limit = {
+														has_megastructure_flag = constructing_mega_with_@root
+													}
+													remove_megastructure = this
+												}
+											}
+											root = {
+												fleet_event = {
+													id = lazy_con_meg_events.2
+													days = 1
+												}
+											}
+										}
+									}
+								}
+							}
+							failed = {
+								effect = {
+									id = lazy_con_meg_events.2.effect.6
+									root = {
+										fleet_event = {
+											id = lazy_con_meg_events.2
+											days = 1
+										}
+									}
+								}
+							}
+						}
+					}
+					failed = {
+						effect = {
+							id = lazy_con_meg_events.2.effect.7
+							root = {
+								fleet_event = {
+									id = lazy_con_meg_events.2
+									days = 1
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = lazy_con_meg_events.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_fleet_flag = auto_mega_ship_flag
+		has_fleet_flag = auto_construct_gateway_flag
+	}
+
+	immediate = {
+		set_fleet_flag = auto_mega_ship_flag
+		clear_fleet_actions = this
+		clear_orders = yes
+		set_name = "Auto Gateway Ship"
+		queue_actions = {
+			repeat = {
+				find_closest_system = {
+					trigger = {
+						id = lazy_con_meg_events.3.trigger.1
+						# root = {
+						# 	NOR = {
+						# 		has_fleet_order = build_orbital_station_order
+						# 		has_fleet_order = evade_hostiles_order
+						# 		has_fleet_order = build_megastructure_fleet_order
+						# 		has_fleet_order = collect_data_fleet_order
+						# 		has_fleet_order = orbit_planet_order
+						# 		has_fleet_order = return_fleet_order
+						# 		has_fleet_order = auto_patrol_order
+						# 		has_fleet_order = repair_fleet_order
+						# 		has_fleet_order = use_bypass_order
+						# 		has_fleet_order = jumpdrive_order
+						# 		has_fleet_order = jumpdrive_windup
+						# 		has_fleet_order = follow_order
+						# 		has_fleet_order = move_to_system_point_order	
+						# 	}
+						# }
+						exists = starbase
+						OR = {
+							is_inside_border = root.owner
+							AND = {
+								exists = owner
+								owner = {
+									is_subject = yes
+									overlord = { is_same_value = root.owner }
+								}
+							}
+						}
+						OR = {
+							NOT = {
+								any_system_planet = {
+									is_surveyed = {
+										who = root.owner
+										status = no
+									}
+								}
+							}
+							AND = {
+								exists = owner
+								owner = {
+									is_subject = yes
+									overlord = { is_same_value = root.owner }
+								}
+							}
+						}
+						NOR = {
+							has_megastructure = gateway_0
+							has_megastructure = gateway_ruined
+							has_megastructure = gateway_restored
+							has_megastructure = gateway_final
+						}
+						NOR = {
+							system_star = {
+								has_planet_flag = auto_construct_planet_flag
+							}
+							has_star_flag = auto_construct_system_flag
+						}
+						NOT = {
+							any_ship_in_system = {
+								exists = owner
+								OR = {
+									if = {
+										limit = {
+											root.owner = {
+												has_global_flag = giga_game_started
+											}
+										}
+										is_constructing = gateway_final
+									}
+									else = {
+										is_constructing = gateway_0
+									}
+									owner = {
+										is_hostile = root.owner
+									}
+								}
+							}
+						}
+					}
+					found_system = {
+						effect = {
+							id = lazy_con_meg_events.3.effect.1
+							set_timed_star_flag = {
+								flag = auto_construct_system_flag
+								days = 1080
+							}
+						}
+						move_to = this
+						find_closest_planet = {
+							trigger = {
+								id = lazy_con_meg_events.3.trigger.2
+								is_primary_star = yes
+								NOR = {
+									solar_system = {
+										any_ship_in_system = {
+											exists = owner
+											OR = {
+												if = {
+													limit = {
+														root.owner = {
+															has_global_flag = giga_game_started
+														}
+													}
+													is_constructing = gateway_final
+												}
+												else = {
+													is_constructing = gateway_0
+												}
+												owner = {
+													is_hostile = root.owner
+												}
+											}
+										}
+									}
+									has_planet_flag = auto_construct_planet_flag
+								}
+							}
+							found_planet = {
+								effect = {
+									id = lazy_con_meg_events.3.effect.2
+									set_timed_planet_flag = {
+										flag = auto_construct_planet_flag
+										days = 1080
+									}
+									prev = {
+										spawn_megastructure = {
+											type = constructing_og_megastructure
+											owner = root.owner
+											random_pos = yes
+											orbit_angle = 360
+											graphical_culture = root.owner
+
+											init_effect = {
+												prev = {
+													spawn_planet = {
+														class = pc_asteroid
+														
+														size = 1
+														location = prev
+														init_effect = {
+															set_name = "The Magic Rock (made of stardust and my tears)"
+															set_planet_flag = auto_construct_planet_pos_flag
+															clear_deposits = yes
+														}
+													}
+												}
+												remove_megastructure = this
+											}
+										}
+									}
+								}
+								find_closest_planet = {
+									trigger = {
+										id = lazy_con_meg_events.3.trigger.3
+										has_planet_flag = auto_construct_planet_pos_flag
+									}
+									found_planet = {
+										move_to = this
+										effect = {
+											id = lazy_con_meg_events.3.effect.3
+											root = {
+												set_event_locked = yes
+											}
+											prevprev = {
+												spawn_megastructure = {
+													type = constructing_og_megastructure
+													owner = root.owner
+													coords_from = prev
+													orbit_angle = 360
+													graphical_culture = root.owner
+		
+													init_effect = {
+														set_megastructure_flag = constructing_mega_with_@root
+														prev = {
+															system_event = {
+																id = lazy_con_meg_events.11
+																days = 1080
+															}
+														}
+													}
+												}
+											}
+										}
+										wait = 1080
+										effect = {
+											id = lazy_con_meg_events.3.effect.4
+											root = {
+												set_event_locked = no
+											}
+											if = {
+												limit = {
+													prevprev = {
+														exists = starbase
+														OR = {
+															is_inside_border = root.owner
+															AND = {
+																exists = owner
+																owner = {
+																	is_subject = yes
+																	overlord = { is_same_value = root.owner }
+																}
+															}
+														}
+														OR = {
+															NOT = {
+																any_system_planet = {
+																	is_surveyed = {
+																		who = root.owner
+																		status = no
+																	}
+																}
+															}
+															AND = {
+																exists = owner
+																owner = {
+																	is_subject = yes
+																	overlord = { is_same_value = root.owner }
+																}
+															}
+														}
+														NOR = {
+															has_megastructure = gateway_0
+															has_megastructure = gateway_ruined
+															has_megastructure = gateway_restored
+															has_megastructure = gateway_final
+														}
+														NOT = {
+															any_ship_in_system = {
+																exists = owner
+																OR = {
+																	if = {
+																		limit = {
+																			root.owner = {
+																				has_global_flag = giga_game_started
+																			}
+																		}
+																		is_constructing = gateway_final
+																	}
+																	else = {
+																		is_constructing = gateway_0
+																	}
+																	owner = {
+																		is_hostile = root.owner
+																	}
+																}
+															}
+														}
+													}
+													root.owner = {
+														if = {
+															limit = {
+																has_global_flag = giga_game_started
+															}
+															resource_stockpile_compare = {
+																resource = influence
+																value >= 75
+																mult = value:positive_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+															}
+															resource_stockpile_compare = {
+																resource = alloys
+																value >= 5000
+																mult = value:positive_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+															}
+															resource_stockpile_compare = {
+																resource = energy
+																value >= 6000
+																mult = value:positive_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+															}
+														}
+														else = {
+															resource_stockpile_compare = {
+																resource = influence
+																value >= 75
+																mult = value:positive_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+															}
+															resource_stockpile_compare = {
+																resource = alloys
+																value >= 2500
+																mult = value:positive_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+															}
+														}
+													}
+												}
+												prevprev = {
+													if = {
+														limit = {
+															root.owner = {
+																has_global_flag = giga_game_started
+															}
+														}
+														spawn_megastructure = {
+															type = gateway_final
+															owner = root.owner
+															coords_from = prev
+															graphical_culture = root.owner
+														}
+													}
+													else = {
+														spawn_megastructure = {
+															type = gateway_0
+															owner = root.owner
+															coords_from = prev
+															graphical_culture = root.owner
+														}
+													}
+												}
+												if = {
+													limit = {
+														has_planet_flag = auto_construct_planet_pos_flag
+													}
+													remove_planet = yes
+												}
+												root.owner = {
+													if = {
+														limit = {
+															has_global_flag = giga_game_started
+														}
+														add_resource = {
+															influence = 75
+															mult = value:negative_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+														}
+														add_resource = {
+															alloys = 5000
+															mult = value:negative_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+														}
+														add_resource = {
+															alloys = 6000
+															mult = value:negative_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+														}
+													}
+													else = {
+														add_resource = {
+															influence = 75
+															mult = value:negative_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+														}
+														add_resource = {
+															alloys = 2500
+															mult = value:negative_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+														}
+													}
+												}
+												if = {
+													limit = {
+														has_planet_flag = auto_construct_planet_pos_flag
+													}
+													remove_planet = yes
+												}
+												prevprev = {
+													random_system_megastructure = {
+														limit = {
+															has_megastructure_flag = constructing_mega_with_@root
+														}
+														remove_megastructure = this
+													}
+												}
+											}
+											else = {
+												if = {
+													limit = {
+														has_planet_flag = auto_construct_planet_pos_flag
+													}
+													remove_planet = yes
+												}
+												prevprev = {
+													random_system_megastructure = {
+														limit = {
+															has_megastructure_flag = constructing_mega_with_@root
+														}
+														remove_megastructure = this
+													}
+												}
+											}
+										}
+									}
+									failed = {
+										effect = {
+											id = lazy_con_meg_events.3.effect.5
+											if = {
+												limit = {
+													has_planet_flag = auto_construct_planet_pos_flag
+												}
+												remove_planet = yes
+											}
+											prev = {
+												random_system_megastructure = {
+													limit = {
+														has_megastructure_flag = constructing_mega_with_@root
+													}
+													remove_megastructure = this
+												}
+											}
+											root = {
+												fleet_event = {
+													id = lazy_con_meg_events.3
+													days = 1
+												}
+											}
+										}
+									}
+								}
+							}
+							failed = {
+								effect = {
+									id = lazy_con_meg_events.3.effect.6
+									root = {
+										fleet_event = {
+											id = lazy_con_meg_events.3
+											days = 1
+										}
+									}
+								}
+							}
+						}
+					}
+					failed = {
+						effect = {
+							id = lazy_con_meg_events.3.effect.7
+							root = {
+								fleet_event = {
+									id = lazy_con_meg_events.3
+									days = 1
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = lazy_con_meg_events.4
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_fleet_flag = auto_mega_ship_flag
+		has_fleet_flag = auto_construct_habitat_central_flag
+	}
+
+	immediate = {
+		set_fleet_flag = auto_mega_ship_flag
+		clear_fleet_actions = this
+		clear_orders = yes
+		set_name = "Auto Central Habitat Ship"
+		queue_actions = {
+			repeat = {
+				find_closest_system = {
+					trigger = {
+						id = lazy_con_meg_events.4.trigger.1
+						# root = {
+						# 	NOR = {
+						# 		has_fleet_order = build_orbital_station_order
+						# 		has_fleet_order = evade_hostiles_order
+						# 		has_fleet_order = build_megastructure_fleet_order
+						# 		has_fleet_order = collect_data_fleet_order
+						# 		has_fleet_order = orbit_planet_order
+						# 		has_fleet_order = return_fleet_order
+						# 		has_fleet_order = auto_patrol_order
+						# 		has_fleet_order = repair_fleet_order
+						# 		has_fleet_order = use_bypass_order
+						# 		has_fleet_order = jumpdrive_order
+						# 		has_fleet_order = jumpdrive_windup
+						# 		has_fleet_order = follow_order
+						# 		has_fleet_order = move_to_system_point_order	
+						# 	}
+						# }
+						exists = starbase
+						is_inside_border = root.owner
+						NOT = {
+							OR = {
+								any_system_planet = {
+									has_planet_flag = habitat
+								}
+								has_megastructure = habitat_central_complex_ruined
+							}
+						}
+						NOR = {
+							system_star = {
+								has_planet_flag = auto_construct_planet_flag
+							}
+							has_star_flag = auto_construct_system_flag
+						}
+						NOT = {
+							any_ship_in_system = {
+								exists = owner
+								OR = {
+									is_constructing = habitat_central_complex
+									owner = {
+										is_hostile = root.owner
+									}
+								}
+							}
+						}
+
+						any_system_planet = {
+							NOT = {
+								has_planet_flag = has_orbital_debris
+							}
+							is_surveyed = {
+								who = root.owner
+								status = yes
+							}
+							NOT = { has_anomaly = yes }
+							NOR = {
+								has_planet_flag = megastructure
+								has_planet_flag = has_megastructure
+								solar_system = {
+									OR = {
+										has_star_flag = ring_world_built
+										has_star_flag = ithomes_gate
+									}
+								}
+								is_planet_class = pc_ringworld_habitable
+								is_planet_class = pc_ringworld_habitable_damaged
+								is_planet_class = pc_ringworld_tech
+								is_planet_class = pc_ringworld_tech_damaged
+								is_planet_class = pc_ringworld_seam
+								is_planet_class = pc_ringworld_seam_damaged
+								is_planet_class = pc_habitat
+							}
+							NOR = {
+								is_asteroid = yes
+								is_moon = yes
+							}
+							NOT = {
+								solar_system = {
+									has_star_flag = solarpunk_system_02
+								}
+							}
+						}
+					}
+					found_system = {
+						effect = {
+							id = lazy_con_meg_events.4.effect.1
+							set_timed_star_flag = {
+								flag = auto_construct_system_flag
+								days = 1800
+							}
+						}
+						move_to = this
+						find_closest_planet = {
+							trigger = {
+								id = lazy_con_meg_events.4.trigger.2
+								NOR = {
+									solar_system = {
+										any_ship_in_system = {
+											exists = owner
+											OR = {
+												is_constructing = habitat_central_complex
+												owner = {
+													is_hostile = root.owner
+												}
+											}
+										}
+									}
+									has_planet_flag = auto_construct_planet_flag
+								}
+								is_surveyed = {
+									who = prev.from
+									status = yes
+								}
+								NOT = { has_anomaly = yes }
+								NOR = {
+									has_planet_flag = megastructure
+									has_planet_flag = has_megastructure
+									solar_system = {
+										OR = {
+											has_star_flag = ring_world_built
+											has_star_flag = ithomes_gate
+										}
+									}
+									is_planet_class = pc_ringworld_habitable
+									is_planet_class = pc_ringworld_habitable_damaged
+									is_planet_class = pc_ringworld_tech
+									is_planet_class = pc_ringworld_tech_damaged
+									is_planet_class = pc_ringworld_seam
+									is_planet_class = pc_ringworld_seam_damaged
+									is_planet_class = pc_habitat
+								}
+								NOR = {
+									is_asteroid = yes
+									is_moon = yes
+								}
+								NOT = {
+									solar_system = {
+										has_star_flag = solarpunk_system_02
+									}
+								}
+							}
+							found_planet = {
+								move_to = this
+								effect = {
+									id = lazy_con_meg_events.4.effect.2
+									set_timed_planet_flag = {
+										flag = auto_construct_planet_flag
+										days = 1800
+									}
+									root = {
+										set_event_locked = yes
+									}
+									prev = {
+										spawn_megastructure = {
+											type = constructing_megastructure
+											owner = root.owner
+											planet = prev
+											orbit_angle = 360
+											graphical_culture = root.owner
+
+											init_effect = {
+												set_megastructure_flag = constructing_mega_with_@root
+												prev = {
+													system_event = {
+														id = lazy_con_meg_events.11
+														days = 1800
+													}
+												}
+											}
+										}
+									}
+								}
+								wait = 1800
+								effect = {
+									id = lazy_con_meg_events.4.effect.3
+									root = {
+										set_event_locked = no
+									}
+									if = {
+										limit = {
+											is_surveyed = {
+												who = prev.from
+												status = yes
+											}
+											NOT = { has_anomaly = yes }
+											NOR = {
+												has_planet_flag = megastructure
+												has_planet_flag = has_megastructure
+												solar_system = {
+													OR = {
+														has_star_flag = ring_world_built
+														has_star_flag = ithomes_gate
+													}
+												}
+												is_planet_class = pc_ringworld_habitable
+												is_planet_class = pc_ringworld_habitable_damaged
+												is_planet_class = pc_ringworld_tech
+												is_planet_class = pc_ringworld_tech_damaged
+												is_planet_class = pc_ringworld_seam
+												is_planet_class = pc_ringworld_seam_damaged
+												is_planet_class = pc_habitat
+											}
+											NOR = {
+												is_asteroid = yes
+												is_moon = yes
+											}
+											NOT = {
+												solar_system = {
+													has_star_flag = solarpunk_system_02
+												}
+											}
+											root.owner = {
+												resource_stockpile_compare = {
+													resource = influence
+													value >= 200
+													mult = value:positive_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+												}
+												resource_stockpile_compare = {
+													resource = alloys
+													value >= 1500
+													mult = value:positive_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+												}
+											}
+										}
+										prev = {
+											spawn_megastructure = {
+												type = habitat_central_complex
+												owner = root.owner
+												planet = prev
+												graphical_culture = root.owner
+											}
+										}
+										root.owner = {
+											add_resource = {
+												influence = 200
+												mult = value:negative_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+											}
+											add_resource = {
+												alloys = 1500
+												mult = value:negative_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+											}
+										}
+										prev = {
+											random_system_megastructure = {
+												limit = {
+													has_megastructure_flag = constructing_mega_with_@root
+												}
+												remove_megastructure = this
+											}
+										}
+									}
+									else = {
+										prev = {
+											random_system_megastructure = {
+												limit = {
+													has_megastructure_flag = constructing_mega_with_@root
+												}
+												remove_megastructure = this
+											}
+										}
+									}
+
+								}
+							}
+							failed = {
+								effect = {
+									id = lazy_con_meg_events.4.effect.4
+									random_system_megastructure = {
+										limit = {
+											has_megastructure_flag = constructing_mega_with_@root
+										}
+										remove_megastructure = this
+									}
+									root = {
+										fleet_event = {
+											id = lazy_con_meg_events.4
+											days = 1
+										}
+									}
+								}
+							}
+						}
+					}
+					failed = {
+						effect = {
+							id = lazy_con_meg_events.4.effect.5
+							root = {
+								fleet_event = {
+									id = lazy_con_meg_events.4
+									days = 1
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = lazy_con_meg_events.5
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_fleet_flag = auto_mega_ship_flag
+		has_fleet_flag = auto_construct_major_orbital_flag
+	}
+
+	immediate = {
+		set_fleet_flag = auto_mega_ship_flag
+		clear_fleet_actions = this
+		clear_orders = yes
+		set_name = "Auto Major Orbital Ship"
+		queue_actions = {
+			repeat = {
+				find_closest_system = {
+					trigger = {
+						id = lazy_con_meg_events.5.trigger.1
+						# root = {
+						# 	NOR = {
+						# 		has_fleet_order = build_orbital_station_order
+						# 		has_fleet_order = evade_hostiles_order
+						# 		has_fleet_order = build_megastructure_fleet_order
+						# 		has_fleet_order = collect_data_fleet_order
+						# 		has_fleet_order = orbit_planet_order
+						# 		has_fleet_order = return_fleet_order
+						# 		has_fleet_order = auto_patrol_order
+						# 		has_fleet_order = repair_fleet_order
+						# 		has_fleet_order = use_bypass_order
+						# 		has_fleet_order = jumpdrive_order
+						# 		has_fleet_order = jumpdrive_windup
+						# 		has_fleet_order = follow_order
+						# 		has_fleet_order = move_to_system_point_order	
+						# 	}
+						# }
+						exists = starbase
+						is_inside_border = root.owner
+						any_system_planet = {
+							has_planet_flag = habitat
+						}
+						NOT = {
+							any_ship_in_system = {
+								exists = owner
+								owner = {
+									is_hostile = root.owner
+								}
+							}
+						}
+						any_system_planet = {
+							NOT = {
+								has_planet_flag = auto_construct_planet_flag
+							}
+							is_surveyed = {
+								who = root.owner
+								status = yes
+							}
+							NOT = { has_anomaly = yes }
+							NOR = {
+								has_planet_flag = megastructure
+								has_planet_flag = has_megastructure
+								solar_system = {
+									OR = {
+										has_star_flag = ring_world_built
+										has_star_flag = ithomes_gate
+									}
+								}
+								is_planet_class = pc_ringworld_habitable
+								is_planet_class = pc_ringworld_habitable_damaged
+								is_planet_class = pc_ringworld_tech
+								is_planet_class = pc_ringworld_tech_damaged
+								is_planet_class = pc_ringworld_seam
+								is_planet_class = pc_ringworld_seam_damaged
+								is_planet_class = pc_habitat
+							}
+							NOR = {
+								has_planet_flag = has_orbital_debris
+							}
+							NOR = {
+								is_asteroid = yes
+								is_moon = yes
+							}
+							NOT = {
+								solar_system = {
+									has_star_flag = solarpunk_system_02
+								}
+							}
+							NOT = {
+								any_fleet_in_orbit = {
+									is_constructing = major_orbital
+								}
+							}
+						}
+					}
+					found_system = {
+						move_to = this
+						find_closest_planet = {
+							trigger = {
+								id = lazy_con_meg_events.5.trigger.2
+								NOR = {
+									any_fleet_in_orbit = {
+										is_constructing = major_orbital
+									}
+									solar_system = {
+										any_ship_in_system = {
+											exists = owner
+											owner = {
+												is_hostile = root.owner
+											}
+										}
+									}
+									has_planet_flag = auto_construct_planet_flag
+								}
+								is_surveyed = {
+									who = prev.from
+									status = yes
+								}
+								NOT = { has_anomaly = yes }
+								NOR = {
+									has_planet_flag = megastructure
+									has_planet_flag = has_megastructure
+									solar_system = {
+										OR = {
+											has_star_flag = ring_world_built
+											has_star_flag = ithomes_gate
+										}
+									}
+									is_planet_class = pc_ringworld_habitable
+									is_planet_class = pc_ringworld_habitable_damaged
+									is_planet_class = pc_ringworld_tech
+									is_planet_class = pc_ringworld_tech_damaged
+									is_planet_class = pc_ringworld_seam
+									is_planet_class = pc_ringworld_seam_damaged
+									is_planet_class = pc_habitat
+								}
+								NOR = {
+									has_planet_flag = has_orbital_debris
+								}
+								NOR = {
+									is_asteroid = yes
+									is_moon = yes
+								}
+								NOT = {
+									solar_system = {
+										has_star_flag = solarpunk_system_02
+									}
+								}
+							}
+							found_planet = {
+								move_to = this
+								effect = {
+									id = lazy_con_meg_events.5.effect.1
+									set_timed_planet_flag = {
+										flag = auto_construct_planet_flag
+										days = 720
+									}
+									root = {
+										set_event_locked = yes
+									}
+									prev = {
+										spawn_megastructure = {
+											type = constructing_megastructure
+											owner = root.owner
+											planet = prev
+											orbit_angle = 360
+											graphical_culture = root.owner
+
+											init_effect = {
+												set_megastructure_flag = constructing_mega_with_@root
+												prev = {
+													system_event = {
+														id = lazy_con_meg_events.11
+														days = 720
+													}
+												}
+											}
+										}
+									}
+								}
+								wait = 720
+								effect = {
+									id = lazy_con_meg_events.5.effect.2
+									root = {
+										set_event_locked = no
+									}
+									if = {
+										limit = {
+											is_surveyed = {
+												who = prev.from
+												status = yes
+											}
+											NOT = { has_anomaly = yes }
+											NOR = {
+												has_planet_flag = megastructure
+												has_planet_flag = has_megastructure
+												solar_system = {
+													OR = {
+														has_star_flag = ring_world_built
+														has_star_flag = ithomes_gate
+													}
+												}
+												is_planet_class = pc_ringworld_habitable
+												is_planet_class = pc_ringworld_habitable_damaged
+												is_planet_class = pc_ringworld_tech
+												is_planet_class = pc_ringworld_tech_damaged
+												is_planet_class = pc_ringworld_seam
+												is_planet_class = pc_ringworld_seam_damaged
+												is_planet_class = pc_habitat
+											}
+											NOR = {
+												has_planet_flag = has_orbital_debris
+											}
+											NOR = {
+												is_asteroid = yes
+												is_moon = yes
+											}
+											NOT = {
+												solar_system = {
+													has_star_flag = solarpunk_system_02
+												}
+											}
+											root.owner = {
+												resource_stockpile_compare = {
+													resource = alloys
+													value >= 200
+													mult = value:positive_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+												}
+											}
+										}
+										prev = {
+											spawn_megastructure = {
+												type = major_orbital
+												owner = root.owner
+												planet = prev
+												graphical_culture = root.owner
+											}
+										}
+										root.owner = {
+											add_resource = {
+												alloys = 200
+												mult = value:negative_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+											}
+										}
+										prev = {
+											random_system_megastructure = {
+												limit = {
+													has_megastructure_flag = constructing_mega_with_@root
+												}
+												remove_megastructure = this
+											}
+										}
+									}
+									else = {
+										prev = {
+											random_system_megastructure = {
+												limit = {
+													has_megastructure_flag = constructing_mega_with_@root
+												}
+												remove_megastructure = this
+											}
+										}
+									}
+
+								}
+							}
+							failed = {
+								effect = {
+									id = lazy_con_meg_events.5.effect.3
+									random_system_megastructure = {
+										limit = {
+											has_megastructure_flag = constructing_mega_with_@root
+										}
+										remove_megastructure = this
+									}
+									root = {
+										fleet_event = {
+											id = lazy_con_meg_events.5
+											days = 1
+										}
+									}
+								}
+							}
+						}
+					}
+					failed = {
+						effect = {
+							id = lazy_con_meg_events.5.effect.4
+							root = {
+								fleet_event = {
+									id = lazy_con_meg_events.5
+									days = 1
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = lazy_con_meg_events.6
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_fleet_flag = auto_mega_ship_flag
+		has_fleet_flag = auto_construct_minor_orbital_flag
+	}
+
+	immediate = {
+		set_fleet_flag = auto_mega_ship_flag
+		clear_fleet_actions = this
+		clear_orders = yes
+		set_name = "Auto Minor Orbital Ship"
+		queue_actions = {
+			repeat = {
+				find_closest_system = {
+					trigger = {
+						id = lazy_con_meg_events.6.trigger.1
+						# root = {
+						# 	NOR = {
+						# 		has_fleet_order = build_orbital_station_order
+						# 		has_fleet_order = evade_hostiles_order
+						# 		has_fleet_order = build_megastructure_fleet_order
+						# 		has_fleet_order = collect_data_fleet_order
+						# 		has_fleet_order = orbit_planet_order
+						# 		has_fleet_order = return_fleet_order
+						# 		has_fleet_order = auto_patrol_order
+						# 		has_fleet_order = repair_fleet_order
+						# 		has_fleet_order = use_bypass_order
+						# 		has_fleet_order = jumpdrive_order
+						# 		has_fleet_order = jumpdrive_windup
+						# 		has_fleet_order = follow_order
+						# 		has_fleet_order = move_to_system_point_order	
+						# 	}
+						# }
+						exists = starbase
+						is_inside_border = root.owner
+						any_system_planet = {
+							has_planet_flag = habitat
+						}
+						NOT = {
+							any_ship_in_system = {
+								exists = owner
+								owner = {
+									is_hostile = root.owner
+								}
+							}
+						}
+						any_system_planet = {
+							NOT = {
+								has_planet_flag = auto_construct_planet_flag
+							}
+							is_surveyed = {
+								who = root.owner
+								status = yes
+							}
+							NOT = { has_anomaly = yes }
+							NOR = {
+								has_planet_flag = megastructure
+								has_planet_flag = has_megastructure
+								solar_system = {
+									OR = {
+										has_star_flag = ring_world_built
+										has_star_flag = ithomes_gate
+									}
+								}
+								is_planet_class = pc_ringworld_habitable
+								is_planet_class = pc_ringworld_habitable_damaged
+								is_planet_class = pc_ringworld_tech
+								is_planet_class = pc_ringworld_tech_damaged
+								is_planet_class = pc_ringworld_seam
+								is_planet_class = pc_ringworld_seam_damaged
+								is_planet_class = pc_habitat
+							}
+							NOR = {
+								has_planet_flag = has_orbital_debris
+							}
+							OR = {
+								is_asteroid = yes
+								is_moon = yes
+							}
+							is_star = no
+							NOT = {
+								solar_system = {
+									has_star_flag = solarpunk_system_02
+								}
+							}
+							NOT = {
+								any_fleet_in_orbit = {
+									is_constructing = minor_orbital
+								}
+							}
+						}
+					}
+					found_system = {
+						move_to = this
+						find_closest_planet = {
+							trigger = {
+								id = lazy_con_meg_events.6.trigger.2
+								NOR = {
+									any_fleet_in_orbit = {
+										is_constructing = minor_orbital
+									}
+									solar_system = {
+										any_ship_in_system = {
+											exists = owner
+											owner = {
+												is_hostile = root.owner
+											}
+										}
+									}
+									has_planet_flag = auto_construct_planet_flag
+								}
+								is_surveyed = {
+									who = root.owner
+									status = yes
+								}
+								NOT = { has_anomaly = yes }
+								NOR = {
+									has_planet_flag = megastructure
+									has_planet_flag = has_megastructure
+									solar_system = {
+										OR = {
+											has_star_flag = ring_world_built
+											has_star_flag = ithomes_gate
+										}
+									}
+									is_planet_class = pc_ringworld_habitable
+									is_planet_class = pc_ringworld_habitable_damaged
+									is_planet_class = pc_ringworld_tech
+									is_planet_class = pc_ringworld_tech_damaged
+									is_planet_class = pc_ringworld_seam
+									is_planet_class = pc_ringworld_seam_damaged
+									is_planet_class = pc_habitat
+								}
+								NOR = {
+									has_planet_flag = has_orbital_debris
+								}
+								OR = {
+									is_asteroid = yes
+									is_moon = yes
+								}
+								NOT = {
+									solar_system = {
+										has_star_flag = solarpunk_system_02
+									}
+								}
+							}
+							found_planet = {
+								move_to = this
+								effect = {
+									id = lazy_con_meg_events.6.effect.1
+									set_timed_planet_flag = {
+										flag = auto_construct_planet_flag
+										days = 180
+									}
+									root = {
+										set_event_locked = yes
+									}
+									prev = {
+										spawn_megastructure = {
+											type = constructing_megastructure
+											owner = root.owner
+											planet = prev
+											orbit_angle = 360
+											graphical_culture = root.owner
+
+											init_effect = {
+												set_megastructure_flag = constructing_mega_with_@root
+												prev = {
+													system_event = {
+														id = lazy_con_meg_events.11
+														days = 180
+													}
+												}
+											}
+										}
+									}
+								}
+								wait = 180
+								effect = {
+									id = lazy_con_meg_events.6.effect.2
+									root = {
+										set_event_locked = no
+									}
+									if = {
+										limit = {
+											is_surveyed = {
+												who = prev.from
+												status = yes
+											}
+											NOT = { has_anomaly = yes }
+											NOR = {
+												has_planet_flag = megastructure
+												has_planet_flag = has_megastructure
+												solar_system = {
+													OR = {
+														has_star_flag = ring_world_built
+														has_star_flag = ithomes_gate
+													}
+												}
+												is_planet_class = pc_ringworld_habitable
+												is_planet_class = pc_ringworld_habitable_damaged
+												is_planet_class = pc_ringworld_tech
+												is_planet_class = pc_ringworld_tech_damaged
+												is_planet_class = pc_ringworld_seam
+												is_planet_class = pc_ringworld_seam_damaged
+												is_planet_class = pc_habitat
+											}
+											NOR = {
+												has_planet_flag = has_orbital_debris
+											}
+											OR = {
+												is_asteroid = yes
+												is_moon = yes
+											}
+											NOT = {
+												solar_system = {
+													has_star_flag = solarpunk_system_02
+												}
+											}
+											root.owner = {
+												resource_stockpile_compare = {
+													resource = alloys
+													value >= 50
+													mult = value:positive_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+												}
+											}
+										}
+										prev = {
+											spawn_megastructure = {
+												type = minor_orbital
+												owner = root.owner
+												planet = prev
+												graphical_culture = root.owner
+											}
+										}
+										root.owner = {
+											add_resource = {
+												alloys = 50
+												mult = value:negative_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+											}
+										}
+										prev = {
+											random_system_megastructure = {
+												limit = {
+													has_megastructure_flag = constructing_mega_with_@root
+												}
+												remove_megastructure = this
+											}
+										}
+									}
+									else = {
+										prev = {
+											random_system_megastructure = {
+												limit = {
+													has_megastructure_flag = constructing_mega_with_@root
+												}
+												remove_megastructure = this
+											}
+										}
+									}
+
+								}
+							}
+							failed = {
+								effect = {
+									id = lazy_con_meg_events.6.effect.3
+									random_system_megastructure = {
+										limit = {
+											has_megastructure_flag = constructing_mega_with_@root
+										}
+										remove_megastructure = this
+									}
+									root = {
+										fleet_event = {
+											id = lazy_con_meg_events.6
+											days = 1
+										}
+									}
+								}
+							}
+						}
+					}
+					failed = {
+						effect = {
+							id = lazy_con_meg_events.6.effect.4
+							root = {
+								fleet_event = {
+									id = lazy_con_meg_events.6
+									days = 1
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = lazy_con_meg_events.7
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_fleet_flag = auto_mega_ship_flag
+		has_fleet_flag = auto_construct_frameworld_outpost_flag
+	}
+
+	immediate = {
+		set_fleet_flag = auto_mega_ship_flag
+		clear_fleet_actions = this
+		clear_orders = yes
+		set_name = "Auto Frameworld Outpost Ship"
+		queue_actions = {
+			repeat = {
+				find_closest_system = {
+					trigger = {
+						id = lazy_con_meg_events.7.trigger.1
+						# root = {
+						# 	NOR = {
+						# 		has_fleet_order = build_orbital_station_order
+						# 		has_fleet_order = evade_hostiles_order
+						# 		has_fleet_order = build_megastructure_fleet_order
+						# 		has_fleet_order = collect_data_fleet_order
+						# 		has_fleet_order = orbit_planet_order
+						# 		has_fleet_order = return_fleet_order
+						# 		has_fleet_order = auto_patrol_order
+						# 		has_fleet_order = repair_fleet_order
+						# 		has_fleet_order = use_bypass_order
+						# 		has_fleet_order = jumpdrive_order
+						# 		has_fleet_order = jumpdrive_windup
+						# 		has_fleet_order = follow_order
+						# 		has_fleet_order = move_to_system_point_order	
+						# 	}
+						# }
+						exists = starbase
+						is_inside_border = root.owner
+						any_system_planet = {
+							NOR = {
+								any_fleet_in_orbit = {
+									OR = {
+										is_constructing = frameworld_outpost_construction
+										is_constructing = frameworld_outpost_construction_lithoid
+										is_constructing = frameworld_outpost_construction_hive
+										is_constructing = frameworld_outpost_construction_hive_lithoid
+										is_constructing = frameworld_outpost_construction_machine
+									}
+								}
+								has_planet_flag = auto_construct_planet_flag
+							}
+							can_have_frameworld_outpost = yes
+						}
+						NOT = {
+							any_ship_in_system = {
+								exists = owner
+								owner = {
+									is_hostile = root.owner
+								}
+							}
+						}
+					}
+					found_system = {
+						move_to = this
+						find_closest_planet = {
+							trigger = {
+								id = lazy_con_meg_events.7.trigger.2
+								NOR = {
+									any_fleet_in_orbit = {
+										OR = {
+											is_constructing = frameworld_outpost_construction
+											is_constructing = frameworld_outpost_construction_lithoid
+											is_constructing = frameworld_outpost_construction_hive
+											is_constructing = frameworld_outpost_construction_hive_lithoid
+											is_constructing = frameworld_outpost_construction_machine
+										}
+									}
+									solar_system = {
+										any_ship_in_system = {
+											exists = owner
+											owner = {
+												is_hostile = root.owner
+											}
+										}
+									}
+									has_planet_flag = auto_construct_planet_flag
+								}
+								exists = starbase
+								is_inside_border = root.owner
+								can_have_frameworld_outpost = yes
+							}
+							found_planet = {
+								move_to = this
+								effect = {
+									id = lazy_con_meg_events.7.effect.1
+									set_timed_planet_flag = {
+										flag = auto_construct_planet_flag
+										days = 720
+									}
+									root = {
+										set_event_locked = yes
+									}
+									prev = {
+										spawn_megastructure = {
+											type = constructing_megastructure
+											owner = root.owner
+											planet = prev
+											orbit_angle = 360
+											graphical_culture = root.owner
+
+											init_effect = {
+												set_megastructure_flag = constructing_mega_with_@root
+												prev = {
+													system_event = {
+														id = lazy_con_meg_events.11
+														days = 720
+													}
+												}
+											}
+										}
+									}
+								}
+								wait = 720
+								effect = {
+									id = lazy_con_meg_events.7.effect.2
+									root = {
+										set_event_locked = no
+									}
+									if = {
+										limit = {
+											NOR = {
+												any_fleet_in_orbit = {
+													OR = {
+														is_constructing = frameworld_outpost_construction
+														is_constructing = frameworld_outpost_construction_lithoid
+														is_constructing = frameworld_outpost_construction_hive
+														is_constructing = frameworld_outpost_construction_hive_lithoid
+														is_constructing = frameworld_outpost_construction_machine
+													}
+												}
+												solar_system = {
+													any_ship_in_system = {
+														exists = owner
+														owner = {
+															is_hostile = root.owner
+														}
+													}
+												}
+												has_planet_flag = auto_construct_planet_flag
+											}
+											exists = starbase
+											is_inside_border = root.owner
+											can_have_frameworld_outpost = yes
+											if = {
+												limit = {
+													root.owner = {
+														is_gestalt = no
+														is_lithoid_empire = no
+													}
+												}
+												root.owner = {
+													resource_stockpile_compare = {
+														resource = alloys
+														value >= 200
+														mult = value:positive_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+													}
+													resource_stockpile_compare = {
+														resource = food
+														value >= 200
+														mult = value:positive_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+													}
+													resource_stockpile_compare = {
+														resource = consumer_goods
+														value >= 200
+														mult = value:positive_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+													}
+													resource_stockpile_compare = {
+														resource = influence
+														value >= 50
+														mult = value:positive_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+													}
+												}
+											}
+											else_if = {
+												limit = {
+													root.owner = {
+														is_gestalt = no
+														is_lithoid_empire = yes
+													}
+												}
+												root.owner = {
+													resource_stockpile_compare = {
+														resource = alloys
+														value >= 200
+														mult = value:positive_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+													}
+													resource_stockpile_compare = {
+														resource = minerals
+														value >= 200
+														mult = value:positive_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+													}
+													resource_stockpile_compare = {
+														resource = consumer_goods
+														value >= 200
+														mult = value:positive_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+													}
+													resource_stockpile_compare = {
+														resource = influence
+														value >= 50
+														mult = value:positive_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+													}
+												}
+											}
+											else_if = {
+												limit = {
+													root.owner = {
+														is_hive_empire = yes
+														is_lithoid_empire = no
+													}
+												}
+												root.owner = {
+													resource_stockpile_compare = {
+														resource = alloys
+														value >= 200
+														mult = value:positive_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+													}
+													resource_stockpile_compare = {
+														resource = food
+														value >= 200
+														mult = value:positive_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+													}
+													resource_stockpile_compare = {
+														resource = influence
+														value >= 50
+														mult = value:positive_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+													}
+												}
+											}
+											else_if = {
+												limit = {
+													root.owner = {
+														is_hive_empire = yes
+														is_lithoid_empire = yes
+													}
+												}
+												root.owner = {
+													resource_stockpile_compare = {
+														resource = alloys
+														value >= 200
+														mult = value:positive_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+													}
+													resource_stockpile_compare = {
+														resource = minerals
+														value >= 500
+														mult = value:positive_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+													}
+													resource_stockpile_compare = {
+														resource = influence
+														value >= 50
+														mult = value:positive_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+													}
+												}
+											}
+											else_if = {
+												limit = {
+													root.owner = {
+														is_machine_empire = yes
+													}
+												}
+												root.owner = {
+													resource_stockpile_compare = {
+														resource = alloys
+														value >= 400
+														mult = value:positive_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+													}
+												}
+											}
+										}
+										prev = {
+											if = {
+												limit = {
+													root.owner = {
+														is_gestalt = no
+														is_lithoid_empire = no
+													}
+												}
+												spawn_megastructure = {
+													type = frameworld_outpost_construction
+													owner = root.owner
+													planet = prev
+													graphical_culture = root.owner
+												}
+											}
+											else_if = {
+												limit = {
+													root.owner = {
+														is_gestalt = no
+														is_lithoid_empire = yes
+													}
+												}
+												spawn_megastructure = {
+													type = frameworld_outpost_construction_lithoid
+													owner = root.owner
+													planet = prev
+													graphical_culture = root.owner
+												}
+											}
+											else_if = {
+												limit = {
+													root.owner = {
+														is_hive_empire = yes
+														is_lithoid_empire = no
+													}
+												}
+												spawn_megastructure = {
+													type = frameworld_outpost_construction_hive
+													owner = root.owner
+													planet = prev
+													graphical_culture = root.owner
+												}
+											}
+											else_if = {
+												limit = {
+													root.owner = {
+														is_hive_empire = yes
+														is_lithoid_empire = yes
+													}
+												}
+												spawn_megastructure = {
+													type = frameworld_outpost_construction_hive_lithoid
+													owner = root.owner
+													planet = prev
+													graphical_culture = root.owner
+												}
+											}
+											else_if = {
+												limit = {
+													root.owner = {
+														is_machine_empire = yes
+													}
+												}
+												spawn_megastructure = {
+													type = frameworld_outpost_construction_machine
+													owner = root.owner
+													planet = prev
+													graphical_culture = root.owner
+												}
+											}
+										}
+										if = {
+											limit = {
+												root.owner = {
+													is_gestalt = no
+													is_lithoid_empire = no
+												}
+											}
+											root.owner = {
+												add_resource = {
+													alloys = 200
+													mult = value:negative_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+												}
+												add_resource = {
+													food = 200
+													mult = value:negative_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+												}
+												add_resource = {
+													consumer_goods = 200
+													mult = value:negative_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+												}
+												add_resource = {
+													influence = 50
+													mult = value:negative_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+												}
+											}
+										}
+										else_if = {
+											limit = {
+												root.owner = {
+													is_gestalt = no
+													is_lithoid_empire = yes
+												}
+											}
+											root.owner = {
+												add_resource = {
+													alloys = 200
+													mult = value:negative_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+												}
+												add_resource = {
+													minerals = 200
+													mult = value:negative_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+												}
+												add_resource = {
+													consumer_goods = 200
+													mult = value:negative_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+												}
+												add_resource = {
+													influence = 50
+													mult = value:negative_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+												}
+											}
+										}
+										else_if = {
+											limit = {
+												root.owner = {
+													is_hive_empire = yes
+													is_lithoid_empire = no
+												}
+											}
+											root.owner = {
+												add_resource = {
+													alloys = 200
+													mult = value:negative_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+												}
+												add_resource = {
+													food = 200
+													mult = value:negative_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+												}
+												add_resource = {
+													influence = 50
+													mult = value:negative_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+												}
+											}
+										}
+										else_if = {
+											limit = {
+												root.owner = {
+													is_hive_empire = yes
+													is_lithoid_empire = yes
+												}
+											}
+											root.owner = {
+												add_resource = {
+													alloys = 200
+													mult = value:negative_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+												}
+												add_resource = {
+													minerals = 500
+													mult = value:negative_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+												}
+												add_resource = {
+													influence = 50
+													mult = value:negative_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+												}
+											}
+										}
+										else_if = {
+											limit = {
+												root.owner = {
+													is_machine_empire = yes
+												}
+											}
+											root.owner = {
+												add_resource = {
+													alloys = 400
+													mult = value:negative_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+												}
+											}
+										}
+										prev = {
+											random_system_megastructure = {
+												limit = {
+													has_megastructure_flag = constructing_mega_with_@root
+												}
+												remove_megastructure = this
+											}
+										}
+									}
+									else = {
+										prev = {
+											random_system_megastructure = {
+												limit = {
+													has_megastructure_flag = constructing_mega_with_@root
+												}
+												remove_megastructure = this
+											}
+										}
+									}
+
+								}
+							}
+							failed = {
+								effect = {
+									id = lazy_con_meg_events.7.effect.3
+									random_system_megastructure = {
+										limit = {
+											has_megastructure_flag = constructing_mega_with_@root
+										}
+										remove_megastructure = this
+									}
+									root = {
+										fleet_event = {
+											id = lazy_con_meg_events.7
+											days = 1
+										}
+									}
+								}
+							}
+						}
+					}
+					failed = {
+						effect = {
+							id = lazy_con_meg_events.7.effect.4
+							root = {
+								fleet_event = {
+									id = lazy_con_meg_events.7
+									days = 1
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = lazy_con_meg_events.8
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_fleet_flag = auto_mega_ship_flag
+		has_fleet_flag = auto_construct_frameworld_harvest_flag
+	}
+
+	immediate = {
+		set_fleet_flag = auto_mega_ship_flag
+		clear_fleet_actions = this
+		clear_orders = yes
+		set_name = "Auto Frameworld Asteroid Harvest Ship"
+		queue_actions = {
+			repeat = {
+				find_closest_system = {
+					trigger = {
+						id = lazy_con_meg_events.8.trigger.1
+						# root = {
+						# 	NOR = {
+						# 		has_fleet_order = build_orbital_station_order
+						# 		has_fleet_order = evade_hostiles_order
+						# 		has_fleet_order = build_megastructure_fleet_order
+						# 		has_fleet_order = collect_data_fleet_order
+						# 		has_fleet_order = orbit_planet_order
+						# 		has_fleet_order = return_fleet_order
+						# 		has_fleet_order = auto_patrol_order
+						# 		has_fleet_order = repair_fleet_order
+						# 		has_fleet_order = use_bypass_order
+						# 		has_fleet_order = jumpdrive_order
+						# 		has_fleet_order = jumpdrive_windup
+						# 		has_fleet_order = follow_order
+						# 		has_fleet_order = move_to_system_point_order	
+						# 	}
+						# }
+						exists = starbase
+						is_inside_border = root.owner
+						any_system_planet = {
+							NOR = {
+								any_fleet_in_orbit = {
+									is_constructing = frameworld_harvest_0
+								}
+								has_planet_flag = auto_construct_planet_flag
+								has_planet_flag = auto_construct_planet_pos_flag
+							}
+							frameworld_can_harvest_asteroid = yes
+						}
+						NOT = {
+							any_ship_in_system = {
+								exists = owner
+								owner = {
+									is_hostile = root.owner
+								}
+							}
+						}
+					}
+					found_system = {
+						move_to = this
+						find_closest_planet = {
+							trigger = {
+								id = lazy_con_meg_events.8.trigger.2
+								NOR = {
+									any_fleet_in_orbit = {
+										is_constructing = frameworld_harvest_0
+									}
+									solar_system = {
+										any_ship_in_system = {
+											exists = owner
+											owner = {
+												is_hostile = root.owner
+											}
+										}
+									}
+									has_planet_flag = auto_construct_planet_flag
+								}
+								exists = starbase
+								is_inside_border = root.owner
+								frameworld_can_harvest_asteroid = yes
+							}
+							found_planet = {
+								move_to = this
+								effect = {
+									id = lazy_con_meg_events.8.effect.1
+									set_timed_planet_flag = {
+										flag = auto_construct_planet_flag
+										days = 360
+									}
+									root = {
+										set_event_locked = yes
+									}
+									prev = {
+										spawn_megastructure = {
+											type = constructing_megastructure
+											owner = root.owner
+											planet = prev
+											orbit_angle = 360
+											graphical_culture = root.owner
+
+											init_effect = {
+												set_megastructure_flag = constructing_mega_with_@root
+												prev = {
+													system_event = {
+														id = lazy_con_meg_events.11
+														days = 360
+													}
+												}
+											}
+										}
+									}
+								}
+								wait = 360
+								effect = {
+									id = lazy_con_meg_events.8.effect.2
+									root = {
+										set_event_locked = no
+									}
+									if = {
+										limit = {
+											NOR = {
+												any_fleet_in_orbit = {
+													is_constructing = frameworld_harvest_0
+												}
+												solar_system = {
+													any_ship_in_system = {
+														exists = owner
+														owner = {
+															is_hostile = root.owner
+														}
+													}
+												}
+												has_planet_flag = auto_construct_planet_flag
+											}
+											exists = starbase
+											is_inside_border = root.owner
+											frameworld_can_harvest_asteroid = yes
+											root.owner = {
+												resource_stockpile_compare = {
+													resource = energy
+													value >= 1000
+													mult = value:positive_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+												}
+												resource_stockpile_compare = {
+													resource = influence
+													value >= 25
+													mult = value:positive_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+												}
+											}
+										}
+										prev = {
+											spawn_megastructure = {
+												type = frameworld_harvest_0
+												owner = root.owner
+												planet = prev
+												graphical_culture = root.owner
+											}
+										}
+										root.owner = {
+											add_resource = {
+												energy = 1000
+												mult = value:negative_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+											}
+											add_resource = {
+												influence = 25
+												mult = value:negative_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+											}
+										}
+										prev = {
+											random_system_megastructure = {
+												limit = {
+													has_megastructure_flag = constructing_mega_with_@root
+												}
+												remove_megastructure = this
+											}
+										}
+									}
+									else = {
+										prev = {
+											random_system_megastructure = {
+												limit = {
+													has_megastructure_flag = constructing_mega_with_@root
+												}
+												remove_megastructure = this
+											}
+										}
+									}
+
+								}
+							}
+							failed = {
+								effect = {
+									id = lazy_con_meg_events.8.effect.3
+									random_system_megastructure = {
+										limit = {
+											has_megastructure_flag = constructing_mega_with_@root
+										}
+										remove_megastructure = this
+									}
+									root = {
+										fleet_event = {
+											id = lazy_con_meg_events.8
+											days = 1
+										}
+									}
+								}
+							}
+						}
+					}
+					failed = {
+						effect = {
+							id = lazy_con_meg_events.8.effect.4
+							root = {
+								fleet_event = {
+									id = lazy_con_meg_events.8
+									days = 1
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = lazy_con_meg_events.9
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_fleet_flag = auto_mega_ship_flag
+		has_fleet_flag = auto_construct_frameworld_salvage_habitat_flag
+	}
+
+	immediate = {
+		set_fleet_flag = auto_mega_ship_flag
+		clear_fleet_actions = this
+		clear_orders = yes
+		set_name = "Auto Frameworld Habitat Salvage Ship"
+		queue_actions = {
+			repeat = {
+				find_closest_system = {
+					trigger = {
+						id = lazy_con_meg_events.9.trigger.1
+						# root = {
+						# 	NOR = {
+						# 		has_fleet_order = build_orbital_station_order
+						# 		has_fleet_order = evade_hostiles_order
+						# 		has_fleet_order = build_megastructure_fleet_order
+						# 		has_fleet_order = collect_data_fleet_order
+						# 		has_fleet_order = orbit_planet_order
+						# 		has_fleet_order = return_fleet_order
+						# 		has_fleet_order = auto_patrol_order
+						# 		has_fleet_order = repair_fleet_order
+						# 		has_fleet_order = use_bypass_order
+						# 		has_fleet_order = jumpdrive_order
+						# 		has_fleet_order = jumpdrive_windup
+						# 		has_fleet_order = follow_order
+						# 		has_fleet_order = move_to_system_point_order	
+						# 	}
+						# }
+						exists = starbase
+						is_inside_border = root.owner
+						any_system_planet = {
+							NOR = {
+								any_fleet_in_orbit = {
+									is_constructing = frameworld_salvage_habitat_0
+								}
+								has_planet_flag = auto_construct_planet_flag
+							}
+							frameworld_can_salvage_habitat = yes
+						}
+						NOT = {
+							any_ship_in_system = {
+								exists = owner
+								owner = {
+									is_hostile = root.owner
+								}
+							}
+						}
+					}
+					found_system = {
+						move_to = this
+						find_closest_planet = {
+							trigger = {
+								id = lazy_con_meg_events.9.trigger.2
+								NOR = {
+									any_fleet_in_orbit = {
+										is_constructing = frameworld_salvage_habitat_0
+									}
+									solar_system = {
+										any_ship_in_system = {
+											exists = owner
+											owner = {
+												is_hostile = root.owner
+											}
+										}
+									}
+									has_planet_flag = auto_construct_planet_flag
+								}
+								exists = starbase
+								is_inside_border = root.owner
+								frameworld_can_salvage_habitat = yes
+							}
+							found_planet = {
+								move_to = this
+								effect = {
+									id = lazy_con_meg_events.9.effect.1
+									set_timed_planet_flag = {
+										flag = auto_construct_planet_flag
+										days = 720
+									}
+									root = {
+										set_event_locked = yes
+									}
+									prev = {
+										spawn_megastructure = {
+											type = constructing_megastructure
+											owner = root.owner
+											planet = prev
+											orbit_angle = 360
+											graphical_culture = root.owner
+
+											init_effect = {
+												set_megastructure_flag = constructing_mega_with_@root
+												prev = {
+													system_event = {
+														id = lazy_con_meg_events.11
+														days = 720
+													}
+												}
+											}
+										}
+									}
+								}
+								wait = 720
+								effect = {
+									id = lazy_con_meg_events.9.effect.2
+									root = {
+										set_event_locked = no
+									}
+									if = {
+										limit = {
+											NOR = {
+												any_fleet_in_orbit = {
+													is_constructing = frameworld_salvage_habitat_0
+												}
+												solar_system = {
+													any_ship_in_system = {
+														exists = owner
+														owner = {
+															is_hostile = root.owner
+														}
+													}
+												}
+												has_planet_flag = auto_construct_planet_flag
+											}
+											exists = starbase
+											is_inside_border = root.owner
+											frameworld_can_salvage_habitat = yes
+											root.owner = {
+												resource_stockpile_compare = {
+													resource = energy
+													value >= 2500
+													mult = value:positive_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+												}
+												resource_stockpile_compare = {
+													resource = influence
+													value >= 50
+													mult = value:positive_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+												}
+											}
+										}
+										prev = {
+											spawn_megastructure = {
+												type = frameworld_salvage_habitat_0
+												owner = root.owner
+												planet = prev
+												graphical_culture = root.owner
+											}
+										}
+										root.owner = {
+											add_resource = {
+												energy = 2500
+												mult = value:negative_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+											}
+											add_resource = {
+												influence = 50
+												mult = value:negative_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+											}
+										}
+										prev = {
+											random_system_megastructure = {
+												limit = {
+													has_megastructure_flag = constructing_mega_with_@root
+												}
+												remove_megastructure = this
+											}
+										}
+									}
+									else = {
+										prev = {
+											random_system_megastructure = {
+												limit = {
+													has_megastructure_flag = constructing_mega_with_@root
+												}
+												remove_megastructure = this
+											}
+										}
+									}
+
+								}
+							}
+							failed = {
+								effect = {
+									id = lazy_con_meg_events.9.effect.3
+									random_system_megastructure = {
+										limit = {
+											has_megastructure_flag = constructing_mega_with_@root
+										}
+										remove_megastructure = this
+									}
+									root = {
+										fleet_event = {
+											id = lazy_con_meg_events.9
+											days = 1
+										}
+									}
+								}
+							}
+						}
+					}
+					failed = {
+						effect = {
+							id = lazy_con_meg_events.9.effect.4
+							root = {
+								fleet_event = {
+									id = lazy_con_meg_events.9
+									days = 1
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = lazy_con_meg_events.10
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_fleet_flag = auto_mega_ship_flag
+		has_fleet_flag = auto_construct_orbital_ring_flag
+	}
+
+	immediate = {
+		set_fleet_flag = auto_mega_ship_flag
+		clear_fleet_actions = this
+		clear_orders = yes
+		set_name = "Auto Orbital Ring Ship"
+		queue_actions = {
+			repeat = {
+				find_closest_system = {
+					trigger = {
+						id = lazy_con_meg_events.10.trigger.1
+						# root = {
+						# 	NOR = {
+						# 		has_fleet_order = build_orbital_station_order
+						# 		has_fleet_order = evade_hostiles_order
+						# 		has_fleet_order = build_megastructure_fleet_order
+						# 		has_fleet_order = collect_data_fleet_order
+						# 		has_fleet_order = orbit_planet_order
+						# 		has_fleet_order = return_fleet_order
+						# 		has_fleet_order = auto_patrol_order
+						# 		has_fleet_order = repair_fleet_order
+						# 		has_fleet_order = use_bypass_order
+						# 		has_fleet_order = jumpdrive_order
+						# 		has_fleet_order = jumpdrive_windup
+						# 		has_fleet_order = follow_order
+						# 		has_fleet_order = move_to_system_point_order	
+						# 	}
+						# }
+						exists = starbase
+						is_inside_border = root.owner
+						NOT = {
+							any_ship_in_system = {
+								exists = owner
+								owner = {
+									is_hostile = root.owner
+								}
+							}
+						}
+
+						any_system_planet = {
+							NOT = {
+								has_planet_flag = auto_construct_planet_flag
+							}
+							is_surveyed = {
+								who = root.owner
+								status = yes
+							}
+							NOT = {
+								has_anomaly = yes
+							}
+							is_colony = yes
+							exists = owner
+							exists = controller
+							controller = {
+								is_same_value = root.owner
+							}
+							NOR = {
+								planet_is_hostile_or_crisis = yes
+								AND = {
+									exists = owner
+									owner = {
+										is_country_type = primitive
+									}
+								}
+							}
+							NOR = {
+								has_planet_flag = megastructure
+								AND = {
+									has_planet_flag = has_megastructure
+									# Special exception so you can build an orbital ring even if you have MSI's warship as a habitat.
+									NOT = {
+										has_planet_flag = has_payback_habitat
+									}
+								}
+								has_planet_flag = ruined_orbital_ring_planet
+								solar_system = {
+									has_star_flag = ring_world_built
+								}
+								is_artificial = yes
+							}
+							NOT = {
+								has_planet_flag = has_orbital_debris
+							}
+							NOT = {
+								any_fleet_in_orbit = {
+									is_constructing = orbital_ring
+								}
+							}
+						}
+					}
+					found_system = {
+						move_to = this
+						find_closest_planet = {
+							trigger = {
+								id = lazy_con_meg_events.10.trigger.2
+								NOT = {
+									has_planet_flag = auto_construct_planet_flag
+								}
+								is_surveyed = {
+									who = root.owner
+									status = yes
+								}
+								NOT = {
+									has_anomaly = yes
+								}
+								is_colony = yes
+								exists = owner
+								exists = controller
+								controller = {
+									is_same_value = root.owner
+								}
+								NOR = {
+									planet_is_hostile_or_crisis = yes
+									AND = {
+										exists = owner
+										owner = {
+											is_country_type = primitive
+										}
+									}
+								}
+								NOR = {
+									has_planet_flag = megastructure
+									AND = {
+										has_planet_flag = has_megastructure
+										# Special exception so you can build an orbital ring even if you have MSI's warship as a habitat.
+										NOT = {
+											has_planet_flag = has_payback_habitat
+										}
+									}
+									has_planet_flag = ruined_orbital_ring_planet
+									solar_system = {
+										has_star_flag = ring_world_built
+									}
+									is_artificial = yes
+								}
+								NOT = {
+									has_planet_flag = has_orbital_debris
+								}
+								NOT = {
+									any_fleet_in_orbit = {
+										is_constructing = orbital_ring
+									}
+								}
+							}
+							found_planet = {
+								move_to = this
+								effect = {
+									id = lazy_con_meg_events.10.effect.1
+									set_timed_planet_flag = {
+										flag = auto_construct_planet_flag
+										days = 720
+									}
+									root = {
+										set_event_locked = yes
+									}
+									prev = {
+										spawn_megastructure = {
+											type = constructing_megastructure
+											owner = root.owner
+											planet = prev
+											orbit_angle = 360
+											graphical_culture = root.owner
+
+											init_effect = {
+												set_megastructure_flag = constructing_mega_with_@root
+												prev = {
+													system_event = {
+														id = lazy_con_meg_events.11
+														days = 720
+													}
+												}
+											}
+										}
+									}
+								}
+								wait = 720
+								effect = {
+									id = lazy_con_meg_events.10.effect.2
+									root = {
+										set_event_locked = no
+									}
+									if = {
+										limit = {
+											is_surveyed = {
+												who = root.owner
+												status = yes
+											}
+											NOT = {
+												has_anomaly = yes
+											}
+											is_colony = yes
+											exists = owner
+											exists = controller
+											controller = {
+												is_same_value = root.owner
+											}
+											NOR = {
+												planet_is_hostile_or_crisis = yes
+												AND = {
+													exists = owner
+													owner = {
+														is_country_type = primitive
+													}
+												}
+											}
+											NOR = {
+												has_planet_flag = megastructure
+												AND = {
+													has_planet_flag = has_megastructure
+													# Special exception so you can build an orbital ring even if you have MSI's warship as a habitat.
+													NOT = {
+														has_planet_flag = has_payback_habitat
+													}
+												}
+												has_planet_flag = ruined_orbital_ring_planet
+												solar_system = {
+													has_star_flag = ring_world_built
+												}
+												is_artificial = yes
+											}
+											NOT = {
+												has_planet_flag = has_orbital_debris
+											}
+											root.owner = {
+												resource_stockpile_compare = {
+													resource = influence
+													value >= 50
+													mult = value:positive_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+												}
+												resource_stockpile_compare = {
+													resource = alloys
+													value >= 1000
+													mult = value:positive_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+												}
+											}
+										}
+										prev = {
+											spawn_megastructure = {
+												type = orbital_ring
+												owner = root.owner
+												planet = prev
+												graphical_culture = root.owner
+											}
+										}
+										root.owner = {
+											add_resource = {
+												influence = 50
+												mult = value:negative_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+											}
+											add_resource = {
+												alloys = 1000
+												mult = value:negative_modifier_mult|MODIFIER|megastructure_build_cost_mult|
+											}
+										}
+										prev = {
+											random_system_megastructure = {
+												limit = {
+													has_megastructure_flag = constructing_mega_with_@root
+												}
+												remove_megastructure = this
+											}
+										}
+									}
+									else = {
+										prev = {
+											random_system_megastructure = {
+												limit = {
+													has_megastructure_flag = constructing_mega_with_@root
+												}
+												remove_megastructure = this
+											}
+										}
+									}
+
+								}
+							}
+							failed = {
+								effect = {
+									id = lazy_con_meg_events.10.effect.3
+									random_system_megastructure = {
+										limit = {
+											has_megastructure_flag = constructing_mega_with_@root
+										}
+										remove_megastructure = this
+									}
+									root = {
+										fleet_event = {
+											id = lazy_con_meg_events.10
+											days = 1
+										}
+									}
+								}
+							}
+						}
+					}
+					failed = {
+						effect = {
+							id = lazy_con_meg_events.10.effect.4
+							root = {
+								fleet_event = {
+									id = lazy_con_meg_events.10
+									days = 1
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+system_event = {
+	id = lazy_con_meg_events.11
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		random_system_megastructure = {
+			limit = {
+				OR = {
+					is_megastructure_type = constructing_og_megastructure
+					is_megastructure_type = constructing_megastructure
+				}
+			}
+			remove_megastructure = this
+		}
+	}
+}

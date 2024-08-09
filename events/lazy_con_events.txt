@@ -1,0 +1,664 @@
+namespace = lazy_con_events
+
+fleet_event = {
+	id = lazy_con_events.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_fleet_flag = auto_outpost_ship_flag
+	}
+
+	immediate = {
+		set_fleet_flag = auto_outpost_ship_flag
+		clear_fleet_actions = this
+		clear_orders = yes
+		set_name = "auto_outpost_ship"
+		queue_actions = {
+			repeat = {
+				find_closest_system = {
+					trigger = {
+						id = lazy_con_events.1.trigger.1
+						# root = {
+						# 	NOR = {
+						# 		has_fleet_order = build_orbital_station_order
+						# 		has_fleet_order = evade_hostiles_order
+						# 		has_fleet_order = build_megastructure_fleet_order
+						# 		has_fleet_order = collect_data_fleet_order
+						# 		has_fleet_order = orbit_planet_order
+						# 		has_fleet_order = return_fleet_order
+						# 		has_fleet_order = auto_patrol_order
+						# 		has_fleet_order = repair_fleet_order
+						# 		has_fleet_order = use_bypass_order
+						# 		has_fleet_order = jumpdrive_order
+						# 		has_fleet_order = jumpdrive_windup
+						# 		has_fleet_order = follow_order
+						# 		has_fleet_order = move_to_system_point_order	
+						# 	}
+						# }
+						is_surveyed = {
+							who = root.owner
+							status = yes
+						}	
+						NOR = {
+							exists = owner
+							system_star = {
+								has_planet_flag = auto_construct_planet_flag
+							}
+							has_star_flag = auto_construct_system_flag
+						}
+						any_neighbor_system = {
+							exists = space_owner
+							is_owned_by = root.owner
+						}
+						NOT = {
+							any_neighbor_system = {
+								exists = space_owner
+								space_owner = {
+									is_country_type = fallen_empire
+									OR = {
+										has_ethic = ethic_xenophobe
+										has_ethic = ethic_fanatic_xenophobe
+									}
+								}
+							}
+						}
+						NOT = {
+							any_ship_in_system = {
+								exists = owner
+								OR = {
+									is_constructing = starbase
+									owner = {
+										is_hostile = root.owner
+									}
+								}
+							}
+						}
+					}
+					found_system = {
+						effect = {
+							id = lazy_con_events.1.effect.1
+							set_timed_star_flag = {
+								flag = auto_construct_system_flag
+								days = 140
+							}
+						}
+						move_to = this
+						find_closest_planet = {
+							trigger = {
+								id = lazy_con_events.1.trigger.2
+								solar_system = {
+									NOR = {
+										exists = owner
+										any_ship_in_system = {
+											exists = owner
+											OR = {
+												is_constructing = habitat_central_complex
+												owner = {
+													is_hostile = root.owner
+												}
+											}
+										}
+									}
+								}
+								is_primary_star = yes
+								NOT = {
+									has_planet_flag = auto_construct_planet_flag
+								}
+							}
+							found_planet = {
+								orbit_planet = this
+								effect = {
+									id = lazy_con_events.1.effect.2
+									# solar_system = {
+									# 	remove_star_flag = auto_construct_system_flag
+									# }
+									if = {
+										limit = {
+											has_orbital_station = no
+										}
+										root = {
+											set_event_locked = yes
+										}
+										set_timed_planet_flag = {
+											flag = auto_construct_planet_flag
+											days = 140
+										}
+									}
+								}
+								wait = 100
+								effect = {
+									id = lazy_con_events.1.effect.3
+									root = {
+										set_event_locked = no
+									}
+									if = {
+										limit = {
+											has_orbital_station = no
+											solar_system = {
+												NOT = {
+													exists = owner
+												}
+											}
+											is_primary_star = yes
+											root.owner = {
+												resource_stockpile_compare = {
+													resource = influence
+													value >= 75
+													mult = value:positive_modifier_mult|MODIFIER|country_starbase_influence_cost_mult|
+												}
+												resource_stockpile_compare = {
+													resource = alloys
+													value >= 100
+													mult = value:positive_modifier_mult|MODIFIER|country_starbase_influence_cost_mult|
+												}
+											}
+										}
+										solar_system = {
+											create_starbase = {
+												size = starbase_outpost
+												owner = root.owner
+											}
+										}
+										root.owner = {
+											add_resource = {
+												influence = 75
+												mult = value:negative_modifier_mult|MODIFIER|country_starbase_influence_cost_mult|
+											}
+											add_resource = {
+												alloys = 100
+												mult = value:negative_modifier_mult|MODIFIER|country_starbase_influence_cost_mult|
+											}
+										}
+									}
+								}
+							}
+							failed = {
+								effect = {
+									id = lazy_con_events.1.effect.4
+									root = {
+										fleet_event = {
+											id = lazy_con_events.1
+											days = 1
+										}
+									}
+								}
+							}
+						}
+					}
+					failed = {
+						effect = {
+							id = lazy_con_events.1.effect.5
+							root = {
+								fleet_event = {
+									id = lazy_con_events.1
+									days = 1
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+# fleet_event = {
+# 	id = lazy_con_events.1
+# 	hide_window = yes
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 		if = {
+# 			limit = {
+# 				has_fleet_flag = auto_construct_flag
+# 				NOR = {
+# 					has_fleet_order = build_orbital_station_order
+# 					has_fleet_order = evade_hostiles_order
+# 					has_fleet_order = build_megastructure_fleet_order
+# 					has_fleet_order = collect_data_fleet_order
+# 					has_fleet_order = orbit_planet_order
+# 					has_fleet_order = return_fleet_order
+# 					has_fleet_order = auto_patrol_order
+# 					has_fleet_order = repair_fleet_order
+# 					has_fleet_order = use_bypass_order
+# 					has_fleet_order = jumpdrive_order
+# 					has_fleet_order = jumpdrive_windup
+# 					has_fleet_order = follow_order
+# 					has_fleet_order = move_to_system_point_order
+# 				}
+# 			}
+# 			set_fleet_flag = auto_construct_flag
+# 			clear_fleet_actions = this
+# 			clear_orders = yes
+# 			set_name = "Auto Construct Ship"
+# 			queue_actions = {
+# 				repeat = {
+# 					find_closest_system = {
+# 						trigger = {
+# 							id = lazy_con_events.1.trigger.1
+# 							OR = {
+# 								AND = {
+# 									root.owner = {
+# 										has_country_flag = auto_construct_outpost_flag
+# 									}
+# 									is_surveyed = {
+# 										who = root.owner
+# 										status = yes
+# 									}	
+# 									NOR = {
+# 										exists = owner
+# 										system_star = {
+# 											has_planet_flag = auto_construct_planet_flag
+# 										}
+# 									}
+# 									any_neighbor_system = {
+# 										exists = space_owner
+# 										is_owned_by = root.owner
+# 										NOT = {
+# 											space_owner = {
+# 												is_country_type = fallen_empire
+# 											}
+# 										}
+# 									}
+# 								}
+# 								AND = {
+# 									root.owner = {
+# 										if = {
+# 											limit = {
+# 												has_country_flag = auto_construct_1000_buffer_flag
+# 											}
+# 											resource_stockpile_compare = {
+# 												resource = minerals
+# 												value >= 1000
+# 											}
+# 										}
+# 										else_if = {
+# 											limit = {
+# 												has_country_flag = auto_construct_2500_buffer_flag
+# 											}
+# 											resource_stockpile_compare = {
+# 												resource = minerals
+# 												value >= 2500
+# 											}
+# 										}
+# 										else_if = {
+# 											limit = {
+# 												has_country_flag = auto_construct_5000_buffer_flag
+# 											}
+# 											resource_stockpile_compare = {
+# 												resource = minerals
+# 												value >= 5000
+# 											}
+# 										}
+# 									}
+# 									is_owned_by = root.owner
+# 									any_system_planet = {
+# 										auto_construct_planet_check = yes
+# 									}
+# 								}
+# 							}
+# 							NOT = {
+# 								any_ship_in_system = {
+# 									exists = owner
+# 									OR = {
+# 										is_constructing = starbase
+# 										owner = {
+# 											is_hostile = root.owner
+# 										}
+# 									}
+# 								}
+# 							}
+# 						}
+# 						found_system = {
+# 							move_to = this
+# 						}
+# 						failed = {
+# 							effect = {
+# 								id = lazy_con_events.1.effect.1
+# 								root = {
+# 									fleet_event = {
+# 										id = lazy_con_events.1
+# 										days = 1
+# 									}
+# 								}
+# 							}
+# 						}
+# 					}
+# 					repeat = {
+# 						find_closest_planet = {
+# 							trigger = {
+# 								id = lazy_con_events.1.trigger.2
+# 								OR = {
+# 									AND = {
+# 										root.owner = {
+# 											has_country_flag = auto_construct_outpost_flag
+# 										}
+# 										solar_system = {
+# 											NOT = {
+# 												exists = owner
+# 											}
+# 										}
+# 										is_primary_star = yes
+# 										NOT = {
+# 											has_planet_flag = auto_construct_planet_flag
+# 										}
+# 									}
+# 									AND = {
+# 										solar_system = {
+# 											exists = owner
+# 										}
+# 										auto_construct_planet_check = yes
+# 									}
+# 								}
+# 							}
+# 							found_planet = {
+# 								effect = {
+# 									id = lazy_con_events.1.effect.2
+# 									if = {
+# 										limit = {
+# 											solar_system = {
+# 												NOT = {
+# 													any_ship_in_system = {
+# 														exists = owner
+# 														owner = {
+# 															is_hostile = root.owner
+# 														}
+# 													}
+# 												}
+# 											}
+# 											NOT = {
+# 												has_planet_flag = auto_construct_planet_flag
+# 											}
+# 										}
+# 										set_timed_planet_flag = {
+# 											flag = auto_construct_planet_flag
+# 											days = 140
+# 										}
+# 									}
+# 									else = {
+# 										root = {
+# 											fleet_event = {
+# 												id = lazy_con_events.1
+# 												days = 1
+# 											}
+# 										}
+# 									}
+# 								}
+# 								orbit_planet = this
+# 								effect = {
+# 									id = lazy_con_events.1.effect.3
+# 									if = {
+# 										limit = {
+# 											has_orbital_station = no
+# 										}
+# 										root = {
+# 											set_event_locked = yes
+# 										}
+# 									}
+# 									else = {
+# 										root = {
+# 											fleet_event = {
+# 												id = lazy_con_events.1
+# 												days = 1
+# 											}
+# 										}
+# 									}
+# 								}
+# 								wait = 100
+# 								effect = {
+# 									id = lazy_con_events.1.effect.4
+# 									root = {
+# 										set_event_locked = no
+# 									}
+# 									root.owner = {
+# 										set_variable = {
+# 											which = auto_construct_outpost_influence_cost
+# 											value = 0
+# 										}
+# 										export_modifier_to_variable = {
+# 											modifier = country_starbase_influence_cost_mult
+# 											variable = auto_construct_outpost_influence_cost
+# 										}
+# 										change_variable = {
+# 											which = auto_construct_outpost_influence_cost
+# 											value = 1
+# 										}
+# 										set_variable = {
+# 											which = auto_construct_outpost_alloy_cost
+# 											value = 0
+# 										}
+# 										export_modifier_to_variable = {
+# 											modifier = starbase_outpost_cost_mult
+# 											variable = auto_construct_outpost_alloy_cost
+# 										}
+# 										change_variable = {
+# 											which = auto_construct_outpost_alloy_cost
+# 											value = 1
+# 										}
+# 									}
+# 									if = {
+# 										limit = {
+# 											root.owner = {
+# 												has_country_flag = auto_construct_outpost_flag
+# 											}
+# 											has_orbital_station = no
+# 											solar_system = {
+# 												NOT = {
+# 													exists = owner
+# 												}
+# 											}
+# 											is_primary_star = yes
+# 											root.owner = {
+# 												resource_stockpile_compare = {
+# 													resource = influence
+# 													value >= 75
+# 													mult = auto_construct_outpost_influence_cost
+# 												}
+# 												resource_stockpile_compare = {
+# 													resource = alloys
+# 													value >= 100
+# 													mult = auto_construct_outpost_alloy_cost
+# 												}
+# 											}
+# 										}
+# 										solar_system = {
+# 											create_starbase = {
+# 												size = starbase_outpost
+# 												owner = root.owner
+# 											}
+# 										}
+# 										root.owner = {
+# 											add_resource = {
+# 												influence = -75
+# 												mult = auto_construct_outpost_influence_cost
+# 											}
+# 											add_resource = {
+# 												alloys = -100
+# 												mult = auto_construct_outpost_alloy_cost
+# 											}
+# 										}
+# 									}
+# 									else_if = {
+# 										limit = {
+# 											solar_system = {
+# 												exists = owner
+# 											}
+# 											has_deposit_for = shipclass_mining_station
+# 											root.owner = {
+# 												if = {
+# 													limit = {
+# 														has_country_flag = auto_construct_1000_buffer_flag
+# 													}
+# 													resource_stockpile_compare = {
+# 														resource = minerals
+# 														value >= 1000
+# 													}
+# 												}
+# 												else_if = {
+# 													limit = {
+# 														has_country_flag = auto_construct_2500_buffer_flag
+# 													}
+# 													resource_stockpile_compare = {
+# 														resource = minerals
+# 														value >= 2500
+# 													}
+# 												}
+# 												else_if = {
+# 													limit = {
+# 														has_country_flag = auto_construct_5000_buffer_flag
+# 													}
+# 													resource_stockpile_compare = {
+# 														resource = minerals
+# 														value >= 5000
+# 													}
+# 												}
+# 												else = {
+# 													resource_stockpile_compare = {
+# 														resource = minerals
+# 														value >= 100
+# 													}
+# 												}
+# 											}
+# 											#auto_construct_planet_check = yes
+# 										}
+# 										create_mining_station = {
+# 											owner = root.owner
+# 										}
+# 										root.owner = {
+# 											add_resource = {
+# 												minerals = -100
+# 											}
+# 										}
+# 									}
+# 									else_if = {
+# 										limit = {
+# 											solar_system = {
+# 												exists = owner
+# 											}
+# 											has_deposit_for = shipclass_research_station
+# 											root.owner = {
+# 												if = {
+# 													limit = {
+# 														has_country_flag = auto_construct_1000_buffer_flag
+# 													}
+# 													resource_stockpile_compare = {
+# 														resource = minerals
+# 														value >= 1000
+# 													}
+# 												}
+# 												else_if = {
+# 													limit = {
+# 														has_country_flag = auto_construct_2500_buffer_flag
+# 													}
+# 													resource_stockpile_compare = {
+# 														resource = minerals
+# 														value >= 2500
+# 													}
+# 												}
+# 												else_if = {
+# 													limit = {
+# 														has_country_flag = auto_construct_5000_buffer_flag
+# 													}
+# 													resource_stockpile_compare = {
+# 														resource = minerals
+# 														value >= 5000
+# 													}
+# 												}
+# 												else = {
+# 													resource_stockpile_compare = {
+# 														resource = minerals
+# 														value >= 100
+# 													}
+# 												}
+# 											}
+# 											#auto_construct_planet_check = yes
+# 										}
+# 										create_research_station = {
+# 											owner = root.owner
+# 										}
+# 										root.owner = {
+# 											add_resource = {
+# 												minerals = -100
+# 											}
+# 										}
+# 									}
+# 									# else_if = {
+# 									# 	limit = {
+# 									# 		solar_system = {
+# 									# 			exists = owner
+# 									# 		}
+# 									# 		has_deposit_for = shipclass_observation_station
+# 									# 		root.owner = {
+# 									# 			if = {
+# 									# 				limit = {
+# 									# 					has_country_flag = auto_construct_1000_buffer_flag
+# 									# 				}
+# 									# 				resource_stockpile_compare = {
+# 									# 					resource = minerals
+# 									# 					value >= 1000
+# 									# 				}
+# 									# 			}
+# 									# 			else_if = {
+# 									# 				limit = {
+# 									# 					has_country_flag = auto_construct_2500_buffer_flag
+# 									# 				}
+# 									# 				resource_stockpile_compare = {
+# 									# 					resource = minerals
+# 									# 					value >= 2500
+# 									# 				}
+# 									# 			}
+# 									# 			else_if = {
+# 									# 				limit = {
+# 									# 					has_country_flag = auto_construct_5000_buffer_flag
+# 									# 				}
+# 									# 				resource_stockpile_compare = {
+# 									# 					resource = minerals
+# 									# 					value >= 5000
+# 									# 				}
+# 									# 			}
+# 									# 			else = {
+# 									# 				resource_stockpile_compare = {
+# 									# 					resource = minerals
+# 									# 					value >= 100
+# 									# 				}
+# 									# 			}
+# 									# 		}
+# 									# 		#auto_construct_planet_check = yes
+# 									# 	}
+# 									# 	create_observation_station = {
+# 									# 		owner = root.owner
+# 									# 	}
+# 									# 	root.owner = {
+# 									# 		add_resource = {
+# 									# 			minerals = -100
+# 									# 		}
+# 									# 	}
+# 									# }
+# 									else = {
+# 										root = {
+# 											fleet_event = {
+# 												id = lazy_con_events.1
+# 												days = 1
+# 											}
+# 										}
+# 									}
+# 								}
+# 							}
+# 							failed = {
+# 								effect = {
+# 									id = lazy_con_events.1.effect.5
+# 									root = {
+# 										fleet_event = {
+# 											id = lazy_con_events.1
+# 											days = 1
+# 										}
+# 									}
+# 								}
+# 							}
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}
+# }

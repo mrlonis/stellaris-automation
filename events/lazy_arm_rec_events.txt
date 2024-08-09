@@ -1,0 +1,322 @@
+namespace = lazy_arm_rec_events
+
+country_event = {
+	id = lazy_arm_rec_events.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = auto_army_recruit_enable_flag
+	}
+
+	immediate = { 
+		switch = {
+			trigger = has_country_flag
+	
+			recruit_slave_army_flag = {
+				country_event = {
+					id = lazy_arm_rec_events.3
+					days = 60
+				}
+				break = yes
+			}
+			recruit_clone_army_flag = {
+				country_event = {
+					id = lazy_arm_rec_events.4
+					days = 30
+				}
+				break = yes
+			}
+			recruit_robotic_army_flag = {
+				country_event = {
+					id = lazy_arm_rec_events.5
+					days = 90
+				}
+				break = yes
+			}
+			recruit_psionic_army_flag = {
+				country_event = {
+					id = lazy_arm_rec_events.6
+					days = 120
+				}
+				break = yes
+			}
+			recruit_xenomorph_army_flag = {
+				country_event = {
+					id = lazy_arm_rec_events.7
+					days = 100
+				}
+				break = yes
+			}
+			recruit_gene_warrior_army_flag = {
+				country_event = {
+					id = lazy_arm_rec_events.8
+					days = 150
+				}
+				break = yes
+			}
+			recruit_machine_assault_2_flag = {
+				country_event = {
+					id = lazy_arm_rec_events.9
+					days = 120
+				}
+				break = yes
+			}
+			recruit_machine_assault_3_flag = {
+				country_event = {
+					id = lazy_arm_rec_events.10
+					days = 500
+				}
+				break = yes
+			}
+			recruit_undead_army_flag = {
+				country_event = {
+					id = lazy_arm_rec_events.11
+					days = 60
+				}
+				break = yes
+			}
+			default = {
+				country_event = {
+					id = lazy_arm_rec_events.2
+					days = 90
+				}
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = lazy_arm_rec_events.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = auto_army_recruit_enable_flag
+	}
+
+	immediate = { 
+		every_owned_planet = {
+			prev = {
+				if = {
+					limit = {
+						has_authority = auth_machine_intelligence
+					}
+					recruit_chosen_army = {
+						army = machine_assault_1
+						MINERALS = 100
+					}
+				}
+				else = {
+					recruit_chosen_army = {
+						army = assault_army
+						MINERALS = 100
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = lazy_arm_rec_events.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = auto_army_recruit_enable_flag
+	}
+
+	immediate = { 
+		every_owned_planet = {
+			limit = {
+				has_building = building_slave_processing
+				any_owned_pop = {
+					is_pop_category = slave
+				}
+			}
+			prev = {
+				recruit_chosen_army = {
+					army = slave_army
+					MINERALS = 50
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = lazy_arm_rec_events.4
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = auto_army_recruit_enable_flag
+	}
+
+	immediate = { 
+		every_owned_planet = {
+			prev = {
+				recruit_chosen_army = {
+					army = clone_army
+					MINERALS = 75
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = lazy_arm_rec_events.5
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = auto_army_recruit_enable_flag
+	}
+
+	immediate = { 
+		every_owned_planet = {
+			prev = {
+				recruit_chosen_army = {
+					army = robotic_army
+					MINERALS = 150
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = lazy_arm_rec_events.6
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = auto_army_recruit_enable_flag
+	}
+
+	immediate = { 
+		every_owned_planet = {
+			prev = {
+				recruit_chosen_army = {
+					army = psionic_army
+					MINERALS = 250
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = lazy_arm_rec_events.7
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = auto_army_recruit_enable_flag
+	}
+
+	immediate = { 
+		every_owned_planet = {
+			prev = {
+				recruit_chosen_army = {
+					army = xenomorph_army
+					MINERALS = 200
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = lazy_arm_rec_events.8
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = auto_army_recruit_enable_flag
+	}
+
+	immediate = { 
+		every_owned_planet = {
+			prev = {
+				recruit_chosen_army = {
+					army = gene_warrior_army
+					MINERALS = 300
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = lazy_arm_rec_events.9
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = auto_army_recruit_enable_flag
+	}
+
+	immediate = { 
+		every_owned_planet = {
+			prev = {
+				recruit_chosen_army = {
+					army = machine_assault_2
+					MINERALS = 200
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = lazy_arm_rec_events.10
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = auto_army_recruit_enable_flag
+	}
+
+	immediate = { 
+		every_owned_planet = {
+			prev = {
+				recruit_chosen_army = {
+					army = machine_assault_3
+					MINERALS = 800
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = lazy_arm_rec_events.11
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = auto_army_recruit_enable_flag
+	}
+
+	immediate = { 
+		every_owned_planet = {
+			limit = {
+				has_active_building = building_dread_encampment
+				num_assigned_jobs = {
+					job = necromancer
+					value >= 1
+				}
+			}
+			prev = {
+				recruit_chosen_army = {
+					army = undead_army
+					ENERGY = 100
+				}
+			}
+		}
+	}
+}
