@@ -1,18 +1,14 @@
 namespace = lazy_meg_upg_events
-
 country_event = {
 	id = lazy_meg_upg_events.1
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		has_country_flag = auto_upgrade_megastructure_flag
 	}
-
 	immediate = {
 		while = {
 			count = auto_meg_upg_speed
-
 			set_variable = {
 				which = auto_upgrade_megastructure_current
 				value = -1
