@@ -1,15 +1,12 @@
 namespace = lazy_arm_inv_events
-
 country_event = {
 	id = lazy_arm_inv_events.1
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		has_country_flag = auto_army_invade_enable_flag
 	}
-
-	immediate = { 
+	immediate = {
 		every_owned_fleet = {
 			limit = {
 				is_ship_class = shipclass_transport
