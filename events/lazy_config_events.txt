@@ -1,5 +1,4 @@
 namespace = lazy_config_events
-
 country_event = {
 	id = lazy_config_events.1
 	title = "lazy_config_events.1.name"
@@ -9,7 +8,6 @@ country_event = {
 	is_triggered_only = yes
 	force_open = yes
 	auto_opens = yes
-
 	option = {
 		name = OK
 	}
@@ -24,7 +22,6 @@ country_event = {
 	is_triggered_only = yes
 	force_open = yes
 	auto_opens = yes
-
 	option = {
 		name = OK
 	}
@@ -37,10 +34,8 @@ country_event = {
 	picture = GFX_evt_machine_sapience
 	show_sound = event_administrative_work
 	hide_window = no
-
 	is_triggered_only = yes
-
-	option = { 
+	option = {
 		name = "lazy_config_events.3.b"
 		hidden_effect = {
 			set_country_flag = lazy_resettle_unemployed_to_free_jobs
@@ -49,8 +44,7 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "lazy_config_events.3.c"
 		hidden_effect = {
 			set_country_flag = lazy_resettle_to_synaptic_lathe_flag
@@ -59,8 +53,7 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "EXIT"
 	}
 }
@@ -72,10 +65,8 @@ country_event = {
 	picture = GFX_evt_machine_sapience
 	show_sound = event_administrative_work
 	hide_window = no
-
 	is_triggered_only = yes
-	
-	# option = { 
+	# option = {
 	# 	name = "lazy_config_events.4.b"
 	# 	allow = {
 	# 		has_technology = tech_hyper_relays
@@ -96,8 +87,7 @@ country_event = {
 	# 		}
 	# 	}
 	# }
-
-	# option = { 
+	# option = {
 	# 	name = "lazy_config_events.4.c"
 	# 	allow = {
 	# 		has_technology = tech_gateway_construction
@@ -118,8 +108,7 @@ country_event = {
 	# 		}
 	# 	}
 	# }
-
-	# option = { 
+	# option = {
 	# 	name = "lazy_config_events.4.d"
 	# 	allow = {
 	# 		hidden_trigger = {
@@ -145,8 +134,7 @@ country_event = {
 	# 		}
 	# 	}
 	# }
-
-	# option = { 
+	# option = {
 	# 	name = "lazy_config_events.4.e"
 	# 	allow = {
 	# 		hidden_trigger = {
@@ -172,8 +160,7 @@ country_event = {
 	# 		}
 	# 	}
 	# }
-
-	# option = { 
+	# option = {
 	# 	name = "lazy_config_events.4.f"
 	# 	allow = {
 	# 		hidden_trigger = {
@@ -199,8 +186,7 @@ country_event = {
 	# 		}
 	# 	}
 	# }
-
-	option = { 
+	option = {
 		name = "EXIT"
 	}
 }
@@ -212,10 +198,8 @@ country_event = {
 	picture = GFX_evt_machine_sapience
 	show_sound = event_administrative_work
 	hide_window = no
-
 	is_triggered_only = yes
-
-	option = { 
+	option = {
 		name = "lazy_config_events.5.b"
 		allow = {
 			hidden_trigger = {
@@ -243,8 +227,7 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "lazy_config_events.5.c"
 		allow = {
 			hidden_trigger = {
@@ -266,8 +249,7 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "lazy_config_events.5.d"
 		allow = {
 			hidden_trigger = {
@@ -290,8 +272,7 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "lazy_config_events.5.e"
 		allow = {
 			hidden_trigger = {
@@ -317,8 +298,7 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "lazy_config_events.5.f"
 		allow = {
 			hidden_trigger = {
@@ -342,8 +322,7 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "lazy_config_events.5.g"
 		allow = {
 			hidden_trigger = {
@@ -369,8 +348,7 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "lazy_config_events.5.h"
 		trigger = {
 			has_global_flag = acot_activated
@@ -383,7 +361,7 @@ country_event = {
 				}
 				OR = {
 					is_country_type = awakened_fallen_empire
-					is_country_type = fallen_empire		
+					is_country_type = fallen_empire
 					has_technology = tech_bombardment_dm
 				}
 			}
@@ -401,8 +379,7 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "lazy_config_events.5.i"
 		trigger = {
 			has_global_flag = acot_activated
@@ -416,7 +393,6 @@ country_event = {
 				has_technology = tech_bombardment_ae
 			}
 		}
-		
 		hidden_effect = {
 			set_country_flag = auto_fleet_bombardment_exterminatus_flag
 			remove_country_flag = auto_fleet_bombardment_raiding_flag
@@ -430,8 +406,7 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "EXIT"
 	}
 }
@@ -443,11 +418,9 @@ country_event = {
 	picture = GFX_evt_machine_sapience
 	show_sound = event_administrative_work
 	hide_window = no
-
 	is_triggered_only = yes
-
-	option = { 
-		name = "lazy_config_events.6.a" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+	option = {
+		name = "lazy_config_events.6.a"		#custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
 		allow = {
 			hidden_trigger = {
 				has_technology = tech_assault_armies
@@ -487,9 +460,8 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
-		name = "lazy_config_events.6.b" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+	option = {
+		name = "lazy_config_events.6.b"		#custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
 		allow = {
 			hidden_trigger = {
 				has_technology = tech_neural_implants
@@ -524,9 +496,8 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
-		name = "lazy_config_events.6.c" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+	option = {
+		name = "lazy_config_events.6.c"		#custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
 		allow = {
 			hidden_trigger = {
 				has_technology = tech_gene_banks
@@ -539,7 +510,9 @@ country_event = {
 					}
 				}
 				OR = {
-					NOT = { has_authority = auth_machine_intelligence }
+					NOT = {
+						has_authority = auth_machine_intelligence
+					}
 					has_civic = civic_machine_assimilator
 				}
 			}
@@ -559,9 +532,8 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
-		name = "lazy_config_events.6.d" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+	option = {
+		name = "lazy_config_events.6.d"		#custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
 		allow = {
 			hidden_trigger = {
 				has_technology = tech_droid_workers
@@ -590,9 +562,8 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
-		name = "lazy_config_events.6.e" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+	option = {
+		name = "lazy_config_events.6.e"		#custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
 		allow = {
 			hidden_trigger = {
 				has_technology = tech_telepathy
@@ -631,9 +602,8 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
-		name = "lazy_config_events.6.f" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+	option = {
+		name = "lazy_config_events.6.f"		#custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
 		allow = {
 			hidden_trigger = {
 				has_technology = tech_morphogenetic_field_mastery
@@ -658,9 +628,8 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
-		name = "lazy_config_events.6.g" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+	option = {
+		name = "lazy_config_events.6.g"		#custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
 		allow = {
 			hidden_trigger = {
 				has_technology = tech_gene_seed_purification
@@ -690,9 +659,8 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
-		name = "lazy_config_events.6.h" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+	option = {
+		name = "lazy_config_events.6.h"		#custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
 		allow = {
 			hidden_trigger = {
 				has_technology = tech_adaptive_combat_algorithms
@@ -720,9 +688,8 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
-		name = "lazy_config_events.6.i" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+	option = {
+		name = "lazy_config_events.6.i"		#custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
 		allow = {
 			hidden_trigger = {
 				has_technology = tech_biomechanics
@@ -747,9 +714,8 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
-		name = "lazy_config_events.6.j" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+	option = {
+		name = "lazy_config_events.6.j"		#custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
 		allow = {
 			hidden_trigger = {
 				has_technology = tech_assault_armies
@@ -779,8 +745,7 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "EXIT"
 	}
 }
@@ -792,11 +757,9 @@ country_event = {
 	picture = GFX_evt_machine_sapience
 	show_sound = event_administrative_work
 	hide_window = no
-
 	is_triggered_only = yes
-
-	option = { 
-		name = "lazy_config_events.7.a" #custom_tooltip = "lazy_config_events.2.custom_tooltip.b"
+	option = {
+		name = "lazy_config_events.7.a"		#custom_tooltip = "lazy_config_events.2.custom_tooltip.b"
 		allow = {
 			hidden_trigger = {
 				OR = {
@@ -813,9 +776,8 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
-		name = "lazy_config_events.7.b" #custom_tooltip = "lazy_config_events.2.custom_tooltip.b"
+	option = {
+		name = "lazy_config_events.7.b"		#custom_tooltip = "lazy_config_events.2.custom_tooltip.b"
 		allow = {
 			hidden_trigger = {
 				NOT = {
@@ -831,9 +793,8 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
-		name = "lazy_config_events.7.c" #custom_tooltip = "lazy_config_events.2.custom_tooltip.b"
+	option = {
+		name = "lazy_config_events.7.c"		#custom_tooltip = "lazy_config_events.2.custom_tooltip.b"
 		allow = {
 			hidden_trigger = {
 				NOT = {
@@ -849,8 +810,7 @@ country_event = {
 			}
 		}
 	}
-	
-	option = { 
+	option = {
 		name = "EXIT"
 	}
 }
@@ -862,10 +822,8 @@ country_event = {
 	picture = GFX_evt_machine_sapience
 	show_sound = event_administrative_work
 	hide_window = no
-
 	is_triggered_only = yes
-
-	option = { 
+	option = {
 		name = "lazy_config_events.8.b"
 		allow = {
 			hidden_trigger = {
@@ -886,8 +844,7 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "lazy_config_events.8.c"
 		allow = {
 			hidden_trigger = {
@@ -908,8 +865,7 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "lazy_config_events.8.d"
 		allow = {
 			hidden_trigger = {
@@ -930,8 +886,7 @@ country_event = {
 			}
 		}
 	}
-	
-	option = { 
+	option = {
 		name = "lazy_config_events.8.e"
 		allow = {
 			hidden_trigger = {
@@ -952,8 +907,7 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "lazy_config_events.8.f"
 		allow = {
 			hidden_trigger = {
@@ -974,8 +928,7 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "lazy_config_events.8.g"
 		allow = {
 			hidden_trigger = {
@@ -996,8 +949,7 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "lazy_config_events.8.h"
 		allow = {
 			hidden_trigger = {
@@ -1023,8 +975,7 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "EXIT"
 	}
 }
@@ -1036,10 +987,8 @@ country_event = {
 	picture = GFX_evt_machine_sapience
 	show_sound = event_administrative_work
 	hide_window = no
-
 	is_triggered_only = yes
-	
-	option = { 
+	option = {
 		name = "EXIT"
 	}
 }
@@ -1051,10 +1000,8 @@ country_event = {
 	picture = GFX_evt_machine_sapience
 	show_sound = event_administrative_work
 	hide_window = no
-
 	is_triggered_only = yes
-	
-	option = { 
+	option = {
 		name = "EXIT"
 	}
 }
@@ -1066,10 +1013,8 @@ country_event = {
 	picture = GFX_evt_machine_sapience
 	show_sound = event_administrative_work
 	hide_window = no
-
 	is_triggered_only = yes
-	
-	option = { 
+	option = {
 		name = "lazy_config_events.11.b"
 		allow = {
 			hidden_trigger = {
@@ -1130,8 +1075,7 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "lazy_config_events.11.c"
 		allow = {
 			hidden_trigger = {
@@ -1175,8 +1119,7 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "lazy_config_events.11.d"
 		allow = {
 			hidden_trigger = {
@@ -1220,8 +1163,7 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "lazy_config_events.11.e"
 		allow = {
 			hidden_trigger = {
@@ -1265,8 +1207,7 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "lazy_config_events.11.f"
 		allow = {
 			hidden_trigger = {
@@ -1310,8 +1251,7 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "lazy_config_events.11.g"
 		allow = {
 			hidden_trigger = {
@@ -1355,8 +1295,7 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "lazy_config_events.11.h"
 		allow = {
 			hidden_trigger = {
@@ -1400,8 +1339,7 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "lazy_config_events.11.i"
 		allow = {
 			hidden_trigger = {
@@ -1445,8 +1383,7 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "lazy_config_events.11.j"
 		allow = {
 			hidden_trigger = {
@@ -1490,8 +1427,7 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "lazy_config_events.11.k"
 		allow = {
 			hidden_trigger = {
@@ -1535,8 +1471,7 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "lazy_config_events.11.l"
 		allow = {
 			hidden_trigger = {
@@ -1580,8 +1515,7 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "lazy_config_events.11.m"
 		allow = {
 			hidden_trigger = {
@@ -1625,8 +1559,7 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "lazy_config_events.11.n"
 		allow = {
 			hidden_trigger = {
@@ -1670,8 +1603,7 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "EXIT"
 	}
 }
@@ -1683,11 +1615,9 @@ country_event = {
 	picture = GFX_evt_machine_sapience
 	show_sound = event_administrative_work
 	hide_window = no
-
 	is_triggered_only = yes
-
-	option = { 
-		name = "lazy_config_events.12.a" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+	option = {
+		name = "lazy_config_events.12.a"		#custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
 		allow = {
 			hidden_trigger = {
 				OR = {
@@ -1700,7 +1630,6 @@ country_event = {
 				}
 			}
 		}
-
 		hidden_effect = {
 			remove_country_flag = auto_upgrading_starbase_outpost_flag
 			remove_country_flag = auto_upgrading_starbase_starport_flag
@@ -1713,9 +1642,8 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
-		name = "lazy_config_events.12.b" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+	option = {
+		name = "lazy_config_events.12.b"		#custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
 		allow = {
 			hidden_trigger = {
 				NOT = {
@@ -1723,7 +1651,6 @@ country_event = {
 				}
 			}
 		}
-
 		hidden_effect = {
 			set_country_flag = auto_upgrading_starbase_outpost_flag
 			remove_country_flag = auto_upgrading_starbase_starport_flag
@@ -1736,9 +1663,8 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
-		name = "lazy_config_events.12.c" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+	option = {
+		name = "lazy_config_events.12.c"		#custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
 		allow = {
 			hidden_trigger = {
 				NOT = {
@@ -1746,7 +1672,6 @@ country_event = {
 				}
 			}
 		}
-
 		hidden_effect = {
 			set_country_flag = auto_upgrading_starbase_starport_flag
 			remove_country_flag = auto_upgrading_starbase_outpost_flag
@@ -1759,9 +1684,8 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
-		name = "lazy_config_events.12.d" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+	option = {
+		name = "lazy_config_events.12.d"		#custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
 		allow = {
 			hidden_trigger = {
 				NOT = {
@@ -1769,7 +1693,6 @@ country_event = {
 				}
 			}
 		}
-
 		hidden_effect = {
 			set_country_flag = auto_upgrading_starbase_starhold_flag
 			remove_country_flag = auto_upgrading_starbase_outpost_flag
@@ -1782,9 +1705,8 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
-		name = "lazy_config_events.12.e" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+	option = {
+		name = "lazy_config_events.12.e"		#custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
 		allow = {
 			hidden_trigger = {
 				NOT = {
@@ -1792,7 +1714,6 @@ country_event = {
 				}
 			}
 		}
-
 		hidden_effect = {
 			set_country_flag = auto_upgrading_starbase_starfortress_flag
 			remove_country_flag = auto_upgrading_starbase_outpost_flag
@@ -1805,9 +1726,8 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
-		name = "lazy_config_events.12.f" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+	option = {
+		name = "lazy_config_events.12.f"		#custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
 		trigger = {
 			has_global_flag = has_nsc_active
 		}
@@ -1818,7 +1738,6 @@ country_event = {
 				}
 			}
 		}
-
 		hidden_effect = {
 			set_country_flag = auto_upgrading_starbase_citadel_flag
 			remove_country_flag = auto_upgrading_starbase_outpost_flag
@@ -1831,9 +1750,8 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
-		name = "lazy_config_events.12.g" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+	option = {
+		name = "lazy_config_events.12.g"		#custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
 		trigger = {
 			has_global_flag = has_nsc_active
 		}
@@ -1844,7 +1762,6 @@ country_event = {
 				}
 			}
 		}
-
 		hidden_effect = {
 			set_country_flag = auto_upgrading_starbase_stronghold_flag
 			remove_country_flag = auto_upgrading_starbase_outpost_flag
@@ -1857,9 +1774,8 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
-		name = "lazy_config_events.12.h" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+	option = {
+		name = "lazy_config_events.12.h"		#custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
 		allow = {
 			hidden_trigger = {
 				count_owned_starbase = {
@@ -1879,9 +1795,8 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
-		name = "lazy_config_events.12.i" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+	option = {
+		name = "lazy_config_events.12.i"		#custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
 		allow = {
 			hidden_trigger = {
 				count_owned_starbase = {
@@ -1904,9 +1819,8 @@ country_event = {
 			}
 		}
 	}
-	
-	option = { 
-		name = "lazy_config_events.12.j" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+	option = {
+		name = "lazy_config_events.12.j"		#custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
 		allow = {
 			hidden_trigger = {
 				count_owned_starbase = {
@@ -1930,9 +1844,8 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
-		name = "lazy_config_events.12.k" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+	option = {
+		name = "lazy_config_events.12.k"		#custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
 		allow = {
 			hidden_trigger = {
 				count_owned_starbase = {
@@ -1957,9 +1870,8 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
-		name = "lazy_config_events.12.l" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+	option = {
+		name = "lazy_config_events.12.l"		#custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
 		trigger = {
 			has_global_flag = has_nsc_active
 		}
@@ -1988,9 +1900,8 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
-		name = "lazy_config_events.12.m" #custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
+	option = {
+		name = "lazy_config_events.12.m"		#custom_tooltip = "lazy_config_events.2.custom_tooltip.a"
 		trigger = {
 			has_global_flag = has_nsc_active
 		}
@@ -2020,8 +1931,7 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "EXIT"
 	}
 }
@@ -2033,10 +1943,8 @@ country_event = {
 	picture = GFX_evt_machine_sapience
 	show_sound = event_administrative_work
 	hide_window = no
-
 	is_triggered_only = yes
-	
-	option = { 
+	option = {
 		name = "EXIT"
 	}
 }
@@ -2048,10 +1956,8 @@ country_event = {
 	picture = GFX_evt_machine_sapience
 	show_sound = event_administrative_work
 	hide_window = no
-
 	is_triggered_only = yes
-	
-	option = { 
+	option = {
 		name = "EXIT"
 	}
 }
@@ -2063,10 +1969,8 @@ country_event = {
 	picture = GFX_evt_machine_sapience
 	show_sound = event_administrative_work
 	hide_window = no
-
 	is_triggered_only = yes
-
-	# option = { 
+	# option = {
 	# 	name = "lazy_config_events.2.b" #custom_tooltip = "lazy_config_events.2.custom_tooltip.b"
 	# 	allow = {
 	# 		hidden_trigger = {
@@ -2082,8 +1986,7 @@ country_event = {
 	# 		}
 	# 	}
 	# }
-
-	option = { 
+	option = {
 		name = "EXIT"
 	}
 }
@@ -2095,10 +1998,8 @@ country_event = {
 	picture = GFX_evt_machine_sapience
 	show_sound = event_administrative_work
 	hide_window = no
-
 	is_triggered_only = yes
-	
-	option = { 
+	option = {
 		name = "lazy_config_events.16.b"
 		allow = {
 			hidden_trigger = {
@@ -2116,8 +2017,7 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "lazy_config_events.16.c"
 		allow = {
 			hidden_trigger = {
@@ -2135,8 +2035,7 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "lazy_config_events.16.d"
 		allow = {
 			hidden_trigger = {
@@ -2154,8 +2053,7 @@ country_event = {
 			}
 		}
 	}
-
-	option = { 
+	option = {
 		name = "EXIT"
 	}
 }
