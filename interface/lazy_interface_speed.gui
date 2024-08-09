@@ -8,7 +8,7 @@ guiTypes = {
 		origo = center
 		orientation = center
 		clipping = no
-		
+
 		background = {
 			name = "lazy_automation_speed_background"
 			size = { x = 350 y = 95 }
@@ -141,32 +141,32 @@ guiTypes = {
 			size = { width = 0 height = 0 }
 			clipping = yes
 		}
-		
+
 		containerWindowType = {
 			name = "portrait"
 			position = { x = 0 y = 0 }
 			size = { width = 0 height = 0 }
 			clipping = yes
-			
+
 			iconType = {
 				name = "portrait"
 				spriteType = "GFX_portrait_gamesetup_mask"
 				alwaysTransparent = yes
 			}
-					
+
 			iconType = {
 				name = "black_frame"
 				spriteType = "GFX_diplomacy_portrait_shadow_frame"
 				position = { x = 0 y = 0 }
 				alwaysTransparent = yes
 			}
-			
+
 			iconType = {
 				name = "stripes_1"
 				spriteType = "GFX_diplomacy_stripes_2"
 				alwaysTransparent = yes
 			}
-				
+
 			iconType = {
 				name = "city_frame"
 				spriteType = "GFX_diplomacy_portrait_frame_trader"
@@ -181,7 +181,7 @@ guiTypes = {
 			name = "opinion_window"
 			position = { x = 0 y = 0 }
 			size = { width = 0 height = 0 }
-			
+
 			iconType = {
 				name = "their_opinion_icon"
 				spriteType = "GFX_diplomacy_opinion"
@@ -192,7 +192,7 @@ guiTypes = {
 				font = "cg_16b"
 			}
 		}
-		
+
 		### EMPIRE INFO ###
 
 		iconType = {
@@ -224,38 +224,38 @@ guiTypes = {
 		containerWindowType = {
 			name = "leader_details"
 			position = { x = 0 y = 0 }
-			
+
 			containerWindowType = {
 				name = "empire_traits_box"
 			}
-			
+
 			instantTextBoxType = {
 				name = "empire_traits_label"
 				font = "cg_16b"
 			}
-		
+
 			overlappingElementsBoxType = {
 				name = "leader_traits"
 			}
-	
+
 			instantTextBoxType = {
 				name = "leader_name"
 				font = "cg_16b"
 			}
-	
+
 			instantTextBoxType = {
 				name = "leader_species"
 				font = "cg_16b"
 			}
 		}
-		
+
 		### EVENT DIPLO ###
-		
+
 		containerWindowType = {
 			name = "EVENT_DIPLO"
 			position = { x = 0 y = 0 }
 			size = { width = 0 height = 0 }
-			
+
 			### TITLE ###
 
 			instantTextBoxType = {
