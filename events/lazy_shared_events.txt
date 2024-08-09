@@ -1,11 +1,9 @@
 namespace = lazy_shared_events
-
 country_event = {
 	id = lazy_shared_events.1
 	hide_window = yes
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	immediate = {
 		set_variable = {
 			which = auto_meg_upg_speed
@@ -37,20 +35,16 @@ country_event = {
 	picture = GFX_evt_machine_sapience
 	show_sound = event_administrative_work
 	hide_window = no
-
 	is_triggered_only = yes
-
-	option = { 
+	option = {
 		name = OK
 	}
 }
-
 
 # country_event = {
 # 	id = lazy_shared_events.2
 # 	hide_window = yes
 # 	is_triggered_only = yes
-
 # 	immediate = {
 # 		every_owned_fleet = {
 # 			limit = {
