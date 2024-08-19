@@ -43,28 +43,6 @@ auto_upgrade_starbases_check = {
 			DAYS = 1440
 		}
 	}
-	else_if = {
-		limit = {
-			has_starbase_size = starbase_starfortress
-		}
-		auto_upgrade_starbase = {
-			TECH_1 = tech_starbase_6
-			EVENT = lazy_upg_sta_events.6
-			ALLOYS = 4500
-			DAYS = 2000
-		}
-	}
-	else_if = {
-		limit = {
-			has_starbase_size = starbase_stronghold
-		}
-		auto_upgrade_starbase = {
-			TECH_1 = tech_starbase_7
-			EVENT = lazy_upg_sta_events.7
-			ALLOYS = 6500
-			DAYS = 2500
-		}
-	}
 }
 
 auto_upgrade_starbase = {

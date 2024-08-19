@@ -169,26 +169,6 @@ fleet_event = {
 											set_fleet_bombardment_stance = raiding
 										}
 									}
-									if = {
-										limit = {
-											root.owner = {
-												has_country_flag = auto_fleet_bombardment_punishment_flag
-											}
-										}
-										root = {
-											set_fleet_bombardment_stance = punishment
-										}
-									}
-									if = {
-										limit = {
-											root.owner = {
-												has_country_flag = auto_fleet_bombardment_exterminatus_flag
-											}
-										}
-										root = {
-											set_fleet_bombardment_stance = exterminatus
-										}
-									}
 								}
 							}
 						}
